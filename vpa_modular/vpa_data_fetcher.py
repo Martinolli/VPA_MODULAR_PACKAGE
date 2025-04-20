@@ -186,13 +186,26 @@ class VPADataFetcher:
         os.makedirs(ticker_dir, exist_ok=True)
 
         file_path = os.path.join(ticker_dir, f"{ticker}.csv")
+        
+       # --- Normalize & flatten columns to lowercase ---
+        if isinstance(data.columns, pd.MultiIndex):
+           # take only the last level (e.g. 'open', 'high', etc.)
+           data.columns = data.columns.get_level_values(0).str.lower()
+        else:
+           data.columns = data.columns.str.lower()
 
-        # Always overwrite old file completely (prevents header duplication)
+        # give the index a clear name so CSV has a 'Date' header
+        data.index.name = 'Date'
+
+        # clean any stray duplicate headers from a previous run
+        self._clean_existing_csv(file_path)
+
+        # now write exactly once, with a single header
         try:
-            data.to_csv(file_path, index=True)
-            logger.info(f"✅ Saved clean data: {ticker} [{timeframe}] with {len(data)} rows.")
+           data.to_csv(file_path, index=True, header=True)
+           logger.info(f"✅ Saved clean data: {ticker} [{timeframe}] with {len(data)} rows.")
         except Exception as e:
-            logger.error(f"❌ Failed to save data for {ticker} [{timeframe}]: {e}")
+           logger.error(f"❌ Failed to save data for {ticker} [{timeframe}]: {e}")    
 
     def _clean_existing_csv(self, filepath):
         """

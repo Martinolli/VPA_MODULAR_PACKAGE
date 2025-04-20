@@ -124,8 +124,10 @@ class VPADataValidator:
                 # Otherwise, set the first column as the index
                 data.set_index(data.columns[0], inplace=True)
             
-            # Parse the index as datetime
+            # Parse the index as datetime, then drop any tz so it's timezone‑naive
             data.index = pd.to_datetime(data.index)
+            if getattr(data.index, 'tz', None) is not None:
+                data.index = data.index.tz_convert(None)
             
             logger.info(f"Loaded {len(data)} rows of {timeframe} data for {ticker}")
             return data
