@@ -95,7 +95,7 @@ class BacktestDataManager:
         return data
     
     def get_data_window(self, ticker: str, current_date: Union[str, pd.Timestamp], 
-                        lookback_days: int = 365) -> Dict[str, pd.DataFrame]:
+                    lookback_days: int = 365) -> Dict[str, pd.DataFrame]:
         """
         Get a window of historical data up to a specific date.
         This ensures point-in-time analysis without look-ahead bias.
@@ -116,19 +116,26 @@ class BacktestDataManager:
         
         # Get full data if not in cache
         if ticker not in self.data_cache:
-            self.get_data(ticker)
+            try:
+                self.get_data(ticker)
+            except Exception as e:
+                logger.error(f"Error retrieving data for {ticker}: {str(e)}")
+                return {}
         
         if ticker not in self.data_cache:
             logger.error(f"No data available for {ticker}")
             return {}
-        
+    
         # Create a window for each timeframe
         windowed_data = {}
         for timeframe, df in self.data_cache[ticker].items():
-            # Filter data up to current_date
-            window = df[df.index <= current_date].copy()
-            if not window.empty:
-                windowed_data[timeframe] = window
+            try:
+                # Filter data up to current_date
+                window = df[df.index <= current_date].copy()
+                if not window.empty:
+                    windowed_data[timeframe] = window
+            except Exception as e:
+                logger.error(f"Error creating window for {ticker} on {timeframe}: {str(e)}")
         
         return windowed_data
     
