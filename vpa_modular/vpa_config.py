@@ -51,8 +51,27 @@ class VPAConfig:
         """Get default timeframes for analysis"""
         return self.config["timeframes"]
     
-    def get_all(self):
-        """Get complete configuration"""
+    def update_parameters(self, params):
+        """
+        Update configuration parameters
+        
+        Args:
+            params: Dictionary of parameters to update
+        """
+        for key, value in params.items():
+            # Handle nested parameters with dot notation
+            if '.' in key:
+                sections = key.split('.')
+                config_section = self.config
+                for section in sections[:-1]:
+                    if section not in config_section:
+                        config_section[section] = {}
+                    config_section = config_section[section]
+                config_section[sections[-1]] = value
+            else:
+                # Handle top-level parameters
+                self.config[key] = value
+        
         return self.config
 
 # Default configuration
@@ -73,8 +92,7 @@ default_config = {
     "trend": {
         "lookback_period": 5,
         "price_change_threshold": 0.01,
-        "volume_change_threshold": 0.05,
-        "min_trend_length": 3
+        "volume_change_threshold": 0.05
     },
     "pattern": {
         "accumulation": {
@@ -102,15 +120,12 @@ default_config = {
         "bullish_confirmation_threshold": 1,
         "bearish_confirmation_threshold": 1,
         "bullish_candles_threshold": 2,
-        "bearish_candles_threshold": 2,
-        "strong_signal_threshold": 0.8
+        "bearish_candles_threshold": 2
     },
     "risk": {
         "default_stop_loss_percent": 0.02,
         "default_take_profit_percent": 0.05,
-        "support_resistance_buffer": 0.005,
-        "default_risk_percent": 0.01,
-        "default_risk_reward": 2,
+        "support_resistance_buffer": 0.005
     },
     "timeframes": [
         {"interval": "1d", "period": "1y"},

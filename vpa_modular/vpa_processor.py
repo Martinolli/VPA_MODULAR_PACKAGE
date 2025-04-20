@@ -6,7 +6,7 @@ This module provides data processing and feature calculation for the VPA algorit
 
 import pandas as pd
 import numpy as np
-from vpa_modular.vpa_config import VPAConfig
+from .vpa_config import VPAConfig
 
 class DataProcessor:
     """Process raw price and volume data for VPA analysis"""

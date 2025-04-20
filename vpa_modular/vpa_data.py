@@ -7,6 +7,8 @@ This module provides data acquisition and management for the VPA algorithm.
 import pandas as pd
 import numpy as np
 import yfinance as yf
+import datetime
+from datetime import datetime, timedelta
 
 class DataProvider:
     """Base class for data providers"""
@@ -26,24 +28,39 @@ class DataProvider:
         return price_data, volume_data
 
 
-class YFinanceProvider(DataProvider):
+class YFinanceProvider:
     """YFinance implementation of data provider"""
     
-    def get_data(self, ticker, interval='1d', period='1y'):
+    def get_data(self, ticker, interval='1d', period='1y', start_date=None, end_date=None):
         """
         Fetch market data using yfinance
         
         Parameters:
         - ticker: Stock symbol (e.g., 'AAPL', 'MSFT')
         - interval: Data interval ('1d', '1h', etc.)
-        - period: Data period ('1y', '6mo', etc.)
+        - period: Data period ('1y', '6mo', etc.) - used if start_date and end_date are None
+        - start_date: Start date for data retrieval (optional)
+        - end_date: End date for data retrieval (optional)
         
         Returns:
-        - price_data: DataFrame with OHLC data
-        - volume_data: Series with volume data
+        - DataFrame with OHLC and volume data
         """
         # Download data
-        data = yf.download(ticker, interval=interval, period=period, auto_adjust=False, progress=False)
+        try:
+            if start_date and end_date:
+                # Convert to string format if datetime objects
+                if isinstance(start_date, (datetime, pd.Timestamp)):
+                    start_date = start_date.strftime('%Y-%m-%d')
+                if isinstance(end_date, (datetime, pd.Timestamp)):
+                    end_date = end_date.strftime('%Y-%m-%d')
+                
+                data = yf.download(ticker, start=start_date, end=end_date, 
+                                  interval=interval, auto_adjust=False, progress=False)
+            else:
+                data = yf.download(ticker, interval=interval, period=period, 
+                                  auto_adjust=False, progress=False)
+        except Exception as e:
+            raise ValueError(f"Error downloading data for {ticker}: {str(e)}")
 
         if data.empty:
             raise ValueError(f"No data returned for ticker {ticker}")
@@ -78,18 +95,39 @@ class YFinanceProvider(DataProvider):
             if col.endswith(f'_{ticker.lower()}'):
                 suffix = f'_{ticker.lower()}'
                 break
+                
+        # Extract required columns
         try:
             if suffix:
-                price_data = data[[f'open{suffix}', f'high{suffix}', f'low{suffix}', f'close{suffix}']].copy()
-                price_data.columns = ['open', 'high', 'low', 'close']
-                volume_data = data[f'volume{suffix}'].copy()
+                # Handle columns with ticker suffix
+                required_cols = {
+                    f'open{suffix}': 'open',
+                    f'high{suffix}': 'high', 
+                    f'low{suffix}': 'low', 
+                    f'close{suffix}': 'close',
+                    f'volume{suffix}': 'volume'
+                }
+                
+                # Create new DataFrame with standardized column names
+                result_df = pd.DataFrame()
+                for old_col, new_col in required_cols.items():
+                    if old_col in data.columns:
+                        result_df[new_col] = data[old_col]
+                    else:
+                        raise KeyError(f"Missing column {old_col}")
             else:
-                price_data = data[['open', 'high', 'low', 'close']].copy()
-                volume_data = data['volume'].copy()
+                # Handle standard column names
+                required_cols = ['open', 'high', 'low', 'close', 'volume']
+                for col in required_cols:
+                    if col not in data.columns:
+                        raise KeyError(f"Missing column {col}")
+                
+                result_df = data[required_cols].copy()
+                
         except KeyError as e:
             raise ValueError(f"Missing expected price/volume columns for ticker {ticker}: {e}")
 
-        return price_data, volume_data
+        return result_df
     
     def get_price_data(self, ticker, interval='1d', period='1y'):
         """Get price data using yfinance"""
