@@ -143,6 +143,12 @@ class VPADataValidator:
         data_start = data.index.min()
         data_end = data.index.max()
         
+        # Ensure data_start and data_end are datetime objects
+        if isinstance(data_start, str):
+            data_start = pd.to_datetime(data_start)
+        if isinstance(data_end, str):
+            data_end = pd.to_datetime(data_end)
+            
         timeframe_result = {
             "status": "valid",
             "rows": len(data),
