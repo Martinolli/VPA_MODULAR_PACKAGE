@@ -190,11 +190,43 @@ class VPADataFetcher:
         # Create directory for ticker if it doesn't exist
         ticker_dir = os.path.join(self.base_dir, timeframe)
         os.makedirs(ticker_dir, exist_ok=True)
+
+        file_path = os.path.join(ticker_dir, f"{ticker}.csv")
+
+        # Clean existing file before saving
+        self._clean_existing_csv(file_path)
         
         # Save data to CSV
-        file_path = os.path.join(ticker_dir, f"{ticker}.csv")
         data.to_csv(file_path)
         logger.info(f"Saved {len(data)} rows of {timeframe} data for {ticker} to {file_path}")
+
+    def _clean_existing_csv(self, filepath):
+        """
+        Clean existing CSV file by removing duplicate header rows.
+
+        Parameters:
+        - filepath: Full path to the CSV file
+        """
+        if not os.path.exists(filepath):
+            return  # nothing to clean
+
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+
+            header = lines[0]
+            unique_lines = [header]
+            for line in lines[1:]:
+                if line.strip() != header.strip():
+                    unique_lines.append(line)
+
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.writelines(unique_lines)
+
+            logger.info(f"🧹 Cleaned duplicate headers in: {filepath}")
+
+        except Exception as e:
+            logger.warning(f"⚠️ Failed to clean file {filepath}: {e}")
     
     def _save_metadata(self, ticker, results):
         """
