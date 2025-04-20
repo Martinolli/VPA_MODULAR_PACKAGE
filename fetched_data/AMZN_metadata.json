@@ -1,18 +1,18 @@
 {
     "ticker": "AMZN",
-    "fetch_time": "2025-04-20 14:28:13",
+    "fetch_time": "2025-04-20 16:10:37",
     "results": {
         "1d": {
             "status": "cached",
-            "last_modified": "2025-04-20T14:18:20.934627"
+            "last_modified": "2025-04-20T16:00:32.849432"
         },
         "1h": {
             "status": "cached",
-            "last_modified": "2025-04-20T14:18:21.578676"
+            "last_modified": "2025-04-20T16:00:34.341952"
         },
         "15m": {
             "status": "cached",
-            "last_modified": "2025-04-20T14:18:21.830208"
+            "last_modified": "2025-04-20T16:00:34.717887"
         }
     }
 }
