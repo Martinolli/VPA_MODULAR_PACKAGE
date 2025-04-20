@@ -657,7 +657,7 @@ class VPABacktester:
         # Process data for each timeframe
         processed_data = {}
         for timeframe, df in data_window.items():
-            processed_data[timeframe] = self.data_processor.process_data(df)
+            processed_data[timeframe] = self.data_processor.preprocess_data(df)
         
         # Analyze each timeframe
         timeframe_results = {}
