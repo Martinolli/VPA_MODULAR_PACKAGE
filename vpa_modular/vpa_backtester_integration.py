@@ -15,6 +15,7 @@ import traceback
 from vpa_modular.vpa_backtester import VPABacktester
 from vpa_modular.vpa_config import VPAConfig
 from vpa_modular.vpa_processor import DataProcessor
+import matplotlib.pyplot as plt
 
 # Set up logging
 logging.basicConfig(

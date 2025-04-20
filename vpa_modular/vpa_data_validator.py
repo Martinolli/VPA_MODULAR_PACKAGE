@@ -21,6 +21,14 @@ logging.basicConfig(
 )
 logger = logging.getLogger('VPADataValidator')
 
+def datetime_json_serializer(obj):
+    """
+    Helper function for json.dumps to serialize datetime objects.
+    """
+    if isinstance(obj, datetime):
+        return obj.isoformat()
+    raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
+
 class VPADataValidator:
     """Validate data consistency across timeframes for VPA analysis"""
     
@@ -308,7 +316,7 @@ class VPADataValidator:
         
         json_path = os.path.join(report_dir, "validation_results.json")
         with open(json_path, 'w') as f:
-            json.dump(validation_results, f, indent=4)
+            json.dump(validation_results, f, indent=4, default=datetime_json_serializer)
         
         # Generate HTML report
         html_report = self._generate_html_report(ticker, validation_results)

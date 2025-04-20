@@ -22,6 +22,14 @@ logging.basicConfig(
 )
 logger = logging.getLogger('VPADataFetcher')
 
+def datetime_json_serializer(obj):
+    """
+    Helper function for json.dumps to serialize datetime objects.
+    """
+    if isinstance(obj, datetime):
+        return obj.isoformat()
+    raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
+
 class VPADataFetcher:
     """Fetch and store market data for VPA analysis"""
     
@@ -205,8 +213,8 @@ class VPADataFetcher:
         # Save metadata to JSON
         file_path = os.path.join(self.base_dir, f"{ticker}_metadata.json")
         with open(file_path, 'w') as f:
-            json.dump(metadata, f, indent=4)
-    
+            json.dump(metadata, f, indent=4, default=datetime_json_serializer)
+            
     def _data_exists(self, ticker, timeframe):
         """
         Check if data exists for a ticker at a specific timeframe

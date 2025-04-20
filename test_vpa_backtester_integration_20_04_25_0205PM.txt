@@ -1,0 +1,37 @@
+PS C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package> python test_vpa_backtester_integration.py
+2025-04-20 14:01:39,631 - VPABacktesterTest - INFO - Running all tests...
+2025-04-20 14:01:39,631 - VPABacktesterTest - INFO - Testing data fetching...
+2025-04-20 14:01:39,632 - VPABacktesterTest - INFO - Fetching data for AAPL...
+2025-04-20 14:01:39,632 - VPADataFetcher - INFO - Using existing data for AAPL at 1d timeframe (last updated: 2025-04-20 13:43:19.018840)
+2025-04-20 14:01:39,632 - VPADataFetcher - INFO - Using existing data for AAPL at 1h timeframe (last updated: 2025-04-20 13:43:19.431898)
+2025-04-20 14:01:39,632 - VPADataFetcher - INFO - Using existing data for AAPL at 15m timeframe (last updated: 2025-04-20 13:43:19.961972)
+Traceback (most recent call last):
+  File "C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package\test_vpa_backtester_integration.py", line 223, in <module>
+    run_all_tests()
+  File "C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package\test_vpa_backtester_integration.py", line 211, in run_all_tests
+    "data_fetching": test_data_fetching(),
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package\test_vpa_backtester_integration.py", line 42, in test_data_fetching
+    results = fetcher.fetch_data(ticker, timeframes)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package\vpa_modular\vpa_data_fetcher.py", line 133, in fetch_data
+    self._save_metadata(ticker, results)
+  File "C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package\vpa_modular\vpa_data_fetcher.py", line 208, in _save_metadata
+    json.dump(metadata, f, indent=4)
+  File "C:\Users\Aspire5 15 i7 4G2050\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\Aspire5 15 i7 4G2050\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\Aspire5 15 i7 4G2050\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\Aspire5 15 i7 4G2050\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\Aspire5 15 i7 4G2050\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\Aspire5 15 i7 4G2050\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\Aspire5 15 i7 4G2050\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable

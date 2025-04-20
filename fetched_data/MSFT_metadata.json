@@ -1,18 +1,18 @@
 {
-    "ticker": "AAPL",
+    "ticker": "MSFT",
     "fetch_time": "2025-04-20 14:32:50",
     "results": {
         "1d": {
             "status": "cached",
-            "last_modified": "2025-04-20T13:43:19.018840"
+            "last_modified": "2025-04-20T14:12:41.375206"
         },
         "1h": {
             "status": "cached",
-            "last_modified": "2025-04-20T13:43:19.431898"
+            "last_modified": "2025-04-20T14:12:42.090006"
         },
         "15m": {
             "status": "cached",
-            "last_modified": "2025-04-20T13:43:19.961972"
+            "last_modified": "2025-04-20T14:12:42.383814"
         }
     }
 }
