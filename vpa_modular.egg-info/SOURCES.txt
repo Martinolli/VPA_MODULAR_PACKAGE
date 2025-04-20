@@ -1,0 +1,7 @@
+README.md
+setup.py
+vpa_modular.egg-info/PKG-INFO
+vpa_modular.egg-info/SOURCES.txt
+vpa_modular.egg-info/dependency_links.txt
+vpa_modular.egg-info/requires.txt
+vpa_modular.egg-info/top_level.txt

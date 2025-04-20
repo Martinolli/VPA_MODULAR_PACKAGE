@@ -1,0 +1,260 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>VPA Batch Analysis Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2 { color: #333366; }
+            table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            .buy { background-color: rgba(0, 255, 0, 0.1); }
+            .sell { background-color: rgba(255, 0, 0, 0.1); }
+            .dashboard { width: 100%; max-width: 1200px; margin: 20px 0; }
+            .chart { width: 100%; max-width: 600px; margin: 20px 0; }
+            .ticker-link { color: blue; text-decoration: underline; cursor: pointer; }
+        </style>
+    </head>
+    <body>
+        <h1>VPA Batch Analysis Report</h1>
+        <p>Generated on: 2025-04-18 23:59:40</p>
+        <p>Tickers analyzed: 15</p>
+        
+        <h2>Dashboard</h2>
+        <img src="vpa_dashboard.png" class="dashboard" alt="VPA Dashboard">
+        
+        <h2>Signal Distribution</h2>
+        <img src="signal_distribution.png" class="chart" alt="Signal Distribution">
+        
+        <h2>Top Signals</h2>
+        <img src="top_signals.png" class="chart" alt="Top Signals">
+        
+        <h2>Comparative Price Movement</h2>
+        <img src="comparative_prices.png" class="chart" alt="Comparative Prices">
+        
+        <h2>Signals Summary</h2>
+        <table>
+            <tr>
+                <th>Ticker</th>
+                <th>Signal</th>
+                <th>Strength</th>
+                <th>Price</th>
+                <th>Stop Loss</th>
+                <th>Take Profit</th>
+                <th>Risk/Reward</th>
+                <th>Trend</th>
+                <th>Volume Trend</th>
+                <th>Patterns</th>
+            </tr>
+    
+            <tr class="buy">
+                <td><a href="NFLX/vpa_report.txt" class="ticker-link">NFLX</a></td>
+                <td>BUY</td>
+                <td>STRONG</td>
+                <td>$973.03</td>
+                <td>$950.23</td>
+                <td>$1000.58</td>
+                <td>1.21</td>
+                <td>UP</td>
+                <td>INCREASING</td>
+                <td>accumulation, distribution, buying_climax, selling_climax</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="META/vpa_report.txt" class="ticker-link">META</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$501.48</td>
+                <td>$491.45</td>
+                <td>$595.62</td>
+                <td>9.39</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="MSFT/vpa_report.txt" class="ticker-link">MSFT</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$367.78</td>
+                <td>$365.40</td>
+                <td>$387.01</td>
+                <td>8.09</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution, testing</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="GOOGL/vpa_report.txt" class="ticker-link">GOOGL</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$151.16</td>
+                <td>$149.91</td>
+                <td>$159.20</td>
+                <td>6.42</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="IBM/vpa_report.txt" class="ticker-link">IBM</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$238.81</td>
+                <td>$236.03</td>
+                <td>$255.90</td>
+                <td>6.16</td>
+                <td>UP</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution, testing</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="AMZN/vpa_report.txt" class="ticker-link">AMZN</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$172.61</td>
+                <td>$169.16</td>
+                <td>$193.61</td>
+                <td>6.08</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="NVDA/vpa_report.txt" class="ticker-link">NVDA</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$101.49</td>
+                <td>$99.46</td>
+                <td>$112.54</td>
+                <td>5.44</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution, testing</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="NVDA/vpa_report.txt" class="ticker-link">NVDA</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$101.49</td>
+                <td>$99.46</td>
+                <td>$112.54</td>
+                <td>5.44</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution, testing</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="INTC/vpa_report.txt" class="ticker-link">INTC</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$18.93</td>
+                <td>$17.58</td>
+                <td>$21.84</td>
+                <td>2.16</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution, testing</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="TSLA/vpa_report.txt" class="ticker-link">TSLA</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$241.37</td>
+                <td>$221.17</td>
+                <td>$276.06</td>
+                <td>1.72</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="DIS/vpa_report.txt" class="ticker-link">DIS</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$84.81</td>
+                <td>$79.70</td>
+                <td>$92.71</td>
+                <td>1.55</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution, buying_climax, selling_climax</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="AAPL/vpa_report.txt" class="ticker-link">AAPL</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$196.98</td>
+                <td>$193.04</td>
+                <td>$201.61</td>
+                <td>1.18</td>
+                <td>UP</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="AMD/vpa_report.txt" class="ticker-link">AMD</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$87.50</td>
+                <td>$76.10</td>
+                <td>$98.40</td>
+                <td>0.96</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution, testing</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="AMD/vpa_report.txt" class="ticker-link">AMD</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$87.50</td>
+                <td>$76.10</td>
+                <td>$98.40</td>
+                <td>0.96</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution, testing</td>
+            </tr>
+        
+            <tr class="buy">
+                <td><a href="CSCO/vpa_report.txt" class="ticker-link">CSCO</a></td>
+                <td>BUY</td>
+                <td>MODERATE</td>
+                <td>$55.76</td>
+                <td>$51.85</td>
+                <td>$58.72</td>
+                <td>0.76</td>
+                <td>DOWN</td>
+                <td>DECREASING</td>
+                <td>accumulation, distribution</td>
+            </tr>
+        
+        </table>
+        
+        <script>
+            // Add JavaScript to make ticker links work
+            document.querySelectorAll('.ticker-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.open(this.getAttribute('href'), '_blank');
+                });
+            });
+        </script>
+    </body>
+    </html>
+    
