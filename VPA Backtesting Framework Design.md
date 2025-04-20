@@ -14,7 +14,7 @@ The VPA Backtesting Framework is designed to evaluate the performance of the Vol
 
 The backtesting framework follows the same modular design principles as the core VPA system, with additional components specific to backtesting:
 
-```
+```bash
 ┌─────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
 │                     │     │                     │     │                     │
 │  Historical Data    │────▶│  VPA Analysis       │────▶│  Trade Execution    │
@@ -38,6 +38,7 @@ The backtesting framework follows the same modular design principles as the core
 **Purpose**: Retrieve, prepare, and manage historical market data for backtesting.
 
 **Key Features**:
+
 - Data retrieval from yfinance with specified date ranges
 - Data validation and cleaning
 - Split between in-sample and out-of-sample periods
@@ -45,6 +46,7 @@ The backtesting framework follows the same modular design principles as the core
 - Data caching for performance
 
 **Implementation**:
+
 ```python
 class HistoricalDataManager:
     def __init__(self, config):
@@ -70,12 +72,14 @@ class HistoricalDataManager:
 **Purpose**: Apply VPA analysis to historical data and generate signals.
 
 **Key Features**:
+
 - Point-in-time analysis to prevent look-ahead bias
 - Signal generation for each historical bar
 - Multi-timeframe analysis support
 - Parameter configuration for strategy variants
 
 **Implementation**:
+
 ```python
 class VPABacktestAnalyzer:
     def __init__(self, config):
@@ -102,6 +106,7 @@ class VPABacktestAnalyzer:
 **Purpose**: Simulate trade execution based on generated signals.
 
 **Key Features**:
+
 - Entry and exit execution based on signals
 - Slippage and commission modeling
 - Position sizing rules
@@ -109,6 +114,7 @@ class VPABacktestAnalyzer:
 - Multiple position management
 
 **Implementation**:
+
 ```python
 class TradeExecutionSimulator:
     def __init__(self, config):
@@ -134,6 +140,7 @@ class TradeExecutionSimulator:
 **Purpose**: Track portfolio value and positions throughout the backtest.
 
 **Key Features**:
+
 - Portfolio value tracking
 - Position tracking
 - Cash management
@@ -141,6 +148,7 @@ class TradeExecutionSimulator:
 - Drawdown tracking
 
 **Implementation**:
+
 ```python
 class PortfolioTracker:
     def __init__(self, initial_capital):
@@ -168,6 +176,7 @@ class PortfolioTracker:
 **Purpose**: Calculate performance metrics to evaluate strategy effectiveness.
 
 **Key Features**:
+
 - Return metrics (total return, annualized return, etc.)
 - Risk metrics (volatility, drawdown, Sharpe ratio, etc.)
 - Trade statistics (win rate, profit factor, etc.)
@@ -175,6 +184,7 @@ class PortfolioTracker:
 - Statistical significance testing
 
 **Implementation**:
+
 ```python
 class PerformanceAnalyzer:
     def __init__(self):
@@ -202,6 +212,7 @@ class PerformanceAnalyzer:
 **Purpose**: Visualize backtest results for easy interpretation.
 
 **Key Features**:
+
 - Equity curve visualization
 - Drawdown visualization
 - Trade entry/exit markers on price chart
@@ -209,6 +220,7 @@ class PerformanceAnalyzer:
 - Comparison charts for parameter optimization
 
 **Implementation**:
+
 ```python
 class BacktestVisualizer:
     def __init__(self):

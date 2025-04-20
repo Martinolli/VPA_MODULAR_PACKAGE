@@ -193,22 +193,26 @@ def get_data(self, ticker: str) -> Dict[str, pd.DataFrame]:
 
 Change absolute imports to relative imports in all modules by adding dots before module names:
 
-1. In `vpa_processor.py`:
+1.In `vpa_processor.py`:
+
 ```python
 from .vpa_config import VPAConfig
 ```
 
-2. In `vpa_analyzer.py`:
+2.In `vpa_analyzer.py`:
+
 ```python
 from .vpa_config import VPAConfig
 ```
 
-3. In `vpa_signals.py`:
+3.In `vpa_signals.py`:
+
 ```python
 from .vpa_config import VPAConfig
 ```
 
-4. In `vpa_facade.py`:
+4.In `vpa_facade.py`:
+
 ```python
 from .vpa_config import VPAConfig
 from .vpa_data import YFinanceProvider, MultiTimeframeProvider
@@ -217,7 +221,8 @@ from .vpa_analyzer import CandleAnalyzer, TrendAnalyzer, PatternRecognizer, Supp
 from .vpa_signals import SignalGenerator
 ```
 
-5. In `vpa_llm_interface.py`:
+5.In `vpa_llm_interface.py`:
+
 ```python
 from .vpa_facade import VPAFacade
 ```

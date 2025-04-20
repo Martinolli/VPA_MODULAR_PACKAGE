@@ -100,18 +100,21 @@ The enhanced framework offers several significant improvements over the original
 ### Basic Backtesting Workflow
 
 1. **Fetch Data**:
+
    ```python
    fetcher = VPADataFetcher()
    fetcher.fetch_data("AAPL", timeframes=["1d", "1h", "15m"])
    ```
 
 2. **Validate Data**:
+
    ```python
    validator = VPADataValidator()
    validation_results = validator.validate_ticker("AAPL", "2023-01-01", "2023-12-31")
    ```
 
 3. **Run Backtest**:
+
    ```python
    integration = VPABacktesterIntegration(fetcher, validator)
    results = integration.run_backtest(
@@ -152,7 +155,7 @@ multi_results = integration.run_multi_ticker_backtest(
 
 The framework creates the following directory structure:
 
-```
+```batch
 fetched_data/
 ├── 1d/                  # Daily data
 │   ├── AAPL.csv
