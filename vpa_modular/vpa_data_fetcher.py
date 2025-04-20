@@ -180,25 +180,19 @@ class VPADataFetcher:
     
     def _save_data(self, ticker, timeframe, data):
         """
-        Save data to CSV file
-        
-        Parameters:
-        - ticker: Stock symbol
-        - timeframe: Timeframe string ('1d', '1h', '15m')
-        - data: DataFrame with data to save
+        Save data to CSV file (overwrites existing cleanly)
         """
-        # Create directory for ticker if it doesn't exist
         ticker_dir = os.path.join(self.base_dir, timeframe)
         os.makedirs(ticker_dir, exist_ok=True)
 
         file_path = os.path.join(ticker_dir, f"{ticker}.csv")
 
-        # Clean existing file before saving
-        self._clean_existing_csv(file_path)
-        
-        # Save data to CSV
-        data.to_csv(file_path)
-        logger.info(f"Saved {len(data)} rows of {timeframe} data for {ticker} to {file_path}")
+        # Always overwrite old file completely (prevents header duplication)
+        try:
+            data.to_csv(file_path, index=True)
+            logger.info(f"✅ Saved clean data: {ticker} [{timeframe}] with {len(data)} rows.")
+        except Exception as e:
+            logger.error(f"❌ Failed to save data for {ticker} [{timeframe}]: {e}")
 
     def _clean_existing_csv(self, filepath):
         """
