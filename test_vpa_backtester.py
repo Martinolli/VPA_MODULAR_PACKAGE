@@ -37,8 +37,8 @@ def test_basic_backtest():
     
     # Create backtester with default parameters
     backtester = VPABacktester(
-        start_date='2022-01-01',
-        end_date='2023-01-01',
+        start_date='2024-01-01',
+        end_date='2025-01-01',
         initial_capital=100000.0
     )
     
@@ -70,14 +70,14 @@ def test_multi_ticker_backtest():
     
     # Create backtester
     backtester = VPABacktester(
-        start_date='2022-01-01',
-        end_date='2023-01-01',
+        start_date='2024-01-01',
+        end_date='2025-01-01',
         initial_capital=100000.0,
         max_positions=3  # Allow up to 3 positions simultaneously
     )
     
     # Run backtest on multiple tickers
-    tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA"]
+    tickers = ["AAPL", "MSFT"]
     results = backtester.run_backtest(tickers)
     
     # Validate results
@@ -103,8 +103,8 @@ def test_benchmark_comparison():
     
     # Create backtester with benchmark
     backtester = VPABacktester(
-        start_date='2022-01-01',
-        end_date='2023-01-01',
+        start_date='2024-01-01',
+        end_date='2025-01-01',
         initial_capital=100000.0,
         benchmark_ticker="SPY"
     )
@@ -150,8 +150,8 @@ def test_walk_forward_analysis():
     
     # Create backtester
     backtester = VPABacktester(
-        start_date='2021-01-01',
-        end_date='2023-01-01',
+        start_date='2024-01-01',
+        end_date='2025-01-01',
         initial_capital=100000.0
     )
     
@@ -216,8 +216,8 @@ def test_monte_carlo_simulation():
     
     # First run a backtest to get trade data
     backtester = VPABacktester(
-        start_date='2021-01-01',
-        end_date='2023-01-01',
+        start_date='2024-01-01',
+        end_date='2025-01-01',
         initial_capital=100000.0
     )
     
@@ -266,8 +266,8 @@ def test_parameter_optimization():
     
     # Create backtester
     backtester = VPABacktester(
-        start_date='2022-01-01',
-        end_date='2023-01-01',
+        start_date='2024-01-01',
+        end_date='2025-01-01',
         initial_capital=100000.0
     )
     

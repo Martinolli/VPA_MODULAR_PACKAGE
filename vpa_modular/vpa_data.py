@@ -43,7 +43,8 @@ class YFinanceProvider:
         - end_date: End date for data retrieval (optional)
         
         Returns:
-        - DataFrame with OHLC and volume data
+        - price_data: DataFrame with OHLC data
+        - volume_data: Series with volume data
         """
         # Download data
         try:
@@ -96,49 +97,32 @@ class YFinanceProvider:
                 suffix = f'_{ticker.lower()}'
                 break
                 
-        # Extract required columns
+        # Extract price and volume data
         try:
             if suffix:
                 # Handle columns with ticker suffix
-                required_cols = {
-                    f'open{suffix}': 'open',
-                    f'high{suffix}': 'high', 
-                    f'low{suffix}': 'low', 
-                    f'close{suffix}': 'close',
-                    f'volume{suffix}': 'volume'
-                }
-                
-                # Create new DataFrame with standardized column names
-                result_df = pd.DataFrame()
-                for old_col, new_col in required_cols.items():
-                    if old_col in data.columns:
-                        result_df[new_col] = data[old_col]
-                    else:
-                        raise KeyError(f"Missing column {old_col}")
+                price_data = data[[f'open{suffix}', f'high{suffix}', f'low{suffix}', f'close{suffix}']].copy()
+                price_data.columns = ['open', 'high', 'low', 'close']
+                volume_data = data[f'volume{suffix}'].copy()
             else:
                 # Handle standard column names
-                required_cols = ['open', 'high', 'low', 'close', 'volume']
-                for col in required_cols:
-                    if col not in data.columns:
-                        raise KeyError(f"Missing column {col}")
-                
-                result_df = data[required_cols].copy()
+                price_data = data[['open', 'high', 'low', 'close']].copy()
+                volume_data = data['volume'].copy()
                 
         except KeyError as e:
             raise ValueError(f"Missing expected price/volume columns for ticker {ticker}: {e}")
 
-        return result_df
+        return price_data, volume_data
     
-    def get_price_data(self, ticker, interval='1d', period='1y'):
+    def get_price_data(self, ticker, interval='1d', period='1y', start_date=None, end_date=None):
         """Get price data using yfinance"""
-        price_data, _ = self.get_data(ticker, interval, period)
+        price_data, _ = self.get_data(ticker, interval, period, start_date, end_date)
         return price_data
     
-    def get_volume_data(self, ticker, interval='1d', period='1y'):
+    def get_volume_data(self, ticker, interval='1d', period='1y', start_date=None, end_date=None):
         """Get volume data using yfinance"""
-        _, volume_data = self.get_data(ticker, interval, period)
+        _, volume_data = self.get_data(ticker, interval, period, start_date, end_date)
         return volume_data
-
 
 class CSVProvider(DataProvider):
     """CSV implementation of data provider"""

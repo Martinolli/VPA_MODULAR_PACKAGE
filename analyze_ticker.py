@@ -21,6 +21,7 @@ print(f"Signal: {results['signal']['type']} ({results['signal']['strength']})")
 report_file = create_vpa_report(results, "vpa_reports")
 print(f"Report files created: {report_file}")
 
+"""
 
 tickers = ["BTC-USD", "AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "AMD", "META", "NFLX"]
 llm_interface = VPALLMInterface()
@@ -30,3 +31,4 @@ for analysis in nl_analyzis:
         print(f"{key}: {value}")
     print("\n")
     print("--------------------------------------------------\n")
+"""

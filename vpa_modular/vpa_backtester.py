@@ -69,16 +69,20 @@ class BacktestDataManager:
             try:
                 # Extract interval and period from timeframe dictionary
                 interval = timeframe['interval']
-                period = timeframe['period']
+                period = timeframe.get('period', '1y')  # Default to 1y if period not specified
                 
                 # Call data provider with correct parameters
-                df = self.data_provider.get_data(
+                price_data, volume_data = self.data_provider.get_data(
                     ticker, 
                     interval=interval, 
                     period=period,
                     start_date=self.start_date,
                     end_date=self.end_date
                 )
+                
+                # Combine price and volume data
+                df = price_data.copy()
+                df['volume'] = volume_data
                 
                 if df is not None and not df.empty:
                     data[interval] = df
@@ -93,7 +97,7 @@ class BacktestDataManager:
         
         self.data_cache[ticker] = data
         return data
-    
+
     def get_data_window(self, ticker: str, current_date: Union[str, pd.Timestamp], 
                     lookback_days: int = 365) -> Dict[str, pd.DataFrame]:
         """
