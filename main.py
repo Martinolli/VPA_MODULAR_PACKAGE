@@ -13,7 +13,7 @@ report_file = create_vpa_report(results, "vpa_reports")
 print(f"Report files created: {report_file}")
 
 # Define a list of tickers to analyze
-tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "AMD", "META"]
+tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "AMD", "META", "NFLX", "DIS", "INTC"]
 
 # Create a batch report
 report_files = create_batch_report(vpa, tickers, "vpa_batch_reports")
