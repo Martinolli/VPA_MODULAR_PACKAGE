@@ -112,7 +112,21 @@ class VPADataValidator:
             return None
         
         try:
-            data = pd.read_csv(file_path, index_col=0, parse_dates=True)
+            # First, read the CSV without parsing dates
+            data = pd.read_csv(file_path)
+
+            # Check if the first column is named 'Ticker'
+            if data.columns[0] == 'Ticker':
+                # If so, set the second column as the index and drop the 'Ticker' column
+                data.set_index(data.columns[1], inplace=True)
+                data.drop('Ticker', axis=1, inplace=True)
+            else:
+                # Otherwise, set the first column as the index
+                data.set_index(data.columns[0], inplace=True)
+            
+            # Parse the index as datetime
+            data.index = pd.to_datetime(data.index)
+            
             logger.info(f"Loaded {len(data)} rows of {timeframe} data for {ticker}")
             return data
         except Exception as e:
