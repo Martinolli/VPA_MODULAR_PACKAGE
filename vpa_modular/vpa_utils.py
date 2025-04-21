@@ -322,8 +322,9 @@ def plot_pattern_detection(price_data, patterns, output_file=None):
                 ax.text(test["index"], test["price"], " R-TEST", color='red', fontsize=10)
     
     # Set title
-    ax.set_title("VPA Pattern Detection")
-    
+    ax.set_title("VPA Pattern Detection", fontsize=12, fontweight='bold')
+    ax.text(0.02, 0.95, f"Volatility: {price_volatility:.2f}", transform=ax.transAxes, fontsize=10, color='gray')
+
     # Save if output file provided
     if output_file:
         plt.savefig(output_file, bbox_inches='tight')
@@ -347,9 +348,11 @@ def plot_multi_timeframe_analysis(timeframe_analyses, output_file=None):
     # Create figure and axes
     fig, axes = plt.subplots(num_timeframes, 2, figsize=(15, 5 * num_timeframes))
     
-    # If only one timeframe, wrap axes in list
+    # If only one timeframe, wrap axes in a 2D list
     if num_timeframes == 1:
-        axes = [axes]
+        axes = [[axes[0], axes[1]]]  # Wrap axes in a 2D list for consistency
+    else:
+        axes = axes.reshape(num_timeframes, 2)  # Ensure axes is always 2D
     
     # Plot each timeframe
     for i, (timeframe, analysis) in enumerate(timeframe_analyses.items()):
@@ -360,7 +363,9 @@ def plot_multi_timeframe_analysis(timeframe_analyses, output_file=None):
         
         # Plot price chart
         latest_date = price_data.index[-1].strftime('%Y-%m-%d %H:%M')
-        plot_candlestick(axes[i][0], price_data, title=f"{timeframe.upper()} – {latest_date}")
+        ax = plot_candlestick(axes[i][0], price_data, title=f"{timeframe.upper()} – {latest_date}")
+        ax.title.set_fontsize(11)
+        ax.title.set_fontweight("bold")
 
         
         # Add signals
@@ -369,7 +374,7 @@ def plot_multi_timeframe_analysis(timeframe_analyses, output_file=None):
                        
         # Plot volume
         axes[i][1].bar(volume_data.index, volume_data, color='blue', alpha=0.5)
-        axes[i][1].set_title(f"{timeframe} Volume")
+        axes[i][1].set_title(f"{timeframe} Volume", fontsize=9, fontweight="bold")
         
         # Format x-axis
         axes[i][1].xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
@@ -385,16 +390,18 @@ def plot_multi_timeframe_analysis(timeframe_analyses, output_file=None):
         info_text += f"Trend: {trend_analysis['trend_direction']} ({trend_analysis['volume_trend']})"
         
         axes[i][1].text(0.05, 0.95, info_text, transform=axes[i][1].transAxes, 
-                        verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+                        verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5),
+                        fontsize=9,
+                        color="green" if 'BUY' in info_text else 'red',
+                        fontweight="bold"
+                        )
         
         axes[i][0].xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
         plt.setp(axes[i][0].xaxis.get_majorticklabels(), rotation=45)
         axes[i][0].grid(True, linestyle='--', linewidth=0.3, alpha=0.5)
 
-        axes[i][1].grid(True, linestyle='--', linewidth=0.3, alpha=0.5)
-    
-    for label in (axes[i][0].get_xticklabels() + axes[i][1].get_xticklabels()):
-        label.set_fontsize(8)
+        for label in (axes[i][0].get_xticklabels() + axes[i][1].get_xticklabels()):
+            label.set_fontsize(8)
 
     # Adjust layout
     plt.tight_layout()
