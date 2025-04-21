@@ -1,4 +1,5 @@
-VPA Analysis Report for INTC
+VPA Analysis Report for MSFT
+Generated on: 2025-04-21_19-19-25
 ==================================================
 
 Signal Information:
@@ -9,41 +10,41 @@ Details: Moderate buy signal with some timeframe confirmation
 
 Risk Assessment:
 ------------------------------
-Current Price: $18.93
-Stop Loss: $17.58
-Take Profit: $21.84
-Risk-Reward Ratio: 2.16
-Position Size: 74.16 shares
+Current Price: $360.31
+Stop Loss: $343.07
+Take Profit: $387.01
+Risk-Reward Ratio: 1.55
+Position Size: 5.80 shares
 
 Timeframe Analysis:
 ------------------------------
 1d:
-  Candle Analysis: None (None)
+  Candle Analysis: VALIDATION (NEUTRAL)
   Trend Analysis: TREND_ANOMALY (BULLISH)
   Patterns:
     Accumulation: Detected
     Distribution: Detected
-    Testing: Detected (5 tests)
+    Testing: Detected (2 tests)
     Buying_climax: Not Detected
     Selling_climax: Not Detected
 
 1h:
   Candle Analysis: VALIDATION (NEUTRAL)
-  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Trend Analysis: TREND_ANOMALY (BULLISH)
   Patterns:
-    Accumulation: Not Detected
-    Distribution: Not Detected
-    Testing: Detected (12 tests)
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (7 tests)
     Buying_climax: Not Detected
     Selling_climax: Not Detected
 
 15m:
-  Candle Analysis: VALIDATION (BEARISH)
-  Trend Analysis: TREND_VALIDATION (BEARISH)
+  Candle Analysis: VALIDATION (NEUTRAL)
+  Trend Analysis: TREND_ANOMALY (BEARISH)
   Patterns:
     Accumulation: Detected
     Distribution: Detected
     Testing: Detected (3 tests)
-    Buying_climax: Detected
-    Selling_climax: Detected
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
 

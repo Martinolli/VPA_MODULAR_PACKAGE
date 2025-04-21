@@ -1,4 +1,7 @@
 # Example: Scan market for VPA signals
+import matplotlib
+matplotlib.use('Agg')  # Use non-interactive backend
+
 from vpa_modular.vpa_facade import VPAFacade
 from vpa_modular.vpa_utils import create_batch_report
 from vpa_modular.vpa_logger import VPALogger
@@ -8,7 +11,7 @@ from vpa_modular.vpa_logger import VPALogger
 vpa = VPAFacade()
 
 # Define a list of tickers to analyze
-tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "AMD", "META", "IBM", "NFLX", "DIS", "INTC", "CSCO", "NVDA", "AMD"]
+tickers = ["AAPL", "MSFT", "GOOGL", "NFLX"]
 
 # Create a batch report
 report_files = create_batch_report(vpa, tickers, "vpa_batch_reports")

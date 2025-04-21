@@ -9,27 +9,27 @@ Details: Moderate buy signal with some timeframe confirmation
 
 Risk Assessment:
 ------------------------------
-Current Price: $196.98
-Stop Loss: $193.04
+Current Price: $191.39
+Stop Loss: $168.36
 Take Profit: $201.61
-Risk-Reward Ratio: 1.18
-Position Size: 25.38 shares
+Risk-Reward Ratio: 0.44
+Position Size: 4.34 shares
 
 Timeframe Analysis:
 ------------------------------
 1d:
-  Candle Analysis: None (None)
-  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Candle Analysis: VALIDATION (NEUTRAL)
+  Trend Analysis: TREND_ANOMALY (BULLISH)
   Patterns:
     Accumulation: Detected
     Distribution: Detected
-    Testing: Not Detected (0 tests)
+    Testing: Detected (1 tests)
     Buying_climax: Not Detected
     Selling_climax: Not Detected
 
 1h:
   Candle Analysis: VALIDATION (NEUTRAL)
-  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Trend Analysis: TREND_ANOMALY (BULLISH)
   Patterns:
     Accumulation: Detected
     Distribution: Detected
@@ -39,11 +39,11 @@ Timeframe Analysis:
 
 15m:
   Candle Analysis: VALIDATION (NEUTRAL)
-  Trend Analysis: TREND_VALIDATION (BEARISH)
+  Trend Analysis: TREND_ANOMALY (BULLISH)
   Patterns:
     Accumulation: Detected
     Distribution: Detected
     Testing: Detected (4 tests)
-    Buying_climax: Detected
-    Selling_climax: Detected
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
 

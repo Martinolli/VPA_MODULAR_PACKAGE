@@ -1,4 +1,5 @@
-VPA Analysis Report for AMZN
+VPA Analysis Report for GOOGL
+Generated on: 2025-04-21_19-19-29
 ==================================================
 
 Signal Information:
@@ -9,23 +10,23 @@ Details: Moderate buy signal with some timeframe confirmation
 
 Risk Assessment:
 ------------------------------
-Current Price: $172.61
-Stop Loss: $169.16
-Take Profit: $193.61
-Risk-Reward Ratio: 6.08
-Position Size: 28.97 shares
+Current Price: $147.49
+Stop Loss: $144.54
+Take Profit: $159.20
+Risk-Reward Ratio: 3.97
+Position Size: 33.90 shares
 
 Timeframe Analysis:
 ------------------------------
 1d:
-  Candle Analysis: None (None)
+  Candle Analysis: VALIDATION (NEUTRAL)
   Trend Analysis: TREND_ANOMALY (BULLISH)
   Patterns:
     Accumulation: Detected
     Distribution: Detected
-    Testing: Not Detected (0 tests)
+    Testing: Detected (1 tests)
     Buying_climax: Not Detected
-    Selling_climax: Not Detected
+    Selling_climax: Detected
 
 1h:
   Candle Analysis: VALIDATION (NEUTRAL)
@@ -33,17 +34,17 @@ Timeframe Analysis:
   Patterns:
     Accumulation: Detected
     Distribution: Detected
-    Testing: Detected (9 tests)
+    Testing: Detected (6 tests)
     Buying_climax: Not Detected
     Selling_climax: Not Detected
 
 15m:
-  Candle Analysis: ANOMALY (BULLISH)
-  Trend Analysis: TREND_VALIDATION (BEARISH)
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_ANOMALY (BULLISH)
   Patterns:
     Accumulation: Detected
     Distribution: Detected
-    Testing: Detected (6 tests)
-    Buying_climax: Detected
-    Selling_climax: Detected
+    Testing: Detected (8 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
 

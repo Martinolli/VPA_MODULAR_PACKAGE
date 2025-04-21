@@ -1,4 +1,5 @@
-VPA Analysis Report for IBM
+VPA Analysis Report for NFLX
+Generated on: 2025-04-21_19-19-34
 ==================================================
 
 Signal Information:
@@ -9,41 +10,41 @@ Details: Moderate buy signal with some timeframe confirmation
 
 Risk Assessment:
 ------------------------------
-Current Price: $238.81
-Stop Loss: $236.03
-Take Profit: $255.90
-Risk-Reward Ratio: 6.16
-Position Size: 36.02 shares
+Current Price: $1001.68
+Stop Loss: $993.36
+Take Profit: $1069.82
+Risk-Reward Ratio: 8.19
+Position Size: 12.01 shares
 
 Timeframe Analysis:
 ------------------------------
 1d:
   Candle Analysis: None (None)
-  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Trend Analysis: TREND_VALIDATION (BULLISH)
   Patterns:
     Accumulation: Detected
     Distribution: Detected
-    Testing: Detected (1 tests)
+    Testing: Not Detected (0 tests)
     Buying_climax: Not Detected
     Selling_climax: Not Detected
 
 1h:
-  Candle Analysis: ANOMALY (NEUTRAL)
+  Candle Analysis: VALIDATION (BULLISH)
   Trend Analysis: TREND_VALIDATION (BEARISH)
   Patterns:
     Accumulation: Detected
     Distribution: Detected
-    Testing: Detected (4 tests)
+    Testing: Not Detected (0 tests)
     Buying_climax: Detected
     Selling_climax: Detected
 
 15m:
-  Candle Analysis: VALIDATION (BEARISH)
-  Trend Analysis: TREND_VALIDATION (BEARISH)
+  Candle Analysis: VALIDATION (NEUTRAL)
+  Trend Analysis: TREND_ANOMALY (BEARISH)
   Patterns:
     Accumulation: Detected
     Distribution: Detected
-    Testing: Detected (1 tests)
+    Testing: Not Detected (0 tests)
     Buying_climax: Detected
-    Selling_climax: Detected
+    Selling_climax: Not Detected
 

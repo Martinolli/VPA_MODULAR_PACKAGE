@@ -6,12 +6,14 @@ from vpa_modular.vpa_llm_interface import VPALLMInterface
 
 
 vpa = VPAFacade()
-results = vpa.analyze_ticker("NVDA")
+results = vpa.analyze_ticker("NFLX")
 print(f"Signal: {results['signal']['type']} ({results['signal']['strength']})")
 
 report_file = create_vpa_report(results, "vpa_reports")
 print(f"Report files created: {report_file}")
 
+
+""""
 # Define a list of tickers to analyze
 tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "AMD", "META", "NFLX", "DIS", "INTC"]
 
@@ -89,3 +91,5 @@ task = "analyze_ticker"
 code_example = vpa_llm.generate_code_example(task, ticker)
 print("\nGenerated Code Example:")
 print(code_example)
+
+"""
