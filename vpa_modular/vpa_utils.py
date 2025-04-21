@@ -359,12 +359,14 @@ def plot_multi_timeframe_analysis(timeframe_analyses, output_file=None):
         volume_data = processed_data["volume"]
         
         # Plot price chart
-        plot_candlestick(axes[i][0], price_data, title=f"{timeframe} Price")
+        latest_date = price_data.index[-1].strftime('%Y-%m-%d %H:%M')
+        plot_candlestick(axes[i][0], price_data, title=f"{timeframe.upper()} – {latest_date}")
+
         
         # Add signals
         plot_vpa_signals(axes[i][0], price_data, processed_data, 
                         analysis["candle_analysis"], analysis["support_resistance"])
-        
+                       
         # Plot volume
         axes[i][1].bar(volume_data.index, volume_data, color='blue', alpha=0.5)
         axes[i][1].set_title(f"{timeframe} Volume")
@@ -384,7 +386,16 @@ def plot_multi_timeframe_analysis(timeframe_analyses, output_file=None):
         
         axes[i][1].text(0.05, 0.95, info_text, transform=axes[i][1].transAxes, 
                         verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+        
+        axes[i][0].xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
+        plt.setp(axes[i][0].xaxis.get_majorticklabels(), rotation=45)
+        axes[i][0].grid(True, linestyle='--', linewidth=0.3, alpha=0.5)
+
+        axes[i][1].grid(True, linestyle='--', linewidth=0.3, alpha=0.5)
     
+    for label in (axes[i][0].get_xticklabels() + axes[i][1].get_xticklabels()):
+        label.set_fontsize(8)
+
     # Adjust layout
     plt.tight_layout()
     
