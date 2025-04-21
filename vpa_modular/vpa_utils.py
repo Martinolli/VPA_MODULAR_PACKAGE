@@ -505,15 +505,6 @@ Batch Reporting Function for VPA Utils Module
 This function creates consolidated reports for multiple tickers analyzed with VPA.
 """
 
-import os
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
-from matplotlib.gridspec import GridSpec
-from datetime import datetime
-
-
 def create_batch_report(facade, tickers, output_dir="vpa_batch_reports", timeframes=None):
     """
     Create a consolidated report for multiple tickers
@@ -529,6 +520,9 @@ def create_batch_report(facade, tickers, output_dir="vpa_batch_reports", timefra
     """
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
+
+    # Get current date and time
+    current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     
     # Initialize results storage
     all_results = {}
@@ -782,29 +776,30 @@ def create_batch_report(facade, tickers, output_dir="vpa_batch_reports", timefra
         report_files["dashboard"] = dashboard_file
     
     # Create HTML report
-    html_content = f"""
+    HTML_TEMPLATE = """
     <!DOCTYPE html>
     <html>
     <head>
         <title>VPA Batch Analysis Report</title>
         <style>
-            body {{ font-family: Arial, sans-serif; margin: 20px; }}
+            body {{ font-family: Arial, sans-serif; margin: 20px; background-color: #f0f0f0; }}
             h1, h2 {{ color: #333366; }}
-            table {{ border-collapse: collapse; width: 100%; margin-bottom: 20px; }}
-            th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
-            th {{ background-color: #f2f2f2; }}
-            tr:nth-child(even) {{ background-color: #f9f9f9; }}
+            table {{ border-collapse: collapse; width: 100%; margin-bottom: 20px; background-color: white; }}
+            th, td {{ border: 1px solid #ddd; padding: 12px; text-align: left; }}
+            th {{ background-color: #4CAF50; color: white; }}
+            tr:nth-child(even) {{ background-color: #f2f2f2; }}
             .buy {{ background-color: rgba(0, 255, 0, 0.1); }}
             .sell {{ background-color: rgba(255, 0, 0, 0.1); }}
-            .dashboard {{ width: 100%; max-width: 1200px; margin: 20px 0; }}
-            .chart {{ width: 100%; max-width: 600px; margin: 20px 0; }}
-            .ticker-link {{ color: blue; text-decoration: underline; cursor: pointer; }}
+            .dashboard {{ width: 100%; max-width: 1200px; margin: 20px 0; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); }}
+            .chart {{ width: 100%; max-width: 600px; margin: 20px 0; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); }}
+            .ticker-link {{ color: #0066cc; text-decoration: none; }}
+            .ticker-link:hover {{ text-decoration: underline; }}
         </style>
     </head>
     <body>
         <h1>VPA Batch Analysis Report</h1>
-        <p>Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
-        <p>Tickers analyzed: {len(tickers)}</p>
+        <p>Generated on: {generation_date}</p>
+        <p>Tickers analyzed: {tickers_analyzed}</p>
         
         <h2>Dashboard</h2>
         <img src="vpa_dashboard.png" class="dashboard" alt="VPA Dashboard">
@@ -832,46 +827,48 @@ def create_batch_report(facade, tickers, output_dir="vpa_batch_reports", timefra
                 <th>Volume Trend</th>
                 <th>Patterns</th>
             </tr>
-    """
-    
-    # Add rows for each ticker
-    for _, row in signals_df.iterrows():
-        signal_class = ""
-        if row["signal_type"] == "BUY":
-            signal_class = "buy"
-        elif row["signal_type"] == "SELL":
-            signal_class = "sell"
-        
-        html_content += f"""
-            <tr class="{signal_class}">
-                <td><a href="{row['ticker']}/vpa_report.txt" class="ticker-link">{row['ticker']}</a></td>
-                <td>{row['signal_type']}</td>
-                <td>{row['signal_strength']}</td>
-                <td>${row['current_price']:.2f}</td>
-                <td>${row['stop_loss']:.2f}</td>
-                <td>${row['take_profit']:.2f}</td>
-                <td>{row['risk_reward']:.2f}</td>
-                <td>{row['trend_direction']}</td>
-                <td>{row['volume_trend']}</td>
-                <td>{row['detected_patterns']}</td>
-            </tr>
-        """
-    
-    html_content += """
+            {table_rows}
         </table>
         
         <script>
             // Add JavaScript to make ticker links work
-            document.querySelectorAll('.ticker-link').forEach(link => {
-                link.addEventListener('click', function(e) {
+            document.querySelectorAll('.ticker-link').forEach(link => {{
+                link.addEventListener('click', function(e) {{
                     e.preventDefault();
                     window.open(this.getAttribute('href'), '_blank');
-                });
-            });
+                }});
+            }});
         </script>
     </body>
     </html>
     """
+    
+    # Add rows for each ticker
+    table_rows = ""
+    for _, row in signals_df.iterrows():
+        signal_class = "buy" if row["signal_type"] == "BUY" else "sell" if row["signal_type"] == "SELL" else ""
+        
+        table_rows += f"""
+        <tr class="{signal_class}">
+            <td><a href="{row['ticker']}/{row['ticker']}_vpa_report_{current_datetime}.txt" class="ticker-link">{row['ticker']}</a></td>
+            <td>{row['signal_type']}</td>
+            <td>{row['signal_strength']}</td>
+            <td>${row['current_price']:.2f}</td>
+            <td>${row['stop_loss']:.2f}</td>
+            <td>${row['take_profit']:.2f}</td>
+            <td>{row['risk_reward']:.2f}</td>
+            <td>{row['trend_direction']}</td>
+            <td>{row['volume_trend']}</td>
+            <td>{row['detected_patterns']}</td>
+        </tr>
+    """
+    
+    # Generate HTML content using the template
+    html_content = HTML_TEMPLATE.format(
+        generation_date=datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        tickers_analyzed=len(tickers),
+        table_rows=table_rows
+    )
     
     # Save HTML report
     html_file = os.path.join(output_dir, "vpa_batch_report.html")

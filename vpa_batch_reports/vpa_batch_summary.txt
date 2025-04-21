@@ -1,7 +1,7 @@
 VPA Batch Analysis Report
 ==================================================
 
-Generated on: 2025-04-21 19:19:39
+Generated on: 2025-04-21 19:53:34
 Tickers analyzed: 4
 
 Signal Summary:
@@ -13,21 +13,21 @@ Errors: 0
 
 Top BUY Signals:
 ------------------------------
-NFLX: MODERATE - Risk/Reward: 8.19
-  Price: $1001.68, Stop: $993.36, Target: $1069.82
+GOOGL: MODERATE - Risk/Reward: 4.36
+  Price: $146.43, Stop: $143.50, Target: $159.20
+  Patterns: accumulation, distribution, testing
+
+MSFT: MODERATE - Risk/Reward: 1.82
+  Price: $358.67, Stop: $343.07, Target: $387.01
+  Patterns: accumulation, distribution, testing
+
+AAPL: MODERATE - Risk/Reward: 0.52
+  Price: $190.26, Stop: $168.36, Target: $201.61
+  Patterns: accumulation, distribution, testing
+
+NFLX: MODERATE - Risk/Reward: 0.21
+  Price: $992.00, Stop: $950.23, Target: $1000.58
   Patterns: accumulation, distribution
-
-GOOGL: MODERATE - Risk/Reward: 3.97
-  Price: $147.49, Stop: $144.54, Target: $159.20
-  Patterns: accumulation, distribution, testing, selling_climax
-
-MSFT: MODERATE - Risk/Reward: 1.55
-  Price: $360.31, Stop: $343.07, Target: $387.01
-  Patterns: accumulation, distribution, testing
-
-AAPL: MODERATE - Risk/Reward: 0.43
-  Price: $191.58, Stop: $168.36, Target: $201.61
-  Patterns: accumulation, distribution, testing
 
 Top SELL Signals:
 ------------------------------
