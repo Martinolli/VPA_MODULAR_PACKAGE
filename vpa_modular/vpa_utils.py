@@ -413,6 +413,9 @@ def create_vpa_report(analysis_results, output_dir="vpa_reports"):
     timeframe_analyses = analysis_results["timeframe_analyses"]
     signal = analysis_results["signal"]
     risk_assessment = analysis_results["risk_assessment"]
+
+    # Get current date and time
+    current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     
     # Create report files
     report_files = {}
@@ -424,29 +427,30 @@ def create_vpa_report(analysis_results, output_dir="vpa_reports"):
     support_resistance = timeframe_analyses[primary_tf]["support_resistance"]
     
     fig, ax = plt.subplots(figsize=(12, 6))
-    plot_candlestick(ax, price_data, processed_data["volume"], title=f"{ticker} - VPA Analysis")
+    plot_candlestick(ax, price_data, processed_data["volume"], title=f"{ticker} - VPA Analysis ({current_datetime})")
     plot_vpa_signals(ax, price_data, processed_data, signal, support_resistance)
     
-    price_chart_file = os.path.join(output_dir, f"{ticker}_price_chart.png")
+    price_chart_file = os.path.join(output_dir, f"{ticker}_price_chart_{current_datetime}.png")
     plt.savefig(price_chart_file, bbox_inches='tight')
     plt.close(fig)
     report_files["price_chart"] = price_chart_file
     
     # Create multi-timeframe analysis chart
-    multi_tf_file = os.path.join(output_dir, f"{ticker}_multi_timeframe.png")
+    multi_tf_file = os.path.join(output_dir, f"{ticker}_multi_timeframe_{current_datetime}.png")
     fig = plot_multi_timeframe_analysis(timeframe_analyses, multi_tf_file)
     plt.close(fig)
     report_files["multi_timeframe"] = multi_tf_file
     
     # Create pattern detection chart
     patterns = timeframe_analyses[primary_tf]["pattern_analysis"]
-    pattern_file = os.path.join(output_dir, f"{ticker}_patterns.png")
+    pattern_file = os.path.join(output_dir, f"{ticker}_patterns_{current_datetime}.png")
     fig = plot_pattern_detection(price_data, patterns, pattern_file)
     plt.close(fig)
     report_files["patterns"] = pattern_file
     
     # Create text report
     report_text = f"VPA Analysis Report for {ticker}\n"
+    report_text += f"Generated on: {current_datetime}\n"
     report_text += "=" * 50 + "\n\n"
     
     # Add signal information
@@ -487,7 +491,7 @@ def create_vpa_report(analysis_results, output_dir="vpa_reports"):
         report_text += "\n"
     
     # Write report to file
-    report_file = os.path.join(output_dir, f"{ticker}_vpa_report.txt")
+    report_file = os.path.join(output_dir, f"{ticker}_vpa_report_{current_datetime}.txt")
     with open(report_file, "w") as f:
         f.write(report_text)
     
