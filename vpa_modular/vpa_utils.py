@@ -111,7 +111,7 @@ def identify_swing_points(price_data, min_swing=3):
 
 def plot_candlestick(ax, price_data, volume_data=None, title=None):
     """
-    Plot candlestick chart
+    Plot candlestick chart with improved readability
     
     Parameters:
     - ax: Matplotlib axis
@@ -127,24 +127,25 @@ def plot_candlestick(ax, price_data, volume_data=None, title=None):
     
     # Plot candlesticks
     width = 0.6
-    width2 = 0.05
+    width2 = 0.2  # Increased wick width for better visibility
     
     up = price_data[price_data.close >= price_data.open]
     down = price_data[price_data.close < price_data.open]
     
     # Plot up candles
-    ax.bar(up.index, up.close - up.open, width, bottom=up.open, color='green', alpha=0.5)
-    ax.bar(up.index, up.high - up.close, width2, bottom=up.close, color='green', alpha=0.5)
-    ax.bar(up.index, up.open - up.low, width2, bottom=up.low, color='green', alpha=0.5)
+    ax.bar(up.index, up.close - up.open, width, bottom=up.open, color='green', edgecolor='black', linewidth=0.5, alpha=0.8)
+    ax.vlines(up.index, up.low, up.high, color='green', linewidth=1.5, alpha=0.8)
     
     # Plot down candles
-    ax.bar(down.index, down.open - down.close, width, bottom=down.close, color='red', alpha=0.5)
-    ax.bar(down.index, down.high - down.open, width2, bottom=down.open, color='red', alpha=0.5)
-    ax.bar(down.index, down.close - down.low, width2, bottom=down.low, color='red', alpha=0.5)
+    ax.bar(down.index, down.open - down.close, width, bottom=down.close, color='red', edgecolor='black', linewidth=0.5, alpha=0.8)
+    ax.vlines(down.index, down.low, down.high, color='red', linewidth=1.5, alpha=0.8)
     
     # Format x-axis
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-    plt.xticks(rotation=45)
+    plt.setp(ax.xaxis.get_majorticklabels(), rotation=45, fontsize=8)
+    
+    # Add gridlines for better readability
+    ax.grid(True, linestyle='--', linewidth=0.5, alpha=0.7)
     
     # Add volume if provided
     if volume_data is not None:
@@ -152,20 +153,21 @@ def plot_candlestick(ax, price_data, volume_data=None, title=None):
         ax2 = ax.twinx()
         
         # Plot volume bars
-        ax2.bar(volume_data.index, volume_data, width, color='blue', alpha=0.3)
+        ax2.bar(volume_data.index, volume_data, width, color='blue', alpha=0.3, label='Volume')
         
         # Set volume axis label
-        ax2.set_ylabel('Volume')
+        ax2.set_ylabel('Volume', fontsize=10)
         
         # Make volume axis less prominent
         ax2.tick_params(axis='y', colors='blue', labelcolor='blue')
+        ax2.grid(False)  # Disable gridlines for volume axis
     
     # Set title if provided
     if title:
-        ax.set_title(title)
+        ax.set_title(title, fontsize=12, fontweight='bold')
     
     # Set labels
-    ax.set_ylabel('Price')
+    ax.set_ylabel('Price', fontsize=10)
     
     return ax
 
@@ -262,68 +264,58 @@ def plot_pattern_detection(price_data, patterns, output_file=None):
     
     # Plot candlestick chart
     plot_candlestick(ax, price_data)
+
+    # Highlight significant patterns
+    if patterns.get("accumulation", {}).get("detected", False):
+        ax.axhspan(price_data["low"].min(), price_data["low"].min() + (price_data["high"].max() - price_data["low"].min()) * 0.2, 
+                   color='green', alpha=0.2, label="Accumulation Zone")
+    if patterns.get("distribution", {}).get("detected", False):
+        ax.axhspan(price_data["high"].max() - (price_data["high"].max() - price_data["low"].min()) * 0.2, price_data["high"].max(), 
+                   color='red', alpha=0.2, label="Distribution Zone")
+    
+    # Add legend for better clarity
+    ax.legend(loc='upper right', fontsize=8)
     
     # Plot accumulation zones
     if patterns.get("accumulation", {}).get("detected", False):
-        # Find potential accumulation zones
-        price_range = price_data["high"].max() - price_data["low"].min()
-        price_volatility = price_range / price_data["close"].mean()
-        
         # Highlight accumulation zones
-        rect = Rectangle((price_data.index[0], price_data["low"].min()), 
-                         price_data.index[-1] - price_data.index[0], 
-                         price_range, 
-                         facecolor='green', alpha=0.2)
-        ax.add_patch(rect)
-        
-        # Add text
-        ax.text(price_data.index[len(price_data)//2], price_data["low"].min(), 
-                "ACCUMULATION ZONE", color='green', fontsize=12, ha='center')
+        ax.axhspan(price_data["low"].min(), price_data["low"].min() + (price_data["high"].max() - price_data["low"].min()) * 0.2, 
+                   color='green', alpha=0.2, label="Accumulation Zone")
     
     # Plot distribution zones
     if patterns.get("distribution", {}).get("detected", False):
-        # Find potential distribution zones
-        price_range = price_data["high"].max() - price_data["low"].min()
-        price_volatility = price_range / price_data["close"].mean()
-        
         # Highlight distribution zones
-        rect = Rectangle((price_data.index[0], price_data["low"].min()), 
-                         price_data.index[-1] - price_data.index[0], 
-                         price_range, 
-                         facecolor='red', alpha=0.2)
-        ax.add_patch(rect)
-        
-        # Add text
-        ax.text(price_data.index[len(price_data)//2], price_data["high"].max(), 
-                "DISTRIBUTION ZONE", color='red', fontsize=12, ha='center')
+        ax.axhspan(price_data["high"].max() - (price_data["high"].max() - price_data["low"].min()) * 0.2, price_data["high"].max(), 
+                   color='red', alpha=0.2, label="Distribution Zone")
     
     # Plot buying climax
     if patterns.get("buying_climax", {}).get("detected", False):
         # Mark buying climax
-        ax.plot(price_data.index[-1], price_data["high"].iloc[-1], 'ro', markersize=10)
-        ax.text(price_data.index[-1], price_data["high"].iloc[-1], 
-                " BUYING CLIMAX", color='red', fontsize=12)
+        ax.plot(price_data.index[-1], price_data["high"].iloc[-1], 'ro', markersize=10, label="Buying Climax")
     
     # Plot selling climax
     if patterns.get("selling_climax", {}).get("detected", False):
         # Mark selling climax
-        ax.plot(price_data.index[-1], price_data["low"].iloc[-1], 'go', markersize=10)
-        ax.text(price_data.index[-1], price_data["low"].iloc[-1], 
-                " SELLING CLIMAX", color='green', fontsize=12)
+        ax.plot(price_data.index[-1], price_data["low"].iloc[-1], 'go', markersize=10, label="Selling Climax")
     
     # Plot testing patterns
     if patterns.get("testing", {}).get("detected", False):
         for test in patterns["testing"].get("tests", []):
             if test["type"] == "SUPPORT_TEST":
-                ax.plot(test["index"], test["price"], 'g^', markersize=8)
-                ax.text(test["index"], test["price"], " S-TEST", color='green', fontsize=10)
+                ax.plot(test["index"], test["price"], 'g^', markersize=8, label="Support Test")
             elif test["type"] == "RESISTANCE_TEST":
-                ax.plot(test["index"], test["price"], 'rv', markersize=8)
-                ax.text(test["index"], test["price"], " R-TEST", color='red', fontsize=10)
+                ax.plot(test["index"], test["price"], 'rv', markersize=8, label="Resistance Test")
     
     # Set title
     ax.set_title("VPA Pattern Detection", fontsize=12, fontweight='bold')
-    ax.text(0.02, 0.95, f"Volatility: {price_volatility:.2f}", transform=ax.transAxes, fontsize=10, color='gray')
+    
+    # Add volatility text
+    price_range = price_data["high"].max() - price_data["low"].min()
+    price_volatility = price_range / price_data["close"].mean()
+    ax.text(0.02, 0.95, f"Volatility: {price_volatility:.2f}", transform=ax.transAxes, fontsize=10, color='black', va='top')
+
+    # Add grid for better readability
+    ax.grid(True, linestyle='--', linewidth=0.5, alpha=0.7)
 
     # Save if output file provided
     if output_file:
