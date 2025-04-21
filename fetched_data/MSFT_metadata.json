@@ -1,12 +1,12 @@
 {
-    "ticker": "AAPL",
-    "fetch_time": "2025-04-21 22:39:06",
+    "ticker": "MSFT",
+    "fetch_time": "2025-04-21 22:39:07",
     "results": {
         "1d": {
             "status": "success",
-            "rows": 11178,
-            "start_date": "1980-12-12",
-            "end_date": "2025-04-17"
+            "rows": 9853,
+            "start_date": "1986-03-13",
+            "end_date": "2025-04-21"
         },
         "1h": {
             "status": "success",

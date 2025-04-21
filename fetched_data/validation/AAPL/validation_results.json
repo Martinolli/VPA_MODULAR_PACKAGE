@@ -1,6 +1,6 @@
 {
     "ticker": "AAPL",
-    "validation_time": "2025-04-20 21:06:14",
+    "validation_time": "2025-04-21 23:09:21",
     "timeframes": {
         "1d": {
             "status": "issues_found",
@@ -8,6 +8,10 @@
             "data_start": "1980-12-12",
             "data_end": "2025-04-17",
             "issues": [
+                {
+                    "type": "date_range",
+                    "message": "Data ends at 2025-04-17 but requested end date is 2025-04-21"
+                },
                 {
                     "type": "data_gaps",
                     "message": "Missing 392 trading days",
@@ -53,9 +57,9 @@
         },
         "1h": {
             "status": "issues_found",
-            "rows": 5086,
-            "data_start": "2022-05-20",
-            "data_end": "2025-04-17",
+            "rows": 5085,
+            "data_start": "2022-05-23",
+            "data_end": "2025-04-21",
             "issues": [
                 {
                     "type": "invalid_volume",
@@ -66,23 +70,13 @@
         },
         "15m": {
             "status": "issues_found",
-            "rows": 1560,
-            "data_start": "2025-01-23",
-            "data_end": "2025-04-17",
+            "rows": 1555,
+            "data_start": "2025-01-24",
+            "data_end": "2025-04-21",
             "issues": [
                 {
                     "type": "date_range",
-                    "message": "Data starts at 2025-01-23 but requested start date is 2024-01-01"
-                },
-                {
-                    "type": "outliers",
-                    "message": "Found 1 outliers in open column",
-                    "outlier_count": 1
-                },
-                {
-                    "type": "outliers",
-                    "message": "Found 1 outliers in close column",
-                    "outlier_count": 1
+                    "message": "Data starts at 2025-01-24 but requested start date is 2024-04-21"
                 }
             ]
         }
@@ -90,10 +84,6 @@
     "cross_timeframe_validation": {
         "status": "issues_found",
         "issues": [
-            {
-                "type": "volume_mismatch",
-                "message": "Volume mismatch on 2022-05-20: daily=137426100, hourly sum=125398349"
-            },
             {
                 "type": "volume_mismatch",
                 "message": "Volume mismatch on 2022-05-23: daily=117726300, hourly sum=106544602"
