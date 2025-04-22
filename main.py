@@ -6,8 +6,9 @@ from vpa_modular.vpa_llm_interface import VPALLMInterface
 
 
 vpa = VPAFacade()
-results = vpa.analyze_ticker("NFLX")
-print(f"Signal: {results['signal']['type']} ({results['signal']['strength']})")
+results = vpa.analyze_ticker("NVDA")
+for key, value in results.items():
+    print(f"{key}: {value}")
 
 report_file = create_vpa_report(results, "vpa_reports")
 print(f"Report files created: {report_file}")
