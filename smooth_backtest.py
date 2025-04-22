@@ -1,8 +1,8 @@
 # smooth_backtest.py
 
-from vpa_modular.vpa_data_fetcher import VPADataFetcher
-from vpa_modular.vpa_data_validator import VPADataValidator
-from vpa_modular.vpa_backtester_integration import VPABacktesterIntegration
+from vpa_backtest.vpa_data_fetcher import VPADataFetcher
+from vpa_backtest.vpa_data_validator import VPADataValidator
+from vpa_backtest.vpa_backtester_integration import VPABacktesterIntegration
 from datetime import datetime, timedelta
 
 if __name__ == "__main__":

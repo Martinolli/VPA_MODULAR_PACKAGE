@@ -12,14 +12,14 @@ from concurrent.futures import ThreadPoolExecutor
 import warnings
 
 # Import VPA modules
-from .vpa_config import VPAConfig
-from .vpa_data import YFinanceProvider, MultiTimeframeProvider
-from .vpa_processor import DataProcessor
-from .vpa_analyzer import CandleAnalyzer, TrendAnalyzer, PatternRecognizer, SupportResistanceAnalyzer
-from .vpa_signals import SignalGenerator
-from .vpa_facade import VPAFacade
-from .vpa_logger import VPALogger
-from .vpa_utils import plot_candlestick, create_vpa_report
+from vpa_modular.vpa_config import VPAConfig
+from vpa_modular.vpa_data import YFinanceProvider, MultiTimeframeProvider
+from vpa_modular.vpa_processor import DataProcessor
+from vpa_modular.vpa_analyzer import CandleAnalyzer, TrendAnalyzer, PatternRecognizer, SupportResistanceAnalyzer
+from vpa_modular.vpa_signals import SignalGenerator
+from vpa_modular.vpa_facade import VPAFacade
+from vpa_modular.vpa_logger import VPALogger
+from vpa_modular.vpa_utils import plot_candlestick, create_vpa_report
 
 # Set up logger
 logger = VPALogger()

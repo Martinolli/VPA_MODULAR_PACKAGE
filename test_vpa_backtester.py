@@ -18,7 +18,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import VPA modules
 from vpa_modular.vpa_config import VPAConfig
-from vpa_modular.vpa_backtester import VPABacktester
+from vpa_backtest.vpa_backtester import VPABacktester
 from vpa_modular.vpa_logger import VPALogger
 
 # Set up logger

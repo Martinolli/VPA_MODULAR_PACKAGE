@@ -12,7 +12,7 @@ import numpy as np
 from datetime import datetime, timedelta
 import logging
 import traceback
-from vpa_modular.vpa_backtester import VPABacktester
+from vpa_backtest.vpa_backtester import VPABacktester
 from vpa_modular.vpa_config import VPAConfig
 from vpa_modular.vpa_processor import DataProcessor
 import matplotlib.pyplot as plt
