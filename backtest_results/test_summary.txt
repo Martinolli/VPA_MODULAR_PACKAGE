@@ -1,9 +1,0 @@
-VPA Backtester Test Summary
-==========================
-
-basic_backtest: FAILED
-multi_ticker_backtest: FAILED
-benchmark_comparison: FAILED
-walk_forward_analysis: FAILED
-monte_carlo_simulation: FAILED
-parameter_optimization: FAILED

@@ -3,11 +3,12 @@
 from vpa_modular.vpa_data_fetcher import VPADataFetcher
 from vpa_modular.vpa_data_validator import VPADataValidator
 from vpa_modular.vpa_backtester_integration import VPABacktesterIntegration
+from datetime import datetime, timedelta
 
 if __name__ == "__main__":
     ticker     = "AAPL"
-    start_date = "2024-01-01"
-    end_date   = "2025-01-01"
+    start_date = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
+    end_date = datetime.now().strftime('%Y-%m-%d')
 
     # 1) Instantiate
     fetcher   = VPADataFetcher()
@@ -22,9 +23,9 @@ if __name__ == "__main__":
 
 
     results = integration.run_backtest(
-        ticker,
-        start_date,
-        end_date,
+        ticker=ticker,
+        start_date=start_date,
+        end_date=end_date,
         prepare_data=False,       # <-- skips fetch+validate
         initial_capital=100000.0,
         commission_rate=0.001,

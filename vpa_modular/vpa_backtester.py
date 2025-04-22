@@ -1924,8 +1924,8 @@ class VPABacktester:
 if __name__ == "__main__":
     # Create a backtester
     backtester = VPABacktester(
-        start_date='2022-01-01',
-        end_date='2023-12-31',
+        start_date='2024-01-01',
+        end_date='2024-12-31',
         initial_capital=100000.0,
         commission_rate=0.001,
         slippage_percent=0.001,
@@ -1934,7 +1934,7 @@ if __name__ == "__main__":
     )
     
     # Run a backtest
-    results = backtester.run_backtest(['AAPL', 'MSFT', 'GOOGL'])
+    results = backtester.run_backtest(['AAPL'])
     
     # Create a report
     report_files = backtester.create_backtest_report("backtest_reports")

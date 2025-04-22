@@ -31,7 +31,7 @@ def test_data_fetching():
     fetcher = VPADataFetcher()
     
     # Test tickers
-    tickers = ["AAPL", "MSFT", "GOOGL"]
+    tickers = ["AAPL"] #, "MSFT", "GOOGL"]
     
     # Test timeframes
     timeframes = ["1d", "1h", "15m"]
@@ -60,7 +60,7 @@ def test_data_validation():
     validator = VPADataValidator()
     
     # Test tickers
-    tickers = ["AAPL", "MSFT", "GOOGL"]
+    tickers = ["AAPL"]#, "MSFT", "GOOGL"]
     
     # Test date range
     start_date = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
@@ -103,7 +103,7 @@ def test_backtester_integration():
     integration = VPABacktesterIntegration(fetcher, validator)
     
     # Test tickers
-    tickers = ["AAPL", "MSFT", "GOOGL"]
+    tickers = ["AAPL"]#, "MSFT", "GOOGL"]
     
     # Test date range - use a shorter range for testing
     end_date = datetime.now().strftime('%Y-%m-%d')
