@@ -24,7 +24,6 @@ report_files = create_batch_report(vpa, tickers, "vpa_batch_reports")
 print(f"Report files: {report_files}")
 
 
-
 config = VPAConfig()
 print(config.get_all())
 
