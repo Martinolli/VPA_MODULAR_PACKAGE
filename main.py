@@ -6,7 +6,7 @@ from vpa_modular.vpa_llm_interface import VPALLMInterface
 
 
 vpa = VPAFacade()
-results = vpa.analyze_ticker("NFLX")
+results = vpa.analyze_ticker("NVDA")
 for key, value in results.items():
     print(f"{key}: {value}")
 
