@@ -51,6 +51,10 @@ class VPAConfig:
         """Get default timeframes for analysis"""
         return self.config["timeframes"]
     
+    def get_all(self):
+        """Get all configuration parameters"""
+        return self.config
+    
     def update_parameters(self, params):
         """
         Update configuration parameters
