@@ -6,12 +6,15 @@ from vpa_modular.vpa_llm_interface import VPALLMInterface
 
 
 vpa = VPAFacade()
-results = vpa.analyze_ticker("NVDA")
-for key, value in results.items():
-    print(f"{key}: {value}")
-
+ticker = "USDEUR"
+results = vpa.analyze_ticker(ticker)
 report_file = create_vpa_report(results, "vpa_reports")
 print(f"Report files created: {report_file}")
+llm_interface = VPALLMInterface()
+nl_analysis = llm_interface.get_ticker_analysis(ticker)
+for key, value in nl_analysis.items():
+    print(f"{key}: {value}")
+    print("\n")
 
 
 """"
