@@ -1,0 +1,18 @@
+{
+    "ticker": "AAPL",
+    "fetch_time": "2025-04-25 20:02:57",
+    "results": {
+        "1d": {
+            "status": "cached",
+            "last_modified": "2025-04-25T19:03:02.627778"
+        },
+        "1h": {
+            "status": "cached",
+            "last_modified": "2025-04-25T19:03:03.676996"
+        },
+        "15m": {
+            "status": "cached",
+            "last_modified": "2025-04-25T19:03:04.002458"
+        }
+    }
+}
