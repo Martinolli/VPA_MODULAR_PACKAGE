@@ -35,8 +35,9 @@ timeframes = [
     ]
 
 # Call the method
+
 scanner = vpa.scan_for_signals(tickers, signal_type, signal_strength, timeframes)
-print("Scanner Results:")
+
 if not scanner:
     print("No signals found.")
 else:
@@ -47,6 +48,7 @@ else:
         for key, value in result.items():
             print(f"{key}: {value}")
             print("\n")
+
 
 """"
 # Define a list of tickers to analyze
