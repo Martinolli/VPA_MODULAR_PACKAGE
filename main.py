@@ -17,6 +17,31 @@ for key, value in nl_analysis.items():
     print(f"{key}: {value}")
     print("\n")
 
+signals = vpa.get_signals(ticker)
+print("Signals:")
+for key, value in signals.items():
+    print(f"{key}: {value}")
+    print("\n")
+
+# Call the method with required and optional arguments
+tickers = ["AAPL", "NFLX"]  # Example list of tickers
+signal_type = "BUY"
+signal_strength = "MODERATE"
+timeframes = [
+        {"interval": "1d", "period": "30d"},
+        {"interval": "1h", "period": "20d"},
+        {"interval": "15m", "period": "10d"}
+    ]
+
+# Call the method
+scanner = vpa.scan_for_signals(tickers, signal_type, signal_strength, timeframes)
+print("Scanner Results:")
+for ticker, result in scanner.items():
+    print(f"{ticker}: {result}")
+    print("\n")
+    for key, value in result.items():
+        print(f"{key}: {value}")
+        print("\n")
 
 """"
 # Define a list of tickers to analyze
