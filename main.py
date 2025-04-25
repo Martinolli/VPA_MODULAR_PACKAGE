@@ -23,6 +23,7 @@ for key, value in signals.items():
     print(f"{key}: {value}")
     print("\n")
 
+# Scanner Signal Example
 # Call the method with required and optional arguments
 tickers = ["MSFT", "NFLX"]  # Example list of tickers
 signal_type = "BUY"
