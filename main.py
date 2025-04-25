@@ -24,24 +24,28 @@ for key, value in signals.items():
     print("\n")
 
 # Call the method with required and optional arguments
-tickers = ["AAPL", "NFLX"]  # Example list of tickers
+tickers = ["MSFT", "NFLX"]  # Example list of tickers
 signal_type = "BUY"
-signal_strength = "MODERATE"
+signal_strength = "STRONG"
 timeframes = [
-        {"interval": "1d", "period": "30d"},
-        {"interval": "1h", "period": "20d"},
-        {"interval": "15m", "period": "10d"}
+        {"interval": "30m", "period": "10d"},
+        {"interval": "15m", "period": "10d"},
+        {"interval": "5m", "period": "5d"}
     ]
 
 # Call the method
 scanner = vpa.scan_for_signals(tickers, signal_type, signal_strength, timeframes)
 print("Scanner Results:")
-for ticker, result in scanner.items():
-    print(f"{ticker}: {result}")
-    print("\n")
-    for key, value in result.items():
-        print(f"{key}: {value}")
+if not scanner:
+    print("No signals found.")
+else:
+    print("Scanner Results:")
+    for ticker, result in scanner.items():
+        print(f"{ticker}: {result}")
         print("\n")
+        for key, value in result.items():
+            print(f"{key}: {value}")
+            print("\n")
 
 """"
 # Define a list of tickers to analyze
