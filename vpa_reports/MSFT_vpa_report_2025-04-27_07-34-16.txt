@@ -1,0 +1,50 @@
+VPA Analysis Report for MSFT
+Generated on: 2025-04-27_07-34-16
+==================================================
+
+Signal Information:
+------------------------------
+Type: BUY
+Strength: MODERATE
+Details: Moderate buy signal with some timeframe confirmation
+
+Risk Assessment:
+------------------------------
+Current Price: $391.85
+Stop Loss: $380.89
+Take Profit: $394.67
+Risk-Reward Ratio: 0.26
+Position Size: 9.12 shares
+
+Timeframe Analysis:
+------------------------------
+1d:
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Not Detected (0 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+1h:
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_VALIDATION (BULLISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (3 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+15m:
+  Candle Analysis: VALIDATION (BULLISH)
+  Trend Analysis: TREND_VALIDATION (BULLISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (12 tests)
+    Buying_climax: Detected
+    Selling_climax: Detected
+
