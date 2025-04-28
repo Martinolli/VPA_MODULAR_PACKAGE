@@ -1,0 +1,30 @@
+VPA Analysis Report for LILM
+Generated on: 2025-04-28_17-56-49
+==================================================
+
+Signal Information:
+------------------------------
+Type: NO_ACTION
+Strength: NEUTRAL
+Details: No clear signal detected
+
+Risk Assessment:
+------------------------------
+Current Price: $0.05
+Stop Loss: $0.05
+Take Profit: $0.05
+Risk-Reward Ratio: 0.00
+Position Size: 96153.84 shares
+
+Timeframe Analysis:
+------------------------------
+1d:
+  Candle Analysis: None (None)
+  Trend Analysis: None (None)
+  Patterns:
+    Accumulation: Not Detected
+    Distribution: Not Detected
+    Testing: Not Detected (0 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+

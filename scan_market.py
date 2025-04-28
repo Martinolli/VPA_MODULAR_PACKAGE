@@ -11,7 +11,7 @@ from vpa_modular.vpa_logger import VPALogger
 vpa = VPAFacade()
 
 # Define a list of tickers to analyze
-tickers = ["AAPL", "MSFT", "GOOGL", "NFLX"]
+tickers = ["AAPL", "MSFT", "GOOGL", "NFLX", "AMZN", "TSLA","LILM"]
 
 # Create a batch report
 report_files = create_batch_report(vpa, tickers, "vpa_batch_reports")
