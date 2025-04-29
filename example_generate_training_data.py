@@ -12,8 +12,8 @@ try:
 
     # --- Configuration ---
     TICKER = "MSFT"  # Example ticker
-    START_DATE = "2023-01-01"
-    END_DATE = "2023-06-30" # Shorter period for quicker example run
+    START_DATE = "2024-06-30"
+    END_DATE = "2025-01-30" # Shorter period for quicker example run
     PRIMARY_TIMEFRAME = "1d"
     SECONDARY_TIMEFRAMES = ["1h"] # Keep secondary TFs minimal for example speed
     OUTPUT_DIRECTORY = "./llm_training_data_output" # Specify output directory
