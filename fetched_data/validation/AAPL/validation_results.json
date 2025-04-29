@@ -1,12 +1,12 @@
 {
     "ticker": "AAPL",
-    "validation_time": "2025-04-25 20:33:36",
+    "validation_time": "2025-04-29 18:36:21",
     "timeframes": {
         "1d": {
             "status": "issues_found",
-            "rows": 11183,
+            "rows": 11185,
             "data_start": "1980-12-12",
-            "data_end": "2025-04-25",
+            "data_end": "2025-04-29",
             "issues": [
                 {
                     "type": "data_gaps",
@@ -26,18 +26,18 @@
                 },
                 {
                     "type": "outliers",
-                    "message": "Found 339 outliers in open column",
+                    "message": "Found 340 outliers in open column",
+                    "outlier_count": 340
+                },
+                {
+                    "type": "outliers",
+                    "message": "Found 339 outliers in high column",
                     "outlier_count": 339
                 },
                 {
                     "type": "outliers",
-                    "message": "Found 338 outliers in high column",
-                    "outlier_count": 338
-                },
-                {
-                    "type": "outliers",
-                    "message": "Found 342 outliers in low column",
-                    "outlier_count": 342
+                    "message": "Found 343 outliers in low column",
+                    "outlier_count": 343
                 },
                 {
                     "type": "outliers",
@@ -54,8 +54,8 @@
         "1h": {
             "status": "issues_found",
             "rows": 5081,
-            "data_start": "2022-05-27",
-            "data_end": "2025-04-25",
+            "data_start": "2022-06-01",
+            "data_end": "2025-04-29",
             "issues": [
                 {
                     "type": "invalid_volume",
@@ -66,13 +66,13 @@
         },
         "15m": {
             "status": "issues_found",
-            "rows": 1541,
-            "data_start": "2025-01-30",
-            "data_end": "2025-04-25",
+            "rows": 1539,
+            "data_start": "2025-02-03",
+            "data_end": "2025-04-29",
             "issues": [
                 {
                     "type": "date_range",
-                    "message": "Data starts at 2025-01-30 but requested start date is 2024-10-27"
+                    "message": "Data starts at 2025-02-03 but requested start date is 2024-04-29"
                 }
             ]
         }
@@ -80,14 +80,6 @@
     "cross_timeframe_validation": {
         "status": "issues_found",
         "issues": [
-            {
-                "type": "volume_mismatch",
-                "message": "Volume mismatch on 2022-05-27: daily=90978500, hourly sum=79287851"
-            },
-            {
-                "type": "volume_mismatch",
-                "message": "Volume mismatch on 2022-05-31: daily=103718400, hourly sum=76932647"
-            },
             {
                 "type": "volume_mismatch",
                 "message": "Volume mismatch on 2022-06-01: daily=74286600, hourly sum=68267244"
@@ -3002,7 +2994,15 @@
             },
             {
                 "type": "volume_mismatch",
-                "message": "Volume mismatch on 2025-04-24: daily=47199300, hourly sum=32014586"
+                "message": "Volume mismatch on 2025-04-24: daily=47311000, hourly sum=32014586"
+            },
+            {
+                "type": "volume_mismatch",
+                "message": "Volume mismatch on 2025-04-25: daily=38222300, hourly sum=29666863"
+            },
+            {
+                "type": "volume_mismatch",
+                "message": "Volume mismatch on 2025-04-28: daily=38652400, hourly sum=27356170"
             }
         ]
     }
