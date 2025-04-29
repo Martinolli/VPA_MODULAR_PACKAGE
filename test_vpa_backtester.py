@@ -159,9 +159,9 @@ def test_walk_forward_analysis():
     ticker = "MSFT"
     walk_forward_results = backtester.run_walk_forward_analysis(
         ticker=ticker,
-        window_size=180,  # 6-month windows
-        step_size=60,     # 2-month steps
-        lookback_days=90  # 3-month lookback for analysis
+        window_size=90,  # 6-month windows
+        step_size=30,     # 2-month steps
+        lookback_days=20  # 3-month lookback for analysis
     )
     
     # Validate results
