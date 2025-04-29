@@ -43,7 +43,7 @@ class VPADataValidator:
         self.validation_dir = os.path.join(base_dir, "validation")
         os.makedirs(self.validation_dir, exist_ok=True)
     
-    def validate_ticker(self, ticker, start_date=None, end_date=None, timeframes=None):
+    def validate_ticker(self, ticker, start_date=None, end_date=None, timeframes=None, generate_report=True):
         """
         Validate data for a ticker across timeframes
         
@@ -91,7 +91,8 @@ class VPADataValidator:
             )
         
         # Generate validation report
-        self._generate_validation_report(ticker, validation_results)
+        if generate_report:
+            self._generate_validation_report(ticker, validation_results)
         
         return validation_results
     
@@ -599,7 +600,7 @@ class VPADataValidator:
             timeframes = ["1d", "1h", "15m"]
         
         # Validate data
-        validation_results = self.validate_ticker(ticker, start_date, end_date, timeframes)
+        validation_results = self.validate_ticker(ticker, start_date, end_date, timeframes, generate_report=False)
         
         # Check readiness
         readiness = {
