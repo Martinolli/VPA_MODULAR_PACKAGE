@@ -74,6 +74,7 @@ class VPAQueryEngine:
         """Initializes the engine with VPAFacade and OpenAI client."""
         self.vpa_facade = vpa_facade
         self.openai_model = openai_model
+        self.logger = logging.getLogger(__name__)
         try:
             # API key is expected to be in the environment variable OPENAI_API_KEY
             self.openai_client = OpenAI()
@@ -87,27 +88,65 @@ class VPAQueryEngine:
             logger.error(f"An unexpected error occurred during OpenAI client initialization: {e}", exc_info=True)
             raise
 
-    def _execute_get_vpa_analysis(self, ticker: str, timeframe: str = "1d", include_secondary_timeframes: bool = False):
-        """Executes the VPA analysis function using the facade."""
-        logger.info(f"Executing VPA analysis for {ticker} ({timeframe})...")
+    def _execute_get_vpa_analysis(self, ticker, timeframe="1d", include_secondary_timeframes=False):
+        """Executes VPA analysis using the VPAFacade."""
+        self.logger.info(f"Executing VPA analysis for {ticker} ({timeframe})...")
         try:
-            # TODO: Ideally, facade should support point-in-time analysis
-            # For now, use the standard analyze_ticker
-            secondary_tfs = self.vpa_facade.config.get('secondary_timeframes', []) if include_secondary_timeframes else []
+            # --- Revised Timeframe Handling ---
+            # Define the primary timeframe based on LLM request
+            # Assuming a default period like '1y'. Adjust if your config/facade expects something different.
+            primary_tf_dict = {"interval": timeframe, "period": "1y"} 
+
+            analysis_timeframes = [primary_tf_dict]
+
+            if include_secondary_timeframes:
+                try:
+                    # Get default timeframes from config (as used in your VPAFacade)
+                    default_timeframes = self.vpa_facade.config.get_timeframes()
+                    # Add secondary timeframes from the default config, avoiding duplicates
+                    for tf_dict in default_timeframes:
+                        # Ensure the dictionary has the 'interval' key before comparing
+                        if tf_dict.get("interval") != timeframe:
+                            analysis_timeframes.append(tf_dict)
+                except AttributeError:
+                    self.logger.warning("VPAConfig does not have 'get_timeframes' method. Using only primary timeframe.")
+                except Exception as e:
+                    self.logger.warning(f"Could not get secondary timeframes from config: {e}. Using only primary timeframe.")
+
+            self.logger.info(f"Analyzing {ticker} with timeframes: {analysis_timeframes}")
+
+            # --- Call analyze_ticker with the correct signature ---
+            # Pass the list of timeframe dictionaries to the 'timeframes' argument
             results = self.vpa_facade.analyze_ticker(
-                ticker=ticker, 
-                primary_timeframe=timeframe, 
-                other_timeframes=secondary_tfs
+                ticker=ticker,
+                timeframes=analysis_timeframes 
             )
-            # Convert results to JSON string for the tool message content
-            return json.dumps(results)
+
+            # --- Process and summarize results for LLM --- 
+            # This summary structure assumes the keys returned by your analyze_ticker method.
+            # Adjust if the actual keys in 'results' are different.
+            summary = {
+                "ticker": results.get("ticker"),
+                "signal": results.get("signal"),
+                "risk_assessment": results.get("risk_assessment"),
+                "current_price": results.get("current_price"),
+                # Attempt to get a summary for the primary timeframe if available
+                "primary_analysis_summary": results.get("timeframe_analyses", {}).get(timeframe, {}).get("summary", "Analysis summary not available."), 
+                "confirmations": results.get("confirmations")
+            }
+            
+            # Convert the summary dictionary to a JSON string for the LLM
+            # Using default=str handles potential non-serializable types like datetime
+            return json.dumps(summary, default=str)
+
         except Exception as e:
-            logger.error(f"Error executing VPA analysis for {ticker}: {e}", exc_info=True)
+            self.logger.error(f"Error executing VPA analysis for {ticker}: {e}", exc_info=True)
+            # Return a clear error message as a JSON string for the LLM
             return json.dumps({"error": f"Failed to perform VPA analysis for {ticker}: {str(e)}"})
 
     def _execute_explain_vpa_concept(self, concept_name: str):
         """Executes the concept explanation function."""
-        logger.info(f"Executing explanation for concept: {concept_name}...")
+        self.logger.info(f"Executing explanation for concept: {concept_name}...")
         try:
             # Option 1: Try getting explanation from facade/knowledge base
             # explanation = self.vpa_facade.get_concept_explanation(concept_name)
@@ -123,7 +162,7 @@ class VPAQueryEngine:
 
     def handle_query(self, user_query: str):
         """Handles a user's natural language query."""
-        logger.info(f"Received query: {user_query}")
+        self.logger.info(f"Received query: {user_query}")
         
         system_message = {
             "role": "system",
