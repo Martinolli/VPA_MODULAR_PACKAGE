@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     # 2) (Optional) ensure CSVs exist. 
     #    Remove the comment if this is your first run or you've cleared fetched_data/
-    # fetcher.fetch_data(ticker, timeframes=["1d","1h","15m"])
+    fetcher.fetch_data(ticker, timeframes=["1d","1h","15m"])
 
     # 3) Run backtest **without** prepare_data (so no double‑validate + plotting)
 

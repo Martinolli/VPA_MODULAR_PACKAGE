@@ -8,7 +8,7 @@ from vpa_backtest.vpa_backtester_integration import VPABacktesterIntegration
 
 # Patch the VPADataFetcher.load_data method
 # VPADataFetcher.load_data = enhance_data_fetcher_load_method(VPADataFetcher.load_data)
-"""
+
 # Example usage
 # Create components
 fetcher = VPADataFetcher()
@@ -32,17 +32,21 @@ results = integration.run_backtest(
 
 print(f"Backtest results for {ticker}:")
 
-
+"""
 # Example usage
 validator = VPADataValidator()
 validation_results = validator.validate_ticker("AMZN", "2024-06-01", "2025-01-01")
 # readiness = validator.check_backtesting_readiness("AAPL", "2023-01-01", "2023-12-31")
-"""
+
+
 
 fetcher = VPADataFetcher()
 data = fetcher.fetch_data("AAPL", timeframes=['1d', '1h', '15m'])
 print("Data fetched successfully.")
 print(data)
 
-# validator = VPADataValidator()
+validator = VPADataValidator()
+print("Validating data...")
+validation_results = validator.validate_ticker("AAPL", "2024-01-01", "2025-01-01")
 # validation_results = validator.validate_ticker("AAPL", "2024-01-01", "2024-12-31")
+"""
