@@ -75,7 +75,7 @@ class VPADataValidator:
         # Load data for each timeframe
         timeframe_data = {}
         for timeframe in timeframes:
-            data = self._load_data(ticker, timeframe)
+            data = timeframe_data.get(timeframe)
             if data is not None:
                 timeframe_data[timeframe] = data
                 
@@ -92,7 +92,7 @@ class VPADataValidator:
         
         # Generate validation report
         if generate_report:
-            self._generate_validation_report(ticker, validation_results)
+            self._generate_validation_report(ticker, validation_results, timeframe_data)
         
         return validation_results
     
@@ -325,7 +325,7 @@ class VPADataValidator:
         
         return cross_validation
     
-    def _generate_validation_report(self, ticker, validation_results):
+    def _generate_validation_report(self, ticker, validation_results, timeframe_data):
         """
         Generate validation report with visualizations
         
@@ -350,7 +350,7 @@ class VPADataValidator:
         # Generate visualizations if data is available
         for timeframe in validation_results["timeframes"]:
             if validation_results["timeframes"][timeframe]["status"] != "empty":
-                data = self._load_data(ticker, timeframe)
+                data = timeframe_data.get(ticker, timeframe)
                 if data is not None:
                     self._generate_visualizations(ticker, timeframe, data, report_dir)
         
