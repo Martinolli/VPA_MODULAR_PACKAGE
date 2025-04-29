@@ -184,5 +184,4 @@ VPA Analysis for NVDA on 2024-04-29T16:00:00 (1d):
 **Conclusion:** Based on the BULLISH trend, the HIGH volume on the WIDE spread candle, and the presence of Test Of Resistance, a MODERATE SELL signal is generated.
 ```
 
-These examples illustrate how the structured JSONL data can be transformed and utilized in common LLM workflows. The key is the careful design of the input feature representation and the desired output format during the generation phase. 
-
+These examples illustrate how the structured JSONL data can be transformed and utilized in common LLM workflows. The key is the careful design of the input feature representation and the desired output format during the generation phase
