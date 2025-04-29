@@ -16,6 +16,7 @@ from vpa_backtest.vpa_backtester import VPABacktester
 from vpa_modular.vpa_config import VPAConfig
 from vpa_modular.vpa_processor import DataProcessor
 import matplotlib.pyplot as plt
+from vpa_backtest.vpa_data_validator import datetime_json_serializer
 
 # Set up logging
 logging.basicConfig(
@@ -95,7 +96,7 @@ class VPABacktesterIntegration:
         """
         file_path = os.path.join(self.base_dir, f"{ticker}_preparation.json")
         with open(file_path, 'w') as f:
-            json.dump(preparation_results, f, indent=4)
+            json.dump(preparation_results, f, indent=4, default=datetime_json_serializer)
         logger.info(f"Saved preparation results for {ticker} to {file_path}")
     
     def run_backtest(self, ticker, start_date, end_date, config=None, prepare_data=True, 
