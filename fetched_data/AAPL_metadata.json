@@ -1,24 +1,18 @@
 {
     "ticker": "AAPL",
-    "fetch_time": "2025-04-29 18:36:21",
+    "fetch_time": "2025-04-29 19:15:31",
     "results": {
         "1d": {
-            "status": "success",
-            "rows": 11185,
-            "start_date": "1980-12-12",
-            "end_date": "2025-04-29"
+            "status": "cached",
+            "last_modified": "2025-04-29T19:09:45.814865"
         },
         "1h": {
-            "status": "success",
-            "rows": 5081,
-            "start_date": "2022-06-01",
-            "end_date": "2025-04-29"
+            "status": "cached",
+            "last_modified": "2025-04-29T19:09:46.663557"
         },
         "15m": {
-            "status": "success",
-            "rows": 1539,
-            "start_date": "2025-02-03",
-            "end_date": "2025-04-29"
+            "status": "cached",
+            "last_modified": "2025-04-29T19:09:46.971536"
         }
     }
 }

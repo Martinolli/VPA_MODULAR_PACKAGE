@@ -428,10 +428,12 @@ class VPADataValidator:
         # Add cross-timeframe validation results
         if "cross_timeframe_validation" in validation_results:
             cross_result = validation_results["cross_timeframe_validation"]
-            status_class = "valid" if cross_result["status"] == "valid" else "issues"
+            logger.debug(f"cross_result: {cross_result}")
+            status = cross_result.get("status", "unknown")
+            status_class = "valid" if status == "valid" else "issues"
             
             html += f"""
-            <h2>Cross-Timeframe Validation <span class="{status_class}">({cross_result["status"]})</span></h2>
+            <h2>Cross-Timeframe Validation <span class="{status_class}">({status})</span></h2>
             """
             
             if "issues" in cross_result and cross_result["issues"]:
