@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPA LLM Query Interface</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        textarea { width: 95%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #response { margin-top: 20px; padding: 15px; background-color: #f8f9fa; border: 1px solid #eee; border-radius: 4px; white-space: pre-wrap; /* Preserve whitespace and line breaks */ }
+        .loading { font-style: italic; color: #555; }
+    </style>
+</head>
+<body>
+    <h1>VPA LLM Query Interface</h1>
+    <p>Ask a question about VPA concepts or request analysis for a ticker (e.g., "Analyze AAPL daily", "Explain selling climax").</p>
+    
+    <textarea id="userQuery" rows="4" placeholder="Enter your query here..."></textarea>
+    <br>
+    <button onclick="submitQuery()">Submit Query</button>
+
+    <h2>Response:</h2>
+    <div id="response">
+        Waiting for query...
+    </div>
+
+    <script>
+        async function submitQuery() {
+            const query = document.getElementById("userQuery").value;
+            const responseDiv = document.getElementById("response");
+
+            if (!query.trim()) {
+                responseDiv.innerText = "Please enter a query.";
+                return;
+            }
+
+            responseDiv.innerText = "Processing query...";
+            responseDiv.classList.add("loading");
+
+            try {
+                const response = await fetch("/query", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ query: query }),
+                });
+
+                responseDiv.classList.remove("loading");
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    responseDiv.innerText = `Error: ${response.status} ${response.statusText}\n${errorData.error || "Unknown error"}`;
+                    return;
+                }
+
+                const data = await response.json();
+                responseDiv.innerText = data.response;
+
+            } catch (error) {
+                responseDiv.classList.remove("loading");
+                responseDiv.innerText = `Network or script error: ${error}`;
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -28,3 +28,6 @@ tzdata==2025.2
 urllib3==2.4.0
 -e git+https://github.com/Martinolli/VPA_MODULAR_PACKAGE.git@fa80a9cad38e6078968cd0ca6c73d0fa3f2c5ee9#egg=vpa_modular
 yfinance==0.2.55
+openai
+python-dotenv
+Flask==3.0.3
