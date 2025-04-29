@@ -1,8 +1,46 @@
 {
     "ticker": "AAPL",
-    "start_date": "2024-10-31",
+    "start_date": "2024-04-29",
     "end_date": "2025-04-29",
     "fetch_results": {
         "1d": {
             "status": "cached",
-            "last_modified": 
+            "last_modified": "2025-04-29T19:40:24.992274"
+        },
+        "1h": {
+            "status": "cached",
+            "last_modified": "2025-04-29T19:40:25.354837"
+        },
+        "15m": {
+            "status": "cached",
+            "last_modified": "2025-04-29T19:40:25.654466"
+        }
+    },
+    "validation_results": {
+        "ticker": "AAPL",
+        "validation_time": "2025-04-29 19:57:55",
+        "timeframes": {},
+        "cross_timeframe_validation": {}
+    },
+    "readiness": {
+        "ticker": "AAPL",
+        "start_date": "2024-04-29",
+        "end_date": "2025-04-29",
+        "is_ready": false,
+        "issues": [
+            {
+                "timeframe": "1d",
+                "message": "No data available"
+            },
+            {
+                "timeframe": "1h",
+                "message": "No data available"
+            },
+            {
+                "timeframe": "15m",
+                "message": "No data available"
+            }
+        ]
+    },
+    "is_ready": false
+}

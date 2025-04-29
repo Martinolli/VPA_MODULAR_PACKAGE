@@ -1,18 +1,18 @@
 {
     "ticker": "AAPL",
-    "fetch_time": "2025-04-29 19:21:05",
+    "fetch_time": "2025-04-29 19:57:55",
     "results": {
         "1d": {
             "status": "cached",
-            "last_modified": "2025-04-29T19:09:45.814865"
+            "last_modified": "2025-04-29T19:40:24.992274"
         },
         "1h": {
             "status": "cached",
-            "last_modified": "2025-04-29T19:09:46.663557"
+            "last_modified": "2025-04-29T19:40:25.354837"
         },
         "15m": {
             "status": "cached",
-            "last_modified": "2025-04-29T19:09:46.971536"
+            "last_modified": "2025-04-29T19:40:25.654466"
         }
     }
 }
