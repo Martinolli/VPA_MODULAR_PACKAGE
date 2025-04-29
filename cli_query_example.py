@@ -26,7 +26,7 @@ except ImportError as e:
 
 # --- Logging Setup ---
 # Reduce logging level for cleaner CLI output, but keep engine logs informative
-logging.basicConfig(level=logging.WARNING, format=\'%(asctime)s - %(name)s - %(levelname)s - %(message)s\')
+logging.basicConfig(level=logging.WARNING, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 # You might want to set the engine\s logger level specifically if needed
 # logging.getLogger("vpa_modular.vpa_llm_query_engine").setLevel(logging.INFO)
 
