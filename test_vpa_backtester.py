@@ -29,7 +29,7 @@ logger.logger.setLevel(logging.INFO)
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "backtest_results")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-def test_basic_backtest():
+def test_basic_backtest(start_date, end_date, custom_config):
     """
     Test basic backtesting functionality with a single ticker.
     """
@@ -37,9 +37,10 @@ def test_basic_backtest():
     
     # Create backtester with default parameters
     backtester = VPABacktester(
-        start_date='2024-01-01',
-        end_date='2025-01-01',
-        initial_capital=100000.0
+        start_date=start_date,
+        end_date=end_date,
+        initial_capital=100000.0,
+        vpa_config=custom_config
     )
     
     # Run backtest on a single ticker
@@ -62,7 +63,7 @@ def test_basic_backtest():
     
     return results
 
-def test_multi_ticker_backtest():
+def test_multi_ticker_backtest(start_date, end_date, custom_config):
     """
     Test backtesting with multiple tickers.
     """
@@ -70,7 +71,7 @@ def test_multi_ticker_backtest():
     
     # Create backtester
     backtester = VPABacktester(
-        start_date='2024-01-01',
+        start_date='2024-06-01',
         end_date='2025-01-01',
         initial_capital=100000.0,
         max_positions=3  # Allow up to 3 positions simultaneously
@@ -95,7 +96,7 @@ def test_multi_ticker_backtest():
     
     return results
 
-def test_benchmark_comparison():
+def test_benchmark_comparison(start_date, end_date, custom_config):
     """
     Test benchmark comparison functionality.
     """
@@ -103,7 +104,7 @@ def test_benchmark_comparison():
     
     # Create backtester with benchmark
     backtester = VPABacktester(
-        start_date='2024-01-01',
+        start_date='2024-06-01',
         end_date='2025-01-01',
         initial_capital=100000.0,
         benchmark_ticker="SPY"
@@ -142,7 +143,7 @@ def test_benchmark_comparison():
     
     return results
 
-def test_walk_forward_analysis():
+def test_walk_forward_analysis(start_date, end_date, custom_config):
     """
     Test walk-forward analysis functionality.
     """
@@ -150,7 +151,7 @@ def test_walk_forward_analysis():
     
     # Create backtester
     backtester = VPABacktester(
-        start_date='2024-01-01',
+        start_date='2024-06-01',
         end_date='2025-01-01',
         initial_capital=100000.0
     )
@@ -161,7 +162,7 @@ def test_walk_forward_analysis():
         ticker=ticker,
         window_size=90,  # 6-month windows
         step_size=30,     # 2-month steps
-        lookback_days=20  # 3-month lookback for analysis
+        lookback_days=5  # 3-month lookback for analysis
     )
     
     # Validate results
@@ -208,7 +209,7 @@ def test_walk_forward_analysis():
     
     return walk_forward_results
 
-def test_monte_carlo_simulation():
+def test_monte_carlo_simulation(start_date, end_date, custom_config):
     """
     Test Monte Carlo simulation functionality.
     """
@@ -216,7 +217,7 @@ def test_monte_carlo_simulation():
     
     # First run a backtest to get trade data
     backtester = VPABacktester(
-        start_date='2024-01-01',
+        start_date='2024-06-01',
         end_date='2025-01-01',
         initial_capital=100000.0
     )
@@ -258,7 +259,7 @@ def test_monte_carlo_simulation():
     
     return monte_carlo_results
 
-def test_parameter_optimization():
+def test_parameter_optimization(start_date, end_date, custom_config):
     """
     Test parameter optimization functionality.
     """
@@ -266,7 +267,7 @@ def test_parameter_optimization():
     
     # Create backtester
     backtester = VPABacktester(
-        start_date='2024-01-01',
+        start_date='2024-06-01',
         end_date='2025-01-01',
         initial_capital=100000.0
     )
@@ -369,7 +370,7 @@ def test_parameter_optimization():
     
     return optimization_results
 
-def run_all_tests():
+def run_all_tests(start_date, end_date, custom_config):
     """
     Run all tests and return a summary of results.
     """
@@ -379,42 +380,42 @@ def run_all_tests():
     
     # Run tests
     try:
-        test_results['basic_backtest'] = test_basic_backtest()
+        test_results['basic_backtest'] = test_basic_backtest(start_date, end_date, custom_config)
         logger.info("Basic backtest test passed")
     except Exception as e:
         logger.error(f"Basic backtest test failed: {str(e)}")
         test_results['basic_backtest'] = None
     
     try:
-        test_results['multi_ticker_backtest'] = test_multi_ticker_backtest()
+        test_results['multi_ticker_backtest'] = test_multi_ticker_backtest(start_date, end_date, custom_config)
         logger.info("Multi-ticker backtest test passed")
     except Exception as e:
         logger.error(f"Multi-ticker backtest test failed: {str(e)}")
         test_results['multi_ticker_backtest'] = None
     
     try:
-        test_results['benchmark_comparison'] = test_benchmark_comparison()
+        test_results['benchmark_comparison'] = test_benchmark_comparison(start_date, end_date, custom_config)
         logger.info("Benchmark comparison test passed")
     except Exception as e:
         logger.error(f"Benchmark comparison test failed: {str(e)}")
         test_results['benchmark_comparison'] = None
     
     try:
-        test_results['walk_forward_analysis'] = test_walk_forward_analysis()
+        test_results['walk_forward_analysis'] = test_walk_forward_analysis(start_date, end_date, custom_config)
         logger.info("Walk-forward analysis test passed")
     except Exception as e:
         logger.error(f"Walk-forward analysis test failed: {str(e)}")
         test_results['walk_forward_analysis'] = None
     
     try:
-        test_results['monte_carlo_simulation'] = test_monte_carlo_simulation()
+        test_results['monte_carlo_simulation'] = test_monte_carlo_simulation(start_date, end_date, custom_config)
         logger.info("Monte Carlo simulation test passed")
     except Exception as e:
         logger.error(f"Monte Carlo simulation test failed: {str(e)}")
         test_results['monte_carlo_simulation'] = None
     
     try:
-        test_results['parameter_optimization'] = test_parameter_optimization()
+        test_results['parameter_optimization'] = test_parameter_optimization(start_date, end_date, custom_config)
         logger.info("Parameter optimization test passed")
     except Exception as e:
         logger.error(f"Parameter optimization test failed: {str(e)}")
@@ -442,4 +443,13 @@ def run_all_tests():
     return test_results
 
 if __name__ == "__main__":
-    run_all_tests()
+    custom_config = VPAConfig()
+    custom_config.config["timeframes"] = [
+        {"interval": "1d", "period": "6mo"},
+        {"interval": "1h", "period": "60d"},
+        {"interval": "15m", "period": "60d"}
+    ]
+     # Update the date range for backtesting
+    start_date = datetime.now() - timedelta(days=60)
+    end_date = datetime.now()
+    run_all_tests(start_date, end_date, custom_config)
