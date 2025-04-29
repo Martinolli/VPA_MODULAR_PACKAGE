@@ -1,0 +1,8 @@
+{
+    "ticker": "AAPL",
+    "start_date": "2024-10-31",
+    "end_date": "2025-04-29",
+    "fetch_results": {
+        "1d": {
+            "status": "cached",
+            "last_modified": 
