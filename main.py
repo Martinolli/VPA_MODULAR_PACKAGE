@@ -1,27 +1,37 @@
-from vpa_modular.vpa_facade import VPAFacade
-from vpa_modular.vpa_utils import create_vpa_report
-from vpa_modular.vpa_utils import create_batch_report
-from vpa_modular.vpa_config import VPAConfig
-from vpa_modular.vpa_llm_interface import VPALLMInterface
+import matplotlib
+matplotlib.use('Agg')  # Use non-interactive backend
 
+from vpa_modular.vpa_utils import create_vpa_report
+from vpa_modular.vpa_llm_interface import VPALLMInterface
+from vpa_modular.vpa_facade import VPAFacade
+from vpa_modular.vpa_logger import VPALogger
+import matplotlib.pyplot as plt
+
+# Initialize the logger
+logger = VPALogger(log_level="INFO", log_file="logs/vpa.log")
 
 vpa = VPAFacade()
+
 tickers = ["NVDA", "MSFT", "AAPL", "NFLX"]
+
 for ticker in tickers:
-    print(f"Analyzing {ticker}...")
+    logger.info(f"Analyzing {ticker}...")
     results = vpa.analyze_ticker(ticker)
-    report_file = create_vpa_report(results, "vpa_reports")
-    print(f"Report files created: {report_file}")
+    report_files = create_vpa_report(results, "vpa_reports")
+    logger.info(f"Report files created: {report_files}")
+    plt.close('all')  # Close all figures
 
-
+logger.info("NL Analysis:")
 llm_interface = VPALLMInterface()
-print("NL Analysis:")
 for ticker in tickers:
-    print(f"Analyzing {ticker}...")
+    logger.info(f"Analyzing {ticker}...")
     nl_analysis = llm_interface.get_ticker_analysis(ticker)
     for key, value in nl_analysis.items():
-        print(f"{key}: {value}")
-        print("\n")
+        logger.info(f"{key}: {value}")
+    logger.info("\n")
+    logger.info("--------------------------------------------------\n")
+
+logger.info("Analysis complete.")
 
 signals = vpa.get_signals(ticker)
 print("Signals:")

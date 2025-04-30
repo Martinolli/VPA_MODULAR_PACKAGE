@@ -17,6 +17,7 @@ from .vpa_facade import VPAFacade
 # We might need a data loading mechanism, potentially reusing parts of the backtester's fetcher/validator
 # For now, let's assume data is pre-loaded or fetched ad-hoc
 from .vpa_data import YFinanceProvider # Example, might need adjustment
+from .vpa_logger import VPALogger # Example, might need adjustment
 
 # Set up logging
 logging.basicConfig(
@@ -28,7 +29,7 @@ logger = logging.getLogger("VPATrainingDataGenerator")
 class VPATrainingDataGenerator:
     """Generates VPA training data for LLMs in JSONL format."""
 
-    def __init__(self, vpa_facade: VPAFacade, output_dir="llm_training_data"):
+    def __init__(self, vpa_facade, output_dir="llm_training_data", log_level="INFO", log_file=None):
         """
         Initialize the generator.
 
@@ -41,6 +42,11 @@ class VPATrainingDataGenerator:
         self.data_provider = YFinanceProvider() # Example instantiation
         os.makedirs(self.output_dir, exist_ok=True)
 
+        if log_file is None:
+            log_file = os.path.join(self.output_dir, "vpa_training_data_generator.log")
+        
+        self.logger = VPALogger(log_level, log_file)
+
     def _load_historical_data(self, ticker, start_date, end_date, timeframes):
         """
         Loads historical data for the specified ticker and timeframes.
@@ -51,9 +57,18 @@ class VPATrainingDataGenerator:
         all_data = {}
         try:
             for tf in timeframes:
-                # Determine appropriate period based on start/end date for yfinance
-                # This is simplified; yfinance period/interval logic needs care
-                df = self.data_provider.get_data(ticker, interval=tf, start=start_date, end=end_date)
+                # Calculate period based on start and end dates
+                period = (datetime.strptime(end_date, "%Y-%m-%d") - datetime.strptime(start_date, "%Y-%m-%d")).days
+                period = f"{period}d"  # Convert to string format expected by yfinance
+
+                result = self.data_provider.get_data(ticker, interval=tf, period=period)
+
+                # Check if result is a tuple and extract the DataFrame
+                if isinstance(result, tuple):
+                    df = result[0]  # Assuming the DataFrame is the first element of the tuple
+                else:
+                    df = result
+                
                 if df is not None and not df.empty:
                     # Ensure standard column names
                     df.rename(columns={
@@ -260,6 +275,7 @@ class VPATrainingDataGenerator:
         return explanation.strip()
 
     def generate_training_data(self, ticker, start_date, end_date, primary_timeframe='1d', other_timeframes=None, min_lookback=50):
+        self.logger.info(f"Generating training data for {ticker}")
         """
         Generates and saves training data for a given ticker and period.
 

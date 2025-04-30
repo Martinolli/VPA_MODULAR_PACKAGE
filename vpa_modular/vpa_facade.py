@@ -11,11 +11,13 @@ from .vpa_processor import DataProcessor
 from .vpa_analyzer import CandleAnalyzer, TrendAnalyzer, PatternRecognizer, SupportResistanceAnalyzer, MultiTimeframeAnalyzer
 from .vpa_signals import SignalGenerator, RiskAssessor
 from .vpa_processor import DataProcessor
+from .vpa_logger import VPALogger
 
 class VPAFacade:
     """Simplified API for VPA analysis"""
     
-    def __init__(self, config_file=None):
+    def __init__(self, config_file=None, log_level="INFO", log_file="vpa.log"):
+        
         """
         Initialize the VPA facade
         
@@ -23,6 +25,7 @@ class VPAFacade:
         - config_file: Optional path to configuration file
         """
         self.config = VPAConfig(config_file)
+        self.logger = VPALogger(log_level, log_file)
         self.data_provider = YFinanceProvider()
         self.multi_tf_provider = MultiTimeframeProvider(self.data_provider)
         self.processor = DataProcessor(self.config)
@@ -31,6 +34,7 @@ class VPAFacade:
         self.risk_assessor = RiskAssessor(self.config)
     
     def analyze_ticker(self, ticker, timeframes=None):
+        self.logger.log_analysis_start(ticker, timeframes or [])
         """
         Analyze a ticker with VPA
         
@@ -74,6 +78,7 @@ class VPAFacade:
             "current_price": current_price
         }
         
+        self.logger.log_analysis_complete(ticker, signal)
         return results
     
     def get_signals(self, ticker, timeframes=None):

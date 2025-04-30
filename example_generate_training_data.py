@@ -9,6 +9,14 @@ import traceback
 try:
     from vpa_modular.vpa_facade import VPAFacade
     from vpa_modular.vpa_training_data_generator import VPATrainingDataGenerator
+    from vpa_modular.vpa_config import VPAConfig
+    from vpa_modular.vpa_logger import VPALogger
+
+    # Initialize logger
+    logger = VPALogger(log_level="INFO", log_file="./vpa_training_data_generation.log")
+
+    # Use the logger
+    logger.info("Starting VPA LLM Training Data Generation Example...")
 
     # --- Configuration ---
     TICKER = "MSFT"  # Example ticker
@@ -19,6 +27,14 @@ try:
     OUTPUT_DIRECTORY = "./llm_training_data_output" # Specify output directory
     MIN_LOOKBACK = 50 # Minimum data points before starting generation
 
+    custom_timeframes = [
+    {"interval": "1d", "period": "60d", "start_date": START_DATE, "end_date": END_DATE},
+    {"interval": "1h", "period": "60d", "start_date": START_DATE, "end_date": END_DATE},
+    {"interval": "15m", "period": "5d",  "start_date": START_DATE, "end_date": END_DATE},
+    ]
+    # Update the config dynamically
+    vpa_config = VPAConfig()  # Create an instance of VPAConfig
+    vpa_config.update_parameters({"timeframes": custom_timeframes})
     # --- Setup Logging ---
     logging.basicConfig(
         level=logging.INFO,
@@ -36,8 +52,9 @@ try:
         logger.info("Initializing VPAFacade...")
         # If your facade requires specific config, provide it here:
         # vpa_facade = VPAFacade(config_file="path/to/your/config.json")
-        vpa_facade = VPAFacade()
+        vpa_facade = VPAFacade(config_file=None, log_level="INFO", log_file="./vpa_analysis.log")
         logger.info("VPAFacade initialized successfully.")
+
     except Exception as e:
         logger.error(f"Failed to initialize VPAFacade: {e}", exc_info=True)
         exit(1)
@@ -45,7 +62,12 @@ try:
     # 2. Initialize Training Data Generator
     #    - Pass the initialized facade and the desired output directory.
     logger.info(f"Initializing VPATrainingDataGenerator (output dir: {OUTPUT_DIRECTORY})...")
-    generator = VPATrainingDataGenerator(vpa_facade, output_dir=OUTPUT_DIRECTORY)
+    generator = VPATrainingDataGenerator(
+    vpa_facade, 
+    OUTPUT_DIRECTORY, 
+    log_level="INFO", 
+    log_file="./vpa_training_data_generation.log"
+    )
     logger.info("VPATrainingDataGenerator initialized successfully.")
 
     # 3. Run the Generation Process
@@ -73,5 +95,3 @@ except ImportError as e:
 except Exception as e:
     print(f"An unexpected error occurred: {e}")
     traceback.print_exc()
-
-
