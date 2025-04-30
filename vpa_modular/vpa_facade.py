@@ -217,3 +217,39 @@ class VPAFacade:
             filtered_results[ticker] = result
         
         return filtered_results
+    def analyze_ticker_at_point(self, ticker: str, sliced_data_by_timeframe: dict):
+        """
+        Analyze a ticker using only data up to a specific historical point in time.
+
+        Parameters:
+        - ticker: Stock symbol
+        - sliced_data_by_timeframe: dict with {'1d': df, '1h': df, '15m': df}
+
+        Returns:
+        - dict containing signal summary, score, and metadata
+        """
+        try:
+            # 1. Preprocess data slices
+            processed = self.processor.preprocess_all(sliced_data_by_timeframe)
+
+            # 2. Run candle, volume, trend, and signal analysis (point-in-time)
+            signals = self.analyzer.analyze_all(processed)
+
+            # 3. (Optional) Compute R/R, SL/TP from recent context
+            rr_info = self.analyzer.compute_risk_reward(processed["1d"], signals.get("1d", {}))
+
+            # 4. Prepare analysis result
+            return {
+                "ticker": ticker,
+                "timestamp": processed["1d"].index[-1].strftime("%Y-%m-%d %H:%M"),
+                "signals": signals,
+                "risk_reward": rr_info,
+                "volatility": self.analyzer.compute_volatility(processed["1d"]),
+                "pattern_summary": processed["1d"].get("pattern_summary", ""),
+                "confidence_score": self.analyzer.compute_confidence_score(signals),
+            }
+
+        except Exception as e:
+            self.logger.error(f"❌ Error analyzing {ticker} at point-in-time: {e}")
+            return None
+

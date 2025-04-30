@@ -316,47 +316,38 @@ class VPATrainingDataGenerator:
             # *** Let's assume it exists for now: analysis_results = self.vpa.analyze_ticker_at_point(ticker, data_up_to_t) ***
             # *** Mocking the call for structure - replace with actual call ***
             try:
-                 # --- Replace this mock with actual call --- 
-                 # analysis_results = self.vpa.analyze_ticker_at_point(ticker, data_up_to_t)
-                 # Mock implementation detail: For now, let's call the standard analyze_ticker
-                 # but it will use *all* data, not point-in-time. This needs fixing in VPAFacade.
-                 logger.warning("Using full analysis instead of point-in-time. Facade needs update.")
-                 analysis_results = self.vpa.analyze_ticker(ticker, config_override={'timeframes': all_timeframes})
-                 # --- End Replace ---
-                 
-                 if not analysis_results:
-                      logger.warning(f"Analysis failed for {ticker} at {current_timestamp}")
-                      continue
+                # Point-in-time analysis (sliced data already prepared as 'data_up_to_t')
+                analysis_results = self.vpa.analyze_ticker_at_point(ticker, data_up_to_t)
+                
+                # Extract input features
+                input_features = self._extract_input_features(analysis_results, current_timestamp, primary_timeframe)
+                if not input_features:
+                    continue
 
-                 # Extract input features
-                 input_features = self._extract_input_features(analysis_results, current_timestamp, primary_timeframe)
-                 if not input_features:
-                      continue
+                # Generate explanation and output structure
+                explanation = self._generate_explanation(input_features, analysis_results)
+                output_data = {
+                    "signal": analysis_results.get("signal", {}),
+                    "explanation": explanation
+                }
+                # Remove potentially large/redundant details from signal for training data
+                if 'details' in output_data['signal']: del output_data['signal']['details']
+                if 'component_signals' in output_data['signal']: del output_data['signal']['component_signals']
+                if 'risk_assessment' in output_data['signal']: del output_data['signal']['risk_assessment']
 
-                 # Generate explanation and output structure
-                 explanation = self._generate_explanation(input_features, analysis_results)
-                 output_data = {
-                     "signal": analysis_results.get("signal", {}),
-                     "explanation": explanation
-                 }
-                 # Remove potentially large/redundant details from signal for training data
-                 if 'details' in output_data['signal']: del output_data['signal']['details']
-                 if 'component_signals' in output_data['signal']: del output_data['signal']['component_signals']
-                 if 'risk_assessment' in output_data['signal']: del output_data['signal']['risk_assessment']
+                # Create the final JSON object for the line
+                training_example = {
+                    "input": input_features,
+                    "output": output_data
+                }
 
-                 # Create the final JSON object for the line
-                 training_example = {
-                     "input": input_features,
-                     "output": output_data
-                 }
-
-                 # Append to JSONL file
-                 with open(output_file, 'a') as f:
-                     json.dump(training_example, f)
-                     f.write('\n')
-                 count += 1
-                 if count % 100 == 0:
-                      logger.info(f"Generated {count} examples for {ticker}...")
+                # Append to JSONL file
+                with open(output_file, 'a') as f:
+                    json.dump(training_example, f)
+                    f.write('\n')
+                count += 1
+                if count % 100 == 0:
+                    logger.info(f"Generated {count} examples for {ticker}...")
 
             except Exception as e:
                 logger.error(f"Error processing timestamp {current_timestamp} for {ticker}: {e}")
