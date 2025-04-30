@@ -43,7 +43,7 @@ for key, value in signals.items():
 # Call the method with required and optional arguments
 tickers = ["MSFT", "NFLX"]  # Example list of tickers
 signal_type = "BUY"
-signal_strength = "STRONG"
+signal_strength = "MODERATE"
 timeframes = [
         {"interval": "30m", "period": "10d"},
         {"interval": "15m", "period": "10d"},
