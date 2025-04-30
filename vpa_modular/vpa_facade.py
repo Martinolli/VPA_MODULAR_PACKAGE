@@ -235,8 +235,24 @@ class VPAFacade:
         """
         try:
             # 1. Preprocess data slices
-            processed = self.processor.preprocess_all(sliced_data_by_timeframe)
+            processed = {}
+            for tf, data in sliced_data_by_timeframe.items():
+                self.logger.info(f"Processing {ticker} data for timeframe {tf}")
+                self.logger.debug(f"Data shape: {data.shape}, Columns: {data.columns.tolist()}")
 
+                # Use the get_data method to fetch both price and volume data
+                price_data, volume_data = self.data_provider.get_data(ticker, interval=tf, period=self.config.get_timeframe_period(tf))
+                
+                self.logger.debug(f"Fetched price data shape: {price_data.shape}, volume data shape: {volume_data.shape}")
+                
+                # Ensure the fetched data is aligned with the sliced data
+                aligned_price_data = price_data.loc[data.index]
+                aligned_volume_data = volume_data.loc[data.index]
+                
+                self.logger.debug(f"Aligned price data shape: {aligned_price_data.shape}, volume data shape: {aligned_volume_data.shape}")
+                
+                processed[tf] = self.processor.preprocess_data(aligned_price_data, aligned_volume_data)
+                
             # 2. Run candle, volume, trend, and signal analysis (point-in-time)
             signals = self.analyzer.analyze_all(processed)
 
@@ -255,6 +271,6 @@ class VPAFacade:
             }
 
         except Exception as e:
-            self.logger.error(f"❌ Error analyzing {ticker} at point-in-time: {e}")
+            self.logger.error(f"❌ Error analyzing {ticker} at point-in-time: {str(e)}")
+            self.logger.exception("Detailed error information:")
             return None
-

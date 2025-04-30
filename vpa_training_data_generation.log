@@ -5,3 +5,61 @@
 2025-04-30 21:44:18,775 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
 2025-04-30 21:44:18,776 - VPA - INFO - Generating training data for MSFT
 2025-04-30 21:44:18,776 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:48:20,115 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
+2025-04-30 21:48:20,116 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:48:20,116 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:52:45,624 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
+2025-04-30 21:52:45,625 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:52:45,625 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:53:25,579 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
+2025-04-30 21:53:25,580 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:53:25,580 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:55:14,301 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
+2025-04-30 21:55:14,302 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:55:14,302 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:59:04,592 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
+2025-04-30 21:59:04,592 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:59:04,592 - VPA - INFO - Generating training data for MSFT
+2025-04-30 21:59:05,894 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,894 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,895 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,895 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,897 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,897 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,898 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,898 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,898 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,898 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,899 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,899 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,899 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,899 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,899 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,899 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,901 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,901 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,901 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 21:59:05,901 - VPA - ERROR - Volume data missing for MSFT in timeframe 1d
+2025-04-30 22:08:03,925 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
+2025-04-30 22:08:03,926 - VPA - INFO - Generating training data for MSFT
+2025-04-30 22:08:03,926 - VPA - INFO - Generating training data for MSFT
+2025-04-30 22:08:06,029 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,029 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,109 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,109 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,116 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,116 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,122 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,122 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,128 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,128 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,135 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,135 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,141 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,141 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,147 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,147 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,153 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,153 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,159 - VPA - INFO - Processing MSFT data for timeframe 1d
+2025-04-30 22:08:06,159 - VPA - INFO - Processing MSFT data for timeframe 1d
