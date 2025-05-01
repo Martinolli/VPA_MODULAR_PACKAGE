@@ -917,3 +917,178 @@ Risk Assessment:
 2025-04-30 23:10:39,839 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
 2025-04-30 23:10:39,841 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 30m, 15m, 5m
 2025-04-30 23:10:40,406 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-01 17:52:29,945 - VPA - INFO - Analyzing NVDA...
+2025-05-01 17:52:29,946 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-01 17:52:30,992 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-01 17:52:33,753 - VPA - INFO - Report files created: {'price_chart': 'vpa_reports\\NVDA_price_chart_2025-05-01_17-52-30.png', 'multi_timeframe': 'vpa_reports\\NVDA_multi_timeframe_2025-05-01_17-52-30.png', 'patterns': 'vpa_reports\\NVDA_patterns_2025-05-01_17-52-30.png', 'text_report': 'vpa_reports\\NVDA_vpa_report_2025-05-01_17-52-30.txt'}
+2025-05-01 17:52:33,753 - VPA - INFO - Analyzing MSFT...
+2025-05-01 17:52:33,753 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-01 17:52:34,387 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-01 17:52:37,105 - VPA - INFO - Report files created: {'price_chart': 'vpa_reports\\MSFT_price_chart_2025-05-01_17-52-34.png', 'multi_timeframe': 'vpa_reports\\MSFT_multi_timeframe_2025-05-01_17-52-34.png', 'patterns': 'vpa_reports\\MSFT_patterns_2025-05-01_17-52-34.png', 'text_report': 'vpa_reports\\MSFT_vpa_report_2025-05-01_17-52-34.txt'}
+2025-05-01 17:52:37,105 - VPA - INFO - Analyzing AAPL...
+2025-05-01 17:52:37,105 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-01 17:52:37,821 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-01 17:52:40,553 - VPA - INFO - Report files created: {'price_chart': 'vpa_reports\\AAPL_price_chart_2025-05-01_17-52-37.png', 'multi_timeframe': 'vpa_reports\\AAPL_multi_timeframe_2025-05-01_17-52-37.png', 'patterns': 'vpa_reports\\AAPL_patterns_2025-05-01_17-52-37.png', 'text_report': 'vpa_reports\\AAPL_vpa_report_2025-05-01_17-52-37.txt'}
+2025-05-01 17:52:40,553 - VPA - INFO - Analyzing NFLX...
+2025-05-01 17:52:40,553 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-01 17:52:41,204 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-01 17:52:43,714 - VPA - INFO - Report files created: {'price_chart': 'vpa_reports\\NFLX_price_chart_2025-05-01_17-52-41.png', 'multi_timeframe': 'vpa_reports\\NFLX_multi_timeframe_2025-05-01_17-52-41.png', 'patterns': 'vpa_reports\\NFLX_patterns_2025-05-01_17-52-41.png', 'text_report': 'vpa_reports\\NFLX_vpa_report_2025-05-01_17-52-41.txt'}
+2025-05-01 17:52:43,715 - VPA - INFO - NL Analysis:
+2025-05-01 17:52:43,716 - VPA - INFO - Analyzing NVDA...
+2025-05-01 17:52:43,716 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-01 17:52:44,346 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-01 17:52:44,347 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-01 17:52:44,487 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-01 17:52:44,487 - VPA - INFO - ticker: NVDA
+2025-05-01 17:52:44,488 - VPA - INFO - current_price: 113.61000061035156
+2025-05-01 17:52:44,489 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-01 17:52:44,489 - VPA - INFO - risk: {'stop_loss': 109.55945060729981, 'take_profit': 114.86145092010497, 'risk_reward': 0.30895811897410097}
+2025-05-01 17:52:44,489 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 6, Support tests: 3'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 6, Resistance tests: 8'}, 'buying_climax': {'detected': False, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-01 17:52:44,490 - VPA - INFO - explanation: VPA Analysis for NVDA:
+
+Signal: BUY (MODERATE)
+Details: Moderate buy signal with some timeframe confirmation
+
+Supporting Evidence:
+- Candle Signals:
+  * 1h: Normal up candle with high volume shows buying interest; Lower wick with high volume shows failed downward breakout
+- Trend Signals:
+  * 1h: Rising price with rising volume confirms bullish trend
+  * 15m: Rising price with rising volume confirms bullish trend
+- Pattern Signals:
+  * 1d - Accumulation: Sideways: False, High volume bars: 6, Support tests: 3
+  * 1h - Accumulation: Sideways: False, High volume bars: 3, Support tests: 10
+  * 1h - Selling Climax: Near low: False, Very high volume: True, Wide down candle: False, Lower wick: True
+  * 15m - Accumulation: Sideways: True, High volume bars: 2, Support tests: 10
+- Timeframe Confirmations:
+  * Confirmed in timeframes: 1h
+
+Risk Assessment:
+- Current Price: $113.61
+- Stop Loss: $109.56
+- Take Profit: $114.86
+- Risk-Reward Ratio: 0.31
+- Recommended Position Size: 24.69 shares
+
+2025-05-01 17:52:44,490 - VPA - INFO - 
+
+2025-05-01 17:52:44,490 - VPA - INFO - --------------------------------------------------
+
+2025-05-01 17:52:44,491 - VPA - INFO - Analyzing MSFT...
+2025-05-01 17:52:44,491 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-01 17:52:45,126 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-01 17:52:45,126 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-01 17:52:45,344 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-01 17:52:45,345 - VPA - INFO - ticker: MSFT
+2025-05-01 17:52:45,345 - VPA - INFO - current_price: 432.6300048828125
+2025-05-01 17:52:45,345 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-01 17:52:45,346 - VPA - INFO - risk: {'stop_loss': 380.88598785400393, 'take_profit': 454.2615051269531, 'risk_reward': 0.4180483365274337}
+2025-05-01 17:52:45,346 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 6, Support tests: 5'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 6, Resistance tests: 9'}, 'buying_climax': {'detected': False, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-01 17:52:45,346 - VPA - INFO - explanation: VPA Analysis for MSFT:
+
+Signal: BUY (MODERATE)
+Details: Moderate buy signal with some timeframe confirmation
+
+Supporting Evidence:
+- Trend Signals:
+  * 1h: Rising price with rising volume confirms bullish trend
+- Pattern Signals:
+  * 1d - Accumulation: Sideways: False, High volume bars: 6, Support tests: 5
+  * 1h - Accumulation: Sideways: False, High volume bars: 4, Support tests: 7
+  * 1h - Selling Climax: Near low: False, Very high volume: True, Wide down candle: False, Lower wick: True
+  * 15m - Accumulation: Sideways: False, High volume bars: 6, Support tests: 10
+  * 15m - Selling Climax: Near low: False, Very high volume: True, Wide down candle: True, Lower wick: False
+
+Risk Assessment:
+- Current Price: $432.63
+- Stop Loss: $380.89
+- Take Profit: $454.26
+- Risk-Reward Ratio: 0.42
+- Recommended Position Size: 1.93 shares
+
+2025-05-01 17:52:45,347 - VPA - INFO - 
+
+2025-05-01 17:52:45,347 - VPA - INFO - --------------------------------------------------
+
+2025-05-01 17:52:45,348 - VPA - INFO - Analyzing AAPL...
+2025-05-01 17:52:45,348 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-01 17:52:45,474 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-01 17:52:45,475 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-01 17:52:45,616 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-01 17:52:45,617 - VPA - INFO - ticker: AAPL
+2025-05-01 17:52:45,617 - VPA - INFO - current_price: 211.3699951171875
+2025-05-01 17:52:45,618 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-01 17:52:45,618 - VPA - INFO - risk: {'stop_loss': 210.22359878540038, 'take_profit': 214.00470245361325, 'risk_reward': 2.29825171572078}
+2025-05-01 17:52:45,618 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 8, Support tests: 5'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 8, Resistance tests: 7'}, 'buying_climax': {'detected': False, 'details': 'Near high: False, Very high volume: False, Wide up candle: True, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-01 17:52:45,619 - VPA - INFO - explanation: VPA Analysis for AAPL:
+
+Signal: BUY (MODERATE)
+Details: Moderate buy signal with some timeframe confirmation
+
+Supporting Evidence:
+- Candle Signals:
+  * 1h: Wide spread up candle with high volume confirms bullish sentiment
+- Trend Signals:
+  * 1h: Rising price with rising volume confirms bullish trend
+  * 15m: Rising price with rising volume confirms bullish trend
+- Pattern Signals:
+  * 1d - Accumulation: Sideways: False, High volume bars: 8, Support tests: 5
+  * 1h - Accumulation: Sideways: True, High volume bars: 4, Support tests: 10
+  * 1h - Selling Climax: Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True
+  * 15m - Accumulation: Sideways: True, High volume bars: 3, Support tests: 9
+- Timeframe Confirmations:
+  * Confirmed in timeframes: 1h
+
+Risk Assessment:
+- Current Price: $211.37
+- Stop Loss: $210.22
+- Take Profit: $214.00
+- Risk-Reward Ratio: 2.30
+- Recommended Position Size: 87.23 shares
+
+2025-05-01 17:52:45,619 - VPA - INFO - 
+
+2025-05-01 17:52:45,620 - VPA - INFO - --------------------------------------------------
+
+2025-05-01 17:52:45,620 - VPA - INFO - Analyzing NFLX...
+2025-05-01 17:52:45,620 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-01 17:52:45,750 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-01 17:52:45,750 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-01 17:52:45,879 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-01 17:52:45,880 - VPA - INFO - ticker: NFLX
+2025-05-01 17:52:45,880 - VPA - INFO - current_price: 1124.9149169921875
+2025-05-01 17:52:45,881 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-01 17:52:45,881 - VPA - INFO - risk: {'stop_loss': 950.225, 'take_profit': 1181.160662841797, 'risk_reward': 0.3219747700270809}
+2025-05-01 17:52:45,881 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 7, Support tests: 4'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 7, Resistance tests: 11'}, 'buying_climax': {'detected': False, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-01 17:52:45,882 - VPA - INFO - explanation: VPA Analysis for NFLX:
+
+Signal: BUY (MODERATE)
+Details: Moderate buy signal with some timeframe confirmation
+
+Supporting Evidence:
+- Trend Signals:
+  * 1h: Rising price with rising volume confirms bullish trend
+  * 15m: Rising price with rising volume confirms bullish trend
+- Pattern Signals:
+  * 1d - Accumulation: Sideways: False, High volume bars: 7, Support tests: 4
+  * 1h - Accumulation: Sideways: True, High volume bars: 1, Support tests: 12
+  * 15m - Accumulation: Sideways: True, High volume bars: 2, Support tests: 10
+
+Risk Assessment:
+- Current Price: $1124.91
+- Stop Loss: $950.23
+- Take Profit: $1181.16
+- Risk-Reward Ratio: 0.32
+- Recommended Position Size: 0.57 shares
+
+2025-05-01 17:52:45,883 - VPA - INFO - 
+
+2025-05-01 17:52:45,883 - VPA - INFO - --------------------------------------------------
+
+2025-05-01 17:52:45,883 - VPA - INFO - Analysis complete.
+2025-05-01 17:52:45,883 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-01 17:52:46,010 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-01 17:52:46,012 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-01 17:52:46,458 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-01 17:52:46,459 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 30m, 15m, 5m
+2025-05-01 17:52:46,923 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
