@@ -1,0 +1,50 @@
+VPA Analysis Report for AMZN
+Generated on: 2025-05-01_20-53-33
+==================================================
+
+Signal Information:
+------------------------------
+Type: BUY
+Strength: MODERATE
+Details: Moderate buy signal with some timeframe confirmation
+
+Risk Assessment:
+------------------------------
+Current Price: $188.91
+Stop Loss: $183.48
+Take Profit: $199.99
+Risk-Reward Ratio: 2.04
+Position Size: 18.41 shares
+
+Timeframe Analysis:
+------------------------------
+1d:
+  Candle Analysis: VALIDATION (NEUTRAL)
+  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (1 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+1h:
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (6 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+15m:
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_ANOMALY (BULLISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (1 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+

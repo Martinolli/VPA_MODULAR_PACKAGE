@@ -126,8 +126,8 @@ def plot_candlestick(ax, price_data, volume_data=None, title=None):
     price_data = ensure_datetime_index(price_data)
     
     # Plot candlesticks
-    width = 0.6
-    width2 = 0.2  # Increased wick width for better visibility
+    width2 = 0.6
+    width = 0.2  # Increased wick width for better visibility
     
     up = price_data[price_data.close >= price_data.open]
     down = price_data[price_data.close < price_data.open]
