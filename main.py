@@ -12,7 +12,9 @@ logger = VPALogger(log_level="INFO", log_file="logs/vpa.log")
 
 vpa = VPAFacade()
 
-tickers = ["NVDA", "MSFT", "AAPL", "NFLX"]
+tickers = ["NVDA", "MSFT", "AAPL", "NFLX", "AMZN", "TSLA", "GOOGL", "META", "AMD", "INTC"]
+logger.info("Starting VPA analysis...")
+logger.info("Tickers to analyze:")
 
 for ticker in tickers:
     logger.info(f"Analyzing {ticker}...")
