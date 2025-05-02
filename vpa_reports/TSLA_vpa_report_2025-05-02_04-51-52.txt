@@ -1,0 +1,50 @@
+VPA Analysis Report for TSLA
+Generated on: 2025-05-02_04-51-52
+==================================================
+
+Signal Information:
+------------------------------
+Type: BUY
+Strength: MODERATE
+Details: Moderate buy signal with some timeframe confirmation
+
+Risk Assessment:
+------------------------------
+Current Price: $280.52
+Stop Loss: $242.14
+Take Profit: $286.41
+Risk-Reward Ratio: 0.15
+Position Size: 2.61 shares
+
+Timeframe Analysis:
+------------------------------
+1d:
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_VALIDATION (BULLISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Not Detected (0 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+1h:
+  Candle Analysis: ANOMALY (BULLISH)
+  Trend Analysis: TREND_ANOMALY (BULLISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (6 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+15m:
+  Candle Analysis: VALIDATION (BEARISH)
+  Trend Analysis: TREND_VALIDATION (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (9 tests)
+    Buying_climax: Detected
+    Selling_climax: Detected
+

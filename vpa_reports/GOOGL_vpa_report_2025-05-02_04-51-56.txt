@@ -1,0 +1,50 @@
+VPA Analysis Report for GOOGL
+Generated on: 2025-05-02_04-51-56
+==================================================
+
+Signal Information:
+------------------------------
+Type: BUY
+Strength: MODERATE
+Details: Moderate buy signal with some timeframe confirmation
+
+Risk Assessment:
+------------------------------
+Current Price: $161.30
+Stop Loss: $155.94
+Take Profit: $162.53
+Risk-Reward Ratio: 0.23
+Position Size: 18.64 shares
+
+Timeframe Analysis:
+------------------------------
+1d:
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Not Detected (0 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+1h:
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_VALIDATION (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (9 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+15m:
+  Candle Analysis: ANOMALY (NEUTRAL)
+  Trend Analysis: TREND_VALIDATION (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (6 tests)
+    Buying_climax: Detected
+    Selling_climax: Detected
+

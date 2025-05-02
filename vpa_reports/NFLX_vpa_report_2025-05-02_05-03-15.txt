@@ -1,0 +1,50 @@
+VPA Analysis Report for NFLX
+Generated on: 2025-05-02_05-03-15
+==================================================
+
+Signal Information:
+------------------------------
+Type: BUY
+Strength: MODERATE
+Details: Moderate buy signal with some timeframe confirmation
+
+Risk Assessment:
+------------------------------
+Current Price: $1133.47
+Stop Loss: $950.23
+Take Profit: $1190.14
+Risk-Reward Ratio: 0.31
+Position Size: 0.55 shares
+
+Timeframe Analysis:
+------------------------------
+1d:
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Not Detected (0 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+1h:
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_ANOMALY (BULLISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (11 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+15m:
+  Candle Analysis: VALIDATION (BEARISH)
+  Trend Analysis: TREND_VALIDATION (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (10 tests)
+    Buying_climax: Detected
+    Selling_climax: Detected
+
