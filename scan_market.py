@@ -43,6 +43,17 @@ for key, value in scanner.items():
     print(f"{key}: {value}")
     print("\n")
 
+print("LLM Analysis:")
+# Initialize the LLM interface
+llm_interface = VPALLMInterface()
+for tikker in scanner.keys():
+    print(f"NL Analysis for {tikker}:")
+    nl_analysis = llm_interface.get_ticker_analysis(tikker)
+    for key, value in nl_analysis.items():
+        print(f"{key}: {value}")
+    print("\n")
+print("--------------------------------------------------\n")
+
 print("--------------------------------------------------\n")
 print("Batch Analysis...")
 batch = vpa.batch_analyze(tickers, timeframes)
