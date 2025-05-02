@@ -5004,3 +5004,91 @@ Risk Assessment:
 2025-05-02 05:37:28,891 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 30m, 15m, 5m
 2025-05-02 05:37:29,007 - VPA - INFO - Completed VPA analysis for NFLX. Signal: SELL (STRONG)
 2025-05-02 05:37:29,007 - VPA - INFO - Completed VPA analysis for NFLX. Signal: SELL (STRONG)
+2025-05-02 05:52:04,301 - VPA - INFO - Starting VPA analysis for M on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:04,301 - VPA - INFO - Starting VPA analysis for M on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:05,482 - VPA - INFO - Completed VPA analysis for M. Signal: BUY (MODERATE)
+2025-05-02 05:52:05,482 - VPA - INFO - Completed VPA analysis for M. Signal: BUY (MODERATE)
+2025-05-02 05:52:05,483 - VPA - INFO - Starting VPA analysis for S on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:05,483 - VPA - INFO - Starting VPA analysis for S on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:06,136 - VPA - INFO - Completed VPA analysis for S. Signal: SELL (STRONG)
+2025-05-02 05:52:06,136 - VPA - INFO - Completed VPA analysis for S. Signal: SELL (STRONG)
+2025-05-02 05:52:06,137 - VPA - INFO - Starting VPA analysis for F on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:06,137 - VPA - INFO - Starting VPA analysis for F on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:06,991 - VPA - INFO - Completed VPA analysis for F. Signal: SELL (STRONG)
+2025-05-02 05:52:06,991 - VPA - INFO - Completed VPA analysis for F. Signal: SELL (STRONG)
+2025-05-02 05:52:06,991 - VPA - INFO - Starting VPA analysis for T on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:06,991 - VPA - INFO - Starting VPA analysis for T on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:07,728 - VPA - INFO - Completed VPA analysis for T. Signal: BUY (MODERATE)
+2025-05-02 05:52:07,728 - VPA - INFO - Completed VPA analysis for T. Signal: BUY (MODERATE)
+2025-05-02 05:52:07,728 - VPA - INFO - Starting VPA analysis for M on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:07,728 - VPA - INFO - Starting VPA analysis for M on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:07,876 - VPA - INFO - Completed VPA analysis for M. Signal: BUY (MODERATE)
+2025-05-02 05:52:07,876 - VPA - INFO - Completed VPA analysis for M. Signal: BUY (MODERATE)
+2025-05-02 05:52:07,878 - VPA - INFO - Starting VPA analysis for S on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:07,878 - VPA - INFO - Starting VPA analysis for S on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:08,057 - VPA - INFO - Completed VPA analysis for S. Signal: SELL (STRONG)
+2025-05-02 05:52:08,057 - VPA - INFO - Completed VPA analysis for S. Signal: SELL (STRONG)
+2025-05-02 05:52:08,057 - VPA - INFO - Starting VPA analysis for F on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:08,057 - VPA - INFO - Starting VPA analysis for F on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:08,223 - VPA - INFO - Completed VPA analysis for F. Signal: SELL (STRONG)
+2025-05-02 05:52:08,223 - VPA - INFO - Completed VPA analysis for F. Signal: SELL (STRONG)
+2025-05-02 05:52:08,224 - VPA - INFO - Starting VPA analysis for T on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:08,224 - VPA - INFO - Starting VPA analysis for T on timeframes: 30m, 15m, 5m
+2025-05-02 05:52:08,391 - VPA - INFO - Completed VPA analysis for T. Signal: BUY (MODERATE)
+2025-05-02 05:52:08,391 - VPA - INFO - Completed VPA analysis for T. Signal: BUY (MODERATE)
+2025-05-02 05:53:14,938 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:53:14,938 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:53:15,960 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:53:15,960 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:53:15,961 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:53:15,961 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:53:16,129 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:53:16,129 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:54:24,160 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:54:24,160 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:54:25,228 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:54:25,228 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:54:25,230 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:54:25,230 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:54:25,386 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:54:25,386 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:55:24,058 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:55:24,058 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:55:24,966 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:55:24,966 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:55:24,967 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:55:24,967 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:55:25,153 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:55:25,153 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:56:05,181 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:56:05,181 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:56:06,181 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:56:06,181 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:56:06,182 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:56:06,182 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:56:06,332 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:56:06,332 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:57:40,335 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:57:40,335 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:57:41,397 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:57:41,397 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:57:41,398 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:57:41,398 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:57:41,556 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:57:41,556 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:58:48,785 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:58:48,785 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:58:50,022 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:58:50,022 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:58:50,023 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:58:50,023 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:58:50,211 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:58:50,211 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:59:18,359 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:59:18,359 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:59:19,229 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:59:19,229 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:59:19,231 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:59:19,231 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-02 05:59:19,387 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)
+2025-05-02 05:59:19,387 - VPA - INFO - Completed VPA analysis for MSFT. Signal: SELL (STRONG)

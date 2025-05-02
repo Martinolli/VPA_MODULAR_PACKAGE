@@ -25,9 +25,9 @@ print(f"Report files: {report_files}")
 """
 # Scanner Signal Example
 # Call the method with required and optional arguments
-tickers = ["MSFT", "NFLX"]  # Example list of tickers
+tickers = ["MSFT"]  # Example list of tickers
 signal_type = "SELL"
-signal_strength = "MODERATE"
+signal_strength = "STRONG"
 timeframes = [
         {"interval": "30m", "period": "10d"},
         {"interval": "15m", "period": "10d"},
@@ -35,14 +35,19 @@ timeframes = [
     ]
 
 # Call the method
-
+print("Scanning for signals...")
 scanner = vpa.scan_for_signals(tickers, signal_type, signal_strength, timeframes)
-print(type(scanner))
-print(scanner)
+# print(type(scanner))
+# print(scanner)
+for key, value in scanner.items():
+    print(f"{key}: {value}")
+    print("\n")
 
+print("--------------------------------------------------\n")
+print("Batch Analysis...")
 batch = vpa.batch_analyze(tickers, timeframes)
-print(type(batch))
-print(batch)
+# print(type(batch))
+# print(batch)
 
 for ticker, result in batch.items():
     print(f"Ticker: {ticker}")
@@ -50,16 +55,6 @@ for ticker, result in batch.items():
         print(f"{key}: {value}")
         print("\n")
    
-
-
-for ticker, result in scanner.items():
-    print(f"Ticker: {ticker}")
-    print(f"Signal Type: {result['signal_type']}")
-    print(f"Signal Strength: {result['signal_strength']}")
-    print(f"Timeframes: {result['timeframes']}")
-    print(f"Signal Details: {result['signal_details']}")
-    print("--------------------------------------------------\n")
-
 """"
 if not scanner:
     print("No signals found.")
