@@ -1,0 +1,50 @@
+VPA Analysis Report for AAPL
+Generated on: 2025-05-02_17-55-14
+==================================================
+
+Signal Information:
+------------------------------
+Type: BUY
+Strength: MODERATE
+Details: Moderate buy signal with some timeframe confirmation
+
+Risk Assessment:
+------------------------------
+Current Price: $203.17
+Stop Loss: $168.36
+Take Profit: $214.00
+Risk-Reward Ratio: 0.31
+Position Size: 2.87 shares
+
+Timeframe Analysis:
+------------------------------
+1d:
+  Candle Analysis: VALIDATION (NEUTRAL)
+  Trend Analysis: TREND_ANOMALY (BULLISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (2 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+1h:
+  Candle Analysis: VALIDATION (BEARISH)
+  Trend Analysis: TREND_VALIDATION (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (7 tests)
+    Buying_climax: Detected
+    Selling_climax: Detected
+
+15m:
+  Candle Analysis: VALIDATION (NEUTRAL)
+  Trend Analysis: TREND_VALIDATION (BULLISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (6 tests)
+    Buying_climax: Detected
+    Selling_climax: Detected
+

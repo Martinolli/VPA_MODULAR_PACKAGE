@@ -153,6 +153,13 @@ class VPALLMInterface:
             if potential_tickers:
                 return self.get_ticker_analysis(potential_tickers[0])
         
+        # Specific check for "Analyze [TICKER] using VPA" format
+        analyze_pattern = r"analyze\s+(\w+)\s+using\s+vpa"
+        match = re.search(analyze_pattern, query)
+        if match:
+            ticker = match.group(1).upper()
+            return self.get_ticker_analysis(ticker)
+        
         # Default response
         return """
             I can help you with Volume Price Analysis (VPA). You can:
