@@ -130,7 +130,11 @@ class VPAQueryEngine:
             return "No relevant information found in the VPA document."
 
         # Build context for the model
-        context_text = "\n\n".join([f"Chunk {i+1}:\n{chunk['text']}" for i, chunk in enumerate(top_chunks)])
+        context_text = "\n\n".join(
+                f"Source: {chunk['source']}\nPage: {chunk.get('metadata', {}).get('page', '?')} - "
+                f"{chunk.get('metadata', {}).get('section', '?')}\n{chunk['text']}"
+                for chunk in top_chunks
+            )
 
         messages = [
             {"role": "system", "content": "You are a financial expert trained in Volume Price Analysis. You now have access to a knowledge base derived from Anna Coulling’s VPA book. Use this context to answer the user’s query."},
