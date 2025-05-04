@@ -79,8 +79,24 @@ tools = [
                 "required": ["ticker", "trading_style"]
             }
         }
+    },
+    {
+    "type": "function",
+    "function": {
+        "name": "search_vpa_documents",
+        "description": "Retrieves similar VPA concepts or examples from the embedded Anna Coulling book.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "A natural language question or keyword related to VPA concepts."
+                }
+            },
+            "required": ["query"]
+        }
     }
-    
+    }
 ]
 
 # --- VPA Query Engine Class --- 
@@ -105,6 +121,16 @@ class VPAQueryEngine:
         except Exception as e:
             logger.error(f"An unexpected error occurred during OpenAI client initialization: {e}", exc_info=True)
             raise
+
+    def _execute_search_vpa_documents(self, query: str) -> str:
+        from vpa_modular.rag.retriever import retrieve_top_chunks
+
+        top_chunks = retrieve_top_chunks(query, top_k=3)
+        if not top_chunks:
+            return "No relevant information found in the VPA document."
+
+        formatted_chunks = "\n\n".join([f"📖 Chunk {i+1}:\n{chunk['text']}" for i, chunk in enumerate(top_chunks)])
+        return f"🔍 Retrieved top VPA insights related to your query:\n\n{formatted_chunks}"
 
     def _execute_get_vpa_analysis(self, ticker, timeframe="1d", include_secondary_timeframes=False):
         """Executes VPA analysis using the VPAFacade and VPALLMInterface."""
@@ -253,6 +279,11 @@ class VPAQueryEngine:
                     function_result_content = self._execute_explain_vpa_concept(**function_args)
                 elif function_name == "suggest_trading_parameters":
                     function_result_content = self._execute_suggest_trading_parameters(**function_args)
+                elif tool_call.function.name == "search_vpa_documents":
+                    args = json.loads(tool_call.function.arguments)
+                    function_result_content = self._execute_search_vpa_documents(
+                        query=args["query"]
+                    )
                 else:
                     logger.warning(f"LLM requested unknown function: {function_name}")
                     function_result_content = json.dumps({"error": f"Unknown function requested: {function_name}"})
