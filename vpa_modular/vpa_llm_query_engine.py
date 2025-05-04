@@ -313,7 +313,7 @@ if __name__ == '__main__':
         
         # --- Test Queries ---
         queries = [
-             "What is a selling climax in VPA?",
+            "What is a selling climax in VPA?",
             "Analyze AAPL using VPA for the daily timeframe.",
             "Can you check the VPA signal for MSFT on the 1h chart?",
             "Explain the concept of accumulation in VPA.",
