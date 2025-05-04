@@ -1,6 +1,5 @@
 """
-Module implementing the VPA LLM Query Engine using OpenAI's API.
-
+Module implementing the VPA LLM Query Engine using OpenAI's API.query
 This module provides an interface to interact with the VPA system using natural
 language queries, leveraging OpenAI's function calling capabilities.
 """
@@ -10,6 +9,7 @@ import json
 import logging
 from openai import OpenAI, OpenAIError
 from vpa_modular.vpa_llm_interface import VPALLMInterface
+from vpa_modular.rag.retriever import retrieve_top_chunks
 
 # Assuming VPAFacade is importable from the vpa_modular package
 try:
@@ -123,30 +123,52 @@ class VPAQueryEngine:
             raise
 
     def _execute_search_vpa_documents(self, query: str) -> str:
-        from vpa_modular.rag.retriever import retrieve_top_chunks
-
-        top_chunks = retrieve_top_chunks(query, top_k=3)
+        """Executes a search for VPA concepts in the embedded Anna Coulling book."""
+         # Step 1: Retrieve top matching chunks
+        top_k=5 # Define the Top K parameter for the number of chunks to retrieve
+        top_chunks = retrieve_top_chunks(query, top_k)
         if not top_chunks:
             return "No relevant information found in the VPA document."
 
-        # Build context for the model
+        # Step 2: Build context from metadata-enhanced chunks
         context_text = "\n\n".join(
-                f"Source: {chunk['source']}\nPage: {chunk.get('metadata', {}).get('page', '?')} - "
-                f"{chunk.get('metadata', {}).get('section', '?')}\n{chunk['text']}"
-                for chunk in top_chunks
-            )
+            f"Source: {chunk['source']}\n"
+            f"Page: {chunk.get('metadata', {}).get('page', '?')} - "
+            f"{chunk.get('metadata', {}).get('section', '?')}\n"
+            f"{chunk['text']}"
+            for chunk in top_chunks
+        )
 
-        messages = [
-            {"role": "system", "content": "You are a financial expert trained in Volume Price Analysis. You now have access to a knowledge base derived from Anna Coulling’s VPA book. Use this context to answer the user’s query."},
-            {"role": "user", "content": f"Here is the context from the book:\n\n{context_text}\n\nNow answer this question based on that: {query}"}
-        ]
+        # Step 3: Generate a prompt for OpenAI
+        prompt = (
+        "You are a helpful assistant trained on the book 'Volume Price Analysis' by Anna Coulling.\n"
+        "Use the following extracted passages to answer the question as clearly as possible.\n\n"
+        f"{context_text}\n\n"
+        f"Question: {query}\n"
+        "Answer:"
+        )
 
         try:
-            response = self.openai_client.chat.completions.create(
-                model=self.openai_model,
-                messages=messages
+            response = OpenAI.ChatCompletion.create(
+                model="gpt-3.5-turbo",  # or gpt-4
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.3
             )
-            return response.choices[0].message.content.strip()
+            answer_text = response.choices[0].message.content.strip()
+        
+        # Step 4: Package structured result
+            return {
+                "answer": answer_text.strip(),
+                "source_chunks": [
+                    {
+                        "chunk_id": c["chunk_id"],
+                        "page": c.get("metadata", {}).get("page"),
+                        "section": c.get("metadata", {}).get("section"),
+                        "text": c["text"][:500] + "..."  # limit text to avoid overload
+                    }
+                    for c in top_chunks
+                ]
+            }
         except Exception as e:
             self.logger.error(f"Error generating answer from VPA book chunks: {e}")
             return f"Error generating response based on embedded content: {str(e)}"
