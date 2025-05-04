@@ -16,36 +16,33 @@ sys.path.append(project_root)
 print("\nAppended to Python Path:", project_root)
 
 
-def main():
-
-    try:
-        from vpa_modular.vpa_utils import create_vpa_report
-        from vpa_modular.vpa_llm_interface import VPALLMInterface
-        from vpa_modular.vpa_facade import VPAFacade
-        from vpa_modular.vpa_logger import VPALogger
-        print("\nSuccessfully imported vpa_modular modules")
-    except ImportError as e:
+try:
+    from vpa_modular.vpa_utils import create_vpa_report, create_batch_report
+    from vpa_modular.vpa_llm_interface import VPALLMInterface
+    from vpa_modular.vpa_facade import VPAFacade
+    from vpa_modular.vpa_logger import VPALogger
+    print("\nSuccessfully imported vpa_modular modules")
+except ImportError as e:
         print(f"\nFailed to import: {e}")
         sys.exit(1)
 
-    # Initialize the logger
-    logger = VPALogger(log_level="INFO", log_file="logs/vpa.log")
+vpa = None
+logger = None
+llm_interface = None
 
-    vpa = VPAFacade()
-
-    tickers = ["NVDA", "MSFT", "AAPL", "NFLX", "AMZN", "TSLA", "GOOGL", "META", "AMD", "INTC"]
+def analyze_tickers(tickers):
+    global vpa, logger
     logger.info("Starting VPA analysis...")
-    logger.info("Tickers to analyze:")
-
     for ticker in tickers:
         logger.info(f"Analyzing {ticker}...")
         results = vpa.analyze_ticker(ticker)
         report_files = create_vpa_report(results, "vpa_reports")
         logger.info(f"Report files created: {report_files}")
         plt.close('all')  # Close all figures
-
+    
+def perform_nl_analysis(tickers):
+    global logger, llm_interface
     logger.info("NL Analysis:")
-    llm_interface = VPALLMInterface()
     for ticker in tickers:
         logger.info(f"Analyzing {ticker}...")
         nl_analysis = llm_interface.get_ticker_analysis(ticker)
@@ -54,9 +51,27 @@ def main():
         logger.info("\n")
         logger.info("--------------------------------------------------\n")
 
+
+def main():
+
+    global vpa, logger, llm_interface
+
+    # Initialize global objects
+    logger = VPALogger(log_level="INFO", log_file="logs/vpa.log")
+    vpa = VPAFacade()
+    llm_interface = VPALLMInterface()
+
+
+    tickers = ["NVDA", "MSFT", "AAPL", "NFLX", "AMZN", "TSLA", "GOOGL", "META", "AMD", "INTC"]
+    logger.info("Starting VPA analysis...")
+    logger.info("Tickers to analyze:")
+
+    analyze_tickers(tickers)
+    perform_nl_analysis(tickers)
+
     logger.info("Analysis complete.")
 
-    signals = vpa.get_signals(ticker)
+    signals = vpa.get_signals(tickers[-1])
     print("Signals:")
     for key, value in signals.items():
         print(f"{key}: {value}")
@@ -88,6 +103,11 @@ def main():
                 print(f"{key}: {value}")
                 print("\n")
 
+    # Batch Report Analysis
+    logger.info("Starting batch report analysis...")
+    batch_report_tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "AMD", "META", "NFLX", "DIS", "INTC"]
+    batch_report_files = create_batch_report(vpa, batch_report_tickers, "vpa_batch_reports")
+    logger.info(f"Batch report files created: {batch_report_files}")
 
     """"
     # Define a list of tickers to analyze
