@@ -127,8 +127,9 @@ class VPAQueryEngine:
          # Step 1: Retrieve top matching chunks
         top_k=5 # Define the Top K parameter for the number of chunks to retrieve
         top_chunks = retrieve_top_chunks(query, top_k)
+
         if not top_chunks:
-            return "No relevant information found in the VPA document."
+            return json.dumps({"answer": "No relevant information found in the VPA document."})
 
         # Step 2: Build context from metadata-enhanced chunks
         context_text = "\n\n".join(
@@ -149,26 +150,29 @@ class VPAQueryEngine:
         )
 
         try:
-            response = OpenAI.ChatCompletion.create(
-                model="gpt-3.5-turbo",  # or gpt-4
-                messages=[{"role": "user", "content": prompt}],
-                temperature=0.3
-            )
+            response = self.openai_client.chat.completions.create(
+            model=self.openai_model,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3
+         )
             answer_text = response.choices[0].message.content.strip()
         
         # Step 4: Package structured result
-            return {
-                "answer": answer_text.strip(),
-                "source_chunks": [
-                    {
-                        "chunk_id": c["chunk_id"],
-                        "page": c.get("metadata", {}).get("page"),
-                        "section": c.get("metadata", {}).get("section"),
-                        "text": c["text"][:500] + "..."  # limit text to avoid overload
-                    }
-                    for c in top_chunks
-                ]
+            result = {
+            "answer": answer_text,
+            "source_chunks": [
+                {
+                    "chunk_id": chunk["chunk_id"],
+                    "source": chunk.get("source"),
+                    "page": chunk.get("metadata", {}).get("page"),
+                    "section": chunk.get("metadata", {}).get("section"),
+                    "text": chunk["text"][:500] + "..."  # trim to avoid overloading
+                }
+                for chunk in top_chunks
+            ]
             }
+            return json.dumps(result)
+        
         except Exception as e:
             self.logger.error(f"Error generating answer from VPA book chunks: {e}")
             return f"Error generating response based on embedded content: {str(e)}"
