@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 matplotlib.use('Agg')  # Use non-interactive backend
 import os
 import sys
+import json
 
 # Print Python path and current working directory
 print("Python Path:")
@@ -33,24 +34,38 @@ llm_interface = None
 def analyze_tickers(tickers):
     global vpa, logger
     logger.info("Starting VPA analysis...")
+    all_results = {}
     for ticker in tickers:
         logger.info(f"Analyzing {ticker}...")
         results = vpa.analyze_ticker(ticker)
+        all_results[ticker] = results
         report_files = create_vpa_report(results, "vpa_reports")
         logger.info(f"Report files created: {report_files}")
         plt.close('all')  # Close all figures
     
+    # Save all results to a JSON file
+    save_results_to_json(all_results, "vpa_analysis_results.json")
+    
 def perform_nl_analysis(tickers):
     global logger, llm_interface
     logger.info("NL Analysis:")
+    nl_results = {}
     for ticker in tickers:
         logger.info(f"Analyzing {ticker}...")
         nl_analysis = llm_interface.get_ticker_analysis(ticker)
+        nl_results[ticker] = nl_analysis
         for key, value in nl_analysis.items():
             logger.info(f"{key}: {value}")
         logger.info("\n")
         logger.info("--------------------------------------------------\n")
+    
+    # Save NL analysis results to a JSON file
+    save_results_to_json(nl_results, "vpa_nl_analysis_results.json")
 
+def save_results_to_json(results, filename):
+    with open(filename, 'w') as f:
+        json.dump(results, f, indent=4, default=str)
+    logger.info(f"Results saved to {filename}")
 
 def main():
 
@@ -62,7 +77,7 @@ def main():
     llm_interface = VPALLMInterface()
 
 
-    tickers = ["NVDA", "MSFT", "AAPL", "NFLX", "AMZN", "TSLA", "GOOGL", "META", "AMD", "INTC"]
+    tickers = ["NVDA", "MSFT"]
     logger.info("Starting VPA analysis...")
     logger.info("Tickers to analyze:")
 

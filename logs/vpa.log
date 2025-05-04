@@ -6712,3 +6712,120 @@ Risk Assessment:
 2025-05-04 09:17:34,131 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
 2025-05-04 09:17:35,222 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
 2025-05-04 09:17:39,476 - VPA - INFO - Batch report files created: {'summary_csv': 'vpa_batch_reports\\vpa_signals_summary.csv', 'signal_distribution': 'vpa_batch_reports\\signal_distribution.png', 'top_signals': 'vpa_batch_reports\\top_signals.png', 'comparative_prices': 'vpa_batch_reports\\comparative_prices.png', 'dashboard': 'vpa_batch_reports\\vpa_dashboard.png', 'html_report': 'vpa_batch_reports\\vpa_batch_report.html', 'text_summary': 'vpa_batch_reports\\vpa_batch_summary.txt'}
+2025-05-04 23:15:45,525 - VPA - INFO - Starting VPA analysis...
+2025-05-04 23:15:45,525 - VPA - INFO - Tickers to analyze:
+2025-05-04 23:15:45,525 - VPA - INFO - Starting VPA analysis...
+2025-05-04 23:15:45,525 - VPA - INFO - Analyzing NVDA...
+2025-05-04 23:15:45,525 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 23:15:46,688 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 23:15:49,311 - VPA - INFO - Report files created: {'price_chart': 'vpa_reports\\NVDA_price_chart_2025-05-04_23-15-46.png', 'multi_timeframe': 'vpa_reports\\NVDA_multi_timeframe_2025-05-04_23-15-46.png', 'patterns': 'vpa_reports\\NVDA_patterns_2025-05-04_23-15-46.png', 'text_report': 'vpa_reports\\NVDA_vpa_report_2025-05-04_23-15-46.txt'}
+2025-05-04 23:15:49,312 - VPA - INFO - Analyzing MSFT...
+2025-05-04 23:15:49,312 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-04 23:15:50,133 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-04 23:15:52,697 - VPA - INFO - Report files created: {'price_chart': 'vpa_reports\\MSFT_price_chart_2025-05-04_23-15-50.png', 'multi_timeframe': 'vpa_reports\\MSFT_multi_timeframe_2025-05-04_23-15-50.png', 'patterns': 'vpa_reports\\MSFT_patterns_2025-05-04_23-15-50.png', 'text_report': 'vpa_reports\\MSFT_vpa_report_2025-05-04_23-15-50.txt'}
+2025-05-04 23:15:52,744 - VPA - INFO - Results saved to vpa_analysis_results.json
+2025-05-04 23:15:52,744 - VPA - INFO - NL Analysis:
+2025-05-04 23:15:52,745 - VPA - INFO - Analyzing NVDA...
+2025-05-04 23:15:52,745 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 23:15:52,945 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 23:15:52,946 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 23:15:53,210 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 23:15:53,211 - VPA - INFO - ticker: NVDA
+2025-05-04 23:15:53,212 - VPA - INFO - current_price: 114.5
+2025-05-04 23:15:53,212 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-04 23:15:53,212 - VPA - INFO - risk: {'stop_loss': 109.55945060729981, 'take_profit': 115.67549846649169, 'risk_reward': 0.2379286943732458}
+2025-05-04 23:15:53,212 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 6, Support tests: 3'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 6, Resistance tests: 8'}, 'buying_climax': {'detected': False, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-04 23:15:53,213 - VPA - INFO - explanation: VPA Analysis for NVDA:
+
+Signal: BUY (MODERATE)
+Details: Moderate buy signal with some timeframe confirmation
+
+Supporting Evidence:
+- Candle Signals:
+  * 15m: Normal up candle with high volume shows buying interest; Upper wick with high volume shows selling pressure at highs; Lower wick with high volume shows failed downward breakout
+- Trend Signals:
+  * 1h: Falling price with falling volume indicates weakening bearish trend
+- Pattern Signals:
+  * 1d - Accumulation: Sideways: False, High volume bars: 6, Support tests: 3
+  * 1h - Accumulation: Sideways: False, High volume bars: 4, Support tests: 13
+  * 15m - Accumulation: Sideways: True, High volume bars: 1, Support tests: 10
+  * 15m - Selling Climax: Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True
+
+Risk Assessment:
+- Current Price: $114.50
+- Stop Loss: $109.56
+- Take Profit: $115.68
+- Risk-Reward Ratio: 0.24
+- Recommended Position Size: 20.24 shares
+
+2025-05-04 23:15:53,214 - VPA - INFO - 
+
+2025-05-04 23:15:53,214 - VPA - INFO - --------------------------------------------------
+
+2025-05-04 23:15:53,214 - VPA - INFO - Analyzing MSFT...
+2025-05-04 23:15:53,214 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-04 23:15:53,404 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-04 23:15:53,405 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-04 23:15:53,572 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-04 23:15:53,573 - VPA - INFO - ticker: MSFT
+2025-05-04 23:15:53,573 - VPA - INFO - current_price: 435.2799987792969
+2025-05-04 23:15:53,574 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-04 23:15:53,574 - VPA - INFO - risk: {'stop_loss': 380.88598785400393, 'take_profit': 457.0439987182617, 'risk_reward': 0.400117578548426}
+2025-05-04 23:15:53,574 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 7, Support tests: 5'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 7, Resistance tests: 9'}, 'buying_climax': {'detected': False, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-04 23:15:53,574 - VPA - INFO - explanation: VPA Analysis for MSFT:
+
+Signal: BUY (MODERATE)
+Details: Moderate buy signal with some timeframe confirmation
+
+Supporting Evidence:
+- Trend Signals:
+  * 1d: Rising price with rising volume confirms bullish trend
+- Pattern Signals:
+  * 1d - Accumulation: Sideways: False, High volume bars: 7, Support tests: 5
+  * 1h - Accumulation: Sideways: False, High volume bars: 7, Support tests: 12
+  * 15m - Accumulation: Sideways: True, High volume bars: 1, Support tests: 11
+  * 15m - Selling Climax: Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True
+
+Risk Assessment:
+- Current Price: $435.28
+- Stop Loss: $380.89
+- Take Profit: $457.04
+- Risk-Reward Ratio: 0.40
+- Recommended Position Size: 1.84 shares
+
+2025-05-04 23:15:53,575 - VPA - INFO - 
+
+2025-05-04 23:15:53,575 - VPA - INFO - --------------------------------------------------
+
+2025-05-04 23:15:53,576 - VPA - INFO - Results saved to vpa_nl_analysis_results.json
+2025-05-04 23:15:53,576 - VPA - INFO - Analysis complete.
+2025-05-04 23:15:53,577 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-04 23:15:53,761 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-04 23:15:53,763 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-04 23:15:54,277 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-04 23:15:54,277 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 30m, 15m, 5m
+2025-05-04 23:15:54,917 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-04 23:15:54,920 - VPA - INFO - Starting batch report analysis...
+2025-05-04 23:15:54,920 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-04 23:15:55,737 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-04 23:15:58,338 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-04 23:15:58,543 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-04 23:16:01,218 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-04 23:16:02,036 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-04 23:16:04,751 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 
+2025-05-04 23:16:05,553 - VPA - INFO - Completed VPA analysis for AMZN. Signal: BUY (MODERATE)
+2025-05-04 23:16:08,232 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-04 23:16:08,994 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-04 23:16:11,655 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 23:16:12,393 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 23:16:15,070 - VPA - INFO - Starting VPA analysis for AMD on timeframes: 
+2025-05-04 23:16:15,875 - VPA - INFO - Completed VPA analysis for AMD. Signal: BUY (MODERATE)
+2025-05-04 23:16:18,522 - VPA - INFO - Starting VPA analysis for META on timeframes: 
+2025-05-04 23:16:19,318 - VPA - INFO - Completed VPA analysis for META. Signal: BUY (MODERATE)
+2025-05-04 23:16:21,966 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-04 23:16:22,674 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-04 23:16:25,348 - VPA - INFO - Starting VPA analysis for DIS on timeframes: 
+2025-05-04 23:16:26,371 - VPA - INFO - Completed VPA analysis for DIS. Signal: BUY (MODERATE)
+2025-05-04 23:16:29,066 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-04 23:16:29,878 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-04 23:16:34,174 - VPA - INFO - Batch report files created: {'summary_csv': 'vpa_batch_reports\\vpa_signals_summary.csv', 'signal_distribution': 'vpa_batch_reports\\signal_distribution.png', 'top_signals': 'vpa_batch_reports\\top_signals.png', 'comparative_prices': 'vpa_batch_reports\\comparative_prices.png', 'dashboard': 'vpa_batch_reports\\vpa_dashboard.png', 'html_report': 'vpa_batch_reports\\vpa_batch_report.html', 'text_summary': 'vpa_batch_reports\\vpa_batch_summary.txt'}

@@ -1,0 +1,68 @@
+{
+    "NVDA": {
+        "ticker": "NVDA",
+        "current_price": 114.5,
+        "signal": {
+            "type": "BUY",
+            "strength": "MODERATE",
+            "details": "Moderate buy signal with some timeframe confirmation"
+        },
+        "risk": {
+            "stop_loss": 109.55945060729981,
+            "take_profit": 115.67549846649169,
+            "risk_reward": 0.2379286943732458
+        },
+        "patterns": {
+            "accumulation": {
+                "detected": true,
+                "details": "Sideways: False, High volume bars: 6, Support tests: 3"
+            },
+            "distribution": {
+                "detected": true,
+                "details": "Sideways: False, High volume bars: 6, Resistance tests: 8"
+            },
+            "buying_climax": {
+                "detected": false,
+                "details": "Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True"
+            },
+            "selling_climax": {
+                "detected": false,
+                "details": "Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True"
+            }
+        },
+        "explanation": "VPA Analysis for NVDA:\n\nSignal: BUY (MODERATE)\nDetails: Moderate buy signal with some timeframe confirmation\n\nSupporting Evidence:\n- Candle Signals:\n  * 15m: Normal up candle with high volume shows buying interest; Upper wick with high volume shows selling pressure at highs; Lower wick with high volume shows failed downward breakout\n- Trend Signals:\n  * 1h: Falling price with falling volume indicates weakening bearish trend\n- Pattern Signals:\n  * 1d - Accumulation: Sideways: False, High volume bars: 6, Support tests: 3\n  * 1h - Accumulation: Sideways: False, High volume bars: 4, Support tests: 13\n  * 15m - Accumulation: Sideways: True, High volume bars: 1, Support tests: 10\n  * 15m - Selling Climax: Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True\n\nRisk Assessment:\n- Current Price: $114.50\n- Stop Loss: $109.56\n- Take Profit: $115.68\n- Risk-Reward Ratio: 0.24\n- Recommended Position Size: 20.24 shares\n"
+    },
+    "MSFT": {
+        "ticker": "MSFT",
+        "current_price": 435.2799987792969,
+        "signal": {
+            "type": "BUY",
+            "strength": "MODERATE",
+            "details": "Moderate buy signal with some timeframe confirmation"
+        },
+        "risk": {
+            "stop_loss": 380.88598785400393,
+            "take_profit": 457.0439987182617,
+            "risk_reward": 0.400117578548426
+        },
+        "patterns": {
+            "accumulation": {
+                "detected": true,
+                "details": "Sideways: False, High volume bars: 7, Support tests: 5"
+            },
+            "distribution": {
+                "detected": true,
+                "details": "Sideways: False, High volume bars: 7, Resistance tests: 9"
+            },
+            "buying_climax": {
+                "detected": false,
+                "details": "Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True"
+            },
+            "selling_climax": {
+                "detected": false,
+                "details": "Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True"
+            }
+        },
+        "explanation": "VPA Analysis for MSFT:\n\nSignal: BUY (MODERATE)\nDetails: Moderate buy signal with some timeframe confirmation\n\nSupporting Evidence:\n- Trend Signals:\n  * 1d: Rising price with rising volume confirms bullish trend\n- Pattern Signals:\n  * 1d - Accumulation: Sideways: False, High volume bars: 7, Support tests: 5\n  * 1h - Accumulation: Sideways: False, High volume bars: 7, Support tests: 12\n  * 15m - Accumulation: Sideways: True, High volume bars: 1, Support tests: 11\n  * 15m - Selling Climax: Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True\n\nRisk Assessment:\n- Current Price: $435.28\n- Stop Loss: $380.89\n- Take Profit: $457.04\n- Risk-Reward Ratio: 0.40\n- Recommended Position Size: 1.84 shares\n"
+    }
+}
