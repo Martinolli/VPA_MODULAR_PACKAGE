@@ -247,13 +247,14 @@ def plot_vpa_signals(ax, price_data, processed_data, signals=None, support_resis
     
     return ax
 
-def plot_pattern_detection(price_data, patterns, output_file=None):
+def plot_pattern_detection(price_data, patterns, ticker, output_file=None):
     """
     Plot pattern detection results
     
     Parameters:
     - price_data: DataFrame with OHLC data
     - patterns: Dictionary with pattern detection results
+    - ticker: String representing the ticker symbol
     - output_file: Optional file path to save the plot
     
     Returns:
@@ -265,17 +266,6 @@ def plot_pattern_detection(price_data, patterns, output_file=None):
     # Plot candlestick chart
     plot_candlestick(ax, price_data)
 
-    # Highlight significant patterns
-    if patterns.get("accumulation", {}).get("detected", False):
-        ax.axhspan(price_data["low"].min(), price_data["low"].min() + (price_data["high"].max() - price_data["low"].min()) * 0.2, 
-                   color='green', alpha=0.2, label="Accumulation Zone")
-    if patterns.get("distribution", {}).get("detected", False):
-        ax.axhspan(price_data["high"].max() - (price_data["high"].max() - price_data["low"].min()) * 0.2, price_data["high"].max(), 
-                   color='red', alpha=0.2, label="Distribution Zone")
-    
-    # Add legend for better clarity
-    ax.legend(loc='upper right', fontsize=8)
-    
     # Plot accumulation zones
     if patterns.get("accumulation", {}).get("detected", False):
         # Highlight accumulation zones
@@ -299,15 +289,19 @@ def plot_pattern_detection(price_data, patterns, output_file=None):
         ax.plot(price_data.index[-1], price_data["low"].iloc[-1], 'go', markersize=10, label="Selling Climax")
     
     # Plot testing patterns
+    support_test_plotted = False
+    resistance_test_plotted = False
     if patterns.get("testing", {}).get("detected", False):
         for test in patterns["testing"].get("tests", []):
-            if test["type"] == "SUPPORT_TEST":
+            if test["type"] == "SUPPORT_TEST" and not support_test_plotted:
                 ax.plot(test["index"], test["price"], 'g^', markersize=8, label="Support Test")
-            elif test["type"] == "RESISTANCE_TEST":
+                support_test_plotted = True
+            elif test["type"] == "RESISTANCE_TEST" and not resistance_test_plotted:
                 ax.plot(test["index"], test["price"], 'rv', markersize=8, label="Resistance Test")
+                resistance_test_plotted = True
     
     # Set title
-    ax.set_title("VPA Pattern Detection", fontsize=12, fontweight='bold')
+    ax.set_title(f"VPA Pattern Detection - {ticker}", fontsize=12, fontweight='bold')
     
     # Add volatility text
     price_range = price_data["high"].max() - price_data["low"].min()
@@ -317,6 +311,13 @@ def plot_pattern_detection(price_data, patterns, output_file=None):
     # Add grid for better readability
     ax.grid(True, linestyle='--', linewidth=0.5, alpha=0.7)
 
+    # Add legend with a smaller font size and place it outside the plot
+    ax.legend(loc='center left', bbox_to_anchor=(1, 0.5), fontsize=8)
+    
+    # Adjust the plot to make room for the legend
+    plt.tight_layout()
+    plt.subplots_adjust(right=0.85)
+    
     # Save if output file provided
     if output_file:
         plt.savefig(output_file, bbox_inches='tight')
@@ -454,7 +455,7 @@ def create_vpa_report(analysis_results, output_dir="vpa_reports"):
     # Create pattern detection chart
     patterns = timeframe_analyses[primary_tf]["pattern_analysis"]
     pattern_file = os.path.join(output_dir, f"{ticker}_patterns_{current_datetime}.png")
-    fig = plot_pattern_detection(price_data, patterns, pattern_file)
+    fig = plot_pattern_detection(price_data, patterns, ticker, pattern_file)
     plt.close(fig)
     report_files["patterns"] = pattern_file
     
