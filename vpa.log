@@ -13466,3 +13466,27 @@ Risk Assessment:
 2025-05-04 15:08:32,123 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d
 2025-05-04 15:08:32,196 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
 2025-05-04 15:08:32,196 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-04 15:44:50,263 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 15:44:50,263 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 15:44:51,726 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:44:51,726 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:44:51,727 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 15:44:51,727 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 15:44:52,019 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:44:52,019 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:44:52,020 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 1d
+2025-05-04 15:44:52,020 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 1d
+2025-05-04 15:44:52,140 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:44:52,140 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:54:15,655 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 15:54:15,655 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 15:54:16,794 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:54:16,794 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:54:16,794 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 15:54:16,794 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-04 15:54:17,012 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:54:17,012 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:54:17,012 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 1d
+2025-05-04 15:54:17,012 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 1d
+2025-05-04 15:54:17,070 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-04 15:54:17,070 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)

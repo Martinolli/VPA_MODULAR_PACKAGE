@@ -140,21 +140,41 @@ class VPAQueryEngine:
             for chunk in top_chunks
         )
 
-        # Step 3: Generate a prompt for OpenAI
-        prompt = (
-        "You are a helpful assistant trained on the book 'Volume Price Analysis' by Anna Coulling.\n"
-        "Use the following extracted passages to answer the question as clearly as possible.\n\n"
-        f"{context_text}\n\n"
-        f"Question: {query}\n"
-        "Answer:"
+        # Step 3: Create a system message for OpenAI
+        system_message = {
+        "role": "system",
+        "content": (
+            "You are an expert assistant specializing in Volume Price Analysis (VPA) based on Anna Coulling's book. "
+            "Provide comprehensive, accurate, and well-structured answers. "
+            "Use examples where appropriate and always relate your answer back to VPA principles."
         )
+        }
+
+        # Step 4: Create a user prompt
+        user_prompt = (
+        f"Question: {query}\n\n"
+        "Based on the following extracted passages from 'Volume Price Analysis' by Anna Coulling, "
+        "please provide a comprehensive answer. Include the following elements:\n"
+        "1. A clear and concise explanation of the concept or topic.\n"
+        "2. How it relates to broader VPA principles.\n"
+        "3. Practical application or example in trading scenarios.\n"
+        "4. Any related VPA concepts that might be relevant.\n\n"
+        f"Extracted Passages:\n{context_text}\n\n"
+        "Comprehensive Answer:"
+    )
 
         try:
             response = self.openai_client.chat.completions.create(
             model=self.openai_model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.3
-         )
+            messages=[
+                system_message,
+                {"role": "user", "content": user_prompt}
+            ],
+            max_tokens=1000,  # Adjust based on desired response length
+            temperature=0.4,  # Adjust for balance between creativity and focus
+            presence_penalty=0.3,  # Slight penalty for topic repetition
+            frequency_penalty=0.3,  # Slight penalty for word repetition
+        )
             answer_text = response.choices[0].message.content.strip()
         
         # Step 4: Package structured result
