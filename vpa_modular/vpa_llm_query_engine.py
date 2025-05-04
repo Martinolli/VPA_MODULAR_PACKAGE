@@ -9,6 +9,7 @@ import os
 import json
 import logging
 from openai import OpenAI, OpenAIError
+from vpa_modular.vpa_llm_interface import VPALLMInterface
 
 # Assuming VPAFacade is importable from the vpa_modular package
 try:
@@ -63,7 +64,23 @@ tools = [
                 "required": ["concept_name"]
             }
         }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "suggest_trading_parameters",
+            "description": "Suggests trading parameters for a given stock and trading style.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "ticker": {"type": "string", "description": "The stock ticker symbol"},
+                    "trading_style": {"type": "string", "description": "The trading style (e.g., 'day_trading', 'swing_trading')"}
+                },
+                "required": ["ticker", "trading_style"]
+            }
+        }
     }
+    
 ]
 
 # --- VPA Query Engine Class --- 
@@ -75,6 +92,7 @@ class VPAQueryEngine:
         self.vpa_facade = vpa_facade
         self.openai_model = openai_model
         self.logger = logging.getLogger(__name__)
+        self.llm_interface = VPALLMInterface()  # Initialize VPALLMInterface
         try:
             # API key is expected to be in the environment variable OPENAI_API_KEY
             self.openai_client = OpenAI()
@@ -89,7 +107,7 @@ class VPAQueryEngine:
             raise
 
     def _execute_get_vpa_analysis(self, ticker, timeframe="1d", include_secondary_timeframes=False):
-        """Executes VPA analysis using the VPAFacade."""
+        """Executes VPA analysis using the VPAFacade and VPALLMInterface."""
         self.logger.info(f"Executing VPA analysis for {ticker} ({timeframe})...")
         try:
             # --- Revised Timeframe Handling ---
@@ -117,28 +135,36 @@ class VPAQueryEngine:
 
             # --- Call analyze_ticker with the correct signature ---
             # Pass the list of timeframe dictionaries to the 'timeframes' argument
-            results = self.vpa_facade.analyze_ticker(
+            try:
+                # Use VPALLMInterface to get the analysis
+                llm_analysis = self.llm_interface.get_ticker_analysis(ticker)
+                facade_results = self.vpa_facade.analyze_ticker(
                 ticker=ticker,
                 timeframes=analysis_timeframes 
-            )
+                )
 
-            # --- Process and summarize results for LLM --- 
-            # This summary structure assumes the keys returned by your analyze_ticker method.
-            # Adjust if the actual keys in 'results' are different.
-            summary = {
-                "ticker": results.get("ticker"),
-                "signal": results.get("signal"),
-                "risk_assessment": results.get("risk_assessment"),
-                "current_price": results.get("current_price"),
-                # Attempt to get a summary for the primary timeframe if available
-                "primary_analysis_summary": results.get("timeframe_analyses", {}).get(timeframe, {}).get("summary", "Analysis summary not available."), 
-                "confirmations": results.get("confirmations")
-            }
+                results ={**llm_analysis, **facade_results}
+
+                # --- Process and summarize results for LLM --- 
+                # This summary structure assumes the keys returned by your analyze_ticker method.
+                # Adjust if the actual keys in 'results' are different.
+                summary = {
+                    "ticker": results.get("ticker"),
+                    "signal": results.get("signal"),
+                    "risk_assessment": results.get("risk_assessment"),
+                    "current_price": results.get("current_price"),
+                    # Attempt to get a summary for the primary timeframe if available
+                    "primary_analysis_summary": results.get("timeframe_analyses", {}).get(timeframe, {}).get("summary", "Analysis summary not available."), 
+                    "confirmations": results.get("confirmations")
+                }
+                
+                # Convert the summary dictionary to a JSON string for the LLM
+                # Using default=str handles potential non-serializable types like datetime
+                return json.dumps(summary, default=str)
+            except Exception as e:
+                self.logger.error(f"Error executing VPA analysis for {ticker}: {e}", exc_info=True)
+                return json.dumps({"error": f"Failed to perform VPA analysis for {ticker}: {str(e)}"})
             
-            # Convert the summary dictionary to a JSON string for the LLM
-            # Using default=str handles potential non-serializable types like datetime
-            return json.dumps(summary, default=str)
-
         except Exception as e:
             self.logger.error(f"Error executing VPA analysis for {ticker}: {e}", exc_info=True)
             # Return a clear error message as a JSON string for the LLM
@@ -149,9 +175,9 @@ class VPAQueryEngine:
         self.logger.info(f"Executing explanation for concept: {concept_name}...")
         try:
             # Option 1: Try getting explanation from facade/knowledge base
-            # explanation = self.vpa_facade.get_concept_explanation(concept_name)
-            # if explanation and not explanation.get("error"): 
-            #     return json.dumps(explanation)
+            explanation = self.llm_interface.explain_vpa_concept(concept_name)
+            if explanation and not explanation.get("error"): 
+                return json.dumps(explanation)
             
             # Option 2: Just pass back the concept name, let LLM explain based on its knowledge
             # This is simpler initially and leverages the LLM's primary strength.
@@ -160,6 +186,14 @@ class VPAQueryEngine:
             logger.error(f"Error executing concept explanation for {concept_name}: {e}", exc_info=True)
             return json.dumps({"error": f"Failed to process explanation request for {concept_name}: {str(e)}"})
 
+    def _execute_suggest_trading_parameters(self, ticker, trading_style):
+        try:
+            suggestion = self.llm_interface.suggest_parameters(ticker, trading_style)
+            return json.dumps(suggestion)
+        except Exception as e:
+            self.logger.error(f"Error suggesting parameters: {e}")
+            return json.dumps({"error": f"Failed to suggest parameters for {ticker}: {str(e)}"})
+    
     def handle_query(self, user_query: str):
         """Handles a user's natural language query."""
         self.logger.info(f"Received query: {user_query}")
@@ -209,6 +243,8 @@ class VPAQueryEngine:
                     function_result_content = self._execute_get_vpa_analysis(**function_args)
                 elif function_name == "explain_vpa_concept":
                     function_result_content = self._execute_explain_vpa_concept(**function_args)
+                elif function_name == "suggest_trading_parameters":
+                    function_result_content = self._execute_suggest_trading_parameters(**function_args)
                 else:
                     logger.warning(f"LLM requested unknown function: {function_name}")
                     function_result_content = json.dumps({"error": f"Unknown function requested: {function_name}"})
@@ -269,9 +305,11 @@ if __name__ == '__main__':
         
         # --- Test Queries ---
         queries = [
-            "What is a selling climax in VPA?",
+             "What is a selling climax in VPA?",
             "Analyze AAPL using VPA for the daily timeframe.",
-            "Can you check the VPA signal for MSFT on the 1h chart?"
+            "Can you check the VPA signal for MSFT on the 1h chart?",
+            "Explain the concept of accumulation in VPA.",
+            "Suggest parameters for day trading TSLA."
         ]
         
         for query in queries:

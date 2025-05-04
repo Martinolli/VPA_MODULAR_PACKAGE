@@ -13430,3 +13430,15 @@ Risk Assessment:
 2025-05-04 09:17:35,222 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
 2025-05-04 09:17:39,476 - VPA - INFO - Batch report files created: {'summary_csv': 'vpa_batch_reports\\vpa_signals_summary.csv', 'signal_distribution': 'vpa_batch_reports\\signal_distribution.png', 'top_signals': 'vpa_batch_reports\\top_signals.png', 'comparative_prices': 'vpa_batch_reports\\comparative_prices.png', 'dashboard': 'vpa_batch_reports\\vpa_dashboard.png', 'html_report': 'vpa_batch_reports\\vpa_batch_report.html', 'text_summary': 'vpa_batch_reports\\vpa_batch_summary.txt'}
 2025-05-04 09:17:39,476 - VPA - INFO - Batch report files created: {'summary_csv': 'vpa_batch_reports\\vpa_signals_summary.csv', 'signal_distribution': 'vpa_batch_reports\\signal_distribution.png', 'top_signals': 'vpa_batch_reports\\top_signals.png', 'comparative_prices': 'vpa_batch_reports\\comparative_prices.png', 'dashboard': 'vpa_batch_reports\\vpa_dashboard.png', 'html_report': 'vpa_batch_reports\\vpa_batch_report.html', 'text_summary': 'vpa_batch_reports\\vpa_batch_summary.txt'}
+2025-05-04 10:09:56,619 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-04 10:09:56,619 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-04 10:09:57,791 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-04 10:09:57,791 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-04 10:09:57,792 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-04 10:09:57,792 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-04 10:09:57,966 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-04 10:09:57,966 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-04 10:09:57,967 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 1d
+2025-05-04 10:09:57,967 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 1d
+2025-05-04 10:09:58,020 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-04 10:09:58,020 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
