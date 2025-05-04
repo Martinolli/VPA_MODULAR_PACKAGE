@@ -129,8 +129,23 @@ class VPAQueryEngine:
         if not top_chunks:
             return "No relevant information found in the VPA document."
 
-        formatted_chunks = "\n\n".join([f"📖 Chunk {i+1}:\n{chunk['text']}" for i, chunk in enumerate(top_chunks)])
-        return f"🔍 Retrieved top VPA insights related to your query:\n\n{formatted_chunks}"
+        # Build context for the model
+        context_text = "\n\n".join([f"Chunk {i+1}:\n{chunk['text']}" for i, chunk in enumerate(top_chunks)])
+
+        messages = [
+            {"role": "system", "content": "You are a financial expert trained in Volume Price Analysis. You now have access to a knowledge base derived from Anna Coulling’s VPA book. Use this context to answer the user’s query."},
+            {"role": "user", "content": f"Here is the context from the book:\n\n{context_text}\n\nNow answer this question based on that: {query}"}
+        ]
+
+        try:
+            response = self.openai_client.chat.completions.create(
+                model=self.openai_model,
+                messages=messages
+            )
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            self.logger.error(f"Error generating answer from VPA book chunks: {e}")
+            return f"Error generating response based on embedded content: {str(e)}"
 
     def _execute_get_vpa_analysis(self, ticker, timeframe="1d", include_secondary_timeframes=False):
         """Executes VPA analysis using the VPAFacade and VPALLMInterface."""

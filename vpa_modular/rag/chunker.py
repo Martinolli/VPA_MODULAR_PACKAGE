@@ -24,19 +24,31 @@ def chunk_text(text: str, chunk_size: int, overlap: int) -> List[dict]:
     chunks = []
     start = 0
     chunk_id = 0
-    while start < len(words):
-        end = min(start + chunk_size, len(words))
+    total_words = len(words)
+
+    while start < total_words:
+        end = min(start + chunk_size, total_words)
         chunk_words = words[start:end]
         chunk_text = " ".join(chunk_words)
+
+        # Simulated page and section number
+        estimated_page = (start // 400) + 1  # Roughly 400 words per page
+        section_number = (start // 3000) + 1  # Roughly one section per ~6 pages
+
         chunks.append({
             "chunk_id": f"coulling_{chunk_id}",
             "source": "anna_coulling_vpa",
-            "text": chunk_text
+            "text": chunk_text,
+            "metadata": {
+                "page": estimated_page,
+                "section": f"Section {section_number}"
+            }
         })
+
         start += chunk_size - overlap
         chunk_id += 1
-    return chunks
 
+    return chunks
 
 def save_chunks_to_json(chunks: List[dict], output_path: Path):
     output_path.parent.mkdir(parents=True, exist_ok=True)

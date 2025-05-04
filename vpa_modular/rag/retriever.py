@@ -4,6 +4,7 @@ import numpy as np
 from pathlib import Path
 from openai import OpenAI
 from typing import List
+# Removed invalid import for openai.embeddings_utils
 
 # Configurations
 EMBEDDING_FILE = Path("vpa_knowledge_base/embeddings/anna_coulling_embeddings.json")
@@ -37,23 +38,33 @@ def load_embeddings():
         return json.load(f)
 
 
-def retrieve_top_chunks(query: str, top_k: int = 5):
-    print(f"🔍 Retrieving top {top_k} chunks for query: '{query}'")
-    query_emb = embed_query(query)
-    if not query_emb:
-        return []
+def retrieve_top_chunks(query, top_k=5):
+    # Embed the query
+    client = OpenAI()
+    query_embedding = embed_query(query)
 
+    # Load chunks and calculate similarities
     chunks = load_embeddings()
     scored = []
-
     for chunk in chunks:
-        score = cosine_similarity(query_emb, chunk["embedding"])
-        scored.append((score, chunk))
+        sim = cosine_similarity(query_embedding, chunk["embedding"])
+        scored.append((sim, chunk))
 
+    # Sort and return top K
     scored.sort(reverse=True, key=lambda x: x[0])
-    top_chunks = [chunk for _, chunk in scored[:top_k]]
+    top_chunks = scored[:top_k]
 
-    return top_chunks
+    # Print for visual verification (can be removed later)
+    print(f"\n🔍 Retrieving top {top_k} chunks for query: '{query}'\n")
+    for i, (score, chunk) in enumerate(top_chunks, 1):
+        meta = chunk.get("metadata", {})
+        print(f"--- Chunk {i} ---")
+        print(f"Score: {score:.4f}")
+        print(f"Page: {meta.get('page', '?')}, Section: {meta.get('section', '?')}")
+        print(chunk['text'][:500] + "...\n")
+
+    # Return only the chunk content and metadata
+    return [chunk for _, chunk in top_chunks]
 
 
 # Example test
