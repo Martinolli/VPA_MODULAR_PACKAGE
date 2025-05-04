@@ -13844,3 +13844,51 @@ Risk Assessment:
 2025-05-04 23:16:29,878 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
 2025-05-04 23:16:34,174 - VPA - INFO - Batch report files created: {'summary_csv': 'vpa_batch_reports\\vpa_signals_summary.csv', 'signal_distribution': 'vpa_batch_reports\\signal_distribution.png', 'top_signals': 'vpa_batch_reports\\top_signals.png', 'comparative_prices': 'vpa_batch_reports\\comparative_prices.png', 'dashboard': 'vpa_batch_reports\\vpa_dashboard.png', 'html_report': 'vpa_batch_reports\\vpa_batch_report.html', 'text_summary': 'vpa_batch_reports\\vpa_batch_summary.txt'}
 2025-05-04 23:16:34,174 - VPA - INFO - Batch report files created: {'summary_csv': 'vpa_batch_reports\\vpa_signals_summary.csv', 'signal_distribution': 'vpa_batch_reports\\signal_distribution.png', 'top_signals': 'vpa_batch_reports\\top_signals.png', 'comparative_prices': 'vpa_batch_reports\\comparative_prices.png', 'dashboard': 'vpa_batch_reports\\vpa_dashboard.png', 'html_report': 'vpa_batch_reports\\vpa_batch_report.html', 'text_summary': 'vpa_batch_reports\\vpa_batch_summary.txt'}
+2025-05-05 00:11:56,501 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-05 00:11:57,673 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-05 00:11:57,673 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-05 00:11:58,339 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-05 00:11:58,339 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-05 00:11:59,025 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-05 00:16:50,975 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-05 00:16:52,155 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-05 00:16:52,155 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-05 00:16:52,870 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-05 00:16:52,870 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-05 00:16:53,543 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-05 00:19:17,395 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-05 00:19:18,547 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-05 00:19:18,547 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-05 00:19:19,341 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-05 00:19:19,342 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-05 00:19:20,061 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-05 00:20:34,764 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-05 00:20:35,914 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-05 00:20:35,914 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-05 00:20:36,640 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-05 00:20:36,640 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-05 00:20:37,345 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-05 00:29:08,602 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-05 00:29:09,824 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-05 00:29:09,825 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-05 00:29:10,561 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-05 00:29:10,561 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-05 00:29:11,259 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-05 00:34:07,702 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-05 00:34:08,878 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-05 00:34:08,878 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-05 00:34:09,558 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-05 00:34:09,559 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-05 00:34:10,387 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-05 00:45:08,611 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-05 00:45:09,862 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-05 00:45:09,862 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-05 00:45:10,690 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-05 00:45:10,691 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-05 00:45:11,420 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-05 00:49:10,668 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-05 00:49:11,885 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-05 00:49:11,886 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-05 00:49:12,698 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-05 00:49:12,699 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-05 00:49:13,741 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)

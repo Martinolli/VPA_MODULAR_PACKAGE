@@ -1,1202 +1,1698 @@
 {
-    "NVDA": {
-        "ticker": "NVDA",
-        "timeframe_analyses": {
-            "1d": {
-                "candle_analysis": {
-                    "candle_class": "NARROW_UPPER_WICK_LOWER_WICK",
-                    "volume_class": "AVERAGE",
-                    "is_up_candle": "True",
-                    "price_direction": "DOWN",
-                    "signal_type": null,
-                    "signal_strength": null,
-                    "details": ""
-                },
-                "trend_analysis": {
-                    "trend_direction": "UP",
-                    "volume_trend": "DECREASING",
-                    "signal_type": "TREND_ANOMALY",
-                    "signal_strength": "BEARISH",
-                    "details": "Rising price with falling volume indicates weakening bullish trend"
-                },
-                "pattern_analysis": {
-                    "accumulation": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: False, High volume bars: 6, Support tests: 3"
-                    },
-                    "distribution": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: False, High volume bars: 6, Resistance tests: 8"
-                    },
-                    "testing": {
-                        "detected": false,
-                        "tests": [],
-                        "details": "Found 0 testing patterns"
-                    },
-                    "buying_climax": {
-                        "detected": false,
-                        "strength": 2,
-                        "details": "Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True"
-                    },
-                    "selling_climax": {
-                        "detected": false,
-                        "strength": 1,
-                        "details": "Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True"
-                    }
-                },
-                "support_resistance": {
-                    "support": [
-                        {
-                            "price": 110.11000061035156,
-                            "index": "2025-03-04 00:00:00+00:00",
-                            "volume": "398163300",
-                            "strength": 2.5,
-                            "tests": 3
-                        },
-                        {
-                            "price": 103.6500015258789,
-                            "index": "2025-03-31 00:00:00+00:00",
-                            "volume": "299212700",
-                            "strength": 1.5,
-                            "tests": 1
-                        },
-                        {
-                            "price": 104.7699966430664,
-                            "index": "2025-03-11 00:00:00+00:00",
-                            "volume": "354865700",
-                            "strength": 1,
-                            "tests": 0
-                        },
-                        {
-                            "price": 114.54000091552734,
-                            "index": "2025-03-18 00:00:00+00:00",
-                            "volume": "299686900",
-                            "strength": 1,
-                            "tests": 0
-                        },
-                        {
-                            "price": 86.62000274658203,
-                            "index": "2025-04-07 00:00:00+00:00",
-                            "volume": "611041300",
-                            "strength": 1,
-                            "tests": 0
-                        }
-                    ],
-                    "resistance": [
-                        {
-                            "price": 111.9800033569336,
-                            "index": "2025-04-02 00:00:00+00:00",
-                            "volume": "220601200",
-                            "strength": 2.0,
-                            "tests": 2
-                        },
-                        {
-                            "price": 115.0999984741211,
-                            "index": "2025-04-09 00:00:00+00:00",
-                            "volume": "612918300",
-                            "strength": 2.0,
-                            "tests": 2
-                        },
-                        {
-                            "price": 135.00999450683594,
-                            "index": "2025-02-27 00:00:00+00:00",
-                            "volume": "443175800",
-                            "strength": 1,
-                            "tests": 0
-                        },
-                        {
-                            "price": 122.88999938964844,
-                            "index": "2025-03-17 00:00:00+00:00",
-                            "volume": "255501500",
-                            "strength": 1,
-                            "tests": 0
-                        }
-                    ],
-                    "volume_at_levels": {
-                        "86.62000274658203": {
-                            "type": "support",
-                            "candles_count": 1,
-                            "total_volume": 611041300,
-                            "avg_volume": 611041300.0
-                        },
-                        "103.6500015258789": {
-                            "type": "support",
-                            "candles_count": 9,
-                            "total_volume": 3321147500,
-                            "avg_volume": 369016388.8888889
-                        },
-                        "104.7699966430664": {
-                            "type": "support",
-                            "candles_count": 10,
-                            "total_volume": 3620224400,
-                            "avg_volume": 362022440.0
-                        },
-                        "110.11000061035156": {
-                            "type": "support",
-                            "candles_count": 15,
-                            "total_volume": 4691642800,
-                            "avg_volume": 312776186.6666667
-                        },
-                        "111.9800033569336": {
-                            "type": "resistance",
-                            "candles_count": 11,
-                            "total_volume": 3446053900,
-                            "avg_volume": 313277627.27272725
-                        },
-                        "114.54000091552734": {
-                            "type": "support",
-                            "candles_count": 11,
-                            "total_volume": 3669929800,
-                            "avg_volume": 333629981.8181818
-                        },
-                        "115.0999984741211": {
-                            "type": "resistance",
-                            "candles_count": 10,
-                            "total_volume": 3433808300,
-                            "avg_volume": 343380830.0
-                        },
-                        "122.88999938964844": {
-                            "type": "resistance",
-                            "candles_count": 4,
-                            "total_volume": 1499149800,
-                            "avg_volume": 374787450.0
-                        },
-                        "135.00999450683594": {
-                            "type": "resistance",
-                            "candles_count": 3,
-                            "total_volume": 922774500,
-                            "avg_volume": 307591500.0
-                        }
-                    }
-                },
-                "processed_data": {
-                    "price": "                                 open        high         low       close\ndatetime                                                                 \n2024-05-03 00:00:00+00:00   87.789001   89.280998   87.040001   88.789001\n2024-05-06 00:00:00+00:00   89.389999   92.220001   89.055000   92.139999\n2024-05-07 00:00:00+00:00   91.098000   91.780998   89.011002   90.554001\n2024-05-08 00:00:00+00:00   89.483002   91.194000   89.419998   90.412003\n2024-05-09 00:00:00+00:00   90.528999   91.071999   88.231003   88.747002\n...                               ...         ...         ...         ...\n2025-04-28 00:00:00+00:00  109.690002  110.370003  106.019997  108.730003\n2025-04-29 00:00:00+00:00  107.669998  110.199997  107.440002  109.019997\n2025-04-30 00:00:00+00:00  104.470001  108.919998  104.080002  108.919998\n2025-05-01 00:00:00+00:00  113.080002  114.940002  111.300003  111.610001\n2025-05-02 00:00:00+00:00  114.180000  115.400002  113.370003  114.500000\n\n[250 rows x 4 columns]",
-                    "volume": "datetime\n2024-05-03 00:00:00+00:00    398341000\n2024-05-06 00:00:00+00:00    376203000\n2024-05-07 00:00:00+00:00    437342000\n2024-05-08 00:00:00+00:00    325721000\n2024-05-09 00:00:00+00:00    378013000\n                               ...    \n2025-04-28 00:00:00+00:00    207708500\n2025-04-29 00:00:00+00:00    170444300\n2025-04-30 00:00:00+00:00    235044600\n2025-05-01 00:00:00+00:00    236121500\n2025-05-02 00:00:00+00:00    189784700\nName: volume_nvda, Length: 250, dtype: int64",
-                    "spread": "datetime\n2024-05-03 00:00:00+00:00    1.000000\n2024-05-06 00:00:00+00:00    2.750000\n2024-05-07 00:00:00+00:00    0.543999\n2024-05-08 00:00:00+00:00    0.929001\n2024-05-09 00:00:00+00:00    1.781998\n                               ...   \n2025-04-28 00:00:00+00:00    0.959999\n2025-04-29 00:00:00+00:00    1.349998\n2025-04-30 00:00:00+00:00    4.449997\n2025-05-01 00:00:00+00:00    1.470001\n2025-05-02 00:00:00+00:00    0.320000\nLength: 250, dtype: float64",
-                    "body_percent": "datetime\n2024-05-03 00:00:00+00:00    0.446230\n2024-05-06 00:00:00+00:00    0.868878\n2024-05-07 00:00:00+00:00    0.196390\n2024-05-08 00:00:00+00:00    0.523675\n2024-05-09 00:00:00+00:00    0.627244\n                               ...   \n2025-04-28 00:00:00+00:00    0.220689\n2025-04-29 00:00:00+00:00    0.489131\n2025-04-30 00:00:00+00:00    0.919422\n2025-05-01 00:00:00+00:00    0.403847\n2025-05-02 00:00:00+00:00    0.157635\nLength: 250, dtype: float64",
-                    "upper_wick": "datetime\n2024-05-03 00:00:00+00:00    0.491997\n2024-05-06 00:00:00+00:00    0.080002\n2024-05-07 00:00:00+00:00    0.682999\n2024-05-08 00:00:00+00:00    0.781998\n2024-05-09 00:00:00+00:00    0.542999\n                               ...   \n2025-04-28 00:00:00+00:00    0.680000\n2025-04-29 00:00:00+00:00    1.180000\n2025-04-30 00:00:00+00:00    0.000000\n2025-05-01 00:00:00+00:00    1.860001\n2025-05-02 00:00:00+00:00    0.900002\nLength: 250, dtype: float64",
-                    "lower_wick": "datetime\n2024-05-03 00:00:00+00:00    0.749001\n2024-05-06 00:00:00+00:00    0.334999\n2024-05-07 00:00:00+00:00    1.542999\n2024-05-08 00:00:00+00:00    0.063004\n2024-05-09 00:00:00+00:00    0.515999\n                               ...   \n2025-04-28 00:00:00+00:00    2.710007\n2025-04-29 00:00:00+00:00    0.229996\n2025-04-30 00:00:00+00:00    0.389999\n2025-05-01 00:00:00+00:00    0.309998\n2025-05-02 00:00:00+00:00    0.809998\nLength: 250, dtype: float64",
-                    "avg_volume": "datetime\n2024-05-03 00:00:00+00:00            NaN\n2024-05-06 00:00:00+00:00            NaN\n2024-05-07 00:00:00+00:00            NaN\n2024-05-08 00:00:00+00:00            NaN\n2024-05-09 00:00:00+00:00            NaN\n                                ...     \n2025-04-28 00:00:00+00:00    304274552.0\n2025-04-29 00:00:00+00:00    303773846.0\n2025-04-30 00:00:00+00:00    304091206.0\n2025-05-01 00:00:00+00:00    305462916.0\n2025-05-02 00:00:00+00:00    306380538.0\nName: volume_nvda, Length: 250, dtype: float64",
-                    "volume_ratio": "datetime\n2024-05-03 00:00:00+00:00         NaN\n2024-05-06 00:00:00+00:00         NaN\n2024-05-07 00:00:00+00:00         NaN\n2024-05-08 00:00:00+00:00         NaN\n2024-05-09 00:00:00+00:00         NaN\n                               ...   \n2025-04-28 00:00:00+00:00    0.682635\n2025-04-29 00:00:00+00:00    0.561089\n2025-04-30 00:00:00+00:00    0.772941\n2025-05-01 00:00:00+00:00    0.772996\n2025-05-02 00:00:00+00:00    0.619441\nName: volume_nvda, Length: 250, dtype: float64",
-                    "volume_class": "datetime\n2024-05-03 00:00:00+00:00    AVERAGE\n2024-05-06 00:00:00+00:00    AVERAGE\n2024-05-07 00:00:00+00:00    AVERAGE\n2024-05-08 00:00:00+00:00    AVERAGE\n2024-05-09 00:00:00+00:00    AVERAGE\n                              ...   \n2025-04-28 00:00:00+00:00    AVERAGE\n2025-04-29 00:00:00+00:00        LOW\n2025-04-30 00:00:00+00:00    AVERAGE\n2025-05-01 00:00:00+00:00    AVERAGE\n2025-05-02 00:00:00+00:00    AVERAGE\nLength: 250, dtype: object",
-                    "candle_class": "datetime\n2024-05-03 00:00:00+00:00                         NEUTRAL\n2024-05-06 00:00:00+00:00                         NEUTRAL\n2024-05-07 00:00:00+00:00              NEUTRAL_LOWER_WICK\n2024-05-08 00:00:00+00:00                         NEUTRAL\n2024-05-09 00:00:00+00:00                         NEUTRAL\n                                         ...             \n2025-04-28 00:00:00+00:00               NARROW_LOWER_WICK\n2025-04-29 00:00:00+00:00                          NARROW\n2025-04-30 00:00:00+00:00                         NEUTRAL\n2025-05-01 00:00:00+00:00                          NARROW\n2025-05-02 00:00:00+00:00    NARROW_UPPER_WICK_LOWER_WICK\nLength: 250, dtype: object",
-                    "price_direction": "datetime\n2024-05-03 00:00:00+00:00    SIDEWAYS\n2024-05-06 00:00:00+00:00    SIDEWAYS\n2024-05-07 00:00:00+00:00    SIDEWAYS\n2024-05-08 00:00:00+00:00    SIDEWAYS\n2024-05-09 00:00:00+00:00    SIDEWAYS\n                               ...   \n2025-04-28 00:00:00+00:00        DOWN\n2025-04-29 00:00:00+00:00        DOWN\n2025-04-30 00:00:00+00:00        DOWN\n2025-05-01 00:00:00+00:00        DOWN\n2025-05-02 00:00:00+00:00        DOWN\nLength: 250, dtype: object",
-                    "volume_direction": "datetime\n2024-05-03 00:00:00+00:00          FLAT\n2024-05-06 00:00:00+00:00          FLAT\n2024-05-07 00:00:00+00:00          FLAT\n2024-05-08 00:00:00+00:00          FLAT\n2024-05-09 00:00:00+00:00          FLAT\n                                ...    \n2025-04-28 00:00:00+00:00    INCREASING\n2025-04-29 00:00:00+00:00    DECREASING\n2025-04-30 00:00:00+00:00    INCREASING\n2025-05-01 00:00:00+00:00    INCREASING\n2025-05-02 00:00:00+00:00    INCREASING\nLength: 250, dtype: object"
-                }
-            },
-            "1h": {
-                "candle_analysis": {
-                    "candle_class": "NARROW_UPPER_WICK_LOWER_WICK",
-                    "volume_class": "AVERAGE",
-                    "is_up_candle": "False",
-                    "price_direction": "UP",
-                    "signal_type": null,
-                    "signal_strength": null,
-                    "details": ""
-                },
-                "trend_analysis": {
-                    "trend_direction": "DOWN",
-                    "volume_trend": "DECREASING",
-                    "signal_type": "TREND_ANOMALY",
-                    "signal_strength": "BULLISH",
-                    "details": "Falling price with falling volume indicates weakening bearish trend"
-                },
-                "pattern_analysis": {
-                    "accumulation": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: False, High volume bars: 4, Support tests: 13"
-                    },
-                    "distribution": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: False, High volume bars: 4, Resistance tests: 14"
-                    },
-                    "testing": {
-                        "detected": true,
-                        "tests": [
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-04-30 16:30:00+00:00",
-                                "price": 105.63999938964844
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-01 16:30:00+00:00",
-                                "price": 112.86000061035156
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-01 18:30:00+00:00",
-                                "price": 112.87999725341797
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 16:30:00+00:00",
-                                "price": 113.94999694824219
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-04-30 18:30:00+00:00",
-                                "price": 107.83499908447266
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-01 17:30:00+00:00",
-                                "price": 113.91999816894531
-                            }
-                        ],
-                        "details": "Found 6 testing patterns"
-                    },
-                    "buying_climax": {
-                        "detected": false,
-                        "strength": 2,
-                        "details": "Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True"
-                    },
-                    "selling_climax": {
-                        "detected": false,
-                        "strength": 1,
-                        "details": "Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True"
-                    }
-                },
-                "support_resistance": {
-                    "support": [
-                        {
-                            "price": 105.51010131835938,
-                            "index": "2025-04-24 18:30:00+00:00",
-                            "volume": "18390301",
-                            "strength": 4.0,
-                            "tests": 6
-                        },
-                        {
-                            "price": 112.86000061035156,
-                            "index": "2025-05-01 16:30:00+00:00",
-                            "volume": "16605965",
-                            "strength": 2.5,
-                            "tests": 3
-                        },
-                        {
-                            "price": 104.08000183105469,
-                            "index": "2025-04-30 13:30:00+00:00",
-                            "volume": "59488326",
-                            "strength": 2,
-                            "high_volume": true,
-                            "tests": 0
-                        },
-                        {
-                            "price": 108.22000122070312,
-                            "index": "2025-04-29 16:30:00+00:00",
-                            "volume": "12800451",
-                            "strength": 1.5,
-                            "tests": 1
-                        },
-                        {
-                            "price": 111.31999969482422,
-                            "index": "2025-05-01 19:30:00+00:00",
-                            "volume": "22930513",
-                            "strength": 1,
-                            "tests": 0
-                        }
-                    ],
-                    "resistance": [
-                        {
-                            "price": 114.94000244140625,
-                            "index": "2025-05-01 14:30:00+00:00",
-                            "volume": "38782979",
-                            "strength": 5.0,
-                            "tests": 8
-                        },
-                        {
-                            "price": 109.70999908447266,
-                            "index": "2025-04-29 13:30:00+00:00",
-                            "volume": "45041087",
-                            "strength": 4.0,
-                            "high_volume": true,
-                            "tests": 4
-                        },
-                        {
-                            "price": 111.91999816894531,
-                            "index": "2025-04-25 16:30:00+00:00",
-                            "volume": "39348572",
-                            "strength": 2.0,
-                            "tests": 2
-                        }
-                    ],
-                    "volume_at_levels": {
-                        "104.08000183105469": {
-                            "type": "support",
-                            "candles_count": 2,
-                            "total_volume": 115527737,
-                            "avg_volume": 57763868.5
-                        },
-                        "105.51010131835938": {
-                            "type": "support",
-                            "candles_count": 4,
-                            "total_volume": 131590916,
-                            "avg_volume": 32897729.0
-                        },
-                        "108.22000122070312": {
-                            "type": "support",
-                            "candles_count": 8,
-                            "total_volume": 234976792,
-                            "avg_volume": 29372099.0
-                        },
-                        "109.70999908447266": {
-                            "type": "resistance",
-                            "candles_count": 5,
-                            "total_volume": 188581330,
-                            "avg_volume": 37716266.0
-                        },
-                        "111.31999969482422": {
-                            "type": "support",
-                            "candles_count": 4,
-                            "total_volume": 121226010,
-                            "avg_volume": 30306502.5
-                        },
-                        "111.91999816894531": {
-                            "type": "resistance",
-                            "candles_count": 2,
-                            "total_volume": 62279085,
-                            "avg_volume": 31139542.5
-                        },
-                        "112.86000061035156": {
-                            "type": "support",
-                            "candles_count": 3,
-                            "total_volume": 109209379,
-                            "avg_volume": 36403126.333333336
-                        },
-                        "114.94000244140625": {
-                            "type": "resistance",
-                            "candles_count": 5,
-                            "total_volume": 154427017,
-                            "avg_volume": 30885403.4
-                        }
-                    }
-                },
-                "processed_data": {
-                    "price": "                                 open        high         low       close\ndatetime                                                                 \n2025-02-06 14:30:00+00:00  127.419998  127.500000  125.209999  126.221603\n2025-02-06 15:30:00+00:00  126.230003  127.000000  125.930000  126.860001\n2025-02-06 16:30:00+00:00  126.860001  128.240005  126.599998  127.735298\n2025-02-06 17:30:00+00:00  127.750000  128.320007  127.400002  128.110001\n2025-02-06 18:30:00+00:00  128.104996  128.440002  127.480003  127.694801\n...                               ...         ...         ...         ...\n2025-05-02 15:30:00+00:00  114.660004  115.250000  114.550003  114.745003\n2025-05-02 16:30:00+00:00  114.745003  114.979897  113.949997  114.364502\n2025-05-02 17:30:00+00:00  114.364998  114.879997  114.190002  114.800003\n2025-05-02 18:30:00+00:00  114.809998  115.029999  114.220001  114.470001\n2025-05-02 19:30:00+00:00  114.470001  114.629997  113.900002  114.389999\n\n[420 rows x 4 columns]",
-                    "volume": "datetime\n2025-02-06 14:30:00+00:00    72706327\n2025-02-06 15:30:00+00:00    26067881\n2025-02-06 16:30:00+00:00    36681781\n2025-02-06 17:30:00+00:00    21309637\n2025-02-06 18:30:00+00:00    20105477\n                               ...   \n2025-05-02 15:30:00+00:00    20729043\n2025-05-02 16:30:00+00:00    15564881\n2025-05-02 17:30:00+00:00    14510300\n2025-05-02 18:30:00+00:00    19985024\n2025-05-02 19:30:00+00:00    19368086\nName: volume_nvda, Length: 420, dtype: int64",
-                    "spread": "datetime\n2025-02-06 14:30:00+00:00    1.198395\n2025-02-06 15:30:00+00:00    0.629997\n2025-02-06 16:30:00+00:00    0.875298\n2025-02-06 17:30:00+00:00    0.360001\n2025-02-06 18:30:00+00:00    0.410194\n                               ...   \n2025-05-02 15:30:00+00:00    0.084999\n2025-05-02 16:30:00+00:00    0.380501\n2025-05-02 17:30:00+00:00    0.435005\n2025-05-02 18:30:00+00:00    0.339996\n2025-05-02 19:30:00+00:00    0.080002\nLength: 420, dtype: float64",
-                    "body_percent": "datetime\n2025-02-06 14:30:00+00:00    0.523316\n2025-02-06 15:30:00+00:00    0.588783\n2025-02-06 16:30:00+00:00    0.533716\n2025-02-06 17:30:00+00:00    0.391303\n2025-02-06 18:30:00+00:00    0.427286\n                               ...   \n2025-05-02 15:30:00+00:00    0.121428\n2025-05-02 16:30:00+00:00    0.369454\n2025-05-02 17:30:00+00:00    0.630447\n2025-05-02 18:30:00+00:00    0.419750\n2025-05-02 19:30:00+00:00    0.109592\nLength: 420, dtype: float64",
-                    "upper_wick": "datetime\n2025-02-06 14:30:00+00:00    0.080002\n2025-02-06 15:30:00+00:00    0.139999\n2025-02-06 16:30:00+00:00    0.504707\n2025-02-06 17:30:00+00:00    0.210007\n2025-02-06 18:30:00+00:00    0.335007\n                               ...   \n2025-05-02 15:30:00+00:00    0.504997\n2025-05-02 16:30:00+00:00    0.234894\n2025-05-02 17:30:00+00:00    0.079994\n2025-05-02 18:30:00+00:00    0.220001\n2025-05-02 19:30:00+00:00    0.159996\nLength: 420, dtype: float64",
-                    "lower_wick": "datetime\n2025-02-06 14:30:00+00:00    1.011604\n2025-02-06 15:30:00+00:00    0.300003\n2025-02-06 16:30:00+00:00    0.260002\n2025-02-06 17:30:00+00:00    0.349998\n2025-02-06 18:30:00+00:00    0.214798\n                               ...   \n2025-05-02 15:30:00+00:00    0.110001\n2025-05-02 16:30:00+00:00    0.414505\n2025-05-02 17:30:00+00:00    0.174995\n2025-05-02 18:30:00+00:00    0.250000\n2025-05-02 19:30:00+00:00    0.489998\nLength: 420, dtype: float64",
-                    "avg_volume": "datetime\n2025-02-06 14:30:00+00:00            NaN\n2025-02-06 15:30:00+00:00            NaN\n2025-02-06 16:30:00+00:00            NaN\n2025-02-06 17:30:00+00:00            NaN\n2025-02-06 18:30:00+00:00            NaN\n                                ...     \n2025-05-02 15:30:00+00:00    26850970.06\n2025-05-02 16:30:00+00:00    26642728.42\n2025-05-02 17:30:00+00:00    26521600.42\n2025-05-02 18:30:00+00:00    26601789.86\n2025-05-02 19:30:00+00:00    26588986.72\nName: volume_nvda, Length: 420, dtype: float64",
-                    "volume_ratio": "datetime\n2025-02-06 14:30:00+00:00         NaN\n2025-02-06 15:30:00+00:00         NaN\n2025-02-06 16:30:00+00:00         NaN\n2025-02-06 17:30:00+00:00         NaN\n2025-02-06 18:30:00+00:00         NaN\n                               ...   \n2025-05-02 15:30:00+00:00    0.772004\n2025-05-02 16:30:00+00:00    0.584207\n2025-05-02 17:30:00+00:00    0.547113\n2025-05-02 18:30:00+00:00    0.751266\n2025-05-02 19:30:00+00:00    0.728425\nName: volume_nvda, Length: 420, dtype: float64",
-                    "volume_class": "datetime\n2025-02-06 14:30:00+00:00    AVERAGE\n2025-02-06 15:30:00+00:00    AVERAGE\n2025-02-06 16:30:00+00:00    AVERAGE\n2025-02-06 17:30:00+00:00    AVERAGE\n2025-02-06 18:30:00+00:00    AVERAGE\n                              ...   \n2025-05-02 15:30:00+00:00    AVERAGE\n2025-05-02 16:30:00+00:00        LOW\n2025-05-02 17:30:00+00:00        LOW\n2025-05-02 18:30:00+00:00    AVERAGE\n2025-05-02 19:30:00+00:00    AVERAGE\nLength: 420, dtype: object",
-                    "candle_class": "datetime\n2025-02-06 14:30:00+00:00                         NEUTRAL\n2025-02-06 15:30:00+00:00                         NEUTRAL\n2025-02-06 16:30:00+00:00                         NEUTRAL\n2025-02-06 17:30:00+00:00                         NEUTRAL\n2025-02-06 18:30:00+00:00                         NEUTRAL\n                                         ...             \n2025-05-02 15:30:00+00:00               NARROW_UPPER_WICK\n2025-05-02 16:30:00+00:00                         NEUTRAL\n2025-05-02 17:30:00+00:00                         NEUTRAL\n2025-05-02 18:30:00+00:00                          NARROW\n2025-05-02 19:30:00+00:00    NARROW_UPPER_WICK_LOWER_WICK\nLength: 420, dtype: object",
-                    "price_direction": "datetime\n2025-02-06 14:30:00+00:00    SIDEWAYS\n2025-02-06 15:30:00+00:00    SIDEWAYS\n2025-02-06 16:30:00+00:00    SIDEWAYS\n2025-02-06 17:30:00+00:00    SIDEWAYS\n2025-02-06 18:30:00+00:00    SIDEWAYS\n                               ...   \n2025-05-02 15:30:00+00:00          UP\n2025-05-02 16:30:00+00:00          UP\n2025-05-02 17:30:00+00:00          UP\n2025-05-02 18:30:00+00:00          UP\n2025-05-02 19:30:00+00:00          UP\nLength: 420, dtype: object",
-                    "volume_direction": "datetime\n2025-02-06 14:30:00+00:00          FLAT\n2025-02-06 15:30:00+00:00          FLAT\n2025-02-06 16:30:00+00:00          FLAT\n2025-02-06 17:30:00+00:00          FLAT\n2025-02-06 18:30:00+00:00          FLAT\n                                ...    \n2025-05-02 15:30:00+00:00    DECREASING\n2025-05-02 16:30:00+00:00    DECREASING\n2025-05-02 17:30:00+00:00    DECREASING\n2025-05-02 18:30:00+00:00    INCREASING\n2025-05-02 19:30:00+00:00    DECREASING\nLength: 420, dtype: object"
-                }
-            },
-            "15m": {
-                "candle_analysis": {
-                    "candle_class": "NEUTRAL_UPPER_WICK_LOWER_WICK",
-                    "volume_class": "VERY_HIGH",
-                    "is_up_candle": "True",
-                    "price_direction": "UP",
-                    "signal_type": "VALIDATION",
-                    "signal_strength": "BULLISH",
-                    "details": "Normal up candle with high volume shows buying interest; Upper wick with high volume shows selling pressure at highs; Lower wick with high volume shows failed downward breakout"
-                },
-                "trend_analysis": {
-                    "trend_direction": "DOWN",
-                    "volume_trend": "INCREASING",
-                    "signal_type": "TREND_VALIDATION",
-                    "signal_strength": "BEARISH",
-                    "details": "Falling price with rising volume confirms bearish trend"
-                },
-                "pattern_analysis": {
-                    "accumulation": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: True, High volume bars: 1, Support tests: 10"
-                    },
-                    "distribution": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: True, High volume bars: 1, Resistance tests: 10"
-                    },
-                    "testing": {
-                        "detected": true,
-                        "tests": [
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 15:45:00+00:00",
-                                "price": 114.55000305175781
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 16:45:00+00:00",
-                                "price": 114.41169738769531
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 18:45:00+00:00",
-                                "price": 114.33000183105469
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 19:00:00+00:00",
-                                "price": 114.22000122070312
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 15:30:00+00:00",
-                                "price": 114.83999633789062
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 15:45:00+00:00",
-                                "price": 114.8499984741211
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 17:15:00+00:00",
-                                "price": 114.4800033569336
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 17:30:00+00:00",
-                                "price": 114.63999938964844
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 17:45:00+00:00",
-                                "price": 114.76000213623047
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 18:00:00+00:00",
-                                "price": 114.8781967163086
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 18:15:00+00:00",
-                                "price": 114.87999725341797
-                            }
-                        ],
-                        "details": "Found 11 testing patterns"
-                    },
-                    "buying_climax": {
-                        "detected": true,
-                        "strength": 4,
-                        "details": "Near high: True, Very high volume: True, Wide up candle: False, Upper wick: True"
-                    },
-                    "selling_climax": {
-                        "detected": true,
-                        "strength": 4,
-                        "details": "Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True"
-                    }
-                },
-                "support_resistance": {
-                    "support": [
-                        {
-                            "price": 113.05000305175781,
-                            "index": "2025-05-01 15:45:00+00:00",
-                            "volume": "8166566",
-                            "strength": 10.0,
-                            "tests": 18
-                        },
-                        {
-                            "price": 111.31999969482422,
-                            "index": "2025-05-01 19:45:00+00:00",
-                            "volume": "16668233",
-                            "strength": 1,
-                            "tests": 0
-                        }
-                    ],
-                    "resistance": [
-                        {
-                            "price": 114.94000244140625,
-                            "index": "2025-05-01 15:15:00+00:00",
-                            "volume": "21402103",
-                            "strength": 14.0,
-                            "high_volume": true,
-                            "tests": 24
-                        },
-                        {
-                            "price": 113.68000030517578,
-                            "index": "2025-05-01 14:30:00+00:00",
-                            "volume": "7103147",
-                            "strength": 10.5,
-                            "tests": 19
-                        }
-                    ],
-                    "volume_at_levels": {
-                        "111.31999969482422": {
-                            "type": "support",
-                            "candles_count": 1,
-                            "total_volume": 16668233,
-                            "avg_volume": 16668233.0
-                        },
-                        "113.05000305175781": {
-                            "type": "support",
-                            "candles_count": 9,
-                            "total_volume": 51276950,
-                            "avg_volume": 5697438.888888889
-                        },
-                        "113.68000030517578": {
-                            "type": "resistance",
-                            "candles_count": 16,
-                            "total_volume": 111173656,
-                            "avg_volume": 6948353.5
-                        },
-                        "114.94000244140625": {
-                            "type": "resistance",
-                            "candles_count": 6,
-                            "total_volume": 73913254,
-                            "avg_volume": 12318875.666666666
-                        }
-                    }
-                },
-                "processed_data": {
-                    "price": "                                 open        high         low       close\ndatetime                                                                 \n2025-04-28 13:30:00+00:00  109.695000  110.369904  108.099998  109.114998\n2025-04-28 13:45:00+00:00  109.114998  109.570000  108.250000  108.449997\n2025-04-28 14:00:00+00:00  108.449997  108.809998  107.860001  108.290001\n2025-04-28 14:15:00+00:00  108.324997  108.919998  108.320000  108.525200\n2025-04-28 14:30:00+00:00  108.529999  108.680000  108.089996  108.570000\n...                               ...         ...         ...         ...\n2025-05-02 18:45:00+00:00  114.760002  114.769997  114.330002  114.500000\n2025-05-02 19:00:00+00:00  114.500000  114.525002  114.220001  114.315002\n2025-05-02 19:15:00+00:00  114.309998  114.550003  114.300003  114.470001\n2025-05-02 19:30:00+00:00  114.470001  114.480003  114.120003  114.269897\n2025-05-02 19:45:00+00:00  114.264999  114.629997  113.900002  114.389999\n\n[130 rows x 4 columns]",
-                    "volume": "datetime\n2025-04-28 13:30:00+00:00    29260820\n2025-04-28 13:45:00+00:00    12744764\n2025-04-28 14:00:00+00:00    11400714\n2025-04-28 14:15:00+00:00     7007074\n2025-04-28 14:30:00+00:00     6761556\n                               ...   \n2025-05-02 18:45:00+00:00     4417396\n2025-05-02 19:00:00+00:00     3591128\n2025-05-02 19:15:00+00:00     7339037\n2025-05-02 19:30:00+00:00     5213938\n2025-05-02 19:45:00+00:00    14154148\nName: volume_nvda, Length: 130, dtype: int64",
-                    "spread": "datetime\n2025-04-28 13:30:00+00:00    0.580002\n2025-04-28 13:45:00+00:00    0.665001\n2025-04-28 14:00:00+00:00    0.159996\n2025-04-28 14:15:00+00:00    0.200203\n2025-04-28 14:30:00+00:00    0.040001\n                               ...   \n2025-05-02 18:45:00+00:00    0.260002\n2025-05-02 19:00:00+00:00    0.184998\n2025-05-02 19:15:00+00:00    0.160004\n2025-05-02 19:30:00+00:00    0.200104\n2025-05-02 19:45:00+00:00    0.125000\nLength: 130, dtype: float64",
-                    "body_percent": "datetime\n2025-04-28 13:30:00+00:00    0.255518\n2025-04-28 13:45:00+00:00    0.503789\n2025-04-28 14:00:00+00:00    0.168417\n2025-04-28 14:15:00+00:00    0.333672\n2025-04-28 14:30:00+00:00    0.067798\n                               ...   \n2025-05-02 18:45:00+00:00    0.590921\n2025-05-02 19:00:00+00:00    0.606549\n2025-05-02 19:15:00+00:00    0.640015\n2025-05-02 19:30:00+00:00    0.555843\n2025-05-02 19:45:00+00:00    0.171234\nLength: 130, dtype: float64",
-                    "upper_wick": "datetime\n2025-04-28 13:30:00+00:00    0.674904\n2025-04-28 13:45:00+00:00    0.455002\n2025-04-28 14:00:00+00:00    0.360001\n2025-04-28 14:15:00+00:00    0.394798\n2025-04-28 14:30:00+00:00    0.110001\n                               ...   \n2025-05-02 18:45:00+00:00    0.009995\n2025-05-02 19:00:00+00:00    0.025002\n2025-05-02 19:15:00+00:00    0.080002\n2025-05-02 19:30:00+00:00    0.010002\n2025-05-02 19:45:00+00:00    0.239998\nLength: 130, dtype: float64",
-                    "lower_wick": "datetime\n2025-04-28 13:30:00+00:00    1.014999\n2025-04-28 13:45:00+00:00    0.199997\n2025-04-28 14:00:00+00:00    0.430000\n2025-04-28 14:15:00+00:00    0.004997\n2025-04-28 14:30:00+00:00    0.440002\n                               ...   \n2025-05-02 18:45:00+00:00    0.169998\n2025-05-02 19:00:00+00:00    0.095001\n2025-05-02 19:15:00+00:00    0.009995\n2025-05-02 19:30:00+00:00    0.149895\n2025-05-02 19:45:00+00:00    0.364998\nLength: 130, dtype: float64",
-                    "avg_volume": "datetime\n2025-04-28 13:30:00+00:00           NaN\n2025-04-28 13:45:00+00:00           NaN\n2025-04-28 14:00:00+00:00           NaN\n2025-04-28 14:15:00+00:00           NaN\n2025-04-28 14:30:00+00:00           NaN\n                                ...    \n2025-05-02 18:45:00+00:00    7478507.22\n2025-05-02 19:00:00+00:00    7461997.76\n2025-05-02 19:15:00+00:00    7214343.78\n2025-05-02 19:30:00+00:00    6566992.22\n2025-05-02 19:45:00+00:00    6570941.32\nName: volume_nvda, Length: 130, dtype: float64",
-                    "volume_ratio": "datetime\n2025-04-28 13:30:00+00:00         NaN\n2025-04-28 13:45:00+00:00         NaN\n2025-04-28 14:00:00+00:00         NaN\n2025-04-28 14:15:00+00:00         NaN\n2025-04-28 14:30:00+00:00         NaN\n                               ...   \n2025-05-02 18:45:00+00:00    0.590679\n2025-05-02 19:00:00+00:00    0.481256\n2025-05-02 19:15:00+00:00    1.017284\n2025-05-02 19:30:00+00:00    0.793961\n2025-05-02 19:45:00+00:00    2.154052\nName: volume_nvda, Length: 130, dtype: float64",
-                    "volume_class": "datetime\n2025-04-28 13:30:00+00:00      AVERAGE\n2025-04-28 13:45:00+00:00      AVERAGE\n2025-04-28 14:00:00+00:00      AVERAGE\n2025-04-28 14:15:00+00:00      AVERAGE\n2025-04-28 14:30:00+00:00      AVERAGE\n                               ...    \n2025-05-02 18:45:00+00:00          LOW\n2025-05-02 19:00:00+00:00          LOW\n2025-05-02 19:15:00+00:00      AVERAGE\n2025-05-02 19:30:00+00:00      AVERAGE\n2025-05-02 19:45:00+00:00    VERY_HIGH\nLength: 130, dtype: object",
-                    "candle_class": "datetime\n2025-04-28 13:30:00+00:00               NEUTRAL_LOWER_WICK\n2025-04-28 13:45:00+00:00                          NEUTRAL\n2025-04-28 14:00:00+00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n2025-04-28 14:15:00+00:00               NEUTRAL_UPPER_WICK\n2025-04-28 14:30:00+00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n                                         ...              \n2025-05-02 18:45:00+00:00                             WIDE\n2025-05-02 19:00:00+00:00                          NEUTRAL\n2025-05-02 19:15:00+00:00                          NEUTRAL\n2025-05-02 19:30:00+00:00                          NEUTRAL\n2025-05-02 19:45:00+00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\nLength: 130, dtype: object",
-                    "price_direction": "datetime\n2025-04-28 13:30:00+00:00    SIDEWAYS\n2025-04-28 13:45:00+00:00    SIDEWAYS\n2025-04-28 14:00:00+00:00    SIDEWAYS\n2025-04-28 14:15:00+00:00    SIDEWAYS\n2025-04-28 14:30:00+00:00    SIDEWAYS\n                               ...   \n2025-05-02 18:45:00+00:00          UP\n2025-05-02 19:00:00+00:00          UP\n2025-05-02 19:15:00+00:00          UP\n2025-05-02 19:30:00+00:00          UP\n2025-05-02 19:45:00+00:00          UP\nLength: 130, dtype: object",
-                    "volume_direction": "datetime\n2025-04-28 13:30:00+00:00          FLAT\n2025-04-28 13:45:00+00:00          FLAT\n2025-04-28 14:00:00+00:00          FLAT\n2025-04-28 14:15:00+00:00          FLAT\n2025-04-28 14:30:00+00:00          FLAT\n                                ...    \n2025-05-02 18:45:00+00:00    INCREASING\n2025-05-02 19:00:00+00:00    DECREASING\n2025-05-02 19:15:00+00:00    DECREASING\n2025-05-02 19:30:00+00:00    DECREASING\n2025-05-02 19:45:00+00:00    INCREASING\nLength: 130, dtype: object"
-                }
-            }
+  "AAPL": {
+    "ticker": "AAPL",
+    "timeframe_analyses": {
+      "1d": {
+        "candle_analysis": {
+          "candle_class": "NARROW_LOWER_WICK",
+          "volume_class": "HIGH",
+          "is_up_candle": "False",
+          "price_direction": "DOWN",
+          "signal_type": "ANOMALY",
+          "signal_strength": "BULLISH",
+          "details": "Narrow spread down candle with high volume shows support at current price level; Lower wick with high volume shows buying pressure at lows"
         },
-        "confirmations": {
-            "bullish": [],
-            "bearish": [],
-            "divergences": []
+        "trend_analysis": {
+          "trend_direction": "DOWN",
+          "volume_trend": "INCREASING",
+          "signal_type": "TREND_VALIDATION",
+          "signal_strength": "BEARISH",
+          "details": "Falling price with rising volume confirms bearish trend"
         },
-        "signal": {
-            "type": "BUY",
-            "strength": "MODERATE",
-            "details": "Moderate buy signal with some timeframe confirmation",
-            "evidence": {
-                "candle_signals": [
-                    {
-                        "timeframe": "15m",
-                        "details": "Normal up candle with high volume shows buying interest; Upper wick with high volume shows selling pressure at highs; Lower wick with high volume shows failed downward breakout"
-                    }
-                ],
-                "trend_signals": [
-                    {
-                        "timeframe": "1h",
-                        "details": "Falling price with falling volume indicates weakening bearish trend"
-                    }
-                ],
-                "pattern_signals": [
-                    {
-                        "timeframe": "1d",
-                        "pattern": "Accumulation",
-                        "details": "Sideways: False, High volume bars: 6, Support tests: 3"
-                    },
-                    {
-                        "timeframe": "1h",
-                        "pattern": "Accumulation",
-                        "details": "Sideways: False, High volume bars: 4, Support tests: 13"
-                    },
-                    {
-                        "timeframe": "15m",
-                        "pattern": "Accumulation",
-                        "details": "Sideways: True, High volume bars: 1, Support tests: 10"
-                    },
-                    {
-                        "timeframe": "15m",
-                        "pattern": "Selling Climax",
-                        "details": "Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True"
-                    }
-                ],
-                "timeframe_confirmations": []
-            }
-        },
-        "risk_assessment": {
-            "stop_loss": 109.55945060729981,
-            "take_profit": 115.67549846649169,
-            "risk_reward_ratio": 0.2379286943732458,
-            "position_size": 20.24066395282941,
-            "risk_per_share": 4.940549392700191
-        },
-        "current_price": 114.5
-    },
-    "MSFT": {
-        "ticker": "MSFT",
-        "timeframe_analyses": {
-            "1d": {
-                "candle_analysis": {
-                    "candle_class": "NARROW",
-                    "volume_class": "AVERAGE",
-                    "is_up_candle": "True",
-                    "price_direction": "UP",
-                    "signal_type": null,
-                    "signal_strength": null,
-                    "details": ""
-                },
-                "trend_analysis": {
-                    "trend_direction": "UP",
-                    "volume_trend": "INCREASING",
-                    "signal_type": "TREND_VALIDATION",
-                    "signal_strength": "BULLISH",
-                    "details": "Rising price with rising volume confirms bullish trend"
-                },
-                "pattern_analysis": {
-                    "accumulation": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: False, High volume bars: 7, Support tests: 5"
-                    },
-                    "distribution": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: False, High volume bars: 7, Resistance tests: 9"
-                    },
-                    "testing": {
-                        "detected": false,
-                        "tests": [],
-                        "details": "Found 0 testing patterns"
-                    },
-                    "buying_climax": {
-                        "detected": false,
-                        "strength": 2,
-                        "details": "Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True"
-                    },
-                    "selling_climax": {
-                        "detected": false,
-                        "strength": 1,
-                        "details": "Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True"
-                    }
-                },
-                "support_resistance": {
-                    "support": [
-                        {
-                            "price": 382.79998779296875,
-                            "index": "2025-03-21 00:00:00+00:00",
-                            "volume": "39675900",
-                            "strength": 4.0,
-                            "high_volume": true,
-                            "tests": 4
-                        },
-                        {
-                            "price": 376.9100036621094,
-                            "index": "2025-03-11 00:00:00+00:00",
-                            "volume": "30380200",
-                            "strength": 3.0,
-                            "tests": 4
-                        },
-                        {
-                            "price": 367.239990234375,
-                            "index": "2025-03-31 00:00:00+00:00",
-                            "volume": "35184700",
-                            "strength": 2.5,
-                            "tests": 3
-                        },
-                        {
-                            "price": 344.7900085449219,
-                            "index": "2025-04-07 00:00:00+00:00",
-                            "volume": "50425000",
-                            "strength": 1,
-                            "tests": 0
-                        },
-                        {
-                            "price": 355.6700134277344,
-                            "index": "2025-04-21 00:00:00+00:00",
-                            "volume": "20807300",
-                            "strength": 1,
-                            "tests": 0
-                        }
-                    ],
-                    "resistance": [
-                        {
-                            "price": 392.7099914550781,
-                            "index": "2025-03-17 00:00:00+00:00",
-                            "volume": "22474300",
-                            "strength": 5.0,
-                            "tests": 8
-                        },
-                        {
-                            "price": 385.0799865722656,
-                            "index": "2025-04-02 00:00:00+00:00",
-                            "volume": "16092600",
-                            "strength": 1.5,
-                            "tests": 1
-                        },
-                        {
-                            "price": 405.739990234375,
-                            "index": "2025-02-27 00:00:00+00:00",
-                            "volume": "21127400",
-                            "strength": 1,
-                            "tests": 0
-                        }
-                    ],
-                    "volume_at_levels": {
-                        "344.7900085449219": {
-                            "type": "support",
-                            "candles_count": 1,
-                            "total_volume": 50425000,
-                            "avg_volume": 50425000.0
-                        },
-                        "355.6700134277344": {
-                            "type": "support",
-                            "candles_count": 4,
-                            "total_volume": 157300900,
-                            "avg_volume": 39325225.0
-                        },
-                        "367.239990234375": {
-                            "type": "support",
-                            "candles_count": 7,
-                            "total_volume": 261316900,
-                            "avg_volume": 37330985.71428572
-                        },
-                        "376.9100036621094": {
-                            "type": "support",
-                            "candles_count": 10,
-                            "total_volume": 284514700,
-                            "avg_volume": 28451470.0
-                        },
-                        "382.79998779296875": {
-                            "type": "support",
-                            "candles_count": 15,
-                            "total_volume": 408115100,
-                            "avg_volume": 27207673.333333332
-                        },
-                        "385.0799865722656": {
-                            "type": "resistance",
-                            "candles_count": 19,
-                            "total_volume": 479942600,
-                            "avg_volume": 25260136.842105262
-                        },
-                        "392.7099914550781": {
-                            "type": "resistance",
-                            "candles_count": 15,
-                            "total_volume": 358580200,
-                            "avg_volume": 23905346.666666668
-                        },
-                        "405.739990234375": {
-                            "type": "resistance",
-                            "candles_count": 2,
-                            "total_volume": 47571100,
-                            "avg_volume": 23785550.0
-                        }
-                    }
-                },
-                "processed_data": {
-                    "price": "                                 open        high         low       close\ndatetime                                                                 \n2024-05-03 00:00:00+00:00  402.279999  407.149994  401.859985  406.660004\n2024-05-06 00:00:00+00:00  408.760010  413.929993  406.369995  413.540009\n2024-05-07 00:00:00+00:00  414.660004  414.670013  409.089996  409.339996\n2024-05-08 00:00:00+00:00  408.170013  412.230011  406.709991  410.540009\n2024-05-09 00:00:00+00:00  410.570007  412.720001  409.100006  412.320007\n...                               ...         ...         ...         ...\n2025-04-28 00:00:00+00:00  391.959991  392.739990  386.640015  391.160004\n2025-04-29 00:00:00+00:00  391.299988  395.100006  390.380005  394.040009\n2025-04-30 00:00:00+00:00  390.299988  396.660004  384.440002  395.260010\n2025-05-01 00:00:00+00:00  431.109985  436.989990  424.899994  425.399994\n2025-05-02 00:00:00+00:00  431.739990  439.440002  429.989990  435.279999\n\n[250 rows x 4 columns]",
-                    "volume": "datetime\n2024-05-03 00:00:00+00:00    17446700\n2024-05-06 00:00:00+00:00    16996600\n2024-05-07 00:00:00+00:00    20018200\n2024-05-08 00:00:00+00:00    11792300\n2024-05-09 00:00:00+00:00    14689700\n                               ...   \n2025-04-28 00:00:00+00:00    16579400\n2025-04-29 00:00:00+00:00    14974000\n2025-04-30 00:00:00+00:00    36461100\n2025-05-01 00:00:00+00:00    58938100\n2025-05-02 00:00:00+00:00    30741600\nName: volume_msft, Length: 250, dtype: int64",
-                    "spread": "datetime\n2024-05-03 00:00:00+00:00    4.380005\n2024-05-06 00:00:00+00:00    4.779999\n2024-05-07 00:00:00+00:00    5.320007\n2024-05-08 00:00:00+00:00    2.369995\n2024-05-09 00:00:00+00:00    1.750000\n                               ...   \n2025-04-28 00:00:00+00:00    0.799988\n2025-04-29 00:00:00+00:00    2.740021\n2025-04-30 00:00:00+00:00    4.960022\n2025-05-01 00:00:00+00:00    5.709991\n2025-05-02 00:00:00+00:00    3.540009\nLength: 250, dtype: float64",
-                    "body_percent": "datetime\n2024-05-03 00:00:00+00:00    0.827977\n2024-05-06 00:00:00+00:00    0.632275\n2024-05-07 00:00:00+00:00    0.953403\n2024-05-08 00:00:00+00:00    0.429345\n2024-05-09 00:00:00+00:00    0.483426\n                               ...   \n2025-04-28 00:00:00+00:00    0.131146\n2025-04-29 00:00:00+00:00    0.580513\n2025-04-30 00:00:00+00:00    0.405894\n2025-05-01 00:00:00+00:00    0.472291\n2025-05-02 00:00:00+00:00    0.374604\nLength: 250, dtype: float64",
-                    "upper_wick": "datetime\n2024-05-03 00:00:00+00:00    0.489990\n2024-05-06 00:00:00+00:00    0.389984\n2024-05-07 00:00:00+00:00    0.010010\n2024-05-08 00:00:00+00:00    1.690002\n2024-05-09 00:00:00+00:00    0.399994\n                               ...   \n2025-04-28 00:00:00+00:00    0.779999\n2025-04-29 00:00:00+00:00    1.059998\n2025-04-30 00:00:00+00:00    1.399994\n2025-05-01 00:00:00+00:00    5.880005\n2025-05-02 00:00:00+00:00    4.160004\nLength: 250, dtype: float64",
-                    "lower_wick": "datetime\n2024-05-03 00:00:00+00:00    0.420013\n2024-05-06 00:00:00+00:00    2.390015\n2024-05-07 00:00:00+00:00    0.250000\n2024-05-08 00:00:00+00:00    1.460022\n2024-05-09 00:00:00+00:00    1.470001\n                               ...   \n2025-04-28 00:00:00+00:00    4.519989\n2025-04-29 00:00:00+00:00    0.919983\n2025-04-30 00:00:00+00:00    5.859985\n2025-05-01 00:00:00+00:00    0.500000\n2025-05-02 00:00:00+00:00    1.750000\nLength: 250, dtype: float64",
-                    "avg_volume": "datetime\n2024-05-03 00:00:00+00:00           NaN\n2024-05-06 00:00:00+00:00           NaN\n2024-05-07 00:00:00+00:00           NaN\n2024-05-08 00:00:00+00:00           NaN\n2024-05-09 00:00:00+00:00           NaN\n                                ...    \n2025-04-28 00:00:00+00:00    25041432.0\n2025-04-29 00:00:00+00:00    24885742.0\n2025-04-30 00:00:00+00:00    25186502.0\n2025-05-01 00:00:00+00:00    25882980.0\n2025-05-02 00:00:00+00:00    26027638.0\nName: volume_msft, Length: 250, dtype: float64",
-                    "volume_ratio": "datetime\n2024-05-03 00:00:00+00:00         NaN\n2024-05-06 00:00:00+00:00         NaN\n2024-05-07 00:00:00+00:00         NaN\n2024-05-08 00:00:00+00:00         NaN\n2024-05-09 00:00:00+00:00         NaN\n                               ...   \n2025-04-28 00:00:00+00:00    0.662079\n2025-04-29 00:00:00+00:00    0.601710\n2025-04-30 00:00:00+00:00    1.447644\n2025-05-01 00:00:00+00:00    2.277099\n2025-05-02 00:00:00+00:00    1.181114\nName: volume_msft, Length: 250, dtype: float64",
-                    "volume_class": "datetime\n2024-05-03 00:00:00+00:00      AVERAGE\n2024-05-06 00:00:00+00:00      AVERAGE\n2024-05-07 00:00:00+00:00      AVERAGE\n2024-05-08 00:00:00+00:00      AVERAGE\n2024-05-09 00:00:00+00:00      AVERAGE\n                               ...    \n2025-04-28 00:00:00+00:00      AVERAGE\n2025-04-29 00:00:00+00:00      AVERAGE\n2025-04-30 00:00:00+00:00         HIGH\n2025-05-01 00:00:00+00:00    VERY_HIGH\n2025-05-02 00:00:00+00:00      AVERAGE\nLength: 250, dtype: object",
-                    "candle_class": "datetime\n2024-05-03 00:00:00+00:00              NEUTRAL\n2024-05-06 00:00:00+00:00              NEUTRAL\n2024-05-07 00:00:00+00:00              NEUTRAL\n2024-05-08 00:00:00+00:00              NEUTRAL\n2024-05-09 00:00:00+00:00              NEUTRAL\n                                   ...        \n2025-04-28 00:00:00+00:00    NARROW_LOWER_WICK\n2025-04-29 00:00:00+00:00               NARROW\n2025-04-30 00:00:00+00:00              NEUTRAL\n2025-05-01 00:00:00+00:00              NEUTRAL\n2025-05-02 00:00:00+00:00               NARROW\nLength: 250, dtype: object",
-                    "price_direction": "datetime\n2024-05-03 00:00:00+00:00    SIDEWAYS\n2024-05-06 00:00:00+00:00    SIDEWAYS\n2024-05-07 00:00:00+00:00    SIDEWAYS\n2024-05-08 00:00:00+00:00    SIDEWAYS\n2024-05-09 00:00:00+00:00    SIDEWAYS\n                               ...   \n2025-04-28 00:00:00+00:00        DOWN\n2025-04-29 00:00:00+00:00        DOWN\n2025-04-30 00:00:00+00:00        DOWN\n2025-05-01 00:00:00+00:00          UP\n2025-05-02 00:00:00+00:00          UP\nLength: 250, dtype: object",
-                    "volume_direction": "datetime\n2024-05-03 00:00:00+00:00          FLAT\n2024-05-06 00:00:00+00:00          FLAT\n2024-05-07 00:00:00+00:00          FLAT\n2024-05-08 00:00:00+00:00          FLAT\n2024-05-09 00:00:00+00:00          FLAT\n                                ...    \n2025-04-28 00:00:00+00:00    DECREASING\n2025-04-29 00:00:00+00:00    DECREASING\n2025-04-30 00:00:00+00:00    INCREASING\n2025-05-01 00:00:00+00:00    INCREASING\n2025-05-02 00:00:00+00:00    INCREASING\nLength: 250, dtype: object"
-                }
-            },
-            "1h": {
-                "candle_analysis": {
-                    "candle_class": "NARROW",
-                    "volume_class": "AVERAGE",
-                    "is_up_candle": "False",
-                    "price_direction": "UP",
-                    "signal_type": null,
-                    "signal_strength": null,
-                    "details": ""
-                },
-                "trend_analysis": {
-                    "trend_direction": "UP",
-                    "volume_trend": "DECREASING",
-                    "signal_type": "TREND_ANOMALY",
-                    "signal_strength": "BEARISH",
-                    "details": "Rising price with falling volume indicates weakening bullish trend"
-                },
-                "pattern_analysis": {
-                    "accumulation": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: False, High volume bars: 7, Support tests: 12"
-                    },
-                    "distribution": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: False, High volume bars: 7, Resistance tests: 12"
-                    },
-                    "testing": {
-                        "detected": false,
-                        "tests": [],
-                        "details": "Found 0 testing patterns"
-                    },
-                    "buying_climax": {
-                        "detected": false,
-                        "strength": 2,
-                        "details": "Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True"
-                    },
-                    "selling_climax": {
-                        "detected": false,
-                        "strength": 1,
-                        "details": "Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True"
-                    }
-                },
-                "support_resistance": {
-                    "support": [
-                        {
-                            "price": 391.3500061035156,
-                            "index": "2025-04-29 16:30:00+00:00",
-                            "volume": "965993",
-                            "strength": 3.0,
-                            "tests": 4
-                        },
-                        {
-                            "price": 384.6000061035156,
-                            "index": "2025-04-25 13:30:00+00:00",
-                            "volume": "3043501",
-                            "strength": 2.5,
-                            "tests": 3
-                        },
-                        {
-                            "price": 427.6400146484375,
-                            "index": "2025-05-01 16:30:00+00:00",
-                            "volume": "3391893",
-                            "strength": 1.5,
-                            "tests": 1
-                        }
-                    ],
-                    "resistance": [
-                        {
-                            "price": 389.2250061035156,
-                            "index": "2025-04-25 13:30:00+00:00",
-                            "volume": "3043501",
-                            "strength": 7.5,
-                            "tests": 13
-                        },
-                        {
-                            "price": 436.989990234375,
-                            "index": "2025-05-01 13:30:00+00:00",
-                            "volume": "23899164",
-                            "strength": 5.0,
-                            "high_volume": true,
-                            "tests": 6
-                        },
-                        {
-                            "price": 394.8299865722656,
-                            "index": "2025-04-29 13:30:00+00:00",
-                            "volume": "2713041",
-                            "strength": 4.5,
-                            "tests": 7
-                        }
-                    ],
-                    "volume_at_levels": {
-                        "384.6000061035156": {
-                            "type": "support",
-                            "candles_count": 5,
-                            "total_volume": 13366163,
-                            "avg_volume": 2673232.6
-                        },
-                        "389.2250061035156": {
-                            "type": "resistance",
-                            "candles_count": 10,
-                            "total_volume": 24318262,
-                            "avg_volume": 2431826.2
-                        },
-                        "391.3500061035156": {
-                            "type": "support",
-                            "candles_count": 8,
-                            "total_volume": 20235454,
-                            "avg_volume": 2529431.75
-                        },
-                        "394.8299865722656": {
-                            "type": "resistance",
-                            "candles_count": 3,
-                            "total_volume": 10273134,
-                            "avg_volume": 3424378.0
-                        },
-                        "427.6400146484375": {
-                            "type": "support",
-                            "candles_count": 2,
-                            "total_volume": 8641250,
-                            "avg_volume": 4320625.0
-                        },
-                        "436.989990234375": {
-                            "type": "resistance",
-                            "candles_count": 6,
-                            "total_volume": 44156111,
-                            "avg_volume": 7359351.833333333
-                        }
-                    }
-                },
-                "processed_data": {
-                    "price": "                                 open        high         low       close\ndatetime                                                                 \n2025-02-06 14:30:00+00:00  414.385010  418.049988  414.089996  417.040009\n2025-02-06 15:30:00+00:00  417.059998  418.200012  416.399994  417.664215\n2025-02-06 16:30:00+00:00  417.635010  417.640015  415.908813  415.994995\n2025-02-06 17:30:00+00:00  416.000000  417.249908  415.760010  416.084991\n2025-02-06 18:30:00+00:00  416.100006  416.369995  415.380005  415.882904\n...                               ...         ...         ...         ...\n2025-05-02 15:30:00+00:00  434.904999  438.190002  433.938202  437.130005\n2025-05-02 16:30:00+00:00  437.130005  438.170013  436.109985  436.510010\n2025-05-02 17:30:00+00:00  436.470001  437.309998  435.630096  436.210510\n2025-05-02 18:30:00+00:00  436.195007  436.730011  434.769989  435.684998\n2025-05-02 19:30:00+00:00  435.659607  435.970001  434.600006  435.100006\n\n[420 rows x 4 columns]",
-                    "volume": "datetime\n2025-02-06 14:30:00+00:00    3499696\n2025-02-06 15:30:00+00:00    1771473\n2025-02-06 16:30:00+00:00    1178620\n2025-02-06 17:30:00+00:00    1176406\n2025-02-06 18:30:00+00:00     946415\n                              ...   \n2025-05-02 15:30:00+00:00    2746092\n2025-05-02 16:30:00+00:00    1976788\n2025-05-02 17:30:00+00:00    1822505\n2025-05-02 18:30:00+00:00    3510278\n2025-05-02 19:30:00+00:00    2775337\nName: volume_msft, Length: 420, dtype: int64",
-                    "spread": "datetime\n2025-02-06 14:30:00+00:00    2.654999\n2025-02-06 15:30:00+00:00    0.604218\n2025-02-06 16:30:00+00:00    1.640015\n2025-02-06 17:30:00+00:00    0.084991\n2025-02-06 18:30:00+00:00    0.217102\n                               ...   \n2025-05-02 15:30:00+00:00    2.225006\n2025-05-02 16:30:00+00:00    0.619995\n2025-05-02 17:30:00+00:00    0.259491\n2025-05-02 18:30:00+00:00    0.510010\n2025-05-02 19:30:00+00:00    0.559601\nLength: 420, dtype: float64",
-                    "body_percent": "datetime\n2025-02-06 14:30:00+00:00    0.670456\n2025-02-06 15:30:00+00:00    0.335673\n2025-02-06 16:30:00+00:00    0.947328\n2025-02-06 17:30:00+00:00    0.057045\n2025-02-06 18:30:00+00:00    0.219297\n                               ...   \n2025-05-02 15:30:00+00:00    0.523309\n2025-05-02 16:30:00+00:00    0.300964\n2025-05-02 17:30:00+00:00    0.154468\n2025-05-02 18:30:00+00:00    0.260206\n2025-05-02 19:30:00+00:00    0.408469\nLength: 420, dtype: float64",
-                    "upper_wick": "datetime\n2025-02-06 14:30:00+00:00    1.009979\n2025-02-06 15:30:00+00:00    0.535797\n2025-02-06 16:30:00+00:00    0.005005\n2025-02-06 17:30:00+00:00    1.164917\n2025-02-06 18:30:00+00:00    0.269989\n                               ...   \n2025-05-02 15:30:00+00:00    1.059998\n2025-05-02 16:30:00+00:00    1.040009\n2025-05-02 17:30:00+00:00    0.839996\n2025-05-02 18:30:00+00:00    0.535004\n2025-05-02 19:30:00+00:00    0.310394\nLength: 420, dtype: float64",
-                    "lower_wick": "datetime\n2025-02-06 14:30:00+00:00    0.295013\n2025-02-06 15:30:00+00:00    0.660004\n2025-02-06 16:30:00+00:00    0.086182\n2025-02-06 17:30:00+00:00    0.239990\n2025-02-06 18:30:00+00:00    0.502899\n                               ...   \n2025-05-02 15:30:00+00:00    0.966797\n2025-05-02 16:30:00+00:00    0.400024\n2025-05-02 17:30:00+00:00    0.580414\n2025-05-02 18:30:00+00:00    0.915009\n2025-05-02 19:30:00+00:00    0.500000\nLength: 420, dtype: float64",
-                    "avg_volume": "datetime\n2025-02-06 14:30:00+00:00           NaN\n2025-02-06 15:30:00+00:00           NaN\n2025-02-06 16:30:00+00:00           NaN\n2025-02-06 17:30:00+00:00           NaN\n2025-02-06 18:30:00+00:00           NaN\n                                ...    \n2025-05-02 15:30:00+00:00    2922097.66\n2025-05-02 16:30:00+00:00    2933025.16\n2025-05-02 17:30:00+00:00    2943334.76\n2025-05-02 18:30:00+00:00    2988879.70\n2025-05-02 19:30:00+00:00    3016312.50\nName: volume_msft, Length: 420, dtype: float64",
-                    "volume_ratio": "datetime\n2025-02-06 14:30:00+00:00         NaN\n2025-02-06 15:30:00+00:00         NaN\n2025-02-06 16:30:00+00:00         NaN\n2025-02-06 17:30:00+00:00         NaN\n2025-02-06 18:30:00+00:00         NaN\n                               ...   \n2025-05-02 15:30:00+00:00    0.939767\n2025-05-02 16:30:00+00:00    0.673976\n2025-05-02 17:30:00+00:00    0.619197\n2025-05-02 18:30:00+00:00    1.174446\n2025-05-02 19:30:00+00:00    0.920109\nName: volume_msft, Length: 420, dtype: float64",
-                    "volume_class": "datetime\n2025-02-06 14:30:00+00:00    AVERAGE\n2025-02-06 15:30:00+00:00    AVERAGE\n2025-02-06 16:30:00+00:00    AVERAGE\n2025-02-06 17:30:00+00:00    AVERAGE\n2025-02-06 18:30:00+00:00    AVERAGE\n                              ...   \n2025-05-02 15:30:00+00:00    AVERAGE\n2025-05-02 16:30:00+00:00    AVERAGE\n2025-05-02 17:30:00+00:00    AVERAGE\n2025-05-02 18:30:00+00:00    AVERAGE\n2025-05-02 19:30:00+00:00    AVERAGE\nLength: 420, dtype: object",
-                    "candle_class": "datetime\n2025-02-06 14:30:00+00:00                          NEUTRAL\n2025-02-06 15:30:00+00:00                          NEUTRAL\n2025-02-06 16:30:00+00:00                          NEUTRAL\n2025-02-06 17:30:00+00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n2025-02-06 18:30:00+00:00               NEUTRAL_LOWER_WICK\n                                         ...              \n2025-05-02 15:30:00+00:00                             WIDE\n2025-05-02 16:30:00+00:00                NARROW_UPPER_WICK\n2025-05-02 17:30:00+00:00     NARROW_UPPER_WICK_LOWER_WICK\n2025-05-02 18:30:00+00:00                NARROW_LOWER_WICK\n2025-05-02 19:30:00+00:00                           NARROW\nLength: 420, dtype: object",
-                    "price_direction": "datetime\n2025-02-06 14:30:00+00:00    SIDEWAYS\n2025-02-06 15:30:00+00:00    SIDEWAYS\n2025-02-06 16:30:00+00:00    SIDEWAYS\n2025-02-06 17:30:00+00:00    SIDEWAYS\n2025-02-06 18:30:00+00:00    SIDEWAYS\n                               ...   \n2025-05-02 15:30:00+00:00          UP\n2025-05-02 16:30:00+00:00          UP\n2025-05-02 17:30:00+00:00          UP\n2025-05-02 18:30:00+00:00          UP\n2025-05-02 19:30:00+00:00          UP\nLength: 420, dtype: object",
-                    "volume_direction": "datetime\n2025-02-06 14:30:00+00:00          FLAT\n2025-02-06 15:30:00+00:00          FLAT\n2025-02-06 16:30:00+00:00          FLAT\n2025-02-06 17:30:00+00:00          FLAT\n2025-02-06 18:30:00+00:00          FLAT\n                                ...    \n2025-05-02 15:30:00+00:00    INCREASING\n2025-05-02 16:30:00+00:00    INCREASING\n2025-05-02 17:30:00+00:00    INCREASING\n2025-05-02 18:30:00+00:00    INCREASING\n2025-05-02 19:30:00+00:00    INCREASING\nLength: 420, dtype: object"
-                }
-            },
-            "15m": {
-                "candle_analysis": {
-                    "candle_class": "NEUTRAL",
-                    "volume_class": "HIGH",
-                    "is_up_candle": "False",
-                    "price_direction": "UP",
-                    "signal_type": "VALIDATION",
-                    "signal_strength": "BEARISH",
-                    "details": "Normal down candle with high volume shows selling pressure"
-                },
-                "trend_analysis": {
-                    "trend_direction": "DOWN",
-                    "volume_trend": "INCREASING",
-                    "signal_type": "TREND_VALIDATION",
-                    "signal_strength": "BEARISH",
-                    "details": "Falling price with rising volume confirms bearish trend"
-                },
-                "pattern_analysis": {
-                    "accumulation": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: True, High volume bars: 1, Support tests: 11"
-                    },
-                    "distribution": {
-                        "detected": true,
-                        "strength": 2,
-                        "details": "Sideways: True, High volume bars: 1, Resistance tests: 11"
-                    },
-                    "testing": {
-                        "detected": true,
-                        "tests": [
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 15:00:00+00:00",
-                                "price": 434.17999267578125
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 15:30:00+00:00",
-                                "price": 433.9382019042969
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 16:30:00+00:00",
-                                "price": 436.8143005371094
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 17:00:00+00:00",
-                                "price": 436.6000061035156
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 17:15:00+00:00",
-                                "price": 436.1099853515625
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 17:30:00+00:00",
-                                "price": 435.6300964355469
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 18:15:00+00:00",
-                                "price": 436.1444091796875
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 18:30:00+00:00",
-                                "price": 435.90350341796875
-                            },
-                            {
-                                "type": "SUPPORT_TEST",
-                                "index": "2025-05-02 18:45:00+00:00",
-                                "price": 434.7699890136719
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 15:15:00+00:00",
-                                "price": 436.1000061035156
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 15:45:00+00:00",
-                                "price": 436.2200012207031
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 16:45:00+00:00",
-                                "price": 438.1700134277344
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 17:45:00+00:00",
-                                "price": 436.92999267578125
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 18:00:00+00:00",
-                                "price": 437.30999755859375
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 19:15:00+00:00",
-                                "price": 435.8699951171875
-                            },
-                            {
-                                "type": "RESISTANCE_TEST",
-                                "index": "2025-05-02 19:30:00+00:00",
-                                "price": 435.9700012207031
-                            }
-                        ],
-                        "details": "Found 16 testing patterns"
-                    },
-                    "buying_climax": {
-                        "detected": true,
-                        "strength": 4,
-                        "details": "Near high: True, Very high volume: True, Wide up candle: False, Upper wick: True"
-                    },
-                    "selling_climax": {
-                        "detected": true,
-                        "strength": 4,
-                        "details": "Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True"
-                    }
-                },
-                "support_resistance": {
-                    "support": [
-                        {
-                            "price": 433.9382019042969,
-                            "index": "2025-05-02 15:30:00+00:00",
-                            "volume": "652501",
-                            "strength": 6.0,
-                            "tests": 10
-                        },
-                        {
-                            "price": 427.6400146484375,
-                            "index": "2025-05-01 17:00:00+00:00",
-                            "volume": "953659",
-                            "strength": 4.0,
-                            "tests": 6
-                        }
-                    ],
-                    "resistance": [
-                        {
-                            "price": 438.19000244140625,
-                            "index": "2025-05-02 16:00:00+00:00",
-                            "volume": "1052615",
-                            "strength": 7.5,
-                            "high_volume": true,
-                            "tests": 11
-                        },
-                        {
-                            "price": 433.57000732421875,
-                            "index": "2025-05-01 15:15:00+00:00",
-                            "volume": "1558990",
-                            "strength": 3.5,
-                            "tests": 5
-                        }
-                    ],
-                    "volume_at_levels": {
-                        "427.6400146484375": {
-                            "type": "support",
-                            "candles_count": 2,
-                            "total_volume": 4972466,
-                            "avg_volume": 2486233.0
-                        },
-                        "433.57000732421875": {
-                            "type": "resistance",
-                            "candles_count": 3,
-                            "total_volume": 8432089,
-                            "avg_volume": 2810696.3333333335
-                        },
-                        "433.9382019042969": {
-                            "type": "support",
-                            "candles_count": 3,
-                            "total_volume": 7525600,
-                            "avg_volume": 2508533.3333333335
-                        },
-                        "438.19000244140625": {
-                            "type": "resistance",
-                            "candles_count": 3,
-                            "total_volume": 4339772,
-                            "avg_volume": 1446590.6666666667
-                        }
-                    }
-                },
-                "processed_data": {
-                    "price": "                                 open        high         low       close\ndatetime                                                                 \n2025-04-28 13:30:00+00:00  391.660004  392.000000  387.649994  390.390015\n2025-04-28 13:45:00+00:00  390.355011  391.140015  389.369995  389.850006\n2025-04-28 14:00:00+00:00  389.989990  390.640015  389.190002  390.015015\n2025-04-28 14:15:00+00:00  389.869995  390.369995  388.989990  389.445007\n2025-04-28 14:30:00+00:00  389.475006  390.890015  389.089996  390.470001\n...                               ...         ...         ...         ...\n2025-05-02 18:45:00+00:00  436.079987  436.139099  434.769989  435.565002\n2025-05-02 19:00:00+00:00  435.565002  435.664490  434.829987  435.140015\n2025-05-02 19:15:00+00:00  435.130005  435.869995  435.049988  435.684998\n2025-05-02 19:30:00+00:00  435.659607  435.970001  435.149994  435.799988\n2025-05-02 19:45:00+00:00  435.829987  435.894989  434.600006  435.100006\n\n[130 rows x 4 columns]",
-                    "volume": "datetime\n2025-04-28 13:30:00+00:00    2043814\n2025-04-28 13:45:00+00:00     712703\n2025-04-28 14:00:00+00:00     447674\n2025-04-28 14:15:00+00:00     442133\n2025-04-28 14:30:00+00:00     486776\n                              ...   \n2025-05-02 18:45:00+00:00     537254\n2025-05-02 19:00:00+00:00    1940748\n2025-05-02 19:15:00+00:00     581496\n2025-05-02 19:30:00+00:00     604312\n2025-05-02 19:45:00+00:00    2171025\nName: volume_msft, Length: 130, dtype: int64",
-                    "spread": "datetime\n2025-04-28 13:30:00+00:00    1.269989\n2025-04-28 13:45:00+00:00    0.505005\n2025-04-28 14:00:00+00:00    0.025024\n2025-04-28 14:15:00+00:00    0.424988\n2025-04-28 14:30:00+00:00    0.994995\n                               ...   \n2025-05-02 18:45:00+00:00    0.514984\n2025-05-02 19:00:00+00:00    0.424988\n2025-05-02 19:15:00+00:00    0.554993\n2025-05-02 19:30:00+00:00    0.140381\n2025-05-02 19:45:00+00:00    0.729980\nLength: 130, dtype: float64",
-                    "body_percent": "datetime\n2025-04-28 13:30:00+00:00    0.291951\n2025-04-28 13:45:00+00:00    0.285310\n2025-04-28 14:00:00+00:00    0.017258\n2025-04-28 14:15:00+00:00    0.307961\n2025-04-28 14:30:00+00:00    0.552769\n                               ...   \n2025-05-02 18:45:00+00:00    0.376145\n2025-05-02 19:00:00+00:00    0.509270\n2025-05-02 19:15:00+00:00    0.676814\n2025-05-02 19:30:00+00:00    0.171195\n2025-05-02 19:45:00+00:00    0.563699\nLength: 130, dtype: float64",
-                    "upper_wick": "datetime\n2025-04-28 13:30:00+00:00    0.339996\n2025-04-28 13:45:00+00:00    0.785004\n2025-04-28 14:00:00+00:00    0.625000\n2025-04-28 14:15:00+00:00    0.500000\n2025-04-28 14:30:00+00:00    0.420013\n                               ...   \n2025-05-02 18:45:00+00:00    0.059113\n2025-05-02 19:00:00+00:00    0.099487\n2025-05-02 19:15:00+00:00    0.184998\n2025-05-02 19:30:00+00:00    0.170013\n2025-05-02 19:45:00+00:00    0.065002\nLength: 130, dtype: float64",
-                    "lower_wick": "datetime\n2025-04-28 13:30:00+00:00    2.740021\n2025-04-28 13:45:00+00:00    0.480011\n2025-04-28 14:00:00+00:00    0.799988\n2025-04-28 14:15:00+00:00    0.455017\n2025-04-28 14:30:00+00:00    0.385010\n                               ...   \n2025-05-02 18:45:00+00:00    0.795013\n2025-05-02 19:00:00+00:00    0.310028\n2025-05-02 19:15:00+00:00    0.080017\n2025-05-02 19:30:00+00:00    0.509613\n2025-05-02 19:45:00+00:00    0.500000\nLength: 130, dtype: float64",
-                    "avg_volume": "datetime\n2025-04-28 13:30:00+00:00           NaN\n2025-04-28 13:45:00+00:00           NaN\n2025-04-28 14:00:00+00:00           NaN\n2025-04-28 14:15:00+00:00           NaN\n2025-04-28 14:30:00+00:00           NaN\n                                ...    \n2025-05-02 18:45:00+00:00    1573573.90\n2025-05-02 19:00:00+00:00    1597057.94\n2025-05-02 19:15:00+00:00    1512716.08\n2025-05-02 19:30:00+00:00    1233146.28\n2025-05-02 19:45:00+00:00    1205474.64\nName: volume_msft, Length: 130, dtype: float64",
-                    "volume_ratio": "datetime\n2025-04-28 13:30:00+00:00         NaN\n2025-04-28 13:45:00+00:00         NaN\n2025-04-28 14:00:00+00:00         NaN\n2025-04-28 14:15:00+00:00         NaN\n2025-04-28 14:30:00+00:00         NaN\n                               ...   \n2025-05-02 18:45:00+00:00    0.341423\n2025-05-02 19:00:00+00:00    1.215202\n2025-05-02 19:15:00+00:00    0.384405\n2025-05-02 19:30:00+00:00    0.490057\n2025-05-02 19:45:00+00:00    1.800971\nName: volume_msft, Length: 130, dtype: float64",
-                    "volume_class": "datetime\n2025-04-28 13:30:00+00:00    AVERAGE\n2025-04-28 13:45:00+00:00    AVERAGE\n2025-04-28 14:00:00+00:00    AVERAGE\n2025-04-28 14:15:00+00:00    AVERAGE\n2025-04-28 14:30:00+00:00    AVERAGE\n                              ...   \n2025-05-02 18:45:00+00:00        LOW\n2025-05-02 19:00:00+00:00    AVERAGE\n2025-05-02 19:15:00+00:00        LOW\n2025-05-02 19:30:00+00:00        LOW\n2025-05-02 19:45:00+00:00       HIGH\nLength: 130, dtype: object",
-                    "candle_class": "datetime\n2025-04-28 13:30:00+00:00               NEUTRAL_LOWER_WICK\n2025-04-28 13:45:00+00:00               NEUTRAL_UPPER_WICK\n2025-04-28 14:00:00+00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n2025-04-28 14:15:00+00:00                          NEUTRAL\n2025-04-28 14:30:00+00:00                          NEUTRAL\n                                         ...              \n2025-05-02 18:45:00+00:00               NEUTRAL_LOWER_WICK\n2025-05-02 19:00:00+00:00                          NEUTRAL\n2025-05-02 19:15:00+00:00                          NEUTRAL\n2025-05-02 19:30:00+00:00                NARROW_LOWER_WICK\n2025-05-02 19:45:00+00:00                          NEUTRAL\nLength: 130, dtype: object",
-                    "price_direction": "datetime\n2025-04-28 13:30:00+00:00    SIDEWAYS\n2025-04-28 13:45:00+00:00    SIDEWAYS\n2025-04-28 14:00:00+00:00    SIDEWAYS\n2025-04-28 14:15:00+00:00    SIDEWAYS\n2025-04-28 14:30:00+00:00    SIDEWAYS\n                               ...   \n2025-05-02 18:45:00+00:00          UP\n2025-05-02 19:00:00+00:00          UP\n2025-05-02 19:15:00+00:00          UP\n2025-05-02 19:30:00+00:00          UP\n2025-05-02 19:45:00+00:00          UP\nLength: 130, dtype: object",
-                    "volume_direction": "datetime\n2025-04-28 13:30:00+00:00          FLAT\n2025-04-28 13:45:00+00:00          FLAT\n2025-04-28 14:00:00+00:00          FLAT\n2025-04-28 14:15:00+00:00          FLAT\n2025-04-28 14:30:00+00:00          FLAT\n                                ...    \n2025-05-02 18:45:00+00:00    DECREASING\n2025-05-02 19:00:00+00:00    INCREASING\n2025-05-02 19:15:00+00:00    DECREASING\n2025-05-02 19:30:00+00:00    DECREASING\n2025-05-02 19:45:00+00:00    DECREASING\nLength: 130, dtype: object"
-                }
-            }
-        },
-        "confirmations": {
-            "bullish": [],
-            "bearish": [
-                "15m"
+        "pattern_analysis": {
+          "accumulation": {
+            "detected": true,
+            "strength": 2,
+            "details": "Sideways: False, High volume bars: 9, Support tests: 5"
+          },
+          "distribution": {
+            "detected": true,
+            "strength": 2,
+            "details": "Sideways: False, High volume bars: 9, Resistance tests: 6"
+          },
+          "testing": {
+            "detected": true,
+            "tests": [
+              {
+                "type": "RESISTANCE_TEST",
+                "index": "2025-04-29T00:00:00+00:00",
+                "price": 212.24000549316406
+              }
             ],
-            "divergences": []
+            "details": "Found 1 testing patterns"
+          },
+          "buying_climax": {
+            "detected": true,
+            "strength": 3,
+            "details": "Near high: False, Very high volume: True, Wide up candle: False, Upper wick: True"
+          },
+          "selling_climax": {
+            "detected": true,
+            "strength": 3,
+            "details": "Near low: False, Very high volume: True, Wide down candle: False, Lower wick: True"
+          }
         },
-        "signal": {
-            "type": "BUY",
-            "strength": "MODERATE",
-            "details": "Moderate buy signal with some timeframe confirmation",
-            "evidence": {
-                "candle_signals": [],
-                "trend_signals": [
-                    {
-                        "timeframe": "1d",
-                        "details": "Rising price with rising volume confirms bullish trend"
-                    }
-                ],
-                "pattern_signals": [
-                    {
-                        "timeframe": "1d",
-                        "pattern": "Accumulation",
-                        "details": "Sideways: False, High volume bars: 7, Support tests: 5"
-                    },
-                    {
-                        "timeframe": "1h",
-                        "pattern": "Accumulation",
-                        "details": "Sideways: False, High volume bars: 7, Support tests: 12"
-                    },
-                    {
-                        "timeframe": "15m",
-                        "pattern": "Accumulation",
-                        "details": "Sideways: True, High volume bars: 1, Support tests: 11"
-                    },
-                    {
-                        "timeframe": "15m",
-                        "pattern": "Selling Climax",
-                        "details": "Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True"
-                    }
-                ],
-                "timeframe_confirmations": []
+        "support_resistance": {
+          "support": [
+            {
+              "price": 208.4199981689453,
+              "index": "2025-03-13T00:00:00+00:00",
+              "volume": "61368300",
+              "strength": 2.5,
+              "tests": 3
+            },
+            {
+              "price": 211.27999877929688,
+              "index": "2025-03-21T00:00:00+00:00",
+              "volume": "94127800",
+              "strength": 2,
+              "high_volume": true,
+              "tests": 0
+            },
+            {
+              "price": 230.1999969482422,
+              "index": "2025-02-28T00:00:00+00:00",
+              "volume": "56833400",
+              "strength": 1.5,
+              "tests": 1
+            },
+            {
+              "price": 216.22999572753906,
+              "index": "2025-03-31T00:00:00+00:00",
+              "volume": "65299300",
+              "strength": 1,
+              "tests": 0
+            },
+            {
+              "price": 169.2100067138672,
+              "index": "2025-04-08T00:00:00+00:00",
+              "volume": "120859500",
+              "strength": 1,
+              "tests": 0
             }
+          ],
+          "resistance": [
+            {
+              "price": 225.02000427246094,
+              "index": "2025-03-26T00:00:00+00:00",
+              "volume": "34466100",
+              "strength": 2.5,
+              "tests": 3
+            },
+            {
+              "price": 200.61000061035156,
+              "index": "2025-04-09T00:00:00+00:00",
+              "volume": "184395900",
+              "strength": 2.0,
+              "tests": 2
+            },
+            {
+              "price": 212.94000244140625,
+              "index": "2025-04-14T00:00:00+00:00",
+              "volume": "101352900",
+              "strength": 2.0,
+              "tests": 2
+            },
+            {
+              "price": 250.0,
+              "index": "2025-02-25T00:00:00+00:00",
+              "volume": "48013300",
+              "strength": 1,
+              "tests": 0
+            },
+            {
+              "price": 244.02999877929688,
+              "index": "2025-03-03T00:00:00+00:00",
+              "volume": "47184000",
+              "strength": 1,
+              "tests": 0
+            }
+          ],
+          "volume_at_levels": {
+            "169.2100067138672": {
+              "type": "support",
+              "candles_count": 1,
+              "total_volume": 120859500,
+              "avg_volume": 120859500.0
+            },
+            "200.61000061035156": {
+              "type": "resistance",
+              "candles_count": 4,
+              "total_volume": 348448600,
+              "avg_volume": 87112150.0
+            },
+            "208.4199981689453": {
+              "type": "support",
+              "candles_count": 7,
+              "total_volume": 376111700,
+              "avg_volume": 53730242.85714286
+            },
+            "211.27999877929688": {
+              "type": "support",
+              "candles_count": 9,
+              "total_volume": 550252900,
+              "avg_volume": 61139211.11111111
+            },
+            "212.94000244140625": {
+              "type": "resistance",
+              "candles_count": 9,
+              "total_volume": 565977500,
+              "avg_volume": 62886388.88888889
+            },
+            "216.22999572753906": {
+              "type": "support",
+              "candles_count": 6,
+              "total_volume": 386591200,
+              "avg_volume": 64431866.666666664
+            },
+            "225.02000427246094": {
+              "type": "resistance",
+              "candles_count": 5,
+              "total_volume": 283879900,
+              "avg_volume": 56775980.0
+            },
+            "230.1999969482422": {
+              "type": "support",
+              "candles_count": 3,
+              "total_volume": 176132200,
+              "avg_volume": 58710733.333333336
+            },
+            "244.02999877929688": {
+              "type": "resistance",
+              "candles_count": 2,
+              "total_volume": 91617600,
+              "avg_volume": 45808800.0
+            },
+            "250.0": {
+              "type": "resistance",
+              "candles_count": 1,
+              "total_volume": 48013300,
+              "avg_volume": 48013300.0
+            }
+          }
         },
-        "risk_assessment": {
-            "stop_loss": 380.88598785400393,
-            "take_profit": 457.0439987182617,
-            "risk_reward_ratio": 0.400117578548426,
-            "position_size": 1.8384376937627245,
-            "risk_per_share": 54.394010925292946
-        },
-        "current_price": 435.2799987792969
-    }
-}
+        "processed_data": {
+          "price": [
+            {
+              "open": 186.64999389648438,
+              "high": 187.0,
+              "low": 182.66000366210938,
+              "close": 183.3800048828125
+            },
+            {
+              "open": 182.35000610351562,
+              "high": 184.1999969482422,
+              "low": 180.4199981689453,
+              "close": 181.7100067138672
+            },
+            {
+              "open": 183.4499969482422,
+              "high": 184.89999389648438,
+              "low": 181.32000732421875,
+              "close": 182.39999389648438
+            },
+            {
+              "open": 182.85000610351562,
+              "high": 183.07000732421875,
+              "low": 181.4499969482422,
+              "close": 182.74000549316406
+            },
+            {
+              "open": 182.55999755859375,
+              "high": 184.66000366210938,
+              "low": 182.11000061035156,
+              "close": 184.57000732421875
+            },
+            {
+              "open": 184.89999389648438,
+              "high": 185.08999633789062,
+              "low": 182.1300048828125,
+              "close": 183.0500030517578
+            },
+            {
+              "open": 185.44000244140625,
+              "high": 187.10000610351562,
+              "low": 184.6199951171875,
+              "close": 186.27999877929688
+            },
+            {
+              "open": 187.50999450683594,
+              "high": 188.3000030517578,
+              "low": 186.2899932861328,
+              "close": 187.42999267578125
+            },
+            {
+              "open": 187.91000366210938,
+              "high": 190.64999389648438,
+              "low": 187.3699951171875,
+              "close": 189.72000122070312
+            },
+            {
+              "open": 190.47000122070312,
+              "high": 191.10000610351562,
+              "low": 189.66000366210938,
+              "close": 189.83999633789062
+            },
+            {
+              "open": 189.50999450683594,
+              "high": 190.80999755859375,
+              "low": 189.17999267578125,
+              "close": 189.8699951171875
+            },
+            {
+              "open": 189.3300018310547,
+              "high": 191.9199981689453,
+              "low": 189.00999450683594,
+              "close": 191.0399932861328
+            },
+            {
+              "open": 191.08999633789062,
+              "high": 192.72999572753906,
+              "low": 190.9199981689453,
+              "close": 192.35000610351562
+            },
+            {
+              "open": 192.27000427246094,
+              "high": 192.82000732421875,
+              "low": 190.27000427246094,
+              "close": 190.89999389648438
+            },
+            {
+              "open": 190.97999572753906,
+              "high": 191.0,
+              "low": 186.6300048828125,
+              "close": 186.8800048828125
+            },
+            {
+              "open": 188.82000732421875,
+              "high": 190.5800018310547,
+              "low": 188.0399932861328,
+              "close": 189.97999572753906
+            },
+            {
+              "open": 191.50999450683594,
+              "high": 193.0,
+              "low": 189.10000610351562,
+              "close": 189.99000549316406
+            },
+            {
+              "open": 189.61000061035156,
+              "high": 192.25,
+              "low": 189.50999450683594,
+              "close": 190.2899932861328
+            },
+            {
+              "open": 190.75999450683594,
+              "high": 192.17999267578125,
+              "low": 190.6300048828125,
+              "close": 191.2899932861328
+            },
+            {
+              "open": 191.44000244140625,
+              "high": 192.57000732421875,
+              "low": 189.91000366210938,
+              "close": 192.25
+            },
+            {
+              "open": 192.89999389648438,
+              "high": 194.99000549316406,
+              "low": 192.52000427246094,
+              "close": 194.02999877929688
+            },
+            {
+              "open": 194.63999938964844,
+              "high": 195.32000732421875,
+              "low": 193.02999877929688,
+              "close": 194.35000610351562
+            },
+            {
+              "open": 195.39999389648438,
+              "high": 196.89999389648438,
+              "low": 194.8699951171875,
+              "close": 195.8699951171875
+            },
+            {
+              "open": 195.69000244140625,
+              "high": 196.5,
+              "low": 194.1699981689453,
+              "close": 194.47999572753906
+            },
+            {
+              "open": 194.64999389648438,
+              "high": 196.94000244140625,
+              "low": 194.13999938964844,
+              "close": 196.88999938964844
+            },
+            {
+              "open": 196.89999389648438,
+              "high": 197.3000030517578,
+              "low": 192.14999389648438,
+              "close": 193.1199951171875
+            },
+            {
+              "open": 193.64999389648438,
+              "high": 207.16000366210938,
+              "low": 193.6300048828125,
+              "close": 207.14999389648438
+            },
+            {
+              "open": 207.3699951171875,
+              "high": 220.1999969482422,
+              "low": 206.89999389648438,
+              "close": 213.07000732421875
+            },
+            {
+              "open": 214.74000549316406,
+              "high": 216.75,
+              "low": 211.60000610351562,
+              "close": 214.24000549316406
+            },
+            {
+              "open": 213.85000610351562,
+              "high": 215.1699981689453,
+              "low": 211.3000030517578,
+              "close": 212.49000549316406
+            },
+            {
+              "open": 213.3699951171875,
+              "high": 218.9499969482422,
+              "low": 212.72000122070312,
+              "close": 216.6699981689453
+            },
+            {
+              "open": 217.58999633789062,
+              "high": 218.6300048828125,
+              "low": 213.0,
+              "close": 214.2899932861328
+            },
+            {
+              "open": 213.92999267578125,
+              "high": 214.24000549316406,
+              "low": 208.85000610351562,
+              "close": 209.67999267578125
+            },
+            {
+              "open": 210.38999938964844,
+              "high": 211.88999938964844,
+              "low": 207.11000061035156,
+              "close": 207.49000549316406
+            },
+            {
+              "open": 207.72000122070312,
+              "high": 212.6999969482422,
+              "low": 206.58999633789062,
+              "close": 208.13999938964844
+            },
+            {
+              "open": 209.14999389648438,
+              "high": 211.3800048828125,
+              "low": 208.61000061035156,
+              "close": 209.07000732421875
+            },
+            {
+              "open": 211.5,
+              "high": 214.86000061035156,
+              "low": 210.63999938964844,
+              "close": 213.25
+            },
+            {
+              "open": 214.69000244140625,
+              "high": 215.74000549316406,
+              "low": 212.35000610351562,
+              "close": 214.10000610351562
+            },
+            {
+              "open": 215.77000427246094,
+              "high": 216.07000732421875,
+              "low": 210.3000030517578,
+              "close": 210.6199951171875
+            },
+            {
+              "open": 212.08999633789062,
+              "high": 217.50999450683594,
+              "low": 211.9199981689453,
+              "close": 216.75
+            },
+            {
+              "open": 216.14999389648438,
+              "high": 220.3800048828125,
+              "low": 215.10000610351562,
+              "close": 220.27000427246094
+            },
+            {
+              "open": 220.0,
+              "high": 221.5500030517578,
+              "low": 219.02999877929688,
+              "close": 221.5500030517578
+            },
+            {
+              "open": 221.64999389648438,
+              "high": 226.4499969482422,
+              "low": 221.64999389648438,
+              "close": 226.33999633789062
+            },
+            {
+              "open": 227.08999633789062,
+              "high": 227.85000610351562,
+              "low": 223.25,
+              "close": 227.82000732421875
+            },
+            {
+              "open": 227.92999267578125,
+              "high": 229.39999389648438,
+              "low": 226.3699951171875,
+              "close": 228.67999267578125
+            },
+            {
+              "open": 229.3000030517578,
+              "high": 233.0800018310547,
+              "low": 229.25,
+              "close": 232.97999572753906
+            },
+            {
+              "open": 231.38999938964844,
+              "high": 232.38999938964844,
+              "low": 225.77000427246094,
+              "close": 227.57000732421875
+            },
+            {
+              "open": 228.9199981689453,
+              "high": 232.63999938964844,
+              "low": 228.67999267578125,
+              "close": 230.5399932861328
+            },
+            {
+              "open": 236.47999572753906,
+              "high": 237.22999572753906,
+              "low": 233.08999633789062,
+              "close": 234.39999389648438
+            },
+            {
+              "open": 235.0,
+              "high": 236.27000427246094,
+              "low": 232.3300018310547,
+              "close": 234.82000732421875
+            },
+            {
+              "open": 229.4499969482422,
+              "high": 231.4600067138672,
+              "low": 226.63999938964844,
+              "close": 228.8800048828125
+            },
+            {
+              "open": 230.27999877929688,
+              "high": 230.44000244140625,
+              "low": 222.27000427246094,
+              "close": 224.17999267578125
+            },
+            {
+              "open": 224.82000732421875,
+              "high": 226.8000030517578,
+              "low": 223.27999877929688,
+              "close": 224.30999755859375
+            },
+            {
+              "open": 227.00999450683594,
+              "high": 227.77999877929688,
+              "low": 223.08999633789062,
+              "close": 223.9600067138672
+            },
+            {
+              "open": 224.3699951171875,
+              "high": 226.94000244140625,
+              "low": 222.67999267578125,
+              "close": 225.00999450683594
+            },
+            {
+              "open": 224.0,
+              "high": 224.8000030517578,
+              "low": 217.1300048828125,
+              "close": 218.5399932861328
+            },
+            {
+              "open": 218.92999267578125,
+              "high": 220.85000610351562,
+              "low": 214.6199951171875,
+              "close": 217.49000549316406
+            },
+            {
+              "open": 218.6999969482422,
+              "high": 219.49000549316406,
+              "low": 216.00999450683594,
+              "close": 217.9600067138672
+            },
+            {
+              "open": 216.9600067138672,
+              "high": 219.3000030517578,
+              "low": 215.75,
+              "close": 218.24000549316406
+            },
+            {
+              "open": 219.19000244140625,
+              "high": 220.3300018310547,
+              "low": 216.1199951171875,
+              "close": 218.8000030517578
+            },
+            {
+              "open": 221.44000244140625,
+              "high": 223.82000732421875,
+              "low": 220.6300048828125,
+              "close": 222.0800018310547
+            },
+            {
+              "open": 224.3699951171875,
+              "high": 224.47999572753906,
+              "low": 217.02000427246094,
+              "close": 218.36000061035156
+            },
+            {
+              "open": 219.14999389648438,
+              "high": 225.60000610351562,
+              "low": 217.7100067138672,
+              "close": 219.86000061035156
+            },
+            {
+              "open": 199.08999633789062,
+              "high": 213.5,
+              "low": 196.0,
+              "close": 209.27000427246094
+            },
+            {
+              "open": 205.3000030517578,
+              "high": 209.99000549316406,
+              "low": 201.07000732421875,
+              "close": 207.22999572753906
+            },
+            {
+              "open": 206.89999389648438,
+              "high": 213.63999938964844,
+              "low": 206.38999938964844,
+              "close": 209.82000732421875
+            },
+            {
+              "open": 213.11000061035156,
+              "high": 214.1999969482422,
+              "low": 208.8300018310547,
+              "close": 213.30999755859375
+            },
+            {
+              "open": 212.10000610351562,
+              "high": 216.77999877929688,
+              "low": 211.97000122070312,
+              "close": 216.24000549316406
+            },
+            {
+              "open": 216.07000732421875,
+              "high": 219.50999450683594,
+              "low": 215.60000610351562,
+              "close": 217.52999877929688
+            },
+            {
+              "open": 219.00999450683594,
+              "high": 221.88999938964844,
+              "low": 219.00999450683594,
+              "close": 221.27000427246094
+            },
+            {
+              "open": 220.57000732421875,
+              "high": 223.02999877929688,
+              "low": 219.6999969482422,
+              "close": 221.72000122070312
+            },
+            {
+              "open": 224.60000610351562,
+              "high": 225.35000610351562,
+              "low": 222.75999450683594,
+              "close": 224.72000122070312
+            },
+            {
+              "open": 223.9199981689453,
+              "high": 226.8300018310547,
+              "low": 223.64999389648438,
+              "close": 226.0500030517578
+            },
+            {
+              "open": 225.72000122070312,
+              "high": 225.99000549316406,
+              "low": 223.0399932861328,
+              "close": 225.88999938964844
+            },
+            {
+              "open": 225.77000427246094,
+              "high": 227.1699981689453,
+              "low": 225.4499969482422,
+              "close": 226.50999450683594
+            },
+            {
+              "open": 226.52000427246094,
+              "high": 227.97999572753906,
+              "low": 225.0500030517578,
+              "close": 226.39999389648438
+            },
+            {
+              "open": 227.7899932861328,
+              "high": 228.33999633789062,
+              "low": 223.89999389648438,
+              "close": 224.52999877929688
+            },
+            {
+              "open": 225.66000366210938,
+              "high": 228.22000122070312,
+              "low": 224.3300018310547,
+              "close": 226.83999633789062
+            },
+            {
+              "open": 226.75999450683594,
+              "high": 227.27999877929688,
+              "low": 223.88999938964844,
+              "close": 227.17999267578125
+            },
+            {
+              "open": 226.0,
+              "high": 228.85000610351562,
+              "low": 224.88999938964844,
+              "close": 228.02999877929688
+            },
+            {
+              "open": 227.9199981689453,
+              "high": 229.86000061035156,
+              "low": 225.67999267578125,
+              "close": 226.49000549316406
+            },
+            {
+              "open": 230.10000610351562,
+              "high": 232.9199981689453,
+              "low": 228.8800048828125,
+              "close": 229.7899932861328
+            },
+            {
+              "open": 230.19000244140625,
+              "high": 230.39999389648438,
+              "low": 227.47999572753906,
+              "close": 229.0
+            },
+            {
+              "open": 228.5500030517578,
+              "high": 229.0,
+              "low": 221.1699981689453,
+              "close": 222.77000427246094
+            },
+            {
+              "open": 221.66000366210938,
+              "high": 221.77999877929688,
+              "low": 217.47999572753906,
+              "close": 220.85000610351562
+            },
+            {
+              "open": 221.6300048828125,
+              "high": 225.47999572753906,
+              "low": 221.52000427246094,
+              "close": 222.3800048828125
+            },
+            {
+              "open": 223.9499969482422,
+              "high": 225.24000549316406,
+              "low": 219.77000427246094,
+              "close": 220.82000732421875
+            },
+            {
+              "open": 220.82000732421875,
+              "high": 221.27000427246094,
+              "low": 216.7100067138672,
+              "close": 220.91000366210938
+            },
+            {
+              "open": 218.9199981689453,
+              "high": 221.47999572753906,
+              "low": 216.72999572753906,
+              "close": 220.11000061035156
+            },
+            {
+              "open": 221.4600067138672,
+              "high": 223.08999633789062,
+              "low": 217.88999938964844,
+              "close": 222.66000366210938
+            },
+            {
+              "open": 222.5,
+              "high": 223.5500030517578,
+              "low": 219.82000732421875,
+              "close": 222.77000427246094
+            },
+            {
+              "open": 223.5800018310547,
+              "high": 224.0399932861328,
+              "low": 221.91000366210938,
+              "close": 222.5
+            },
+            {
+              "open": 216.5399932861328,
+              "high": 217.22000122070312,
+              "low": 213.9199981689453,
+              "close": 216.32000732421875
+            },
+            {
+              "open": 215.75,
+              "high": 216.89999389648438,
+              "low": 214.5,
+              "close": 216.7899932861328
+            },
+            {
+              "open": 217.5500030517578,
+              "high": 222.7100067138672,
+              "low": 217.5399932861328,
+              "close": 220.69000244140625
+            },
+            {
+              "open": 224.99000549316406,
+              "high": 229.82000732421875,
+              "low": 224.6300048828125,
+              "close": 228.8699951171875
+            },
+            {
+              "open": 229.97000122070312,
+              "high": 233.08999633789062,
+              "low": 227.6199951171875,
+              "close": 228.1999969482422
+            },
+            {
+              "open": 227.33999633789062,
+              "high": 229.4499969482422,
+              "low": 225.80999755859375,
+              "close": 226.47000122070312
+            },
+            {
+              "open": 228.64999389648438,
+              "high": 229.35000610351562,
+              "low": 225.72999572753906,
+              "close": 227.3699951171875
+            },
+            {
+              "open": 224.92999267578125,
+              "high": 227.2899932861328,
+              "low": 224.02000427246094,
+              "close": 226.3699951171875
+            },
+            {
+              "open": 227.3000030517578,
+              "high": 228.5,
+              "low": 225.41000366210938,
+              "close": 227.52000427246094
+            },
+            {
+              "open": 228.4600067138672,
+              "high": 229.52000427246094,
+              "low": 227.3000030517578,
+              "close": 227.7899932861328
+            },
+            {
+              "open": 230.0399932861328,
+              "high": 233.0,
+              "low": 229.64999389648438,
+              "close": 233.0
+            },
+            {
+              "open": 229.52000427246094,
+              "high": 229.64999389648438,
+              "low": 223.74000549316406,
+              "close": 226.2100067138672
+            },
+            {
+              "open": 225.88999938964844,
+              "high": 227.3699951171875,
+              "low": 223.02000427246094,
+              "close": 226.77999877929688
+            },
+            {
+              "open": 225.13999938964844,
+              "high": 226.80999755859375,
+              "low": 223.32000732421875,
+              "close": 225.6699981689453
+            },
+            {
+              "open": 227.89999389648438,
+              "high": 228.0,
+              "low": 224.1300048828125,
+              "close": 226.8000030517578
+            },
+            {
+              "open": 224.5,
+              "high": 225.69000244140625,
+              "low": 221.3300018310547,
+              "close": 221.69000244140625
+            },
+            {
+              "open": 224.3000030517578,
+              "high": 225.97999572753906,
+              "low": 223.25,
+              "close": 225.77000427246094
+            },
+            {
+              "open": 225.22999572753906,
+              "high": 229.75,
+              "low": 224.8300018310547,
+              "close": 229.5399932861328
+            },
+            {
+              "open": 227.77999877929688,
+              "high": 229.5,
+              "low": 227.1699981689453,
+              "close": 229.0399932861328
+            },
+            {
+              "open": 229.3000030517578,
+              "high": 229.41000366210938,
+              "low": 227.33999633789062,
+              "close": 227.5500030517578
+            },
+            {
+              "open": 228.6999969482422,
+              "high": 231.72999572753906,
+              "low": 228.60000610351562,
+              "close": 231.3000030517578
+            },
+            {
+              "open": 233.61000061035156,
+              "high": 237.49000549316406,
+              "low": 232.3699951171875,
+              "close": 233.85000610351562
+            },
+            {
+              "open": 231.60000610351562,
+              "high": 232.1199951171875,
+              "low": 229.83999633789062,
+              "close": 231.77999877929688
+            },
+            {
+              "open": 233.42999267578125,
+              "high": 233.85000610351562,
+              "low": 230.52000427246094,
+              "close": 232.14999389648438
+            },
+            {
+              "open": 236.17999267578125,
+              "high": 236.17999267578125,
+              "low": 234.00999450683594,
+              "close": 235.0
+            },
+            {
+              "open": 234.4499969482422,
+              "high": 236.85000610351562,
+              "low": 234.4499969482422,
+              "close": 236.47999572753906
+            },
+            {
+              "open": 233.88999938964844,
+              "high": 236.22000122070312,
+              "low": 232.60000610351562,
+              "close": 235.86000061035156
+            },
+            {
+              "open": 234.0800018310547,
+              "high": 235.13999938964844,
+              "low": 227.75999450683594,
+              "close": 230.75999450683594
+            },
+            {
+              "open": 229.97999572753906,
+              "high": 230.82000732421875,
+              "low": 228.41000366210938,
+              "close": 230.57000732421875
+            },
+            {
+              "open": 229.74000549316406,
+              "high": 233.22000122070312,
+              "low": 229.57000732421875,
+              "close": 231.41000366210938
+            },
+            {
+              "open": 233.32000732421875,
+              "high": 234.72999572753906,
+              "low": 232.5500030517578,
+              "close": 233.39999389648438
+            },
+            {
+              "open": 233.10000610351562,
+              "high": 234.3300018310547,
+              "low": 232.32000732421875,
+              "close": 233.6699981689453
+            },
+            {
+              "open": 232.61000061035156,
+              "high": 233.47000122070312,
+              "low": 229.5500030517578,
+              "close": 230.10000610351562
+            },
+            {
+              "open": 229.33999633789062,
+              "high": 229.8300018310547,
+              "low": 225.3699951171875,
+              "close": 225.91000366210938
+            },
+            {
+              "open": 220.97000122070312,
+              "high": 225.35000610351562,
+              "low": 220.27000427246094,
+              "close": 222.91000366210938
+            },
+            {
+              "open": 220.99000549316406,
+              "high": 222.7899932861328,
+              "low": 219.7100067138672,
+              "close": 222.00999450683594
+            },
+            {
+              "open": 221.8000030517578,
+              "high": 223.9499969482422,
+              "low": 221.13999938964844,
+              "close": 223.4499969482422
+            },
+            {
+              "open": 222.61000061035156,
+              "high": 226.07000732421875,
+              "low": 221.19000244140625,
+              "close": 222.72000122070312
+            },
+            {
+              "open": 224.6300048828125,
+              "high": 227.8800048828125,
+              "low": 224.57000732421875,
+              "close": 227.47999572753906
+            },
+            {
+              "open": 227.1699981689453,
+              "high": 228.66000366210938,
+              "low": 226.41000366210938,
+              "close": 226.9600067138672
+            },
+            {
+              "open": 225.0,
+              "high": 225.6999969482422,
+              "low": 221.5,
+              "close": 224.22999572753906
+            },
+            {
+              "open": 224.5500030517578,
+              "high": 225.58999633789062,
+              "low": 223.36000061035156,
+              "close": 224.22999572753906
+            },
+            {
+              "open": 224.00999450683594,
+              "high": 226.64999389648438,
+              "low": 222.75999450683594,
+              "close": 225.1199951171875
+            },
+            {
+              "open": 225.02000427246094,
+              "high": 228.8699951171875,
+              "low": 225.0,
+              "close": 228.22000122070312
+            },
+            {
+              "open": 226.39999389648438,
+              "high": 226.9199981689453,
+              "low": 224.27000427246094,
+              "close": 225.0
+            },
+            {
+              "open": 225.25,
+              "high": 229.74000549316406,
+              "low": 225.1699981689453,
+              "close": 228.02000427246094
+            },
+            {
+              "open": 226.97999572753906,
+              "high": 230.16000366210938,
+              "low": 226.66000366210938,
+              "close": 228.27999877929688
+            },
+            {
+              "open": 228.05999755859375,
+              "high": 229.92999267578125,
+              "low": 225.88999938964844,
+              "close": 229.0
+            },
+            {
+              "open": 228.8800048828125,
+              "high": 230.16000366210938,
+              "low": 225.7100067138672,
+              "close": 228.52000427246094
+            },
+            {
+              "open": 228.05999755859375,
+              "high": 230.72000122070312,
+              "low": 228.05999755859375,
+              "close": 229.8699951171875
+            },
+            {
+              "open": 231.4600067138672,
+              "high": 233.25,
+              "low": 229.74000549316406,
+              "close": 232.8699951171875
+            },
+            {
+              "open": 233.3300018310547,
+              "high": 235.57000732421875,
+              "low": 233.3300018310547,
+              "close": 235.05999755859375
+            },
+            {
+              "open": 234.47000122070312,
+              "high": 235.69000244140625,
+              "low": 233.80999755859375,
+              "close": 234.92999267578125
+            },
+            {
+              "open": 234.80999755859375,
+              "high": 237.80999755859375,
+              "low": 233.97000122070312,
+              "close": 237.3300018310547
+            },
+            {
+              "open": 237.27000427246094,
+              "high": 240.7899932861328,
+              "low": 237.16000366210938,
+              "close": 239.58999633789062
+            },
+            {
+              "open": 239.80999755859375,
+              "high": 242.75999450683594,
+              "low": 238.89999389648438,
+              "close": 242.64999389648438
+            },
+            {
+              "open": 242.8699951171875,
+              "high": 244.11000061035156,
+              "low": 241.25,
+              "close": 243.00999450683594
+            },
+            {
+              "open": 243.99000549316406,
+              "high": 244.5399932861328,
+              "low": 242.1300048828125,
+              "close": 243.0399932861328
+            },
+            {
+              "open": 242.91000366210938,
+              "high": 244.6300048828125,
+              "low": 242.0800018310547,
+              "close": 242.83999633789062
+            },
+            {
+              "open": 241.8300018310547,
+              "high": 247.24000549316406,
+              "low": 241.75,
+              "close": 246.75
+            },
+            {
+              "open": 246.88999938964844,
+              "high": 248.2100067138672,
+              "low": 245.33999633789062,
+              "close": 247.77000427246094
+            },
+            {
+              "open": 247.9600067138672,
+              "high": 250.8000030517578,
+              "low": 246.25999450683594,
+              "close": 246.49000549316406
+            },
+            {
+              "open": 246.88999938964844,
+              "high": 248.74000549316406,
+              "low": 245.67999267578125,
+              "close": 247.9600067138672
+            },
+            {
+              "open": 247.82000732421875,
+              "high": 249.2899932861328,
+              "low": 246.24000549316406,
+              "close": 248.1300048828125
+            },
+            {
+              "open": 247.99000549316406,
+              "high": 251.3800048828125,
+              "low": 247.64999389648438,
+              "close": 251.0399932861328
+            },
+            {
+              "open": 250.0800018310547,
+              "high": 253.8300018310547,
+              "low": 249.77999877929688,
+              "close": 253.47999572753906
+            },
+            {
+              "open": 252.16000366210938,
+              "high": 254.27999877929688,
+              "low": 247.74000549316406,
+              "close": 248.0500030517578
+            },
+            {
+              "open": 247.5,
+              "high": 252.0,
+              "low": 247.08999633789062,
+              "close": 249.7899932861328
+            },
+            {
+              "open": 248.0399932861328,
+              "high": 255.0,
+              "low": 245.69000244140625,
+              "close": 254.49000549316406
+            },
+            {
+              "open": 254.77000427246094,
+              "high": 255.64999389648438,
+              "low": 253.4499969482422,
+              "close": 255.27000427246094
+            },
+            {
+              "open": 255.49000549316406,
+              "high": 258.2099914550781,
+              "low": 255.2899932861328,
+              "close": 258.20001220703125
+            },
+            {
+              "open": 258.19000244140625,
+              "high": 260.1000061035156,
+              "low": 257.6300048828125,
+              "close": 259.0199890136719
+            },
+            {
+              "open": 257.8299865722656,
+              "high": 258.70001220703125,
+              "low": 253.05999755859375,
+              "close": 255.58999633789062
+            },
+            {
+              "open": 252.22999572753906,
+              "high": 253.5,
+              "low": 250.75,
+              "close": 252.1999969482422
+            },
+            {
+              "open": 252.44000244140625,
+              "high": 253.27999877929688,
+              "low": 249.42999267578125,
+              "close": 250.4199981689453
+            },
+            {
+              "open": 248.92999267578125,
+              "high": 249.10000610351562,
+              "low": 241.82000732421875,
+              "close": 243.85000610351562
+            },
+            {
+              "open": 243.36000061035156,
+              "high": 244.17999267578125,
+              "low": 241.88999938964844,
+              "close": 243.36000061035156
+            },
+            {
+              "open": 244.30999755859375,
+              "high": 247.3300018310547,
+              "low": 243.1999969482422,
+              "close": 245.0
+            },
+            {
+              "open": 242.97999572753906,
+              "high": 245.5500030517578,
+              "low": 241.35000610351562,
+              "close": 242.2100067138672
+            },
+            {
+              "open": 241.9199981689453,
+              "high": 243.7100067138672,
+              "low": 240.0500030517578,
+              "close": 242.6999969482422
+            },
+            {
+              "open": 240.00999450683594,
+              "high": 240.16000366210938,
+              "low": 233.0,
+              "close": 236.85000610351562
+            },
+            {
+              "open": 233.52999877929688,
+              "high": 234.6699981689453,
+              "low": 229.72000122070312,
+              "close": 234.39999389648438
+            },
+            {
+              "open": 234.75,
+              "high": 236.1199951171875,
+              "low": 232.47000122070312,
+              "close": 233.27999877929688
+            },
+            {
+              "open": 234.63999938964844,
+              "high": 238.9600067138672,
+              "low": 234.42999267578125,
+              "close": 237.8699951171875
+            },
+            {
+              "open": 237.35000610351562,
+              "high": 238.00999450683594,
+              "low": 228.02999877929688,
+              "close": 228.25999450683594
+            },
+            {
+              "open": 232.1199951171875,
+              "high": 232.2899932861328,
+              "low": 228.47999572753906,
+              "close": 229.97999572753906
+            },
+            {
+              "open": 224.0,
+              "high": 224.4199981689453,
+              "low": 219.3800048828125,
+              "close": 222.63999938964844
+            },
+            {
+              "open": 219.7899932861328,
+              "high": 224.1199951171875,
+              "low": 219.7899932861328,
+              "close": 223.8300018310547
+            },
+            {
+              "open": 224.74000549316406,
+              "high": 227.02999877929688,
+              "low": 222.3000030517578,
+              "close": 223.66000366210938
+            },
+            {
+              "open": 224.77999877929688,
+              "high": 225.6300048828125,
+              "low": 221.41000366210938,
+              "close": 222.77999877929688
+            },
+            {
+              "open": 224.02000427246094,
+              "high": 232.14999389648438,
+              "low": 223.97999572753906,
+              "close": 229.86000061035156
+            },
+            {
+              "open": 230.85000610351562,
+              "high": 240.19000244140625,
+              "low": 230.80999755859375,
+              "close": 238.25999450683594
+            },
+            {
+              "open": 234.1199951171875,
+              "high": 239.86000061035156,
+              "low": 234.00999450683594,
+              "close": 239.36000061035156
+            },
+            {
+              "open": 238.6699981689453,
+              "high": 240.7899932861328,
+              "low": 237.2100067138672,
+              "close": 237.58999633789062
+            },
+            {
+              "open": 247.19000244140625,
+              "high": 247.19000244140625,
+              "low": 233.44000244140625,
+              "close": 236.0
+            },
+            {
+              "open": 229.99000549316406,
+              "high": 231.8300018310547,
+              "low": 225.6999969482422,
+              "close": 228.00999450683594
+            },
+            {
+              "open": 227.25,
+              "high": 233.1300048828125,
+              "low": 226.64999389648438,
+              "close": 232.8000030517578
+            },
+            {
+              "open": 228.52999877929688,
+              "high": 232.6699981689453,
+              "low": 228.27000427246094,
+              "close": 232.47000122070312
+            },
+            {
+              "open": 231.2899932861328,
+              "high": 233.8000030517578,
+              "low": 230.42999267578125,
+              "close": 233.22000122070312
+            },
+            {
+              "open": 232.60000610351562,
+              "high": 234.0,
+              "low": 227.25999450683594,
+              "close": 227.6300048828125
+            },
+            {
+              "open": 229.57000732421875,
+              "high": 230.58999633789062,
+              "low": 227.1999969482422,
+              "close": 227.64999389648438
+            },
+            {
+              "open": 228.1999969482422,
+              "high": 235.22999572753906,
+              "low": 228.1300048828125,
+              "close": 232.6199951171875
+            },
+            {
+              "open": 231.1999969482422,
+              "high": 236.9600067138672,
+              "low": 230.67999267578125,
+              "close": 236.8699951171875
+            },
+            {
+              "open": 236.91000366210938,
+              "high": 242.33999633789062,
+              "low": 235.57000732421875,
+              "close": 241.52999877929688
+            },
+            {
+              "open": 241.25,
+              "high": 245.5500030517578,
+              "low": 240.99000549316406,
+              "close": 244.60000610351562
+            },
+            {
+              "open": 244.14999389648438,
+              "high": 245.17999267578125,
+              "low": 241.83999633789062,
+              "close": 244.47000122070312
+            },
+            {
+              "open": 244.66000366210938,
+              "high": 246.00999450683594,
+              "low": 243.16000366210938,
+              "close": 244.8699951171875
+            },
+            {
+              "open": 244.94000244140625,
+              "high": 246.77999877929688,
+              "low": 244.2899932861328,
+              "close": 245.8300018310547
+            },
+            {
+              "open": 245.9499969482422,
+              "high": 248.69000244140625,
+              "low": 245.22000122070312,
+              "close": 245.5500030517578
+            },
+            {
+              "open": 244.92999267578125,
+              "high": 248.86000061035156,
+              "low": 244.4199981689453,
+              "close": 247.10000610351562
+            },
+            {
+              "open": 248.0,
+              "high": 250.0,
+              "low": 244.91000366210938,
+              "close": 247.0399932861328
+            },
+            {
+              "open": 244.3300018310547,
+              "high": 244.97999572753906,
+              "low": 239.1300048828125,
+              "close": 240.36000061035156
+            },
+            {
+              "open": 239.41000366210938,
+              "high": 242.4600067138672,
+              "low": 237.05999755859375,
+              "close": 237.3000030517578
+            },
+            {
+              "open": 236.9499969482422,
+              "high": 242.08999633789062,
+              "low": 230.1999969482422,
+              "close": 241.83999633789062
+            },
+            {
+              "open": 241.7899932861328,
+              "high": 244.02999877929688,
+              "low": 236.11000061035156,
+              "close": 238.02999877929688
+            },
+            {
+              "open": 237.7100067138672,
+              "high": 240.07000732421875,
+              "low": 234.67999267578125,
+              "close": 235.92999267578125
+            },
+            {
+              "open": 235.4199981689453,
+              "high": 236.5500030517578,
+              "low": 229.22999572753906,
+              "close": 235.74000549316406
+            },
+            {
+              "open": 234.44000244140625,
+              "high": 237.86000061035156,
+              "low": 233.16000366210938,
+              "close": 235.3300018310547
+            },
+            {
+              "open": 235.11000061035156,
+              "high": 241.3699951171875,
+              "low": 234.75999450683594,
+              "close": 239.07000732421875
+            },
+            {
+              "open": 235.5399932861328,
+              "high": 236.16000366210938,
+              "low": 224.22000122070312,
+              "close": 227.47999572753906
+            },
+            {
+              "open": 223.80999755859375,
+              "high": 225.83999633789062,
+              "low": 217.4499969482422,
+              "close": 220.83999633789062
+            },
+            {
+              "open": 220.13999938964844,
+              "high": 221.75,
+              "low": 214.91000366210938,
+              "close": 216.97999572753906
+            },
+            {
+              "open": 215.9499969482422,
+              "high": 216.83999633789062,
+              "low": 208.4199981689453,
+              "close": 209.67999267578125
+            },
+            {
+              "open": 211.25,
+              "high": 213.9499969482422,
+              "low": 209.5800018310547,
+              "close": 213.49000549316406
+            },
+            {
+              "open": 213.30999755859375,
+              "high": 215.22000122070312,
+              "low": 209.97000122070312,
+              "close": 214.0
+            },
+            {
+              "open": 214.16000366210938,
+              "high": 215.14999389648438,
+              "low": 211.49000549316406,
+              "close": 212.69000244140625
+            },
+            {
+              "open": 214.22000122070312,
+              "high": 218.75999450683594,
+              "low": 213.75,
+              "close": 215.24000549316406
+            },
+            {
+              "open": 213.99000549316406,
+              "high": 217.49000549316406,
+              "low": 212.22000122070312,
+              "close": 214.10000610351562
+            },
+            {
+              "open": 211.55999755859375,
+              "high": 218.83999633789062,
+              "low": 211.27999877929688,
+              "close": 218.27000427246094
+            },
+            {
+              "open": 221.0,
+              "high": 221.47999572753906,
+              "low": 218.5800018310547,
+              "close": 220.72999572753906
+            },
+            {
+              "open": 220.77000427246094,
+              "high": 224.10000610351562,
+              "low": 220.0800018310547,
+              "close": 223.75
+            },
+            {
+              "open": 223.50999450683594,
+              "high": 225.02000427246094,
+              "low": 220.47000122070312,
+              "close": 221.52999877929688
+            },
+            {
+              "open": 221.38999938964844,
+              "high": 224.99000549316406,
+              "low": 220.55999755859375,
+              "close": 223.85000610351562
+            },
+            {
+              "open": 221.6699981689453,
+              "high": 223.80999755859375,
+              "low": 217.67999267578125,
+              "close": 217.89999389648438
+            },
+            {
+              "open": 217.00999450683594,
+              "high": 225.6199951171875,
+              "low": 216.22999572753906,
+              "close": 222.1300048828125
+            },
+            {
+              "open": 219.80999755859375,
+              "high": 223.67999267578125,
+              "low": 218.89999389648438,
+              "close": 223.19000244140625
+            },
+            {
+              "open": 221.32000732421875,
+              "high": 225.19000244140625,
+              "low": 221.02000427246094,
+              "close": 223.88999938964844
+            },
+            {
+              "open": 205.5399932861328,
+              "high": 207.49000549316406,
+              "low": 201.25,
+              "close": 203.19000244140625
+            },
+            {
+              "open": 193.88999938964844,
+              "high": 199.8800048828125,
+              "low": 187.33999633789062,
+              "close": 188.3800048828125
+            },
+            {
+              "open": 177.1999969482422,
+              "high": 194.14999389648438,
+              "low": 174.6199951171875,
+              "close": 181.4600067138672
+            },
+            {
+              "open": 186.6999969482422,
+              "high": 190.33999633789062,
+              "low": 169.2100067138672,
+              "close": 172.4199981689453
+            },
+            {
+              "open": 171.9499969482422,
+              "high": 200.61000061035156,
+              "low": 171.88999938964844,
+              "close": 198.85000610351562
+            },
+            {
+              "open": 189.07000732421875,
+              "high": 194.77999877929688,
+              "low": 183.0,
+              "close": 190.4199981689453
+            },
+            {
+              "open": 186.10000610351562,
+              "high": 199.5399932861328,
+              "low": 186.05999755859375,
+              "close": 198.14999389648438
+            },
+            {
+              "open": 211.44000244140625,
+              "high": 212.94000244140625,
+              "low": 201.16000366210938,
+              "close": 202.52000427246094
+            },
+            {
+              "open": 201.86000061035156,
+              "high": 203.50999450683594,
+              "low": 199.8000030517578,
+              "close": 202.13999938964844
+            },
+            {
+              "open": 198.36000061035156,
+              "high": 200.6999969482422,
+              "low": 192.3699951171875,
+              "close": 194.27000427246094
+            },
+            {
+              "open": 197.1999969482422,
+              "high": 198.8300018310547,
+              "low": 194.4199981689453,
+              "close": 196.97999572753906
+            },
+            {
+              "open": 193.27000427246094,
+              "high": 193.8000030517578,
+              "low": 189.80999755859375,
+              "close": 193.16000366210938
+            },
+            {
+              "open": 196.1199951171875,
+              "high": 201.58999633789062,
+              "low": 195.97000122070312,
+              "close": 199.74000549316406
+            },
+            {
+              "open": 206.0,
+              "high": 208.0,
+              "low": 202.8000030517578,
+              "close": 204.60000610351562
+            },
+            {
+              "open": 204.88999938964844,
+              "high": 208.8300018310547,
+              "low": 202.94000244140625,
+              "close": 208.3699951171875
+            },
+            {
+              "open": 206.3699951171875,
+              "high": 209.75,
+              "low": 206.1999969482422,
+              "close": 209.27999877929688
+            },
+            {
+              "open": 210.0,
+              "high": 211.5,
+              "low": 207.4600067138672,
+              "close": 210.13999938964844
+            },
+            {
+              "open": 208.69000244140625,
+              "high": 212.24000549316406,
+              "low": 208.3699951171875,
+              "close": 211.2100067138672
+            },
+            {
+              "open": 209.3000030517578,
+              "high": 213.5800018310547,
+              "low": 206.6699981689453,
+              "close": 212.5
+            },
+            {
+              "open": 209.0800018310547,
+              "high": 214.55999755859375,
+              "low": 208.89999389648438,
+              "close": 213.32000732421875
+            },
+            {
+              "open": 206.08999633789062,
+              "high": 206.99000549316406,
+              "low": 202.16000366210938,
+              "close": 205.35000610351562
+            }
+          ],
+          "volume": {
+            
