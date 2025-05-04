@@ -176,12 +176,20 @@ class VPAQueryEngine:
         try:
             # Option 1: Try getting explanation from facade/knowledge base
             explanation = self.llm_interface.explain_vpa_concept(concept_name)
-            if explanation and not explanation.get("error"): 
+
+            if isinstance(explanation, str):
+                # If it's a string, assume it's a valid explanation
+                return json.dumps({"explanation": explanation})
+            elif isinstance(explanation, dict):
+                # If it's a dictionary, use it as is
                 return json.dumps(explanation)
+            else:
+                # Handle unexpected types
+                return json.dumps({"error": f"Unexpected type for explanation: {type(explanation)}"})
             
             # Option 2: Just pass back the concept name, let LLM explain based on its knowledge
             # This is simpler initially and leverages the LLM's primary strength.
-            return json.dumps({"concept_name": concept_name, "status": "Ready for LLM explanation"})
+            # return json.dumps({"concept_name": concept_name, "status": "Ready for LLM explanation"})
         except Exception as e:
             logger.error(f"Error executing concept explanation for {concept_name}: {e}", exc_info=True)
             return json.dumps({"error": f"Failed to process explanation request for {concept_name}: {str(e)}"})
