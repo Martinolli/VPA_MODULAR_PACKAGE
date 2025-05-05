@@ -14,7 +14,9 @@ from vpa_modular.vpa_visualizer import (
     create_pattern_signal_heatmap,
     plot_risk_management,
     visualize_risk_reward_ratio,
-    update_price_chart_with_risk_levels
+    update_price_chart_with_risk_levels,
+    plot_vpa_signals_candlestick,
+    plot_relative_volume
 )
 import os
 
@@ -60,18 +62,26 @@ def test_visualizer():
             plot_price_volume_chart(full_data, ticker, timeframe, os.path.join(ticker_dir, f"{ticker}_{timeframe}_price_volume.png"))
             plot_pattern_analysis(price_data, pattern_analysis, ticker, timeframe, os.path.join(ticker_dir, f"{ticker}_{timeframe}_patterns.png"))
             plot_support_resistance(price_data, support_resistance, ticker, timeframe, os.path.join(ticker_dir, f"{ticker}_{timeframe}_support_resistance.png"))
-
+            
         # Test new visualizations
         signal = extractor.get_signal(ticker)
         risk_assessment = extractor.get_risk_assessment(ticker)
         current_price = extractor.get_current_price(ticker)
-
+        # Filtrar o signal para o timeframe atual:
+        signal_for_tf = {
+            "evidence": {
+                timeframe: signal.get("evidence", {}).get(timeframe, [])
+            }
+        }
+        plot_vpa_signals_candlestick(price_data, signal_for_tf, ticker, os.path.join(ticker_dir, f"{ticker}_{timeframe}_candlestick_signals.png"))
         create_signal_dashboard(signal, ticker, os.path.join(ticker_dir, f"{ticker}_signal_dashboard.png"))
         plot_multi_timeframe_trends(signal['evidence'], ticker, os.path.join(ticker_dir, f"{ticker}_multi_timeframe_trends.png"))
         create_pattern_signal_heatmap(signal['evidence'], ticker, os.path.join(ticker_dir, f"{ticker}_pattern_heatmap.png"))
         plot_risk_management(risk_assessment, current_price, ticker, os.path.join(ticker_dir, f"{ticker}_risk_management.png"))
         visualize_risk_reward_ratio(risk_assessment, ticker, os.path.join(ticker_dir, f"{ticker}_risk_reward_ratio.png"))
         update_price_chart_with_risk_levels(price_data, risk_assessment, current_price, ticker, os.path.join(ticker_dir, f"{ticker}_price_with_risk_levels.png"))
+        plot_relative_volume(full_data, ticker, timeframe, os.path.join(ticker_dir, f"{ticker}_{timeframe}_relative_volume.png"))
+
 
     # Create summary report and dashboard
     create_summary_report(extractor, output_dir)

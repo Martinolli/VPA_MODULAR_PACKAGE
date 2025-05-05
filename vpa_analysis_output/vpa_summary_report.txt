@@ -2,7 +2,7 @@
 📊 Analysis for AAPL
 ============================================================
 
-Current Price: 200.76
+Current Price: 198.89
 
 🔔 Signal:
   • Type: BUY
@@ -13,32 +13,32 @@ Current Price: 200.76
   • Candle_signals:
   • Trend_signals:
       - timeframe: 1h
-      - details: Falling price with falling volume indicates weakening bearish trend; Multiple high volume bars in downtrend may indicate selling climax
+      - details: Falling price with falling volume indicates weakening bearish trend
   • Pattern_signals:
       - timeframe: 1d
       - pattern: Accumulation
       - details: Sideways: False, High volume bars: 8, Support tests: 6
       - timeframe: 1h
       - pattern: Accumulation
-      - details: Sideways: True, High volume bars: 12, Support tests: 9
+      - details: Sideways: True, High volume bars: 11, Support tests: 9
       - timeframe: 15m
       - pattern: Accumulation
-      - details: Sideways: True, High volume bars: 4, Support tests: 15
+      - details: Sideways: True, High volume bars: 1, Support tests: 11
       - timeframe: 15m
       - pattern: Selling Climax
-      - details: Near low: True, Very high volume: False, Wide down candle: True, Lower wick: True
+      - details: Near low: True, Very high volume: True, Wide down candle: True, Lower wick: True
   • Timeframe_confirmations:
 
 ⚠️ Risk Assessment:
   • Stop loss: 168.36
-  • Take profit: 214.00
-  • Risk reward ratio: 0.41
-  • Position size: 3.09
-  • Risk per share: 32.39
+  • Take profit: 201.61
+  • Risk reward ratio: 0.09
+  • Position size: 3.28
+  • Risk per share: 30.53
 
 ⏱️ Timeframe: 1d
   🕯️ Candle Analysis:
-    • Candle class: NARROW
+    • Candle class: NEUTRAL
     • Volume class: AVERAGE
     • Is up candle: False
     • Price direction: DOWN
@@ -72,7 +72,7 @@ Current Price: 200.76
     • Selling climax:
         - Detected: False
         - Strength: 1
-        - Details: Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True
+        - Details: Near low: False, Very high volume: False, Wide down candle: True, Lower wick: False
   📉 Support and Resistance:
     • Support Levels:
         - Price: 208.42, Strength: 2.5, Tests: 3
@@ -89,33 +89,32 @@ Current Price: 200.76
 
 ⏱️ Timeframe: 1h
   🕯️ Candle Analysis:
-    • Candle class: NARROW
-    • Volume class: LOW
-    • Is up candle: True
+    • Candle class: NEUTRAL
+    • Volume class: AVERAGE
+    • Is up candle: False
     • Price direction: DOWN
-    • Signal type: VALIDATION
-    • Signal strength: NEUTRAL
-    • Details: Narrow spread up candle with low volume indicates consolidation
+    • Signal type: None
+    • Signal strength: None
+    • Details: 
   📈 Trend Analysis:
     • Trend direction: DOWN
     • Volume trend: DECREASING
     • Signal type: TREND_ANOMALY
     • Signal strength: BULLISH
-    • Details: Falling price with falling volume indicates weakening bearish trend; Multiple high volume bars in downtrend may indicate selling climax
+    • Details: Falling price with falling volume indicates weakening bearish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
         - Strength: 3
-        - Details: Sideways: True, High volume bars: 12, Support tests: 9
+        - Details: Sideways: True, High volume bars: 11, Support tests: 9
     • Distribution:
         - Detected: True
         - Strength: 3
-        - Details: Sideways: True, High volume bars: 12, Resistance tests: 10
+        - Details: Sideways: True, High volume bars: 11, Resistance tests: 10
     • Testing:
-        - Detected: True
+        - Detected: False
         - Tests:
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 201.09
-        - Details: Found 1 testing patterns
+        - Details: Found 0 testing patterns
     • Buying climax:
         - Detected: False
         - Strength: 1
@@ -127,65 +126,66 @@ Current Price: 200.76
   📉 Support and Resistance:
     • Support Levels:
         - Price: 209.35, Strength: 5.0, Tests: 8
-        - Price: 206.20, Strength: 2.5, Tests: 3
+        - Price: 206.67, Strength: 2.0, Tests: 0
         - Price: 202.21, Strength: 2.0, Tests: 0
-        - Price: 198.21, Strength: 1.5, Tests: 1
+        - Price: 198.21, Strength: 2.0, Tests: 2
     • Resistance Levels:
         - Price: 211.50, Strength: 9.0, Tests: 14
-        - Price: 209.25, Strength: 6.0, Tests: 10
         - Price: 214.22, Strength: 2.0, Tests: 2
 
 ⏱️ Timeframe: 15m
   🕯️ Candle Analysis:
-    • Candle class: NEUTRAL
-    • Volume class: VERY_LOW
+    • Candle class: WIDE
+    • Volume class: VERY_HIGH
     • Is up candle: False
     • Price direction: DOWN
-    • Signal type: None
-    • Signal strength: None
-    • Details: 
-  📈 Trend Analysis:
-    • Trend direction: UP
-    • Volume trend: DECREASING
-    • Signal type: TREND_ANOMALY
+    • Signal type: VALIDATION
     • Signal strength: BEARISH
-    • Details: Rising price with falling volume indicates weakening bullish trend
+    • Details: Wide spread down candle with high volume confirms bearish sentiment
+  📈 Trend Analysis:
+    • Trend direction: DOWN
+    • Volume trend: INCREASING
+    • Signal type: TREND_VALIDATION
+    • Signal strength: BEARISH
+    • Details: Falling price with rising volume confirms bearish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
-        - Strength: 3
-        - Details: Sideways: True, High volume bars: 4, Support tests: 15
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 1, Support tests: 11
     • Distribution:
         - Detected: True
-        - Strength: 3
-        - Details: Sideways: True, High volume bars: 4, Resistance tests: 14
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 1, Resistance tests: 11
     • Testing:
         - Detected: True
         - Tests:
             - Type: SUPPORT_TEST, Time: 2025-05-05 16:45:00+00:00, Price: 199.72
             - Type: SUPPORT_TEST, Time: 2025-05-05 18:00:00+00:00, Price: 200.16
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:30:00+00:00, Price: 200.60
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:45:00+00:00, Price: 200.43
+            - Type: SUPPORT_TEST, Time: 2025-05-05 19:00:00+00:00, Price: 200.07
             - Type: RESISTANCE_TEST, Time: 2025-05-05 16:00:00+00:00, Price: 199.79
             - Type: RESISTANCE_TEST, Time: 2025-05-05 16:15:00+00:00, Price: 200.04
             - Type: RESISTANCE_TEST, Time: 2025-05-05 17:15:00+00:00, Price: 200.64
             - Type: RESISTANCE_TEST, Time: 2025-05-05 18:00:00+00:00, Price: 201.09
-        - Details: Found 6 testing patterns
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:30:00+00:00, Price: 201.16
+        - Details: Found 10 testing patterns
     • Buying climax:
-        - Detected: False
-        - Strength: 2
-        - Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
+        - Detected: True
+        - Strength: 4
+        - Details: Near high: True, Very high volume: True, Wide up candle: False, Upper wick: True
     • Selling climax:
         - Detected: True
-        - Strength: 3
-        - Details: Near low: True, Very high volume: False, Wide down candle: True, Lower wick: True
+        - Strength: 5
+        - Details: Near low: True, Very high volume: True, Wide down candle: True, Lower wick: True
   📉 Support and Resistance:
     • Support Levels:
         - Price: 204.60, Strength: 10.5, Tests: 19
-        - Price: 198.21, Strength: 4.5, Tests: 7
-        - Price: 202.21, Strength: 1.0, Tests: 0
+        - Price: 199.67, Strength: 6.0, Tests: 10
     • Resistance Levels:
+        - Price: 199.65, Strength: 8.0, Tests: 14
         - Price: 205.89, Strength: 6.5, Tests: 11
-        - Price: 199.65, Strength: 6.0, Tests: 10
-        - Price: 214.55, Strength: 1.0, Tests: 0
 
 
 
@@ -193,7 +193,7 @@ Current Price: 200.76
 📊 Analysis for NFLX
 ============================================================
 
-Current Price: 1138.17
+Current Price: 1134.06
 
 🔔 Signal:
   • Type: BUY
@@ -205,8 +205,6 @@ Current Price: 1138.17
   • Trend_signals:
       - timeframe: 1d
       - details: Rising price with rising volume confirms bullish trend
-      - timeframe: 1h
-      - details: Falling price with falling volume indicates weakening bearish trend
   • Pattern_signals:
       - timeframe: 1d
       - pattern: Accumulation
@@ -216,15 +214,18 @@ Current Price: 1138.17
       - details: Sideways: True, High volume bars: 3, Support tests: 9
       - timeframe: 15m
       - pattern: Accumulation
-      - details: Sideways: True, High volume bars: 4, Support tests: 12
+      - details: Sideways: True, High volume bars: 1, Support tests: 10
+      - timeframe: 15m
+      - pattern: Selling Climax
+      - details: Near low: True, Very high volume: True, Wide down candle: True, Lower wick: False
   • Timeframe_confirmations:
 
 ⚠️ Risk Assessment:
   • Stop loss: 896.09
-  • Take profit: 1195.08
+  • Take profit: 1190.76
   • Risk reward ratio: 0.24
-  • Position size: 0.41
-  • Risk per share: 242.09
+  • Position size: 0.42
+  • Risk per share: 237.97
 
 ⏱️ Timeframe: 1d
   🕯️ Candle Analysis:
@@ -257,7 +258,7 @@ Current Price: 1138.17
     • Buying climax:
         - Detected: False
         - Strength: 2
-        - Details: Near high: True, Very high volume: False, Wide up candle: True, Upper wick: False
+        - Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
     • Selling climax:
         - Detected: False
         - Strength: 1
@@ -275,19 +276,19 @@ Current Price: 1138.17
 
 ⏱️ Timeframe: 1h
   🕯️ Candle Analysis:
-    • Candle class: NARROW
-    • Volume class: LOW
+    • Candle class: WIDE
+    • Volume class: AVERAGE
     • Is up candle: False
     • Price direction: UP
-    • Signal type: VALIDATION
-    • Signal strength: NEUTRAL
-    • Details: Narrow spread down candle with low volume indicates consolidation
+    • Signal type: None
+    • Signal strength: None
+    • Details: 
   📈 Trend Analysis:
-    • Trend direction: DOWN
+    • Trend direction: UP
     • Volume trend: DECREASING
     • Signal type: TREND_ANOMALY
-    • Signal strength: BULLISH
-    • Details: Falling price with falling volume indicates weakening bearish trend
+    • Signal strength: BEARISH
+    • Details: Rising price with falling volume indicates weakening bullish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
@@ -312,42 +313,43 @@ Current Price: 1138.17
     • Selling climax:
         - Detected: False
         - Strength: 2
-        - Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+        - Details: Near low: True, Very high volume: False, Wide down candle: True, Lower wick: False
   📉 Support and Resistance:
     • Support Levels:
-        - Price: 1091.00, Strength: 6.0, Tests: 8
-        - Price: 1132.56, Strength: 3.5, Tests: 5
+        - Price: 1132.56, Strength: 4.5, Tests: 7
+        - Price: 1082.62, Strength: 2.5, Tests: 1
+        - Price: 1095.48, Strength: 2.0, Tests: 0
         - Price: 1108.51, Strength: 2.0, Tests: 0
     • Resistance Levels:
-        - Price: 1142.37, Strength: 6.0, Tests: 10
-        - Price: 1106.80, Strength: 5.5, Tests: 7
+        - Price: 1142.37, Strength: 7.0, Tests: 12
+        - Price: 1102.66, Strength: 4.5, Tests: 7
         - Price: 1127.79, Strength: 4.5, Tests: 7
         - Price: 1159.44, Strength: 1.0, Tests: 0
 
 ⏱️ Timeframe: 15m
   🕯️ Candle Analysis:
-    • Candle class: NARROW
-    • Volume class: VERY_LOW
+    • Candle class: WIDE
+    • Volume class: HIGH
     • Is up candle: False
     • Price direction: DOWN
     • Signal type: VALIDATION
-    • Signal strength: NEUTRAL
-    • Details: Narrow spread down candle with low volume indicates consolidation
-  📈 Trend Analysis:
-    • Trend direction: UP
-    • Volume trend: DECREASING
-    • Signal type: TREND_ANOMALY
     • Signal strength: BEARISH
-    • Details: Rising price with falling volume indicates weakening bullish trend
+    • Details: Wide spread down candle with high volume confirms bearish sentiment
+  📈 Trend Analysis:
+    • Trend direction: DOWN
+    • Volume trend: INCREASING
+    • Signal type: TREND_VALIDATION
+    • Signal strength: BEARISH
+    • Details: Falling price with rising volume confirms bearish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
-        - Strength: 3
-        - Details: Sideways: True, High volume bars: 4, Support tests: 12
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 1, Support tests: 10
     • Distribution:
         - Detected: True
-        - Strength: 3
-        - Details: Sideways: True, High volume bars: 4, Resistance tests: 13
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 1, Resistance tests: 10
     • Testing:
         - Detected: True
         - Tests:
@@ -355,27 +357,31 @@ Current Price: 1138.17
             - Type: SUPPORT_TEST, Time: 2025-05-05 17:00:00+00:00, Price: 1137.01
             - Type: SUPPORT_TEST, Time: 2025-05-05 17:15:00+00:00, Price: 1136.18
             - Type: SUPPORT_TEST, Time: 2025-05-05 18:00:00+00:00, Price: 1137.63
+            - Type: SUPPORT_TEST, Time: 2025-05-05 19:00:00+00:00, Price: 1138.09
             - Type: RESISTANCE_TEST, Time: 2025-05-05 15:45:00+00:00, Price: 1139.95
             - Type: RESISTANCE_TEST, Time: 2025-05-05 16:45:00+00:00, Price: 1143.50
             - Type: RESISTANCE_TEST, Time: 2025-05-05 17:15:00+00:00, Price: 1140.32
             - Type: RESISTANCE_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 1141.70
-        - Details: Found 8 testing patterns
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:15:00+00:00, Price: 1140.44
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:30:00+00:00, Price: 1142.00
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:45:00+00:00, Price: 1142.62
+        - Details: Found 12 testing patterns
     • Buying climax:
-        - Detected: False
-        - Strength: 2
-        - Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
+        - Detected: True
+        - Strength: 4
+        - Details: Near high: True, Very high volume: True, Wide up candle: False, Upper wick: True
     • Selling climax:
-        - Detected: False
-        - Strength: 2
-        - Details: Near low: True, Very high volume: False, Wide down candle: True, Lower wick: False
+        - Detected: True
+        - Strength: 4
+        - Details: Near low: True, Very high volume: True, Wide down candle: True, Lower wick: False
   📉 Support and Resistance:
     • Support Levels:
-        - Price: 1132.56, Strength: 8.5, Tests: 15
+        - Price: 1136.18, Strength: 6.0, Tests: 10
         - Price: 1152.15, Strength: 5.5, Tests: 9
         - Price: 1108.51, Strength: 2.0, Tests: 0
     • Resistance Levels:
+        - Price: 1137.00, Strength: 11.5, Tests: 21
         - Price: 1155.93, Strength: 8.5, Tests: 15
-        - Price: 1137.00, Strength: 8.5, Tests: 15
 
 
 
@@ -383,7 +389,7 @@ Current Price: 1138.17
 📊 Analysis for GOOGL
 ============================================================
 
-Current Price: 165.13
+Current Price: 164.21
 
 🔔 Signal:
   • Type: BUY
@@ -402,25 +408,28 @@ Current Price: 165.13
       - details: Sideways: True, High volume bars: 2, Support tests: 10
       - timeframe: 15m
       - pattern: Accumulation
-      - details: Sideways: True, High volume bars: 3, Support tests: 14
+      - details: Sideways: True, High volume bars: 1, Support tests: 9
+      - timeframe: 15m
+      - pattern: Selling Climax
+      - details: Near low: True, Very high volume: True, Wide down candle: True, Lower wick: True
   • Timeframe_confirmations:
 
 ⚠️ Risk Assessment:
   • Stop loss: 160.56
   • Take profit: 166.93
-  • Risk reward ratio: 0.39
-  • Position size: 21.90
-  • Risk per share: 4.57
+  • Risk reward ratio: 0.75
+  • Position size: 27.42
+  • Risk per share: 3.65
 
 ⏱️ Timeframe: 1d
   🕯️ Candle Analysis:
-    • Candle class: NEUTRAL
+    • Candle class: NARROW
     • Volume class: LOW
     • Is up candle: True
     • Price direction: DOWN
-    • Signal type: None
-    • Signal strength: None
-    • Details: 
+    • Signal type: VALIDATION
+    • Signal strength: NEUTRAL
+    • Details: Narrow spread up candle with low volume indicates consolidation
   📈 Trend Analysis:
     • Trend direction: UP
     • Volume trend: DECREASING
@@ -439,12 +448,12 @@ Current Price: 165.13
     • Testing:
         - Detected: True
         - Tests:
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 00:00:00+00:00, Price: 165.37
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 00:00:00+00:00, Price: 165.39
         - Details: Found 1 testing patterns
     • Buying climax:
         - Detected: False
         - Strength: 2
-        - Details: Near high: True, Very high volume: False, Wide up candle: True, Upper wick: False
+        - Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
     • Selling climax:
         - Detected: False
         - Strength: 1
@@ -465,19 +474,19 @@ Current Price: 165.13
 
 ⏱️ Timeframe: 1h
   🕯️ Candle Analysis:
-    • Candle class: NARROW
-    • Volume class: VERY_LOW
-    • Is up candle: True
+    • Candle class: NEUTRAL
+    • Volume class: AVERAGE
+    • Is up candle: False
     • Price direction: UP
-    • Signal type: VALIDATION
-    • Signal strength: NEUTRAL
-    • Details: Narrow spread up candle with low volume indicates consolidation
+    • Signal type: None
+    • Signal strength: None
+    • Details: 
   📈 Trend Analysis:
-    • Trend direction: UP
-    • Volume trend: DECREASING
-    • Signal type: TREND_ANOMALY
+    • Trend direction: DOWN
+    • Volume trend: INCREASING
+    • Signal type: TREND_VALIDATION
     • Signal strength: BEARISH
-    • Details: Rising price with falling volume indicates weakening bullish trend
+    • Details: Falling price with rising volume confirms bearish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
@@ -493,13 +502,15 @@ Current Price: 165.13
             - Type: SUPPORT_TEST, Time: 2025-05-01 16:30:00+00:00, Price: 160.23
             - Type: SUPPORT_TEST, Time: 2025-05-02 17:30:00+00:00, Price: 163.83
             - Type: SUPPORT_TEST, Time: 2025-05-05 15:30:00+00:00, Price: 164.05
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:30:00+00:00, Price: 164.80
             - Type: RESISTANCE_TEST, Time: 2025-05-01 16:30:00+00:00, Price: 161.48
             - Type: RESISTANCE_TEST, Time: 2025-05-01 17:30:00+00:00, Price: 161.94
             - Type: RESISTANCE_TEST, Time: 2025-05-01 18:30:00+00:00, Price: 161.95
             - Type: RESISTANCE_TEST, Time: 2025-05-02 16:30:00+00:00, Price: 164.97
             - Type: RESISTANCE_TEST, Time: 2025-05-05 16:30:00+00:00, Price: 165.19
             - Type: RESISTANCE_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 165.37
-        - Details: Found 9 testing patterns
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:30:00+00:00, Price: 165.39
+        - Details: Found 11 testing patterns
     • Buying climax:
         - Detected: False
         - Strength: 2
@@ -515,39 +526,43 @@ Current Price: 165.13
         - Price: 155.40, Strength: 2.0, Tests: 0
         - Price: 162.80, Strength: 1.0, Tests: 0
     • Resistance Levels:
+        - Price: 164.97, Strength: 6.0, Tests: 10
         - Price: 161.00, Strength: 5.5, Tests: 9
-        - Price: 164.97, Strength: 5.0, Tests: 8
         - Price: 163.15, Strength: 2.0, Tests: 0
 
 ⏱️ Timeframe: 15m
   🕯️ Candle Analysis:
-    • Candle class: NARROW
-    • Volume class: VERY_LOW
+    • Candle class: WIDE
+    • Volume class: VERY_HIGH
     • Is up candle: False
     • Price direction: UP
     • Signal type: VALIDATION
-    • Signal strength: NEUTRAL
-    • Details: Narrow spread down candle with low volume indicates consolidation
-  📈 Trend Analysis:
-    • Trend direction: UP
-    • Volume trend: DECREASING
-    • Signal type: TREND_ANOMALY
     • Signal strength: BEARISH
-    • Details: Rising price with falling volume indicates weakening bullish trend
+    • Details: Wide spread down candle with high volume confirms bearish sentiment
+  📈 Trend Analysis:
+    • Trend direction: DOWN
+    • Volume trend: INCREASING
+    • Signal type: TREND_VALIDATION
+    • Signal strength: BEARISH
+    • Details: Falling price with rising volume confirms bearish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
-        - Strength: 3
-        - Details: Sideways: True, High volume bars: 3, Support tests: 14
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 1, Support tests: 9
     • Distribution:
         - Detected: True
-        - Strength: 3
-        - Details: Sideways: True, High volume bars: 3, Resistance tests: 14
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 1, Resistance tests: 9
     • Testing:
         - Detected: True
         - Tests:
             - Type: SUPPORT_TEST, Time: 2025-05-05 15:15:00+00:00, Price: 164.30
             - Type: SUPPORT_TEST, Time: 2025-05-05 15:30:00+00:00, Price: 164.05
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:30:00+00:00, Price: 165.10
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:45:00+00:00, Price: 165.09
+            - Type: SUPPORT_TEST, Time: 2025-05-05 19:00:00+00:00, Price: 164.87
+            - Type: SUPPORT_TEST, Time: 2025-05-05 19:15:00+00:00, Price: 164.80
             - Type: RESISTANCE_TEST, Time: 2025-05-05 16:00:00+00:00, Price: 164.84
             - Type: RESISTANCE_TEST, Time: 2025-05-05 16:15:00+00:00, Price: 164.86
             - Type: RESISTANCE_TEST, Time: 2025-05-05 16:30:00+00:00, Price: 165.00
@@ -555,21 +570,21 @@ Current Price: 165.13
             - Type: RESISTANCE_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 165.05
             - Type: RESISTANCE_TEST, Time: 2025-05-05 17:45:00+00:00, Price: 165.15
             - Type: RESISTANCE_TEST, Time: 2025-05-05 18:00:00+00:00, Price: 165.37
-        - Details: Found 9 testing patterns
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:45:00+00:00, Price: 165.39
+        - Details: Found 14 testing patterns
     • Buying climax:
-        - Detected: False
-        - Strength: 2
-        - Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
+        - Detected: True
+        - Strength: 4
+        - Details: Near high: True, Very high volume: True, Wide up candle: False, Upper wick: True
     • Selling climax:
-        - Detected: False
-        - Strength: 2
-        - Details: Near low: True, Very high volume: False, Wide down candle: True, Lower wick: False
+        - Detected: True
+        - Strength: 5
+        - Details: Near low: True, Very high volume: True, Wide down candle: True, Lower wick: True
   📉 Support and Resistance:
     • Support Levels:
-        - Price: 163.57, Strength: 11.5, Tests: 19
-        - Price: 160.97, Strength: 2.0, Tests: 0
+        - Price: 163.57, Strength: 12.0, Tests: 20
     • Resistance Levels:
-        - Price: 164.68, Strength: 20.0, Tests: 38
+        - Price: 164.68, Strength: 23.0, Tests: 44
 
 
 
@@ -577,7 +592,7 @@ Current Price: 165.13
 📊 Analysis for AMZN
 ============================================================
 
-Current Price: 187.62
+Current Price: 186.35
 
 🔔 Signal:
   • Type: BUY
@@ -587,8 +602,6 @@ Current Price: 187.62
 📌 Evidence:
   • Candle_signals:
   • Trend_signals:
-      - timeframe: 1d
-      - details: Falling price with falling volume indicates weakening bearish trend
       - timeframe: 1h
       - details: Falling price with falling volume indicates weakening bearish trend
   • Pattern_signals:
@@ -597,34 +610,37 @@ Current Price: 187.62
       - details: Sideways: False, High volume bars: 7, Support tests: 7
       - timeframe: 1h
       - pattern: Accumulation
-      - details: Sideways: True, High volume bars: 7, Support tests: 11
+      - details: Sideways: True, High volume bars: 7, Support tests: 12
       - timeframe: 15m
       - pattern: Accumulation
-      - details: Sideways: True, High volume bars: 2, Support tests: 14
+      - details: Sideways: True, High volume bars: 1, Support tests: 10
+      - timeframe: 15m
+      - pattern: Selling Climax
+      - details: Near low: True, Very high volume: True, Wide down candle: True, Lower wick: False
   • Timeframe_confirmations:
 
 ⚠️ Risk Assessment:
   • Stop loss: 183.48
-  • Take profit: 193.61
-  • Risk reward ratio: 1.45
-  • Position size: 24.14
-  • Risk per share: 4.14
+  • Take profit: 188.38
+  • Risk reward ratio: 0.71
+  • Position size: 34.82
+  • Risk per share: 2.87
 
 ⏱️ Timeframe: 1d
   🕯️ Candle Analysis:
-    • Candle class: NARROW
-    • Volume class: LOW
-    • Is up candle: True
+    • Candle class: NARROW_UPPER_WICK_LOWER_WICK
+    • Volume class: AVERAGE
+    • Is up candle: False
     • Price direction: DOWN
-    • Signal type: VALIDATION
-    • Signal strength: NEUTRAL
-    • Details: Narrow spread up candle with low volume indicates consolidation
+    • Signal type: None
+    • Signal strength: None
+    • Details: 
   📈 Trend Analysis:
     • Trend direction: DOWN
-    • Volume trend: DECREASING
-    • Signal type: TREND_ANOMALY
-    • Signal strength: BULLISH
-    • Details: Falling price with falling volume indicates weakening bearish trend
+    • Volume trend: INCREASING
+    • Signal type: TREND_VALIDATION
+    • Signal strength: BEARISH
+    • Details: Falling price with rising volume confirms bearish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
@@ -635,14 +651,13 @@ Current Price: 187.62
         - Strength: 2
         - Details: Sideways: False, High volume bars: 7, Resistance tests: 7
     • Testing:
-        - Detected: True
+        - Detected: False
         - Tests:
-            - Type: SUPPORT_TEST, Time: 2025-05-05 00:00:00+00:00, Price: 185.53
-        - Details: Found 1 testing patterns
+        - Details: Found 0 testing patterns
     • Buying climax:
         - Detected: False
-        - Strength: 2
-        - Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
+        - Strength: 1
+        - Details: Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True
     • Selling climax:
         - Detected: False
         - Strength: 1
@@ -663,13 +678,13 @@ Current Price: 187.62
 
 ⏱️ Timeframe: 1h
   🕯️ Candle Analysis:
-    • Candle class: NARROW_UPPER_WICK_LOWER_WICK
+    • Candle class: NEUTRAL
     • Volume class: LOW
-    • Is up candle: True
+    • Is up candle: False
     • Price direction: UP
-    • Signal type: VALIDATION
-    • Signal strength: NEUTRAL
-    • Details: Narrow spread up candle with low volume indicates consolidation
+    • Signal type: None
+    • Signal strength: None
+    • Details: 
   📈 Trend Analysis:
     • Trend direction: DOWN
     • Volume trend: DECREASING
@@ -680,70 +695,72 @@ Current Price: 187.62
     • Accumulation:
         - Detected: True
         - Strength: 3
-        - Details: Sideways: True, High volume bars: 7, Support tests: 11
+        - Details: Sideways: True, High volume bars: 7, Support tests: 12
     • Distribution:
         - Detected: True
         - Strength: 3
-        - Details: Sideways: True, High volume bars: 7, Resistance tests: 11
+        - Details: Sideways: True, High volume bars: 7, Resistance tests: 12
     • Testing:
         - Detected: True
         - Tests:
             - Type: SUPPORT_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 187.06
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:30:00+00:00, Price: 186.63
+            - Type: SUPPORT_TEST, Time: 2025-05-05 19:30:00+00:00, Price: 186.14
             - Type: RESISTANCE_TEST, Time: 2025-05-05 16:30:00+00:00, Price: 188.00
-        - Details: Found 2 testing patterns
+        - Details: Found 4 testing patterns
     • Buying climax:
         - Detected: False
-        - Strength: 2
-        - Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
+        - Strength: 1
+        - Details: Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True
     • Selling climax:
         - Detected: False
-        - Strength: 2
-        - Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+        - Strength: 1
+        - Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: False
   📉 Support and Resistance:
     • Support Levels:
-        - Price: 186.40, Strength: 4.5, Tests: 5
+        - Price: 186.40, Strength: 5.5, Tests: 7
         - Price: 188.65, Strength: 2.5, Tests: 3
         - Price: 183.68, Strength: 2.0, Tests: 0
         - Price: 178.85, Strength: 2.0, Tests: 0
     • Resistance Levels:
-        - Price: 187.94, Strength: 9.5, Tests: 17
         - Price: 191.18, Strength: 7.0, Tests: 10
+        - Price: 188.02, Strength: 5.5, Tests: 9
 
 ⏱️ Timeframe: 15m
   🕯️ Candle Analysis:
-    • Candle class: NEUTRAL
-    • Volume class: VERY_LOW
-    • Is up candle: True
+    • Candle class: WIDE
+    • Volume class: HIGH
+    • Is up candle: False
     • Price direction: DOWN
-    • Signal type: None
-    • Signal strength: None
-    • Details: 
-  📈 Trend Analysis:
-    • Trend direction: UP
-    • Volume trend: DECREASING
-    • Signal type: TREND_ANOMALY
+    • Signal type: VALIDATION
     • Signal strength: BEARISH
-    • Details: Rising price with falling volume indicates weakening bullish trend
+    • Details: Wide spread down candle with high volume confirms bearish sentiment
+  📈 Trend Analysis:
+    • Trend direction: DOWN
+    • Volume trend: INCREASING
+    • Signal type: TREND_VALIDATION
+    • Signal strength: BEARISH
+    • Details: Falling price with rising volume confirms bearish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
-        - Strength: 3
-        - Details: Sideways: True, High volume bars: 2, Support tests: 14
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 1, Support tests: 10
     • Distribution:
         - Detected: True
-        - Strength: 3
-        - Details: Sideways: True, High volume bars: 2, Resistance tests: 14
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 1, Resistance tests: 10
     • Testing:
         - Detected: True
         - Tests:
-            - Type: SUPPORT_TEST, Time: 2025-05-05 14:30:00+00:00, Price: 186.70
             - Type: SUPPORT_TEST, Time: 2025-05-05 15:30:00+00:00, Price: 186.85
             - Type: SUPPORT_TEST, Time: 2025-05-05 17:15:00+00:00, Price: 187.24
             - Type: SUPPORT_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 187.20
             - Type: SUPPORT_TEST, Time: 2025-05-05 17:45:00+00:00, Price: 187.18
             - Type: SUPPORT_TEST, Time: 2025-05-05 18:00:00+00:00, Price: 187.06
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 14:15:00+00:00, Price: 187.90
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 14:45:00+00:00, Price: 187.71
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:30:00+00:00, Price: 187.22
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:45:00+00:00, Price: 187.10
+            - Type: SUPPORT_TEST, Time: 2025-05-05 19:15:00+00:00, Price: 186.63
             - Type: RESISTANCE_TEST, Time: 2025-05-05 15:00:00+00:00, Price: 188.02
             - Type: RESISTANCE_TEST, Time: 2025-05-05 15:15:00+00:00, Price: 188.18
             - Type: RESISTANCE_TEST, Time: 2025-05-05 16:00:00+00:00, Price: 187.40
@@ -751,22 +768,23 @@ Current Price: 187.62
             - Type: RESISTANCE_TEST, Time: 2025-05-05 16:45:00+00:00, Price: 187.78
             - Type: RESISTANCE_TEST, Time: 2025-05-05 17:00:00+00:00, Price: 188.00
             - Type: RESISTANCE_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 187.84
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:15:00+00:00, Price: 187.66
-        - Details: Found 16 testing patterns
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:15:00+00:00, Price: 187.73
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 19:30:00+00:00, Price: 187.25
+        - Details: Found 17 testing patterns
     • Buying climax:
         - Detected: True
-        - Strength: 3
-        - Details: Near high: True, Very high volume: False, Wide up candle: True, Upper wick: True
+        - Strength: 4
+        - Details: Near high: True, Very high volume: True, Wide up candle: False, Upper wick: True
     • Selling climax:
-        - Detected: False
-        - Strength: 2
-        - Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+        - Detected: True
+        - Strength: 4
+        - Details: Near low: True, Very high volume: True, Wide down candle: True, Lower wick: False
   📉 Support and Resistance:
     • Support Levels:
-        - Price: 186.40, Strength: 10.5, Tests: 19
+        - Price: 186.85, Strength: 9.5, Tests: 17
         - Price: 190.14, Strength: 5.5, Tests: 9
     • Resistance Levels:
-        - Price: 187.90, Strength: 9.0, Tests: 16
+        - Price: 187.90, Strength: 12.0, Tests: 22
         - Price: 191.20, Strength: 7.0, Tests: 12
 
 
@@ -775,7 +793,7 @@ Current Price: 187.62
 📊 Analysis for MSFT
 ============================================================
 
-Current Price: 438.11
+Current Price: 436.17
 
 🔔 Signal:
   • Type: BUY
@@ -785,31 +803,32 @@ Current Price: 438.11
 📌 Evidence:
   • Candle_signals:
   • Trend_signals:
-      - timeframe: 15m
-      - details: Falling price with falling volume indicates weakening bearish trend
   • Pattern_signals:
       - timeframe: 1d
       - pattern: Accumulation
       - details: Sideways: False, High volume bars: 7, Support tests: 6
       - timeframe: 1h
       - pattern: Accumulation
-      - details: Sideways: False, High volume bars: 6, Support tests: 13
+      - details: Sideways: True, High volume bars: 5, Support tests: 13
       - timeframe: 15m
       - pattern: Accumulation
-      - details: Sideways: True, High volume bars: 2, Support tests: 12
+      - details: Sideways: True, High volume bars: 1, Support tests: 9
+      - timeframe: 15m
+      - pattern: Selling Climax
+      - details: Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True
   • Timeframe_confirmations:
 
 ⚠️ Risk Assessment:
   • Stop loss: 380.89
-  • Take profit: 460.01
-  • Risk reward ratio: 0.38
-  • Position size: 1.75
-  • Risk per share: 57.22
+  • Take profit: 457.98
+  • Risk reward ratio: 0.39
+  • Position size: 1.81
+  • Risk per share: 55.28
 
 ⏱️ Timeframe: 1d
   🕯️ Candle Analysis:
-    • Candle class: NEUTRAL
-    • Volume class: LOW
+    • Candle class: NARROW
+    • Volume class: AVERAGE
     • Is up candle: True
     • Price direction: UP
     • Signal type: None
@@ -831,14 +850,13 @@ Current Price: 438.11
         - Strength: 2
         - Details: Sideways: False, High volume bars: 7, Resistance tests: 10
     • Testing:
-        - Detected: True
+        - Detected: False
         - Tests:
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 00:00:00+00:00, Price: 439.50
-        - Details: Found 1 testing patterns
+        - Details: Found 0 testing patterns
     • Buying climax:
-        - Detected: True
-        - Strength: 3
-        - Details: Near high: True, Very high volume: False, Wide up candle: True, Upper wick: True
+        - Detected: False
+        - Strength: 2
+        - Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
     • Selling climax:
         - Detected: False
         - Strength: 1
@@ -858,57 +876,7 @@ Current Price: 438.11
 ⏱️ Timeframe: 1h
   🕯️ Candle Analysis:
     • Candle class: NARROW
-    • Volume class: LOW
-    • Is up candle: False
-    • Price direction: UP
-    • Signal type: VALIDATION
-    • Signal strength: NEUTRAL
-    • Details: Narrow spread down candle with low volume indicates consolidation
-  📈 Trend Analysis:
-    • Trend direction: UP
-    • Volume trend: DECREASING
-    • Signal type: TREND_ANOMALY
-    • Signal strength: BEARISH
-    • Details: Rising price with falling volume indicates weakening bullish trend
-  🔍 Pattern Analysis:
-    • Accumulation:
-        - Detected: True
-        - Strength: 2
-        - Details: Sideways: False, High volume bars: 6, Support tests: 13
-    • Distribution:
-        - Detected: True
-        - Strength: 2
-        - Details: Sideways: False, High volume bars: 6, Resistance tests: 13
-    • Testing:
-        - Detected: True
-        - Tests:
-            - Type: SUPPORT_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 437.79
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 15:30:00+00:00, Price: 439.38
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 16:30:00+00:00, Price: 439.50
-        - Details: Found 3 testing patterns
-    • Buying climax:
-        - Detected: False
-        - Strength: 2
-        - Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
-    • Selling climax:
-        - Detected: False
-        - Strength: 2
-        - Details: Near low: False, Very high volume: False, Wide down candle: True, Lower wick: True
-  📉 Support and Resistance:
-    • Support Levels:
-        - Price: 391.35, Strength: 3.0, Tests: 4
-        - Price: 384.60, Strength: 2.5, Tests: 3
-        - Price: 427.64, Strength: 1.5, Tests: 1
-        - Price: 432.11, Strength: 1.0, Tests: 0
-    • Resistance Levels:
-        - Price: 389.23, Strength: 7.5, Tests: 13
-        - Price: 436.99, Strength: 6.5, Tests: 9
-        - Price: 394.83, Strength: 4.5, Tests: 7
-
-⏱️ Timeframe: 15m
-  🕯️ Candle Analysis:
-    • Candle class: NEUTRAL
-    • Volume class: VERY_LOW
+    • Volume class: AVERAGE
     • Is up candle: False
     • Price direction: UP
     • Signal type: None
@@ -916,39 +884,27 @@ Current Price: 438.11
     • Details: 
   📈 Trend Analysis:
     • Trend direction: DOWN
-    • Volume trend: DECREASING
-    • Signal type: TREND_ANOMALY
-    • Signal strength: BULLISH
-    • Details: Falling price with falling volume indicates weakening bearish trend
+    • Volume trend: INCREASING
+    • Signal type: TREND_VALIDATION
+    • Signal strength: BEARISH
+    • Details: Falling price with rising volume confirms bearish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
         - Strength: 3
-        - Details: Sideways: True, High volume bars: 2, Support tests: 12
+        - Details: Sideways: True, High volume bars: 5, Support tests: 13
     • Distribution:
         - Detected: True
         - Strength: 3
-        - Details: Sideways: True, High volume bars: 2, Resistance tests: 12
+        - Details: Sideways: True, High volume bars: 5, Resistance tests: 13
     • Testing:
         - Detected: True
         - Tests:
-            - Type: SUPPORT_TEST, Time: 2025-05-05 14:30:00+00:00, Price: 434.47
-            - Type: SUPPORT_TEST, Time: 2025-05-05 15:15:00+00:00, Price: 436.09
-            - Type: SUPPORT_TEST, Time: 2025-05-05 17:00:00+00:00, Price: 438.61
-            - Type: SUPPORT_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 438.01
-            - Type: SUPPORT_TEST, Time: 2025-05-05 17:45:00+00:00, Price: 437.92
-            - Type: SUPPORT_TEST, Time: 2025-05-05 18:00:00+00:00, Price: 437.79
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 13:45:00+00:00, Price: 436.58
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 14:30:00+00:00, Price: 436.62
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 14:45:00+00:00, Price: 437.44
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 15:00:00+00:00, Price: 438.06
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 15:45:00+00:00, Price: 437.65
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 16:00:00+00:00, Price: 438.21
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 16:15:00+00:00, Price: 439.38
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 16:45:00+00:00, Price: 439.50
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 17:15:00+00:00, Price: 439.39
-            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:00:00+00:00, Price: 438.73
-        - Details: Found 16 testing patterns
+            - Type: SUPPORT_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 437.75
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:30:00+00:00, Price: 436.77
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 15:30:00+00:00, Price: 439.38
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 16:30:00+00:00, Price: 439.50
+        - Details: Found 4 testing patterns
     • Buying climax:
         - Detected: False
         - Strength: 2
@@ -956,13 +912,75 @@ Current Price: 438.11
     • Selling climax:
         - Detected: False
         - Strength: 2
-        - Details: Near low: True, Very high volume: False, Wide down candle: True, Lower wick: False
+        - Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
   📉 Support and Resistance:
     • Support Levels:
-        - Price: 435.63, Strength: 11.0, Tests: 20
-        - Price: 424.92, Strength: 1.0, Tests: 0
+        - Price: 391.35, Strength: 3.0, Tests: 4
+        - Price: 386.64, Strength: 2.5, Tests: 3
+        - Price: 427.64, Strength: 1.5, Tests: 1
+        - Price: 432.11, Strength: 1.0, Tests: 0
     • Resistance Levels:
-        - Price: 438.19, Strength: 17.0, Tests: 30
+        - Price: 436.99, Strength: 7.5, Tests: 11
+        - Price: 392.16, Strength: 7.0, Tests: 12
+
+⏱️ Timeframe: 15m
+  🕯️ Candle Analysis:
+    • Candle class: WIDE
+    • Volume class: VERY_HIGH
+    • Is up candle: False
+    • Price direction: DOWN
+    • Signal type: VALIDATION
+    • Signal strength: BEARISH
+    • Details: Wide spread down candle with high volume confirms bearish sentiment
+  📈 Trend Analysis:
+    • Trend direction: DOWN
+    • Volume trend: INCREASING
+    • Signal type: TREND_VALIDATION
+    • Signal strength: BEARISH
+    • Details: Falling price with rising volume confirms bearish trend
+  🔍 Pattern Analysis:
+    • Accumulation:
+        - Detected: True
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 1, Support tests: 9
+    • Distribution:
+        - Detected: True
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 1, Resistance tests: 9
+    • Testing:
+        - Detected: True
+        - Tests:
+            - Type: SUPPORT_TEST, Time: 2025-05-05 15:15:00+00:00, Price: 436.09
+            - Type: SUPPORT_TEST, Time: 2025-05-05 17:00:00+00:00, Price: 438.61
+            - Type: SUPPORT_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 438.01
+            - Type: SUPPORT_TEST, Time: 2025-05-05 17:45:00+00:00, Price: 437.92
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:00:00+00:00, Price: 437.79
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:15:00+00:00, Price: 437.75
+            - Type: SUPPORT_TEST, Time: 2025-05-05 18:30:00+00:00, Price: 437.69
+            - Type: SUPPORT_TEST, Time: 2025-05-05 19:00:00+00:00, Price: 437.25
+            - Type: SUPPORT_TEST, Time: 2025-05-05 19:15:00+00:00, Price: 436.77
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 15:00:00+00:00, Price: 438.06
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 15:45:00+00:00, Price: 437.65
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 16:00:00+00:00, Price: 438.21
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 16:15:00+00:00, Price: 439.38
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 16:45:00+00:00, Price: 439.50
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 17:15:00+00:00, Price: 439.39
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:00:00+00:00, Price: 438.73
+            - Type: RESISTANCE_TEST, Time: 2025-05-05 18:45:00+00:00, Price: 438.65
+        - Details: Found 17 testing patterns
+    • Buying climax:
+        - Detected: True
+        - Strength: 4
+        - Details: Near high: True, Very high volume: True, Wide up candle: False, Upper wick: True
+    • Selling climax:
+        - Detected: True
+        - Strength: 4
+        - Details: Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True
+  📉 Support and Resistance:
+    • Support Levels:
+        - Price: 435.63, Strength: 14.0, Tests: 26
+    • Resistance Levels:
+        - Price: 438.19, Strength: 20.0, Tests: 36
 
 
 
@@ -970,7 +988,7 @@ Current Price: 438.11
 📊 Analysis for TSLA
 ============================================================
 
-Current Price: 281.34
+Current Price: 280.26
 
 🔔 Signal:
   • Type: BUY
@@ -982,39 +1000,34 @@ Current Price: 281.34
   • Trend_signals:
       - timeframe: 1d
       - details: Falling price with falling volume indicates weakening bearish trend
-      - timeframe: 1h
-      - details: Falling price with falling volume indicates weakening bearish trend
   • Pattern_signals:
       - timeframe: 1d
       - pattern: Accumulation
       - details: Sideways: False, High volume bars: 6, Support tests: 3
       - timeframe: 1h
       - pattern: Accumulation
-      - details: Sideways: True, High volume bars: 3, Support tests: 10
+      - details: Sideways: True, High volume bars: 3, Support tests: 11
       - timeframe: 15m
       - pattern: Accumulation
-      - details: Sideways: True, High volume bars: 6, Support tests: 13
-      - timeframe: 15m
-      - pattern: Selling Climax
-      - details: Near low: True, Very high volume: False, Wide down candle: True, Lower wick: True
+      - details: Sideways: True, High volume bars: 0, Support tests: 13
   • Timeframe_confirmations:
 
 ⚠️ Risk Assessment:
   • Stop loss: 269.43
   • Take profit: 286.41
-  • Risk reward ratio: 0.43
-  • Position size: 8.39
-  • Risk per share: 11.91
+  • Risk reward ratio: 0.57
+  • Position size: 9.23
+  • Risk per share: 10.83
 
 ⏱️ Timeframe: 1d
   🕯️ Candle Analysis:
-    • Candle class: NARROW_LOWER_WICK
-    • Volume class: LOW
+    • Candle class: NARROW
+    • Volume class: AVERAGE
     • Is up candle: False
     • Price direction: DOWN
-    • Signal type: VALIDATION
-    • Signal strength: NEUTRAL
-    • Details: Narrow spread down candle with low volume indicates consolidation
+    • Signal type: None
+    • Signal strength: None
+    • Details: 
   📈 Trend Analysis:
     • Trend direction: DOWN
     • Volume trend: DECREASING
@@ -1031,10 +1044,9 @@ Current Price: 281.34
         - Strength: 2
         - Details: Sideways: False, High volume bars: 6, Resistance tests: 6
     • Testing:
-        - Detected: True
+        - Detected: False
         - Tests:
-            - Type: SUPPORT_TEST, Time: 2025-05-05 00:00:00+00:00, Price: 274.40
-        - Details: Found 1 testing patterns
+        - Details: Found 0 testing patterns
     • Buying climax:
         - Detected: False
         - Strength: 1
@@ -1059,24 +1071,24 @@ Current Price: 281.34
 
 ⏱️ Timeframe: 1h
   🕯️ Candle Analysis:
-    • Candle class: NARROW
+    • Candle class: NEUTRAL
     • Volume class: LOW
-    • Is up candle: True
+    • Is up candle: False
     • Price direction: UP
-    • Signal type: VALIDATION
-    • Signal strength: NEUTRAL
-    • Details: Narrow spread up candle with low volume indicates consolidation
+    • Signal type: None
+    • Signal strength: None
+    • Details: 
   📈 Trend Analysis:
-    • Trend direction: DOWN
+    • Trend direction: UP
     • Volume trend: DECREASING
     • Signal type: TREND_ANOMALY
-    • Signal strength: BULLISH
-    • Details: Falling price with falling volume indicates weakening bearish trend
+    • Signal strength: BEARISH
+    • Details: Rising price with falling volume indicates weakening bullish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
         - Strength: 3
-        - Details: Sideways: True, High volume bars: 3, Support tests: 10
+        - Details: Sideways: True, High volume bars: 3, Support tests: 11
     • Distribution:
         - Detected: True
         - Strength: 3
@@ -1086,7 +1098,7 @@ Current Price: 281.34
         - Tests:
             - Type: SUPPORT_TEST, Time: 2025-05-01 17:30:00+00:00, Price: 281.76
             - Type: SUPPORT_TEST, Time: 2025-05-01 19:30:00+00:00, Price: 279.81
-            - Type: RESISTANCE_TEST, Time: 2025-04-30 19:30:00+00:00, Price: 284.45
+            - Type: SUPPORT_TEST, Time: 2025-05-05 19:30:00+00:00, Price: 279.31
             - Type: RESISTANCE_TEST, Time: 2025-05-01 18:30:00+00:00, Price: 284.58
             - Type: RESISTANCE_TEST, Time: 2025-05-01 19:30:00+00:00, Price: 284.65
             - Type: RESISTANCE_TEST, Time: 2025-05-05 17:30:00+00:00, Price: 282.05
@@ -1101,7 +1113,7 @@ Current Price: 281.34
         - Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
   📉 Support and Resistance:
     • Support Levels:
-        - Price: 279.47, Strength: 3.0, Tests: 4
+        - Price: 279.47, Strength: 4.0, Tests: 6
         - Price: 270.79, Strength: 2.0, Tests: 0
         - Price: 274.40, Strength: 1.5, Tests: 1
     • Resistance Levels:
@@ -1112,27 +1124,27 @@ Current Price: 281.34
 ⏱️ Timeframe: 15m
   🕯️ Candle Analysis:
     • Candle class: NEUTRAL
-    • Volume class: VERY_LOW
+    • Volume class: AVERAGE
     • Is up candle: False
     • Price direction: DOWN
     • Signal type: None
     • Signal strength: None
     • Details: 
   📈 Trend Analysis:
-    • Trend direction: UP
-    • Volume trend: DECREASING
-    • Signal type: TREND_ANOMALY
+    • Trend direction: DOWN
+    • Volume trend: INCREASING
+    • Signal type: TREND_VALIDATION
     • Signal strength: BEARISH
-    • Details: Rising price with falling volume indicates weakening bullish trend
+    • Details: Falling price with rising volume confirms bearish trend
   🔍 Pattern Analysis:
     • Accumulation:
         - Detected: True
-        - Strength: 3
-        - Details: Sideways: True, High volume bars: 6, Support tests: 13
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 0, Support tests: 13
     • Distribution:
         - Detected: True
-        - Strength: 3
-        - Details: Sideways: True, High volume bars: 6, Resistance tests: 12
+        - Strength: 2
+        - Details: Sideways: True, High volume bars: 0, Resistance tests: 13
     • Testing:
         - Detected: True
         - Tests:
@@ -1144,19 +1156,18 @@ Current Price: 281.34
         - Strength: 2
         - Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
     • Selling climax:
-        - Detected: True
-        - Strength: 3
-        - Details: Near low: True, Very high volume: False, Wide down candle: True, Lower wick: True
+        - Detected: False
+        - Strength: 2
+        - Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
   📉 Support and Resistance:
     • Support Levels:
-        - Price: 279.81, Strength: 7.0, Tests: 12
         - Price: 274.40, Strength: 3.0, Tests: 4
+        - Price: 280.59, Strength: 2.5, Tests: 3
         - Price: 290.68, Strength: 2.0, Tests: 2
     • Resistance Levels:
-        - Price: 287.94, Strength: 4.5, Tests: 7
         - Price: 294.49, Strength: 4.5, Tests: 7
+        - Price: 280.92, Strength: 4.5, Tests: 7
         - Price: 277.58, Strength: 3.5, Tests: 5
-        - Price: 280.92, Strength: 3.0, Tests: 4
 
 
 

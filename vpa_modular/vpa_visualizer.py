@@ -10,9 +10,9 @@ import numpy as np
 from matplotlib.patches import Rectangle
 from matplotlib.collections import PatchCollection
 from typing import Dict, List, Any
-
 import matplotlib.pyplot as plt
-import pandas as pd
+import matplotlib.dates as mdates
+import mplfinance as mpf
 
 def plot_price_volume_chart(df: pd.DataFrame, ticker: str, timeframe: str, output_path: str = None):
     """
@@ -133,7 +133,6 @@ def plot_pattern_analysis(df: pd.DataFrame, pattern_analysis: dict, ticker: str,
     print(f"✅ Pattern analysis chart saved to {output_path}")
     plt.close()
 
-
 def plot_support_resistance(df: pd.DataFrame, support_resistance: dict, ticker: str, timeframe: str, output_path: str = None):
     fig, ax = plt.subplots(figsize=(12, 6), dpi=100)
     
@@ -168,7 +167,6 @@ def plot_support_resistance(df: pd.DataFrame, support_resistance: dict, ticker: 
         plt.show()
     
     plt.close()
-
 
 def create_summary_report(extractor, output_dir: str):
     import os
@@ -263,7 +261,6 @@ def create_summary_report(extractor, output_dir: str):
             f.write("\n\n")  # Space between tickers
 
     print(f"✅ Summary report saved to {report_path}")
-
 
 def create_dashboard(extractor, output_dir: str):
     os.makedirs(output_dir, exist_ok=True)
@@ -441,4 +438,97 @@ def update_price_chart_with_risk_levels(price_data: pd.DataFrame, risk_assessmen
     plt.tight_layout()
     if output_path:
         plt.savefig(output_path)
+    plt.close()
+
+def plot_vpa_signals_candlestick(df: pd.DataFrame, signals: dict, ticker: str, output_path: str = None):
+    """
+    Plot a candlestick chart with VPA signal annotations.
+    """
+    # Filtrar apenas sinais detectados
+    evidence = signals.get("evidence", {})
+    signal_markers = []
+
+    for timeframe, patterns in evidence.items():
+        for pattern in patterns:
+            index = pattern.get("index")
+            label = pattern.get("type", "signal")
+            if index in df.index:
+                signal_markers.append((index, label))
+
+    # Criar lista de anotações
+    addplots = []
+    for date, label in signal_markers:
+        idx_pos = df.index.get_loc(date)
+        price = df.iloc[idx_pos]["high"]
+        addplots.append(mpf.make_addplot(
+            [None if i != idx_pos else price * 1.01 for i in range(len(df))],
+            type='scatter',
+            markersize=100,
+            marker='v',
+            color='red'
+        ))
+
+    # Plot do candlestick com as anotações
+    fig, axlist = mpf.plot(
+        df,
+        type='candle',
+        style='yahoo',
+        title=f'{ticker} - VPA Candlestick Signals',
+        ylabel='Price',
+        volume=False,
+        addplot=addplots,
+        returnfig=True,
+        figratio=(12,6)
+    )
+
+    # Adicionar os rótulos das anotações
+    if signal_markers:
+        ax = axlist[0]
+        for date, label in signal_markers:
+            if date in df.index:
+                idx = df.index.get_loc(date)
+                price = df.iloc[idx]["high"]
+                ax.annotate(label, xy=(mdates.date2num(date), price * 1.01),
+                            xytext=(0, 10), textcoords='offset points',
+                            ha='center', fontsize=8, color='red', rotation=45)
+
+    if output_path:
+        fig.savefig(output_path)
+        print(f"✅ Candlestick VPA chart saved to {output_path}")
+    else:
+        plt.show()
+
+    plt.close(fig)
+
+def plot_relative_volume(df: pd.DataFrame, ticker: str, timeframe: str, output_path: str = None):
+    """
+    Plot the relative volume (volume compared to its moving average) over time.
+    """
+    # Detect volume column (flexível)
+    volume_col = next((col for col in df.columns if 'volume' in col.lower()), None)
+
+    if volume_col is None:
+        print(f"⚠️ Volume column not found for {ticker} - {timeframe}. Skipping relative volume plot.")
+        print("Columns in df:", df.columns.tolist())
+        return
+
+    df = df.copy()
+    df['volume_avg'] = df[volume_col].rolling(window=20, min_periods=1).mean()
+    df['relative_volume'] = df[volume_col] / df['volume_avg']
+
+    plt.figure(figsize=(12, 4))
+    plt.plot(df.index, df['relative_volume'], label='Relative Volume', color='purple')
+    plt.axhline(1, color='gray', linestyle='--', linewidth=1, label='Average Volume')
+    plt.title(f"{ticker} - {timeframe.upper()} Relative Volume")
+    plt.xlabel("Date")
+    plt.ylabel("Relative Volume")
+    plt.legend()
+    plt.tight_layout()
+
+    if output_path:
+        plt.savefig(output_path)
+        print(f"✅ Relative volume chart saved to {output_path}")
+    else:
+        plt.show()
+
     plt.close()
