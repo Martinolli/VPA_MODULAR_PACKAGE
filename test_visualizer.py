@@ -20,7 +20,7 @@ import os
 def test_visualizer():
     # Initialize VPAFacade and perform analysis
     vpa = VPAFacade()
-    tickers = ["AAPL", "NFLX"]
+    tickers = ["AAPL", "NFLX", "GOOGL", "AMZN", "MSFT", "TSLA"]
     results = {}
 
     for ticker in tickers:

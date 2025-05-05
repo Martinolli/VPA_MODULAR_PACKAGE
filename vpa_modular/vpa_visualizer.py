@@ -73,18 +73,25 @@ def plot_pattern_analysis(df: pd.DataFrame, pattern_analysis: dict, ticker: str,
         'other': 'orange'  # For any other patterns
     }
     
+    # Create a list to store legend handles
+    legend_elements = [plt.Line2D([0], [0], color='blue', lw=2, label='Close Price')]
+    
     for pattern, data in pattern_analysis.items():
         if data.get('detected', False):
             color = color_map.get(pattern.lower(), color_map['other'])
             # If specific dates are provided, use them; otherwise, use the last date
             pattern_date = data.get('date', df.index[-1])
-            ax.axvline(x=pattern_date, color=color, alpha=0.5, linestyle='--', label=pattern)
-            ax.text(pattern_date, df['close'].max(), pattern, rotation=90, verticalalignment='top', color=color)
+            pattern_price = data.get('price', df['close'].iloc[-1])  # Use provided price or last close price
+            ax.hlines(y=pattern_price, xmin=df.index[0], xmax=df.index[-1], color=color, alpha=0.5, linestyle='--')
+            ax.text(df.index[-1], pattern_price, pattern, horizontalalignment='right', verticalalignment='center', color=color)
+            
+            # Add a horizontal line to the legend
+            legend_elements.append(plt.Line2D([0], [0], color=color, lw=2, label=pattern))
     
     ax.set_title(f"{ticker} - {timeframe.upper()} Pattern Analysis")
     ax.set_xlabel("Date")
     ax.set_ylabel("Price")
-    ax.legend(loc='upper left', bbox_to_anchor=(1.05, 1), borderaxespad=0.)
+    ax.legend(handles=legend_elements, loc='upper left', bbox_to_anchor=(1.05, 1), borderaxespad=0.)
     ax.grid(True, linestyle='--', alpha=0.3)
     
     plt.tight_layout()
@@ -137,17 +144,73 @@ def create_summary_report(extractor, output_dir: str):
     with open(report_path, 'w') as f:
         for ticker in extractor.get_tickers():
             f.write(f"Analysis for {ticker}:\n")
-            f.write(f"Current price: {extractor.get_ticker_data(ticker)['current_price']}\n")
-            f.write(f"Signal: {extractor.get_signal(ticker)}\n")
-            f.write(f"Risk assessment: {extractor.get_risk_assessment(ticker)}\n\n")
-            
+            f.write(f"Current price: {extractor.get_ticker_data(ticker)['current_price']:.2f}\n\n")
+
+            # Signal
+            signal = extractor.get_signal(ticker)
+            f.write("Signal:\n")
+            f.write(f"  Type: {signal.get('type', 'N/A')}\n")
+            f.write(f"  Strength: {signal.get('strength', 'N/A')}\n")
+            f.write(f"  Details: {signal.get('details', 'N/A')}\n\n")
+
+            # Evidence
+            evidence = signal.get('evidence', {})
+            f.write("Evidence:\n")
+            for evidence_type, items in evidence.items():
+                f.write(f"  {evidence_type.capitalize()}:\n")
+                for item in items:
+                    if isinstance(item, dict):
+                        for key, value in item.items():
+                            f.write(f"    {key}: {value}\n")
+                    else:
+                        f.write(f"    {item}\n")
+                f.write("\n")
+
+            # Risk Assessment
+            risk = extractor.get_risk_assessment(ticker)
+            f.write("Risk Assessment:\n")
+            for key, value in risk.items():
+                f.write(f"  {key.replace('_', ' ').capitalize()}: {value:.2f}\n")
+            f.write("\n")
+
+            # Timeframe Analysis
             for timeframe in extractor.get_timeframes(ticker):
                 f.write(f"Timeframe: {timeframe}\n")
-                f.write(f"Candle analysis: {extractor.get_candle_analysis(ticker, timeframe)}\n")
-                f.write(f"Trend analysis: {extractor.get_trend_analysis(ticker, timeframe)}\n")
-                f.write(f"Pattern analysis: {extractor.get_pattern_analysis(ticker, timeframe)}\n")
-                f.write(f"Support and Resistance: {extractor.get_support_resistance(ticker, timeframe)}\n\n")
-    
+                
+                # Candle Analysis
+                candle = extractor.get_candle_analysis(ticker, timeframe)
+                f.write("  Candle Analysis:\n")
+                for key, value in candle.items():
+                    f.write(f"    {key.replace('_', ' ').capitalize()}: {value}\n")
+                f.write("\n")
+                
+                # Trend Analysis
+                trend = extractor.get_trend_analysis(ticker, timeframe)
+                f.write("  Trend Analysis:\n")
+                for key, value in trend.items():
+                    f.write(f"    {key.replace('_', ' ').capitalize()}: {value}\n")
+                f.write("\n")
+                
+                # Pattern Analysis
+                pattern = extractor.get_pattern_analysis(ticker, timeframe)
+                f.write("  Pattern Analysis:\n")
+                for pat_type, pat_data in pattern.items():
+                    f.write(f"    {pat_type.capitalize()}:\n")
+                    for key, value in pat_data.items():
+                        f.write(f"      {key.capitalize()}: {value}\n")
+                f.write("\n")
+                
+                # Support and Resistance
+                sr = extractor.get_support_resistance(ticker, timeframe)
+                f.write("  Support and Resistance:\n")
+                for sr_type in ['support', 'resistance']:
+                    f.write(f"    {sr_type.capitalize()}:\n")
+                    for level in sr.get(sr_type, []):
+                        f.write(f"      Price: {level['price']:.2f}, Strength: {level['strength']:.1f}, Tests: {level.get('tests', 'N/A')}\n")
+                f.write("\n")
+
+            f.write("\n")
+
     print(f"✅ Summary report saved to {report_path}")
 
 def create_dashboard(extractor, output_dir: str):
@@ -218,7 +281,12 @@ def create_signal_dashboard(signal: Dict[str, Any], ticker: str, output_path: st
     plt.close()
 
 def plot_multi_timeframe_trends(evidence: Dict[str, List], ticker: str, output_path: str = None):
-    trend_signals = evidence['trend_signals']
+    trend_signals = evidence.get('trend_signals', [])
+    
+    if not trend_signals:
+        print(f"Warning: No trend signals found for {ticker}")
+        return
+    
     timeframes = [signal['timeframe'] for signal in trend_signals]
     
     fig, axs = plt.subplots(len(timeframes), 1, figsize=(10, 5*len(timeframes)), squeeze=False)
@@ -232,6 +300,7 @@ def plot_multi_timeframe_trends(evidence: Dict[str, List], ticker: str, output_p
     plt.tight_layout()
     if output_path:
         plt.savefig(output_path)
+        print(f"✅ Multi-timeframe trends chart saved to {output_path}")
     plt.close()
 
 def create_pattern_signal_heatmap(evidence: Dict[str, List], ticker: str, output_path: str = None):

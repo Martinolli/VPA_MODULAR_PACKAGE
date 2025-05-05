@@ -1,46 +1,1121 @@
 Analysis for AAPL:
-Current price: 198.90499877929688
-Signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation', 'evidence': {'candle_signals': [], 'trend_signals': [{'timeframe': '1d', 'details': 'Falling price with falling volume indicates weakening bearish trend'}, {'timeframe': '1h', 'details': 'Falling price with falling volume indicates weakening bearish trend; Multiple high volume bars in downtrend may indicate selling climax'}, {'timeframe': '15m', 'details': 'Falling price with falling volume indicates weakening bearish trend; Multiple high volume bars in downtrend may indicate selling climax'}], 'pattern_signals': [{'timeframe': '1d', 'pattern': 'Accumulation', 'details': 'Sideways: False, High volume bars: 8, Support tests: 6'}, {'timeframe': '1h', 'pattern': 'Accumulation', 'details': 'Sideways: True, High volume bars: 11, Support tests: 8'}, {'timeframe': '15m', 'pattern': 'Accumulation', 'details': 'Sideways: True, High volume bars: 6, Support tests: 10'}], 'timeframe_confirmations': []}}
-Risk assessment: {'stop_loss': np.float64(168.36395668029786), 'take_profit': np.float64(201.6130506134033), 'risk_reward_ratio': np.float64(0.08866926758190645), 'position_size': np.float64(3.2742825105917888), 'risk_per_share': np.float64(30.541042098999014)}
+Current price: 199.41
+
+Signal:
+  Type: BUY
+  Strength: MODERATE
+  Details: Moderate buy signal with some timeframe confirmation
+
+Evidence:
+  Candle_signals:
+    timeframe: 1h
+    details: Normal up candle with high volume shows buying interest
+
+  Trend_signals:
+    timeframe: 1d
+    details: Falling price with falling volume indicates weakening bearish trend
+    timeframe: 1h
+    details: Falling price with rising volume confirms bearish trend; Multiple high volume bars in downtrend may indicate selling climax
+    timeframe: 15m
+    details: Falling price with falling volume indicates weakening bearish trend
+
+  Pattern_signals:
+    timeframe: 1d
+    pattern: Accumulation
+    details: Sideways: False, High volume bars: 8, Support tests: 6
+    timeframe: 1h
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 12, Support tests: 8
+    timeframe: 1h
+    pattern: Selling Climax
+    details: Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True
+    timeframe: 15m
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 6, Support tests: 11
+
+  Timeframe_confirmations:
+    1h
+
+Risk Assessment:
+  Stop loss: 168.36
+  Take profit: 201.61
+  Risk reward ratio: 0.07
+  Position size: 3.22
+  Risk per share: 31.04
 
 Timeframe: 1d
-Candle analysis: {'candle_class': 'NEUTRAL', 'volume_class': 'LOW', 'is_up_candle': np.False_, 'price_direction': 'DOWN', 'signal_type': None, 'signal_strength': None, 'details': ''}
-Trend analysis: {'trend_direction': 'DOWN', 'volume_trend': 'DECREASING', 'signal_type': 'TREND_ANOMALY', 'signal_strength': 'BULLISH', 'details': 'Falling price with falling volume indicates weakening bearish trend'}
-Pattern analysis: {'accumulation': {'detected': True, 'strength': 2, 'details': 'Sideways: False, High volume bars: 8, Support tests: 6'}, 'distribution': {'detected': True, 'strength': 2, 'details': 'Sideways: False, High volume bars: 8, Resistance tests: 6'}, 'testing': {'detected': True, 'tests': [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-05 00:00:00+0000', tz='UTC'), 'price': np.float64(198.2100067138672)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-04-29 00:00:00+0000', tz='UTC'), 'price': np.float64(212.24000549316406)}], 'details': 'Found 2 testing patterns'}, 'buying_climax': {'detected': False, 'strength': 1, 'details': 'Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'strength': 1, 'details': 'Near low: False, Very high volume: False, Wide down candle: True, Lower wick: False'}}
-Support and Resistance: {'support': [{'price': np.float64(208.4199981689453), 'index': Timestamp('2025-03-13 00:00:00+0000', tz='UTC'), 'volume': np.int64(61368300), 'strength': 2.5, 'tests': 3}, {'price': np.float64(211.27999877929688), 'index': Timestamp('2025-03-21 00:00:00+0000', tz='UTC'), 'volume': np.int64(94127800), 'strength': 2, 'high_volume': True, 'tests': 0}, {'price': np.float64(230.1999969482422), 'index': Timestamp('2025-02-28 00:00:00+0000', tz='UTC'), 'volume': np.int64(56833400), 'strength': 1.5, 'tests': 1}, {'price': np.float64(216.22999572753906), 'index': Timestamp('2025-03-31 00:00:00+0000', tz='UTC'), 'volume': np.int64(65299300), 'strength': 1, 'tests': 0}, {'price': np.float64(169.2100067138672), 'index': Timestamp('2025-04-08 00:00:00+0000', tz='UTC'), 'volume': np.int64(120859500), 'strength': 1, 'tests': 0}], 'resistance': [{'price': np.float64(225.02000427246094), 'index': Timestamp('2025-03-26 00:00:00+0000', tz='UTC'), 'volume': np.int64(34466100), 'strength': 2.5, 'tests': 3}, {'price': np.float64(200.61000061035156), 'index': Timestamp('2025-04-09 00:00:00+0000', tz='UTC'), 'volume': np.int64(184395900), 'strength': 2.0, 'tests': 2}, {'price': np.float64(212.94000244140625), 'index': Timestamp('2025-04-14 00:00:00+0000', tz='UTC'), 'volume': np.int64(101352900), 'strength': 2.0, 'tests': 2}, {'price': np.float64(244.02999877929688), 'index': Timestamp('2025-03-03 00:00:00+0000', tz='UTC'), 'volume': np.int64(47184000), 'strength': 1, 'tests': 0}, {'price': np.float64(241.3699951171875), 'index': Timestamp('2025-03-07 00:00:00+0000', tz='UTC'), 'volume': np.int64(46273600), 'strength': 1, 'tests': 0}], 'volume_at_levels': {np.float64(169.2100067138672): {'type': 'support', 'candles_count': 1, 'total_volume': 120859500, 'avg_volume': 120859500.0}, np.float64(200.61000061035156): {'type': 'resistance', 'candles_count': 5, 'total_volume': 369872712, 'avg_volume': 73974542.4}, np.float64(208.4199981689453): {'type': 'support', 'candles_count': 7, 'total_volume': 376111700, 'avg_volume': 53730242.85714286}, np.float64(211.27999877929688): {'type': 'support', 'candles_count': 9, 'total_volume': 550252900, 'avg_volume': 61139211.11111111}, np.float64(212.94000244140625): {'type': 'resistance', 'candles_count': 9, 'total_volume': 565977500, 'avg_volume': 62886388.88888889}, np.float64(216.22999572753906): {'type': 'support', 'candles_count': 6, 'total_volume': 386591200, 'avg_volume': 64431866.666666664}, np.float64(225.02000427246094): {'type': 'resistance', 'candles_count': 5, 'total_volume': 283879900, 'avg_volume': 56775980.0}, np.float64(230.1999969482422): {'type': 'support', 'candles_count': 3, 'total_volume': 176132200, 'avg_volume': 58710733.333333336}, np.float64(241.3699951171875): {'type': 'resistance', 'candles_count': 5, 'total_volume': 235878200, 'avg_volume': 47175640.0}, np.float64(244.02999877929688): {'type': 'resistance', 'candles_count': 2, 'total_volume': 91617600, 'avg_volume': 45808800.0}}}
+  Candle Analysis:
+    Candle class: NEUTRAL
+    Volume class: LOW
+    Is up candle: False
+    Price direction: DOWN
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: DOWN
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BULLISH
+    Details: Falling price with falling volume indicates weakening bearish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 8, Support tests: 6
+    Distribution:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 8, Resistance tests: 6
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-05 00:00:00+0000', tz='UTC'), 'price': np.float64(198.2100067138672)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-04-29 00:00:00+0000', tz='UTC'), 'price': np.float64(212.24000549316406)}]
+      Details: Found 2 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 1
+      Details: Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: False, Very high volume: False, Wide down candle: True, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 208.42, Strength: 2.5, Tests: 3
+      Price: 211.28, Strength: 2.0, Tests: 0
+      Price: 230.20, Strength: 1.5, Tests: 1
+      Price: 216.23, Strength: 1.0, Tests: 0
+      Price: 169.21, Strength: 1.0, Tests: 0
+    Resistance:
+      Price: 225.02, Strength: 2.5, Tests: 3
+      Price: 200.61, Strength: 2.0, Tests: 2
+      Price: 212.94, Strength: 2.0, Tests: 2
+      Price: 244.03, Strength: 1.0, Tests: 0
+      Price: 241.37, Strength: 1.0, Tests: 0
 
 Timeframe: 1h
-Candle analysis: {'candle_class': 'NARROW_UPPER_WICK_LOWER_WICK', 'volume_class': 'AVERAGE', 'is_up_candle': np.True_, 'price_direction': 'DOWN', 'signal_type': None, 'signal_strength': None, 'details': ''}
-Trend analysis: {'trend_direction': 'DOWN', 'volume_trend': 'DECREASING', 'signal_type': 'TREND_ANOMALY', 'signal_strength': 'BULLISH', 'details': 'Falling price with falling volume indicates weakening bearish trend; Multiple high volume bars in downtrend may indicate selling climax'}
-Pattern analysis: {'accumulation': {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 11, Support tests: 8'}, 'distribution': {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 11, Resistance tests: 9'}, 'testing': {'detected': True, 'tests': [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-04-30 16:30:00+0000', tz='UTC'), 'price': np.float64(209.8000030517578)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-04-30 16:30:00+0000', tz='UTC'), 'price': np.float64(211.36000061035156)}], 'details': 'Found 2 testing patterns'}, 'buying_climax': {'detected': False, 'strength': 1, 'details': 'Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'strength': 2, 'details': 'Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True'}}
-Support and Resistance: {'support': [{'price': np.float64(209.35000610351562), 'index': Timestamp('2025-04-29 16:30:00+0000', tz='UTC'), 'volume': np.int64(2562388), 'strength': 5.0, 'tests': 8}, {'price': np.float64(206.1999969482422), 'index': Timestamp('2025-04-25 13:30:00+0000', tz='UTC'), 'volume': np.int64(8557840), 'strength': 2.5, 'tests': 3}, {'price': np.float64(202.2100067138672), 'index': Timestamp('2025-05-02 13:30:00+0000', tz='UTC'), 'volume': np.int64(30704404), 'strength': 2, 'high_volume': True, 'tests': 0}], 'resistance': [{'price': np.float64(211.5), 'index': Timestamp('2025-04-28 13:30:00+0000', tz='UTC'), 'volume': np.int64(9371395), 'strength': 9.0, 'high_volume': True, 'tests': 14}, {'price': np.float64(209.24989318847656), 'index': Timestamp('2025-04-25 13:30:00+0000', tz='UTC'), 'volume': np.int64(8557840), 'strength': 6.0, 'tests': 10}, {'price': np.float64(214.22000122070312), 'index': Timestamp('2025-05-01 14:30:00+0000', tz='UTC'), 'volume': np.int64(5794472), 'strength': 2.0, 'tests': 2}], 'volume_at_levels': {np.float64(202.2100067138672): {'type': 'support', 'candles_count': 2, 'total_volume': 48067721, 'avg_volume': 24033860.5}, np.float64(206.1999969482422): {'type': 'support', 'candles_count': 7, 'total_volume': 68570233, 'avg_volume': 9795747.57142857}, np.float64(209.24989318847656): {'type': 'resistance', 'candles_count': 11, 'total_volume': 68476510, 'avg_volume': 6225137.2727272725}, np.float64(209.35000610351562): {'type': 'support', 'candles_count': 11, 'total_volume': 62481058, 'avg_volume': 5680096.181818182}, np.float64(211.5): {'type': 'resistance', 'candles_count': 11, 'total_volume': 61773442, 'avg_volume': 5615767.454545454}, np.float64(214.22000122070312): {'type': 'resistance', 'candles_count': 2, 'total_volume': 12929576, 'avg_volume': 6464788.0}}}
+  Candle Analysis:
+    Candle class: NEUTRAL
+    Volume class: HIGH
+    Is up candle: True
+    Price direction: DOWN
+    Signal type: VALIDATION
+    Signal strength: BULLISH
+    Details: Normal up candle with high volume shows buying interest
+
+  Trend Analysis:
+    Trend direction: DOWN
+    Volume trend: INCREASING
+    Signal type: TREND_VALIDATION
+    Signal strength: BULLISH
+    Details: Falling price with rising volume confirms bearish trend; Multiple high volume bars in downtrend may indicate selling climax
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 12, Support tests: 8
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 12, Resistance tests: 9
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-04-30 16:30:00+0000', tz='UTC'), 'price': np.float64(209.8000030517578)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-04-30 16:30:00+0000', tz='UTC'), 'price': np.float64(211.36000061035156)}]
+      Details: Found 2 testing patterns
+    Buying_climax:
+      Detected: True
+      Strength: 3
+      Details: Near high: False, Very high volume: True, Wide up candle: False, Upper wick: True
+    Selling_climax:
+      Detected: True
+      Strength: 4
+      Details: Near low: True, Very high volume: True, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 209.35, Strength: 5.0, Tests: 8
+      Price: 206.20, Strength: 2.5, Tests: 3
+      Price: 202.21, Strength: 2.0, Tests: 0
+    Resistance:
+      Price: 211.50, Strength: 9.0, Tests: 14
+      Price: 209.25, Strength: 6.0, Tests: 10
+      Price: 214.22, Strength: 2.0, Tests: 2
 
 Timeframe: 15m
-Candle analysis: {'candle_class': 'NARROW_LOWER_WICK', 'volume_class': 'LOW', 'is_up_candle': np.False_, 'price_direction': 'DOWN', 'signal_type': 'VALIDATION', 'signal_strength': 'NEUTRAL', 'details': 'Narrow spread down candle with low volume indicates consolidation'}
-Trend analysis: {'trend_direction': 'DOWN', 'volume_trend': 'DECREASING', 'signal_type': 'TREND_ANOMALY', 'signal_strength': 'BULLISH', 'details': 'Falling price with falling volume indicates weakening bearish trend; Multiple high volume bars in downtrend may indicate selling climax'}
-Pattern analysis: {'accumulation': {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 6, Support tests: 10'}, 'distribution': {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 6, Resistance tests: 9'}, 'testing': {'detected': True, 'tests': [{'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 17:30:00+0000', tz='UTC'), 'price': np.float64(205.52999877929688)}], 'details': 'Found 1 testing patterns'}, 'buying_climax': {'detected': False, 'strength': 1, 'details': 'Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'strength': 2, 'details': 'Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True'}}
-Support and Resistance: {'support': [{'price': np.float64(204.60000610351562), 'index': Timestamp('2025-05-02 15:00:00+0000', tz='UTC'), 'volume': np.int64(1957144), 'strength': 10.5, 'tests': 19}, {'price': np.float64(211.85000610351562), 'index': Timestamp('2025-05-01 16:45:00+0000', tz='UTC'), 'volume': np.int64(608311), 'strength': 7.0, 'tests': 12}, {'price': np.float64(202.2100067138672), 'index': Timestamp('2025-05-02 13:45:00+0000', tz='UTC'), 'volume': np.int64(4789355), 'strength': 1, 'tests': 0}], 'resistance': [{'price': np.float64(205.88999938964844), 'index': Timestamp('2025-05-02 16:45:00+0000', tz='UTC'), 'volume': np.int64(1778703), 'strength': 6.5, 'tests': 11}, {'price': np.float64(212.87759399414062), 'index': Timestamp('2025-05-01 17:15:00+0000', tz='UTC'), 'volume': np.int64(734695), 'strength': 5.5, 'tests': 9}], 'volume_at_levels': {np.float64(202.2100067138672): {'type': 'support', 'candles_count': 2, 'total_volume': 11298284, 'avg_volume': 5649142.0}, np.float64(204.60000610351562): {'type': 'support', 'candles_count': 9, 'total_volume': 41062106, 'avg_volume': 4562456.222222222}, np.float64(205.88999938964844): {'type': 'resistance', 'candles_count': 6, 'total_volume': 32081312, 'avg_volume': 5346885.333333333}, np.float64(211.85000610351562): {'type': 'support', 'candles_count': 4, 'total_volume': 3730445, 'avg_volume': 932611.25}, np.float64(212.87759399414062): {'type': 'resistance', 'candles_count': 10, 'total_volume': 14206806, 'avg_volume': 1420680.6}}}
+  Candle Analysis:
+    Candle class: NEUTRAL
+    Volume class: LOW
+    Is up candle: True
+    Price direction: DOWN
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: DOWN
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BULLISH
+    Details: Falling price with falling volume indicates weakening bearish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 6, Support tests: 11
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 6, Resistance tests: 10
+    Testing:
+      Detected: True
+      Tests: [{'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 17:30:00+0000', tz='UTC'), 'price': np.float64(205.52999877929688)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 15:15:00+0000', tz='UTC'), 'price': np.float64(199.64999389648438)}]
+      Details: Found 2 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 1
+      Details: Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 204.60, Strength: 10.5, Tests: 19
+      Price: 211.85, Strength: 7.0, Tests: 12
+      Price: 198.21, Strength: 2.5, Tests: 3
+      Price: 202.21, Strength: 1.0, Tests: 0
+    Resistance:
+      Price: 205.89, Strength: 6.5, Tests: 11
+      Price: 212.88, Strength: 5.5, Tests: 9
+
 
 Analysis for NFLX:
-Current price: 1132.81005859375
-Signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation', 'evidence': {'candle_signals': [], 'trend_signals': [{'timeframe': '1h', 'details': 'Falling price with falling volume indicates weakening bearish trend'}], 'pattern_signals': [{'timeframe': '1d', 'pattern': 'Accumulation', 'details': 'Sideways: False, High volume bars: 7, Support tests: 5'}, {'timeframe': '1h', 'pattern': 'Accumulation', 'details': 'Sideways: True, High volume bars: 3, Support tests: 8'}, {'timeframe': '15m', 'pattern': 'Accumulation', 'details': 'Sideways: True, High volume bars: 4, Support tests: 11'}], 'timeframe_confirmations': []}}
-Risk assessment: {'stop_loss': np.float64(896.0870767211914), 'take_profit': np.float64(1189.4505615234375), 'risk_reward_ratio': np.float64(0.23926913424983925), 'position_size': np.float64(0.42243469226758745), 'risk_per_share': np.float64(236.72298187255865)}
+Current price: 1132.94
+
+Signal:
+  Type: BUY
+  Strength: MODERATE
+  Details: Moderate buy signal with some timeframe confirmation
+
+Evidence:
+  Candle_signals:
+
+  Trend_signals:
+
+  Pattern_signals:
+    timeframe: 1d
+    pattern: Accumulation
+    details: Sideways: False, High volume bars: 7, Support tests: 5
+    timeframe: 1h
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 3, Support tests: 8
+    timeframe: 15m
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 4, Support tests: 11
+
+  Timeframe_confirmations:
+
+Risk Assessment:
+  Stop loss: 896.09
+  Take profit: 1189.59
+  Risk reward ratio: 0.24
+  Position size: 0.42
+  Risk per share: 236.85
 
 Timeframe: 1d
-Candle analysis: {'candle_class': 'NEUTRAL', 'volume_class': 'LOW', 'is_up_candle': np.True_, 'price_direction': 'UP', 'signal_type': None, 'signal_strength': None, 'details': ''}
-Trend analysis: {'trend_direction': 'UP', 'volume_trend': 'DECREASING', 'signal_type': 'TREND_ANOMALY', 'signal_strength': 'BEARISH', 'details': 'Rising price with falling volume indicates weakening bullish trend'}
-Pattern analysis: {'accumulation': {'detected': True, 'strength': 2, 'details': 'Sideways: False, High volume bars: 7, Support tests: 5'}, 'distribution': {'detected': True, 'strength': 2, 'details': 'Sideways: False, High volume bars: 7, Resistance tests: 11'}, 'testing': {'detected': True, 'tests': [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-05 00:00:00+0000', tz='UTC'), 'price': np.float64(1107.010009765625)}], 'details': 'Found 1 testing patterns'}, 'buying_climax': {'detected': False, 'strength': 2, 'details': 'Near high: True, Very high volume: False, Wide up candle: True, Upper wick: False'}, 'selling_climax': {'detected': False, 'strength': 1, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
-Support and Resistance: {'support': [{'price': np.float64(854.5), 'index': Timestamp('2025-03-10 00:00:00+0000', tz='UTC'), 'volume': np.int64(6995300), 'strength': 2.5, 'tests': 3}, {'price': np.float64(900.5900268554688), 'index': Timestamp('2025-03-31 00:00:00+0000', tz='UTC'), 'volume': np.int64(4634100), 'strength': 1.5, 'tests': 1}, {'price': np.float64(821.0999755859375), 'index': Timestamp('2025-04-07 00:00:00+0000', tz='UTC'), 'volume': np.int64(6656800), 'strength': 1, 'tests': 0}], 'resistance': [{'price': np.float64(949.5499877929688), 'index': Timestamp('2025-04-02 00:00:00+0000', tz='UTC'), 'volume': np.int64(3256900), 'strength': 3.0, 'tests': 4}, {'price': np.float64(995.5999755859375), 'index': Timestamp('2025-03-05 00:00:00+0000', tz='UTC'), 'volume': np.int64(3807900), 'strength': 2.5, 'tests': 3}, {'price': np.float64(968.0), 'index': Timestamp('2025-03-19 00:00:00+0000', tz='UTC'), 'volume': np.int64(6662400), 'strength': 2.0, 'tests': 2}, {'price': np.float64(927.1799926757812), 'index': Timestamp('2025-03-12 00:00:00+0000', tz='UTC'), 'volume': np.int64(6865800), 'strength': 1, 'tests': 0}], 'volume_at_levels': {np.float64(821.0999755859375): {'type': 'support', 'candles_count': 1, 'total_volume': 6656800, 'avg_volume': 6656800.0}, np.float64(854.5): {'type': 'support', 'candles_count': 4, 'total_volume': 27948900, 'avg_volume': 6987225.0}, np.float64(900.5900268554688): {'type': 'support', 'candles_count': 11, 'total_volume': 70198200, 'avg_volume': 6381654.545454546}, np.float64(927.1799926757812): {'type': 'resistance', 'candles_count': 12, 'total_volume': 65403100, 'avg_volume': 5450258.333333333}, np.float64(949.5499877929688): {'type': 'resistance', 'candles_count': 11, 'total_volume': 65778300, 'avg_volume': 5979845.454545454}, np.float64(968.0): {'type': 'resistance', 'candles_count': 14, 'total_volume': 74254000, 'avg_volume': 5303857.142857143}, np.float64(995.5999755859375): {'type': 'resistance', 'candles_count': 7, 'total_volume': 32483200, 'avg_volume': 4640457.142857143}}}
+  Candle Analysis:
+    Candle class: NEUTRAL
+    Volume class: AVERAGE
+    Is up candle: True
+    Price direction: UP
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: UP
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BEARISH
+    Details: Rising price with falling volume indicates weakening bullish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 7, Support tests: 5
+    Distribution:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 7, Resistance tests: 11
+    Testing:
+      Detected: False
+      Tests: []
+      Details: Found 0 testing patterns
+    Buying_climax:
+      Detected: True
+      Strength: 3
+      Details: Near high: True, Very high volume: False, Wide up candle: True, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 1
+      Details: Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 854.50, Strength: 2.5, Tests: 3
+      Price: 900.59, Strength: 1.5, Tests: 1
+      Price: 821.10, Strength: 1.0, Tests: 0
+    Resistance:
+      Price: 949.55, Strength: 3.0, Tests: 4
+      Price: 995.60, Strength: 2.5, Tests: 3
+      Price: 968.00, Strength: 2.0, Tests: 2
+      Price: 927.18, Strength: 1.0, Tests: 0
 
 Timeframe: 1h
-Candle analysis: {'candle_class': 'NARROW_UPPER_WICK_LOWER_WICK', 'volume_class': 'LOW', 'is_up_candle': np.True_, 'price_direction': 'UP', 'signal_type': 'VALIDATION', 'signal_strength': 'NEUTRAL', 'details': 'Narrow spread up candle with low volume indicates consolidation'}
-Trend analysis: {'trend_direction': 'DOWN', 'volume_trend': 'DECREASING', 'signal_type': 'TREND_ANOMALY', 'signal_strength': 'BULLISH', 'details': 'Falling price with falling volume indicates weakening bearish trend'}
-Pattern analysis: {'accumulation': {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 3, Support tests: 8'}, 'distribution': {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 3, Resistance tests: 11'}, 'testing': {'detected': True, 'tests': [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-04-30 16:30:00+0000', tz='UTC'), 'price': np.float64(1115.02001953125)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-04-30 18:30:00+0000', tz='UTC'), 'price': np.float64(1117.87890625)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-04-30 17:30:00+0000', tz='UTC'), 'price': np.float64(1127.0)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-01 16:30:00+0000', tz='UTC'), 'price': np.float64(1138.6800537109375)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-01 17:30:00+0000', tz='UTC'), 'price': np.float64(1141.949951171875)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 16:30:00+0000', tz='UTC'), 'price': np.float64(1156.02001953125)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 18:30:00+0000', tz='UTC'), 'price': np.float64(1159.2012939453125)}], 'details': 'Found 7 testing patterns'}, 'buying_climax': {'detected': False, 'strength': 2, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'strength': 2, 'details': 'Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True'}}
-Support and Resistance: {'support': [{'price': np.float64(1091.0001220703125), 'index': Timestamp('2025-04-25 13:30:00+0000', tz='UTC'), 'volume': np.int64(1124375), 'strength': 6.0, 'high_volume': True, 'tests': 8}, {'price': np.float64(1132.56005859375), 'index': Timestamp('2025-05-01 19:30:00+0000', tz='UTC'), 'volume': np.int64(404926), 'strength': 2.0, 'tests': 2}, {'price': np.float64(1111.830078125), 'index': Timestamp('2025-05-01 13:30:00+0000', tz='UTC'), 'volume': np.int64(979402), 'strength': 1.5, 'tests': 1}], 'resistance': [{'price': np.float64(1106.79833984375), 'index': Timestamp('2025-04-25 13:30:00+0000', tz='UTC'), 'volume': np.int64(1124375), 'strength': 5.5, 'high_volume': True, 'tests': 7}, {'price': np.float64(1127.7921142578125), 'index': Timestamp('2025-04-29 19:30:00+0000', tz='UTC'), 'volume': np.int64(471862), 'strength': 4.5, 'tests': 7}, {'price': np.float64(1142.3699951171875), 'index': Timestamp('2025-05-01 14:30:00+0000', tz='UTC'), 'volume': np.int64(577965), 'strength': 4.0, 'tests': 6}, {'price': np.float64(1159.43994140625), 'index': Timestamp('2025-05-02 19:30:00+0000', tz='UTC'), 'volume': np.int64(446166), 'strength': 1, 'tests': 0}], 'volume_at_levels': {np.float64(1091.0001220703125): {'type': 'support', 'candles_count': 5, 'total_volume': 4030197, 'avg_volume': 806039.4}, np.float64(1106.79833984375): {'type': 'resistance', 'candles_count': 6, 'total_volume': 5431964, 'avg_volume': 905327.3333333334}, np.float64(1111.830078125): {'type': 'support', 'candles_count': 9, 'total_volume': 7934159, 'avg_volume': 881573.2222222222}, np.float64(1127.7921142578125): {'type': 'resistance', 'candles_count': 5, 'total_volume': 5147266, 'avg_volume': 1029453.2}, np.float64(1132.56005859375): {'type': 'support', 'candles_count': 7, 'total_volume': 5249098, 'avg_volume': 749871.1428571428}, np.float64(1142.3699951171875): {'type': 'resistance', 'candles_count': 2, 'total_volume': 1593405, 'avg_volume': 796702.5}, np.float64(1159.43994140625): {'type': 'resistance', 'candles_count': 1, 'total_volume': 446166, 'avg_volume': 446166.0}}}
+  Candle Analysis:
+    Candle class: NARROW_UPPER_WICK_LOWER_WICK
+    Volume class: AVERAGE
+    Is up candle: True
+    Price direction: UP
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: DOWN
+    Volume trend: INCREASING
+    Signal type: TREND_VALIDATION
+    Signal strength: BEARISH
+    Details: Falling price with rising volume confirms bearish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 3, Support tests: 8
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 3, Resistance tests: 11
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-04-30 16:30:00+0000', tz='UTC'), 'price': np.float64(1115.02001953125)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-04-30 18:30:00+0000', tz='UTC'), 'price': np.float64(1117.87890625)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-04-30 17:30:00+0000', tz='UTC'), 'price': np.float64(1127.0)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-01 16:30:00+0000', tz='UTC'), 'price': np.float64(1138.6800537109375)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-01 17:30:00+0000', tz='UTC'), 'price': np.float64(1141.949951171875)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 16:30:00+0000', tz='UTC'), 'price': np.float64(1156.02001953125)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 18:30:00+0000', tz='UTC'), 'price': np.float64(1159.2012939453125)}]
+      Details: Found 7 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 2
+      Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 1091.00, Strength: 6.0, Tests: 8
+      Price: 1132.56, Strength: 2.0, Tests: 2
+      Price: 1111.83, Strength: 1.5, Tests: 1
+    Resistance:
+      Price: 1106.80, Strength: 5.5, Tests: 7
+      Price: 1127.79, Strength: 4.5, Tests: 7
+      Price: 1142.37, Strength: 4.5, Tests: 7
+      Price: 1159.44, Strength: 1.0, Tests: 0
 
 Timeframe: 15m
-Candle analysis: {'candle_class': 'NARROW_UPPER_WICK_LOWER_WICK', 'volume_class': 'AVERAGE', 'is_up_candle': np.False_, 'price_direction': 'DOWN', 'signal_type': None, 'signal_strength': None, 'details': ''}
-Trend analysis: {'trend_direction': 'UP', 'volume_trend': 'DECREASING', 'signal_type': 'TREND_ANOMALY', 'signal_strength': 'BEARISH', 'details': 'Rising price with falling volume indicates weakening bullish trend; Multiple high volume bars in uptrend may indicate buying climax'}
-Pattern analysis: {'accumulation': {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 4, Support tests: 11'}, 'distribution': {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 4, Resistance tests: 12'}, 'testing': {'detected': True, 'tests': [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 16:45:00+0000', tz='UTC'), 'price': np.float64(1152.1199951171875)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:15:00+0000', tz='UTC'), 'price': np.float64(1152.905029296875)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:30:00+0000', tz='UTC'), 'price': np.float64(1152.1500244140625)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 19:15:00+0000', tz='UTC'), 'price': np.float64(1157.0)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 18:30:00+0000', tz='UTC'), 'price': np.float64(1159.0)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 19:15:00+0000', tz='UTC'), 'price': np.float64(1159.2012939453125)}], 'details': 'Found 6 testing patterns'}, 'buying_climax': {'detected': False, 'strength': 2, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'strength': 2, 'details': 'Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True'}}
-Support and Resistance: {'support': [{'price': np.float64(1131.650146484375), 'index': Timestamp('2025-05-01 16:15:00+0000', tz='UTC'), 'volume': np.int64(60059), 'strength': 9.5, 'tests': 17}, {'price': np.float64(1152.1500244140625), 'index': Timestamp('2025-05-02 17:30:00+0000', tz='UTC'), 'volume': np.int64(68413), 'strength': 5.5, 'tests': 9}, {'price': np.float64(1108.510009765625), 'index': Timestamp('2025-05-05 13:30:00+0000', tz='UTC'), 'volume': np.int64(1793915), 'strength': 2, 'high_volume': True, 'tests': 0}], 'resistance': [{'price': np.float64(1138.6800537109375), 'index': Timestamp('2025-05-01 17:15:00+0000', tz='UTC'), 'volume': np.int64(49066), 'strength': 8.5, 'tests': 15}, {'price': np.float64(1155.929931640625), 'index': Timestamp('2025-05-02 16:00:00+0000', tz='UTC'), 'volume': np.int64(153889), 'strength': 8.5, 'tests': 15}], 'volume_at_levels': {np.float64(1108.510009765625): {'type': 'support', 'candles_count': 1, 'total_volume': 1793915, 'avg_volume': 1793915.0}, np.float64(1131.650146484375): {'type': 'support', 'candles_count': 5, 'total_volume': 1205370, 'avg_volume': 241074.0}, np.float64(1138.6800537109375): {'type': 'resistance', 'candles_count': 7, 'total_volume': 727089, 'avg_volume': 103869.85714285714}, np.float64(1152.1500244140625): {'type': 'support', 'candles_count': 5, 'total_volume': 414580, 'avg_volume': 82916.0}, np.float64(1155.929931640625): {'type': 'resistance', 'candles_count': 5, 'total_volume': 783956, 'avg_volume': 156791.2}}}
+  Candle Analysis:
+    Candle class: NARROW
+    Volume class: LOW
+    Is up candle: False
+    Price direction: DOWN
+    Signal type: VALIDATION
+    Signal strength: NEUTRAL
+    Details: Narrow spread down candle with low volume indicates consolidation
+
+  Trend Analysis:
+    Trend direction: UP
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BEARISH
+    Details: Rising price with falling volume indicates weakening bullish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 4, Support tests: 11
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 4, Resistance tests: 12
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:15:00+0000', tz='UTC'), 'price': np.float64(1152.905029296875)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:30:00+0000', tz='UTC'), 'price': np.float64(1152.1500244140625)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 19:15:00+0000', tz='UTC'), 'price': np.float64(1157.0)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-05 15:15:00+0000', tz='UTC'), 'price': np.float64(1132.16015625)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 18:30:00+0000', tz='UTC'), 'price': np.float64(1159.0)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 19:15:00+0000', tz='UTC'), 'price': np.float64(1159.2012939453125)}]
+      Details: Found 6 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 2
+      Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 1152.15, Strength: 5.5, Tests: 9
+      Price: 1135.52, Strength: 5.0, Tests: 8
+      Price: 1108.51, Strength: 2.0, Tests: 0
+    Resistance:
+      Price: 1138.68, Strength: 9.5, Tests: 17
+      Price: 1155.93, Strength: 8.5, Tests: 15
+
+
+Analysis for GOOGL:
+Current price: 164.65
+
+Signal:
+  Type: BUY
+  Strength: MODERATE
+  Details: Moderate buy signal with some timeframe confirmation
+
+Evidence:
+  Candle_signals:
+
+  Trend_signals:
+    timeframe: 1h
+    details: Rising price with rising volume confirms bullish trend
+    timeframe: 15m
+    details: Falling price with falling volume indicates weakening bearish trend
+
+  Pattern_signals:
+    timeframe: 1d
+    pattern: Accumulation
+    details: Sideways: False, High volume bars: 6, Support tests: 5
+    timeframe: 1h
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 2, Support tests: 10
+    timeframe: 15m
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 3, Support tests: 12
+
+  Timeframe_confirmations:
+
+Risk Assessment:
+  Stop loss: 160.56
+  Take profit: 166.93
+  Risk reward ratio: 0.56
+  Position size: 24.49
+  Risk per share: 4.08
+
+Timeframe: 1d
+  Candle Analysis:
+    Candle class: NARROW
+    Volume class: VERY_LOW
+    Is up candle: True
+    Price direction: DOWN
+    Signal type: VALIDATION
+    Signal strength: NEUTRAL
+    Details: Narrow spread up candle with low volume indicates consolidation
+
+  Trend Analysis:
+    Trend direction: UP
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BEARISH
+    Details: Rising price with falling volume indicates weakening bullish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 6, Support tests: 5
+    Distribution:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 6, Resistance tests: 6
+    Testing:
+      Detected: True
+      Tests: [{'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 00:00:00+0000', tz='UTC'), 'price': np.float64(165.27999877929688)}]
+      Details: Found 1 testing patterns
+    Buying_climax:
+      Detected: True
+      Strength: 3
+      Details: Near high: True, Very high volume: False, Wide up candle: True, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 1
+      Details: Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 161.37, Strength: 4.5, Tests: 7
+      Price: 150.66, Strength: 2.0, Tests: 2
+      Price: 165.80, Strength: 1.5, Tests: 1
+      Price: 156.72, Strength: 1.0, Tests: 0
+      Price: 140.53, Strength: 1.0, Tests: 0
+    Resistance:
+      Price: 159.55, Strength: 2.5, Tests: 3
+      Price: 161.72, Strength: 1.5, Tests: 1
+      Price: 166.10, Strength: 1.5, Tests: 1
+      Price: 174.97, Strength: 1.0, Tests: 0
+      Price: 170.63, Strength: 1.0, Tests: 0
+
+Timeframe: 1h
+  Candle Analysis:
+    Candle class: NARROW
+    Volume class: LOW
+    Is up candle: False
+    Price direction: UP
+    Signal type: VALIDATION
+    Signal strength: NEUTRAL
+    Details: Narrow spread down candle with low volume indicates consolidation
+
+  Trend Analysis:
+    Trend direction: UP
+    Volume trend: INCREASING
+    Signal type: TREND_VALIDATION
+    Signal strength: BULLISH
+    Details: Rising price with rising volume confirms bullish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 2, Support tests: 10
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 2, Resistance tests: 11
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-04-30 16:30:00+0000', tz='UTC'), 'price': np.float64(156.19000244140625)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-01 16:30:00+0000', tz='UTC'), 'price': np.float64(160.22999572753906)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:30:00+0000', tz='UTC'), 'price': np.float64(163.83079528808594)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-01 16:30:00+0000', tz='UTC'), 'price': np.float64(161.47999572753906)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-01 17:30:00+0000', tz='UTC'), 'price': np.float64(161.94000244140625)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-01 18:30:00+0000', tz='UTC'), 'price': np.float64(161.9499969482422)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 16:30:00+0000', tz='UTC'), 'price': np.float64(164.97000122070312)}]
+      Details: Found 7 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 2
+      Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 161.04, Strength: 4.5, Tests: 7
+      Price: 157.52, Strength: 4.0, Tests: 4
+      Price: 155.40, Strength: 2.0, Tests: 0
+    Resistance:
+      Price: 161.00, Strength: 5.5, Tests: 9
+      Price: 164.97, Strength: 3.5, Tests: 5
+      Price: 163.15, Strength: 2.0, Tests: 0
+
+Timeframe: 15m
+  Candle Analysis:
+    Candle class: NARROW_UPPER_WICK
+    Volume class: VERY_LOW
+    Is up candle: True
+    Price direction: UP
+    Signal type: VALIDATION
+    Signal strength: NEUTRAL
+    Details: Narrow spread up candle with low volume indicates consolidation
+
+  Trend Analysis:
+    Trend direction: DOWN
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BULLISH
+    Details: Falling price with falling volume indicates weakening bearish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 3, Support tests: 12
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 3, Resistance tests: 12
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:00:00+0000', tz='UTC'), 'price': np.float64(163.9499969482422)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:15:00+0000', tz='UTC'), 'price': np.float64(163.92999267578125)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:30:00+0000', tz='UTC'), 'price': np.float64(163.83079528808594)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 18:15:00+0000', tz='UTC'), 'price': np.float64(164.1699981689453)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-05 15:15:00+0000', tz='UTC'), 'price': np.float64(164.50379943847656)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 17:45:00+0000', tz='UTC'), 'price': np.float64(164.22999572753906)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 18:00:00+0000', tz='UTC'), 'price': np.float64(164.41000366210938)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 18:30:00+0000', tz='UTC'), 'price': np.float64(164.5218048095703)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 19:15:00+0000', tz='UTC'), 'price': np.float64(164.3000030517578)}]
+      Details: Found 9 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 2
+      Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 163.57, Strength: 10.0, Tests: 16
+      Price: 160.96, Strength: 5.0, Tests: 8
+    Resistance:
+      Price: 164.68, Strength: 14.0, Tests: 26
+      Price: 161.94, Strength: 4.5, Tests: 7
+
+
+Analysis for AMZN:
+Current price: 188.07
+
+Signal:
+  Type: BUY
+  Strength: MODERATE
+  Details: Moderate buy signal with some timeframe confirmation
+
+Evidence:
+  Candle_signals:
+
+  Trend_signals:
+    timeframe: 1h
+    details: Falling price with falling volume indicates weakening bearish trend
+
+  Pattern_signals:
+    timeframe: 1d
+    pattern: Accumulation
+    details: Sideways: False, High volume bars: 7, Support tests: 7
+    timeframe: 1h
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 7, Support tests: 10
+    timeframe: 15m
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 2, Support tests: 12
+
+  Timeframe_confirmations:
+
+Risk Assessment:
+  Stop loss: 183.48
+  Take profit: 193.61
+  Risk reward ratio: 1.21
+  Position size: 21.80
+  Risk per share: 4.59
+
+Timeframe: 1d
+  Candle Analysis:
+    Candle class: NARROW
+    Volume class: VERY_LOW
+    Is up candle: True
+    Price direction: DOWN
+    Signal type: VALIDATION
+    Signal strength: NEUTRAL
+    Details: Narrow spread up candle with low volume indicates consolidation
+
+  Trend Analysis:
+    Trend direction: UP
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BEARISH
+    Details: Rising price with falling volume indicates weakening bullish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 7, Support tests: 7
+    Distribution:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 7, Resistance tests: 7
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-05 00:00:00+0000', tz='UTC'), 'price': np.float64(185.52999877929688)}]
+      Details: Found 1 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 1
+      Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: False
+    Selling_climax:
+      Detected: False
+      Strength: 1
+      Details: Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 191.82, Strength: 3.0, Tests: 4
+      Price: 184.40, Strength: 2.0, Tests: 2
+      Price: 197.43, Strength: 1.5, Tests: 1
+      Price: 189.38, Strength: 1.0, Tests: 0
+      Price: 161.38, Strength: 1.0, Tests: 0
+    Resistance:
+      Price: 187.44, Strength: 3.0, Tests: 4
+      Price: 199.00, Strength: 2.5, Tests: 3
+      Price: 192.65, Strength: 2.0, Tests: 2
+      Price: 206.21, Strength: 1.5, Tests: 1
+      Price: 219.97, Strength: 1.0, Tests: 0
+
+Timeframe: 1h
+  Candle Analysis:
+    Candle class: NEUTRAL
+    Volume class: AVERAGE
+    Is up candle: True
+    Price direction: UP
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: DOWN
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BULLISH
+    Details: Falling price with falling volume indicates weakening bearish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 7, Support tests: 10
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 7, Resistance tests: 10
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-04-30 16:30:00+0000', tz='UTC'), 'price': np.float64(180.48899841308594)}]
+      Details: Found 1 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 2
+      Details: Near high: True, Very high volume: False, Wide up candle: True, Upper wick: False
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 184.89, Strength: 3.5, Tests: 5
+      Price: 188.65, Strength: 2.5, Tests: 3
+      Price: 178.85, Strength: 2.0, Tests: 0
+    Resistance:
+      Price: 187.94, Strength: 8.0, Tests: 14
+      Price: 191.18, Strength: 7.0, Tests: 10
+
+Timeframe: 15m
+  Candle Analysis:
+    Candle class: WIDE
+    Volume class: VERY_LOW
+    Is up candle: True
+    Price direction: DOWN
+    Signal type: ANOMALY
+    Signal strength: BEARISH
+    Details: Wide spread up candle with low volume suggests potential trap up move
+
+  Trend Analysis:
+    Trend direction: UP
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BEARISH
+    Details: Rising price with falling volume indicates weakening bullish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 2, Support tests: 12
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 2, Resistance tests: 12
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:00:00+0000', tz='UTC'), 'price': np.float64(190.75)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:15:00+0000', tz='UTC'), 'price': np.float64(190.3000030517578)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:30:00+0000', tz='UTC'), 'price': np.float64(190.13999938964844)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 18:45:00+0000', tz='UTC'), 'price': np.float64(189.94000244140625)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 19:00:00+0000', tz='UTC'), 'price': np.float64(189.6649932861328)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-05 14:30:00+0000', tz='UTC'), 'price': np.float64(186.6999969482422)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 17:30:00+0000', tz='UTC'), 'price': np.float64(191.05999755859375)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 18:30:00+0000', tz='UTC'), 'price': np.float64(191.42999267578125)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 19:15:00+0000', tz='UTC'), 'price': np.float64(190.47999572753906)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 14:15:00+0000', tz='UTC'), 'price': np.float64(187.89999389648438)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 14:45:00+0000', tz='UTC'), 'price': np.float64(187.71400451660156)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 15:00:00+0000', tz='UTC'), 'price': np.float64(188.02000427246094)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 15:15:00+0000', tz='UTC'), 'price': np.float64(188.0800018310547)}]
+      Details: Found 13 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 2
+      Details: Near high: True, Very high volume: False, Wide up candle: True, Upper wick: False
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 189.37, Strength: 12.0, Tests: 22
+      Price: 186.40, Strength: 5.5, Tests: 9
+    Resistance:
+      Price: 190.50, Strength: 13.5, Tests: 25
+      Price: 187.90, Strength: 3.0, Tests: 4
+      Price: 192.88, Strength: 2.0, Tests: 2
+
+
+Analysis for MSFT:
+Current price: 437.07
+
+Signal:
+  Type: BUY
+  Strength: MODERATE
+  Details: Moderate buy signal with some timeframe confirmation
+
+Evidence:
+  Candle_signals:
+
+  Trend_signals:
+
+  Pattern_signals:
+    timeframe: 1d
+    pattern: Accumulation
+    details: Sideways: False, High volume bars: 7, Support tests: 6
+    timeframe: 1h
+    pattern: Accumulation
+    details: Sideways: False, High volume bars: 6, Support tests: 11
+    timeframe: 15m
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 2, Support tests: 10
+
+  Timeframe_confirmations:
+
+Risk Assessment:
+  Stop loss: 380.89
+  Take profit: 458.92
+  Risk reward ratio: 0.39
+  Position size: 1.78
+  Risk per share: 56.18
+
+Timeframe: 1d
+  Candle Analysis:
+    Candle class: NEUTRAL
+    Volume class: VERY_LOW
+    Is up candle: True
+    Price direction: UP
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: UP
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BEARISH
+    Details: Rising price with falling volume indicates weakening bullish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 7, Support tests: 6
+    Distribution:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 7, Resistance tests: 10
+    Testing:
+      Detected: False
+      Tests: []
+      Details: Found 0 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 2
+      Details: Near high: True, Very high volume: False, Wide up candle: True, Upper wick: False
+    Selling_climax:
+      Detected: False
+      Strength: 1
+      Details: Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 382.80, Strength: 4.0, Tests: 4
+      Price: 376.91, Strength: 3.0, Tests: 4
+      Price: 367.24, Strength: 2.5, Tests: 3
+      Price: 344.79, Strength: 1.0, Tests: 0
+      Price: 355.67, Strength: 1.0, Tests: 0
+    Resistance:
+      Price: 392.71, Strength: 5.0, Tests: 8
+      Price: 385.08, Strength: 1.5, Tests: 1
+      Price: 405.74, Strength: 1.0, Tests: 0
+
+Timeframe: 1h
+  Candle Analysis:
+    Candle class: NEUTRAL
+    Volume class: LOW
+    Is up candle: True
+    Price direction: UP
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: UP
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BEARISH
+    Details: Rising price with falling volume indicates weakening bullish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 6, Support tests: 11
+    Distribution:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 6, Resistance tests: 11
+    Testing:
+      Detected: True
+      Tests: [{'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 14:30:00+0000', tz='UTC'), 'price': np.float64(438.05999755859375)}]
+      Details: Found 1 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 2
+      Details: Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 1
+      Details: Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 391.35, Strength: 3.0, Tests: 4
+      Price: 384.60, Strength: 2.5, Tests: 3
+      Price: 427.64, Strength: 1.5, Tests: 1
+    Resistance:
+      Price: 389.23, Strength: 7.5, Tests: 13
+      Price: 436.99, Strength: 6.0, Tests: 8
+      Price: 394.83, Strength: 4.5, Tests: 7
+
+Timeframe: 15m
+  Candle Analysis:
+    Candle class: NEUTRAL
+    Volume class: VERY_LOW
+    Is up candle: True
+    Price direction: UP
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: UP
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BEARISH
+    Details: Rising price with falling volume indicates weakening bullish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 2, Support tests: 10
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 2, Resistance tests: 10
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:00:00+0000', tz='UTC'), 'price': np.float64(436.6000061035156)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:15:00+0000', tz='UTC'), 'price': np.float64(436.1099853515625)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 17:30:00+0000', tz='UTC'), 'price': np.float64(435.6300964355469)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 18:15:00+0000', tz='UTC'), 'price': np.float64(436.1444091796875)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 18:30:00+0000', tz='UTC'), 'price': np.float64(435.90350341796875)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 18:45:00+0000', tz='UTC'), 'price': np.float64(434.7699890136719)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-05 14:30:00+0000', tz='UTC'), 'price': np.float64(434.4700012207031)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-05 15:15:00+0000', tz='UTC'), 'price': np.float64(436.0899963378906)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 17:45:00+0000', tz='UTC'), 'price': np.float64(436.92999267578125)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 18:00:00+0000', tz='UTC'), 'price': np.float64(437.30999755859375)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 19:15:00+0000', tz='UTC'), 'price': np.float64(435.8699951171875)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-02 19:30:00+0000', tz='UTC'), 'price': np.float64(435.9700012207031)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 13:45:00+0000', tz='UTC'), 'price': np.float64(436.57989501953125)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 14:30:00+0000', tz='UTC'), 'price': np.float64(436.6199951171875)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 14:45:00+0000', tz='UTC'), 'price': np.float64(437.44000244140625)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-05 15:00:00+0000', tz='UTC'), 'price': np.float64(438.05999755859375)}]
+      Details: Found 16 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 2
+      Details: Near high: True, Very high volume: False, Wide up candle: True, Upper wick: False
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 433.94, Strength: 9.0, Tests: 16
+      Price: 427.64, Strength: 4.0, Tests: 6
+    Resistance:
+      Price: 438.19, Strength: 11.0, Tests: 18
+      Price: 431.90, Strength: 2.5, Tests: 3
+
+
+Analysis for TSLA:
+Current price: 276.90
+
+Signal:
+  Type: BUY
+  Strength: MODERATE
+  Details: Moderate buy signal with some timeframe confirmation
+
+Evidence:
+  Candle_signals:
+
+  Trend_signals:
+    timeframe: 1d
+    details: Falling price with falling volume indicates weakening bearish trend
+    timeframe: 1h
+    details: Falling price with falling volume indicates weakening bearish trend
+    timeframe: 15m
+    details: Falling price with falling volume indicates weakening bearish trend; Multiple high volume bars in downtrend may indicate selling climax
+
+  Pattern_signals:
+    timeframe: 1d
+    pattern: Accumulation
+    details: Sideways: False, High volume bars: 6, Support tests: 3
+    timeframe: 1h
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 3, Support tests: 9
+    timeframe: 15m
+    pattern: Accumulation
+    details: Sideways: True, High volume bars: 8, Support tests: 11
+
+  Timeframe_confirmations:
+
+Risk Assessment:
+  Stop loss: 269.43
+  Take profit: 286.41
+  Risk reward ratio: 1.27
+  Position size: 13.38
+  Risk per share: 7.47
+
+Timeframe: 1d
+  Candle Analysis:
+    Candle class: NEUTRAL
+    Volume class: LOW
+    Is up candle: False
+    Price direction: DOWN
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: DOWN
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BULLISH
+    Details: Falling price with falling volume indicates weakening bearish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 6, Support tests: 3
+    Distribution:
+      Detected: True
+      Strength: 2
+      Details: Sideways: False, High volume bars: 6, Resistance tests: 6
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-05 00:00:00+0000', tz='UTC'), 'price': np.float64(274.3999938964844)}]
+      Details: Found 1 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 1
+      Details: Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: False, Very high volume: False, Wide down candle: True, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 217.02, Strength: 1.5, Tests: 1
+      Price: 222.28, Strength: 1.5, Tests: 1
+      Price: 243.36, Strength: 1.5, Tests: 1
+      Price: 214.25, Strength: 1.0, Tests: 0
+      Price: 270.78, Strength: 1.0, Tests: 0
+    Resistance:
+      Price: 284.99, Strength: 2.0, Tests: 2
+      Price: 291.85, Strength: 1.5, Tests: 1
+      Price: 294.86, Strength: 1.5, Tests: 1
+      Price: 303.94, Strength: 1.0, Tests: 0
+      Price: 274.69, Strength: 1.0, Tests: 0
+
+Timeframe: 1h
+  Candle Analysis:
+    Candle class: NARROW_LOWER_WICK
+    Volume class: AVERAGE
+    Is up candle: True
+    Price direction: UP
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: DOWN
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BULLISH
+    Details: Falling price with falling volume indicates weakening bearish trend
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 3, Support tests: 9
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 3, Resistance tests: 9
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-01 17:30:00+0000', tz='UTC'), 'price': np.float64(281.760009765625)}, {'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-01 19:30:00+0000', tz='UTC'), 'price': np.float64(279.80999755859375)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-04-30 19:30:00+0000', tz='UTC'), 'price': np.float64(284.45001220703125)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-01 18:30:00+0000', tz='UTC'), 'price': np.float64(284.5799865722656)}, {'type': 'RESISTANCE_TEST', 'index': Timestamp('2025-05-01 19:30:00+0000', tz='UTC'), 'price': np.float64(284.6492919921875)}]
+      Details: Found 5 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 1
+      Details: Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 279.47, Strength: 2.5, Tests: 3
+      Price: 270.79, Strength: 2.0, Tests: 0
+    Resistance:
+      Price: 286.85, Strength: 7.5, Tests: 13
+      Price: 294.86, Strength: 3.5, Tests: 3
+      Price: 290.87, Strength: 2.0, Tests: 2
+
+Timeframe: 15m
+  Candle Analysis:
+    Candle class: NEUTRAL
+    Volume class: LOW
+    Is up candle: True
+    Price direction: DOWN
+    Signal type: None
+    Signal strength: None
+    Details: 
+
+  Trend Analysis:
+    Trend direction: DOWN
+    Volume trend: DECREASING
+    Signal type: TREND_ANOMALY
+    Signal strength: BULLISH
+    Details: Falling price with falling volume indicates weakening bearish trend; Multiple high volume bars in downtrend may indicate selling climax
+
+  Pattern Analysis:
+    Accumulation:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 8, Support tests: 11
+    Distribution:
+      Detected: True
+      Strength: 3
+      Details: Sideways: True, High volume bars: 8, Resistance tests: 10
+    Testing:
+      Detected: True
+      Tests: [{'type': 'SUPPORT_TEST', 'index': Timestamp('2025-05-02 18:15:00+0000', tz='UTC'), 'price': np.float64(292.8500061035156)}]
+      Details: Found 1 testing patterns
+    Buying_climax:
+      Detected: False
+      Strength: 2
+      Details: Near high: False, Very high volume: False, Wide up candle: True, Upper wick: True
+    Selling_climax:
+      Detected: False
+      Strength: 2
+      Details: Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True
+
+  Support and Resistance:
+    Support:
+      Price: 281.76, Strength: 6.5, Tests: 11
+      Price: 290.68, Strength: 2.0, Tests: 2
+      Price: 274.40, Strength: 2.0, Tests: 2
+    Resistance:
+      Price: 287.94, Strength: 4.5, Tests: 7
+      Price: 294.49, Strength: 4.5, Tests: 7
+
 
