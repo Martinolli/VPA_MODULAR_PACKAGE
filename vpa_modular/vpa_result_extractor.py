@@ -1,7 +1,7 @@
 # vpa_result_extractor.py
 
 import pandas as pd
-from typing import Dict, Any
+from typing import Dict, Any, List
 
 class VPAResultExtractor:
     def __init__(self, results: Dict[str, Any]):
@@ -60,5 +60,11 @@ class VPAResultExtractor:
     def get_signal(self, ticker: str) -> Dict[str, Any]:
         return self.extracted_data.get(ticker, {}).get('signal', {})
 
+    def get_signal_evidence(self, ticker: str) -> Dict[str, List]:
+        return self.get_signal(ticker).get('evidence', {})
+    
     def get_risk_assessment(self, ticker: str) -> Dict[str, Any]:
         return self.extracted_data.get(ticker, {}).get('risk_assessment', {})
+    
+    def get_current_price(self, ticker: str) -> float:
+        return self.extracted_data.get(ticker, {}).get('current_price', 0.0)

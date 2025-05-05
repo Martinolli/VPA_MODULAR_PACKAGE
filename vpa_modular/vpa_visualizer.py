@@ -6,19 +6,22 @@ import matplotlib.ticker as mticker
 import pandas as pd
 import seaborn as sns
 import os
+import numpy as np
+from matplotlib.patches import Rectangle
+from matplotlib.collections import PatchCollection
+from typing import Dict, List, Any
 
 def plot_price_volume_chart(df: pd.DataFrame, ticker: str, timeframe: str, output_path: str = None):
     """
     Plot candlestick chart with volume for a specific ticker and timeframe.
 
     Args:
-        df (pd.DataFrame): DataFrame with 'open', 'high', 'low', 'close', 'volume'
+        df (pd.DataFrame): DataFrame with 'open', 'high', 'low', 'close', and optionally 'volume'
         ticker (str): Stock symbol
         timeframe (str): Timeframe label (e.g., '1d', '1h', '15m')
         output_path (str, optional): Path to save the figure. If None, just show.
     """
     fig, ax_price = plt.subplots(figsize=(12, 6), dpi=100)
-    ax_volume = ax_price.twinx()
 
     df = df.copy()
     df.index = pd.to_datetime(df.index)
@@ -27,14 +30,17 @@ def plot_price_volume_chart(df: pd.DataFrame, ticker: str, timeframe: str, outpu
     ax_price.plot(df.index, df['close'], label='Close Price', color='black', linewidth=1.2)
     ax_price.vlines(df.index, df['low'], df['high'], color='gray', linewidth=0.5, alpha=0.7)
 
-    # Volume plot (as transparent bars behind the price line)
-    ax_volume.bar(df.index, df['volume'], width=0.005, color='blue', alpha=0.2, label='Volume')
-    ax_volume.set_ylim(0, df['volume'].max() * 4)
+    # Volume plot (if volume data is available)
+    if 'volume' in df.columns:
+        ax_volume = ax_price.twinx()
+        ax_volume.bar(df.index, df['volume'], width=0.005, color='blue', alpha=0.2, label='Volume')
+        ax_volume.set_ylim(0, df['volume'].max() * 4)
+        ax_volume.set_ylabel("Volume")
+        ax_volume.legend(loc='upper right')
 
     # Formatting
-    ax_price.set_title(f"{ticker} - {timeframe.upper()} Price + Volume")
+    ax_price.set_title(f"{ticker} - {timeframe.upper()} Price" + (" + Volume" if 'volume' in df.columns else ""))
     ax_price.set_ylabel("Price")
-    ax_volume.set_ylabel("Volume")
     ax_price.grid(True, linestyle='--', alpha=0.3)
 
     ax_price.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
@@ -42,7 +48,6 @@ def plot_price_volume_chart(df: pd.DataFrame, ticker: str, timeframe: str, outpu
     fig.autofmt_xdate()
 
     ax_price.legend(loc='upper left')
-    ax_volume.legend(loc='upper right')
 
     plt.tight_layout()
 
@@ -178,3 +183,131 @@ def create_dashboard(extractor, output_dir: str):
     plt.close()
     
     print(f"✅ Dashboard saved to {dashboard_path}")
+
+def create_signal_dashboard(signal: Dict[str, Any], ticker: str, output_path: str = None):
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 7))
+        
+    # Signal type and strength
+    ax1.text(0.5, 0.5, f"{signal['type']}\n{signal['strength']}", 
+            ha='center', va='center', fontsize=24, 
+            color='green' if signal['type'] == 'BUY' else 'red')
+    ax1.axis('off')
+        
+    # Evidence breakdown
+    evidence = signal['evidence']
+    categories = list(evidence.keys())
+    counts = [len(evidence[cat]) for cat in categories]
+        
+    ax2.bar(categories, counts)
+    ax2.set_title('Evidence Breakdown')
+    ax2.set_ylabel('Count')
+        
+    plt.tight_layout()
+    if output_path:
+        plt.savefig(output_path)
+    plt.close()
+
+def plot_multi_timeframe_trends(evidence: Dict[str, List], ticker: str, output_path: str = None):
+    trend_signals = evidence['trend_signals']
+    timeframes = [signal['timeframe'] for signal in trend_signals]
+    
+    fig, axs = plt.subplots(len(timeframes), 1, figsize=(10, 5*len(timeframes)))
+    
+    for i, tf in enumerate(timeframes):
+        signal = next(s for s in trend_signals if s['timeframe'] == tf)
+        axs[i].text(0.5, 0.5, signal['details'], ha='center', va='center', wrap=True)
+        axs[i].set_title(f"{tf} Trend")
+        axs[i].axis('off')
+    
+    plt.tight_layout()
+    if output_path:
+        plt.savefig(output_path)
+    plt.close()
+
+def create_pattern_signal_heatmap(evidence: Dict[str, List], ticker: str, output_path: str = None):
+    pattern_signals = evidence['pattern_signals']
+    timeframes = list(set(signal['timeframe'] for signal in pattern_signals))
+    patterns = list(set(signal['pattern'] for signal in pattern_signals))
+    
+    data = np.zeros((len(timeframes), len(patterns)))
+    
+    for signal in pattern_signals:
+        i = timeframes.index(signal['timeframe'])
+        j = patterns.index(signal['pattern'])
+        data[i, j] = 1
+    
+    fig, ax = plt.subplots(figsize=(10, 8))
+    im = ax.imshow(data, cmap='YlOrRd')
+    
+    ax.set_xticks(np.arange(len(patterns)))
+    ax.set_yticks(np.arange(len(timeframes)))
+    ax.set_xticklabels(patterns)
+    ax.set_yticklabels(timeframes)
+    
+    plt.setp(ax.get_xticklabels(), rotation=45, ha="right", rotation_mode="anchor")
+    
+    ax.set_title(f"Pattern Signals Heatmap for {ticker}")
+    fig.tight_layout()
+    
+    if output_path:
+        plt.savefig(output_path)
+    plt.close()
+
+def plot_risk_management(risk_assessment: Dict[str, float], current_price: float, ticker: str, output_path: str = None):
+    fig, ax = plt.subplots(figsize=(10, 6))
+    
+    prices = [risk_assessment['stop_loss'], current_price, risk_assessment['take_profit']]
+    labels = ['Stop Loss', 'Current Price', 'Take Profit']
+    colors = ['red', 'blue', 'green']
+    
+    ax.bar(labels, prices, color=colors)
+    ax.set_title(f"Risk Management for {ticker}")
+    ax.set_ylabel("Price")
+    
+    for i, price in enumerate(prices):
+        ax.text(i, price, f'${price:.2f}', ha='center', va='bottom')
+    
+    plt.tight_layout()
+    if output_path:
+        plt.savefig(output_path)
+    plt.close()
+
+def visualize_risk_reward_ratio(risk_assessment: Dict[str, float], ticker: str, output_path: str = None):
+    risk = risk_assessment['risk_per_share']
+    reward = risk_assessment['take_profit'] - risk_assessment['stop_loss']
+    ratio = risk_assessment['risk_reward_ratio']
+    
+    fig, ax = plt.subplots(figsize=(8, 6))
+    
+    ax.bar(['Risk', 'Reward'], [risk, reward], color=['red', 'green'])
+    ax.set_title(f"Risk-Reward Ratio for {ticker}")
+    ax.set_ylabel("Amount")
+    
+    ax.text(0, risk/2, f'${risk:.2f}', ha='center', va='center', color='white')
+    ax.text(1, reward/2, f'${reward:.2f}', ha='center', va='center', color='white')
+    
+    plt.text(0.5, 1.05, f"Ratio: {ratio:.2f}", transform=ax.transAxes, ha='center')
+    
+    plt.tight_layout()
+    if output_path:
+        plt.savefig(output_path)
+    plt.close()
+
+def update_price_chart_with_risk_levels(price_data: pd.DataFrame, risk_assessment: Dict[str, float], current_price: float, ticker: str, output_path: str = None):
+    fig, ax = plt.subplots(figsize=(12, 6))
+    
+    ax.plot(price_data.index, price_data['close'], label='Close Price')
+    
+    ax.axhline(y=risk_assessment['stop_loss'], color='r', linestyle='--', label='Stop Loss')
+    ax.axhline(y=risk_assessment['take_profit'], color='g', linestyle='--', label='Take Profit')
+    ax.axhline(y=current_price, color='b', linestyle='-', label='Current Price')
+    
+    ax.set_title(f"{ticker} Price Chart with Risk Levels")
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Price")
+    ax.legend()
+    
+    plt.tight_layout()
+    if output_path:
+        plt.savefig(output_path)
+    plt.close()
