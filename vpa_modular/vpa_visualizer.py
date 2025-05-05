@@ -62,25 +62,35 @@ def plot_price_volume_chart(df: pd.DataFrame, ticker: str, timeframe: str, outpu
 def plot_pattern_analysis(df: pd.DataFrame, pattern_analysis: dict, ticker: str, timeframe: str, output_path: str = None):
     fig, ax = plt.subplots(figsize=(12, 6), dpi=100)
     
-    ax.plot(df.index, df['close'], label='Close Price', color='black', linewidth=1.2)
+    # Plot close price in blue for better visibility
+    ax.plot(df.index, df['close'], label='Close Price', color='blue', linewidth=1.2)
+    
+    # Define a color map for different patterns
+    color_map = {
+        'accumulation': 'green',
+        'distribution': 'red',
+        'testing': 'purple',
+        'other': 'orange'  # For any other patterns
+    }
     
     for pattern, data in pattern_analysis.items():
         if data.get('detected', False):
-            # If specific dates are not provided, use the last date in the DataFrame
-            pattern_date = df.index[-1]
-            ax.axvline(x=pattern_date, color='yellow', alpha=0.5, linestyle='--', label=pattern)
-            ax.text(pattern_date, df['close'].iloc[-1], pattern, rotation=90, verticalalignment='bottom')
+            color = color_map.get(pattern.lower(), color_map['other'])
+            # If specific dates are provided, use them; otherwise, use the last date
+            pattern_date = data.get('date', df.index[-1])
+            ax.axvline(x=pattern_date, color=color, alpha=0.5, linestyle='--', label=pattern)
+            ax.text(pattern_date, df['close'].max(), pattern, rotation=90, verticalalignment='top', color=color)
     
     ax.set_title(f"{ticker} - {timeframe.upper()} Pattern Analysis")
     ax.set_xlabel("Date")
     ax.set_ylabel("Price")
-    ax.legend(loc='upper left')
+    ax.legend(loc='upper left', bbox_to_anchor=(1.05, 1), borderaxespad=0.)
     ax.grid(True, linestyle='--', alpha=0.3)
     
     plt.tight_layout()
     
     if output_path:
-        plt.savefig(output_path)
+        plt.savefig(output_path, bbox_inches='tight')
         print(f"✅ Pattern analysis chart saved to {output_path}")
     else:
         plt.show()
@@ -211,13 +221,13 @@ def plot_multi_timeframe_trends(evidence: Dict[str, List], ticker: str, output_p
     trend_signals = evidence['trend_signals']
     timeframes = [signal['timeframe'] for signal in trend_signals]
     
-    fig, axs = plt.subplots(len(timeframes), 1, figsize=(10, 5*len(timeframes)))
+    fig, axs = plt.subplots(len(timeframes), 1, figsize=(10, 5*len(timeframes)), squeeze=False)
     
     for i, tf in enumerate(timeframes):
         signal = next(s for s in trend_signals if s['timeframe'] == tf)
-        axs[i].text(0.5, 0.5, signal['details'], ha='center', va='center', wrap=True)
-        axs[i].set_title(f"{tf} Trend")
-        axs[i].axis('off')
+        axs[i, 0].text(0.5, 0.5, signal['details'], ha='center', va='center', wrap=True)
+        axs[i, 0].set_title(f"{tf} Trend")
+        axs[i, 0].axis('off')
     
     plt.tight_layout()
     if output_path:
