@@ -14386,3 +14386,147 @@ Risk Assessment:
 2025-05-06 00:26:17,285 - VPA - INFO - Completed VPA analysis for JPM. Signal: BUY (MODERATE)
 2025-05-06 00:26:17,288 - VPA - INFO - Starting VPA analysis for BAC on timeframes: 
 2025-05-06 00:26:18,084 - VPA - INFO - Completed VPA analysis for BAC. Signal: BUY (MODERATE)
+2025-05-06 01:37:38,457 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 01:37:39,647 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-06 01:37:39,648 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-06 01:37:40,382 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-06 01:37:40,382 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-06 01:37:41,175 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-06 01:37:41,177 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 
+2025-05-06 01:37:41,974 - VPA - INFO - Completed VPA analysis for AMZN. Signal: BUY (MODERATE)
+2025-05-06 01:37:41,976 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-06 01:37:42,850 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-06 01:37:42,851 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-06 01:37:43,578 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-06 01:37:43,579 - VPA - INFO - Starting VPA analysis for META on timeframes: 
+2025-05-06 01:37:44,368 - VPA - INFO - Completed VPA analysis for META. Signal: BUY (MODERATE)
+2025-05-06 01:37:44,369 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-06 01:37:45,491 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-06 01:37:45,492 - VPA - INFO - Starting VPA analysis for AMD on timeframes: 
+2025-05-06 01:37:46,291 - VPA - INFO - Completed VPA analysis for AMD. Signal: BUY (MODERATE)
+2025-05-06 01:37:46,292 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-06 01:37:47,084 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-06 01:37:47,085 - VPA - INFO - Starting VPA analysis for JPM on timeframes: 
+2025-05-06 01:37:47,804 - VPA - INFO - Completed VPA analysis for JPM. Signal: BUY (MODERATE)
+2025-05-06 01:37:47,805 - VPA - INFO - Starting VPA analysis for BAC on timeframes: 
+2025-05-06 01:37:48,953 - VPA - INFO - Completed VPA analysis for BAC. Signal: BUY (MODERATE)
+2025-05-06 01:41:38,192 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 01:41:39,402 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-06 01:41:39,403 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-06 01:41:40,258 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-06 01:41:40,258 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-06 01:41:41,007 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-06 01:41:41,008 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 
+2025-05-06 01:41:41,730 - VPA - INFO - Completed VPA analysis for AMZN. Signal: BUY (MODERATE)
+2025-05-06 01:41:41,731 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-06 01:41:42,527 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-06 01:41:42,527 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-06 01:41:43,248 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-06 01:41:43,249 - VPA - INFO - Starting VPA analysis for META on timeframes: 
+2025-05-06 01:41:44,027 - VPA - INFO - Completed VPA analysis for META. Signal: BUY (MODERATE)
+2025-05-06 01:41:44,028 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-06 01:41:44,775 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-06 01:41:44,775 - VPA - INFO - Starting VPA analysis for AMD on timeframes: 
+2025-05-06 01:41:45,571 - VPA - INFO - Completed VPA analysis for AMD. Signal: BUY (MODERATE)
+2025-05-06 01:41:45,573 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-06 01:41:46,370 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-06 01:41:46,372 - VPA - INFO - Starting VPA analysis for JPM on timeframes: 
+2025-05-06 01:41:47,205 - VPA - INFO - Completed VPA analysis for JPM. Signal: BUY (MODERATE)
+2025-05-06 01:41:47,207 - VPA - INFO - Starting VPA analysis for BAC on timeframes: 
+2025-05-06 01:41:48,046 - VPA - INFO - Completed VPA analysis for BAC. Signal: BUY (MODERATE)
+2025-05-06 01:51:11,635 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 01:51:12,845 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-06 01:51:12,846 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-06 01:51:13,531 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-06 01:51:13,531 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-06 01:51:14,294 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-06 01:51:14,295 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 
+2025-05-06 01:51:15,037 - VPA - INFO - Completed VPA analysis for AMZN. Signal: BUY (MODERATE)
+2025-05-06 01:51:15,038 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-06 01:51:15,807 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-06 01:51:15,808 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-06 01:51:16,612 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-06 01:51:16,613 - VPA - INFO - Starting VPA analysis for META on timeframes: 
+2025-05-06 01:51:17,486 - VPA - INFO - Completed VPA analysis for META. Signal: BUY (MODERATE)
+2025-05-06 01:51:17,487 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-06 01:51:18,297 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-06 01:51:18,299 - VPA - INFO - Starting VPA analysis for AMD on timeframes: 
+2025-05-06 01:51:19,086 - VPA - INFO - Completed VPA analysis for AMD. Signal: BUY (MODERATE)
+2025-05-06 01:51:19,087 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-06 01:51:19,895 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-06 01:51:19,896 - VPA - INFO - Starting VPA analysis for JPM on timeframes: 
+2025-05-06 01:51:20,776 - VPA - INFO - Completed VPA analysis for JPM. Signal: BUY (MODERATE)
+2025-05-06 01:51:20,777 - VPA - INFO - Starting VPA analysis for BAC on timeframes: 
+2025-05-06 01:51:21,563 - VPA - INFO - Completed VPA analysis for BAC. Signal: BUY (MODERATE)
+2025-05-06 01:55:02,312 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 01:55:03,644 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-06 01:55:03,644 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-06 01:55:04,378 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-06 01:55:04,378 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-06 01:55:05,081 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-06 01:55:05,082 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 
+2025-05-06 01:55:05,800 - VPA - INFO - Completed VPA analysis for AMZN. Signal: BUY (MODERATE)
+2025-05-06 01:55:05,802 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-06 01:55:06,669 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-06 01:55:06,670 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-06 01:55:07,297 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-06 01:55:07,298 - VPA - INFO - Starting VPA analysis for META on timeframes: 
+2025-05-06 01:55:08,051 - VPA - INFO - Completed VPA analysis for META. Signal: BUY (MODERATE)
+2025-05-06 01:55:08,052 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-06 01:55:08,772 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-06 01:55:08,773 - VPA - INFO - Starting VPA analysis for AMD on timeframes: 
+2025-05-06 01:55:09,484 - VPA - INFO - Completed VPA analysis for AMD. Signal: BUY (MODERATE)
+2025-05-06 01:55:09,486 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-06 01:55:10,215 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-06 01:55:10,216 - VPA - INFO - Starting VPA analysis for JPM on timeframes: 
+2025-05-06 01:55:11,003 - VPA - INFO - Completed VPA analysis for JPM. Signal: BUY (MODERATE)
+2025-05-06 01:55:11,003 - VPA - INFO - Starting VPA analysis for BAC on timeframes: 
+2025-05-06 01:55:11,813 - VPA - INFO - Completed VPA analysis for BAC. Signal: BUY (MODERATE)
+2025-05-06 02:06:41,604 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 02:06:42,755 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-06 02:06:42,755 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-06 02:06:43,475 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-06 02:06:43,475 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-06 02:06:44,199 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-06 02:06:44,199 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 
+2025-05-06 02:06:44,921 - VPA - INFO - Completed VPA analysis for AMZN. Signal: BUY (MODERATE)
+2025-05-06 02:06:44,922 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-06 02:06:45,670 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-06 02:06:45,670 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-06 02:06:46,447 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-06 02:06:46,449 - VPA - INFO - Starting VPA analysis for META on timeframes: 
+2025-05-06 02:06:47,167 - VPA - INFO - Completed VPA analysis for META. Signal: BUY (MODERATE)
+2025-05-06 02:06:47,168 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-06 02:06:47,969 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-06 02:06:47,969 - VPA - INFO - Starting VPA analysis for AMD on timeframes: 
+2025-05-06 02:06:48,619 - VPA - INFO - Completed VPA analysis for AMD. Signal: BUY (MODERATE)
+2025-05-06 02:06:48,621 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-06 02:06:49,404 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-06 02:06:49,405 - VPA - INFO - Starting VPA analysis for JPM on timeframes: 
+2025-05-06 02:06:50,210 - VPA - INFO - Completed VPA analysis for JPM. Signal: BUY (MODERATE)
+2025-05-06 02:06:50,212 - VPA - INFO - Starting VPA analysis for BAC on timeframes: 
+2025-05-06 02:06:51,012 - VPA - INFO - Completed VPA analysis for BAC. Signal: BUY (MODERATE)
+2025-05-06 02:13:14,923 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 02:13:16,164 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-06 02:13:16,164 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-06 02:13:16,853 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-06 02:13:16,853 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-06 02:13:17,655 - VPA - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-06 02:13:17,656 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 
+2025-05-06 02:13:18,847 - VPA - INFO - Completed VPA analysis for AMZN. Signal: BUY (MODERATE)
+2025-05-06 02:13:18,848 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-06 02:13:19,634 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-06 02:13:19,635 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-06 02:13:20,314 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-06 02:13:20,315 - VPA - INFO - Starting VPA analysis for META on timeframes: 
+2025-05-06 02:13:21,076 - VPA - INFO - Completed VPA analysis for META. Signal: BUY (MODERATE)
+2025-05-06 02:13:21,077 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-06 02:13:21,872 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-06 02:13:21,873 - VPA - INFO - Starting VPA analysis for AMD on timeframes: 
+2025-05-06 02:13:22,596 - VPA - INFO - Completed VPA analysis for AMD. Signal: BUY (MODERATE)
+2025-05-06 02:13:22,597 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-06 02:13:23,402 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-06 02:13:23,404 - VPA - INFO - Starting VPA analysis for JPM on timeframes: 
+2025-05-06 02:13:24,202 - VPA - INFO - Completed VPA analysis for JPM. Signal: BUY (MODERATE)
+2025-05-06 02:13:24,203 - VPA - INFO - Starting VPA analysis for BAC on timeframes: 
+2025-05-06 02:13:24,997 - VPA - INFO - Completed VPA analysis for BAC. Signal: BUY (MODERATE)
