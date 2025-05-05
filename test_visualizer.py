@@ -85,8 +85,8 @@ def test_visualizer():
 
 
     # Create summary report and dashboard
-    create_summary_report(extractor, output_dir)
-    create_dashboard(extractor, output_dir)
+    create_summary_report(extractor, report_path="vpa_summary_report.txt")
+    create_dashboard(extractor, dashboard_path="vpa_dashboard.png")
 
     print("VPA analysis and visualization complete!")
 if __name__ == "__main__":
