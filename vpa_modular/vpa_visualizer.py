@@ -202,9 +202,17 @@ def create_summary_report(extractor, output_dir: str):
                 if pattern:
                     f.write("  🔍 Pattern Analysis:\n")
                     for pat_type, pat_data in pattern.items():
-                        f.write(f"    • {pat_type.capitalize()}:\n")
+                        f.write(f"    • {pat_type.replace('_', ' ').capitalize()}:\n")
                         for key, value in pat_data.items():
-                            f.write(f"        - {key.capitalize()}: {value}\n")
+                            if key.lower() == "tests" and isinstance(value, list):
+                                f.write(f"        - Tests:\n")
+                                for test in value:
+                                    test_type = test.get("type", "N/A")
+                                    index = test.get("index", "N/A")
+                                    price = test.get("price", "N/A")
+                                    f.write(f"            - Type: {test_type}, Time: {index}, Price: {price:.2f}\n")
+                            else:
+                                f.write(f"        - {key.replace('_', ' ').capitalize()}: {value}\n")
 
                 # Support and Resistance
                 sr = extractor.get_support_resistance(ticker, timeframe)

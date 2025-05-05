@@ -90,8 +90,10 @@ def extract_testing_signals(results: dict) -> dict:
 
         timeframes = ticker_data.get("timeframes", {})
         for tf, tf_data in timeframes.items():
-            pattern_analysis = tf_data.get("Pattern Analysis", {})
-            testing_section = pattern_analysis.get("Testing", {})
+            # Normalize all keys to lowercase for safety
+            pattern_analysis = {k.lower(): v for k, v in tf_data.get("pattern_analysis", {}).items()}
+            testing_section = pattern_analysis.get("testing", {})
+
 
             if testing_section.get("Detected") and isinstance(testing_section.get("Tests"), list):
                 testing_data[ticker][tf] = testing_section["Tests"]
