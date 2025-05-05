@@ -68,7 +68,6 @@ def plot_price_volume_chart(df: pd.DataFrame, ticker: str, timeframe: str, outpu
 
     plt.close()
 
-
 def plot_pattern_analysis(df: pd.DataFrame, pattern_analysis: dict, ticker: str, timeframe: str, output_dir: str = "charts", max_test_labels: int = 5):
     """
     Plots pattern analysis for a ticker on a specific timeframe.
