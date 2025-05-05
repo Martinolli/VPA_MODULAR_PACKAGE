@@ -400,22 +400,36 @@ def plot_risk_management(risk_assessment: Dict[str, float], current_price: float
         plt.savefig(output_path)
     plt.close()
 
-def visualize_risk_reward_ratio(risk_assessment: Dict[str, float], ticker: str, output_path: str = None):
-    risk = risk_assessment['risk_per_share']
-    reward = risk_assessment['take_profit'] - risk_assessment['stop_loss']
+def visualize_risk_reward_ratio(risk_assessment: Dict[str, float], current_price: float, ticker: str, output_path: str = None):
+    stop_loss = risk_assessment['stop_loss']
+    take_profit = risk_assessment['take_profit']
+    risk = current_price - stop_loss
+    reward = take_profit - current_price
     ratio = risk_assessment['risk_reward_ratio']
-    
+
     fig, ax = plt.subplots(figsize=(8, 6))
-    
-    ax.bar(['Risk', 'Reward'], [risk, reward], color=['red', 'green'])
-    ax.set_title(f"Risk-Reward Ratio for {ticker}")
-    ax.set_ylabel("Amount")
-    
-    ax.text(0, risk/2, f'${risk:.2f}', ha='center', va='center', color='white')
-    ax.text(1, reward/2, f'${reward:.2f}', ha='center', va='center', color='white')
-    
-    plt.text(0.5, 1.05, f"Ratio: {ratio:.2f}", transform=ax.transAxes, ha='center')
-    
+    ax.set_title(f"{ticker} - Risk-Reward Overview (Ratio: {ratio:.2f})")
+
+    # Plot risk area (red)
+    ax.barh(0, risk, left=stop_loss, color='red', edgecolor='black', height=0.4, label='Risk')
+
+    # Plot reward area (green)
+    ax.barh(0, reward, left=current_price, color='green', edgecolor='black', height=0.4, label='Reward')
+
+    # Draw vertical lines
+    ax.axvline(stop_loss, color='red', linestyle='--')
+    ax.axvline(current_price, color='blue', linestyle='--')
+    ax.axvline(take_profit, color='green', linestyle='--')
+
+    # Add text annotations
+    ax.text(stop_loss, 0.1, f"Stop\n${stop_loss:.2f}", color='black', ha='center', va='bottom', fontsize=9)
+    ax.text(current_price, 0.1, f"Current\n${current_price:.2f}", color='blue', ha='center', va='bottom', fontsize=9)
+    ax.text(take_profit, 0.1, f"Profit\n${take_profit:.2f}", color='black', ha='center', va='bottom', fontsize=9)
+
+    ax.set_yticks([])
+    ax.set_xlabel("Price")
+    ax.legend()
+
     plt.tight_layout()
     if output_path:
         plt.savefig(output_path)

@@ -24,7 +24,7 @@ import os
 def test_visualizer():
     # Initialize VPAFacade and perform analysis
     vpa = VPAFacade()
-    tickers = ["AAPL", "NFLX", "GOOGL", "AMZN", "MSFT", "TSLA"]
+    tickers = ["AAPL", "NFLX", "GOOGL", "AMZN", "MSFT", "TSLA", "META", "NVDA", "AMD", "INTC", "JPM", "BAC"]
     results = {}
 
     for ticker in tickers:
@@ -78,7 +78,8 @@ def test_visualizer():
         plot_multi_timeframe_trends(signal['evidence'], ticker, os.path.join(ticker_dir, f"{ticker}_multi_timeframe_trends.png"))
         create_pattern_signal_heatmap(signal['evidence'], ticker, os.path.join(ticker_dir, f"{ticker}_pattern_heatmap.png"))
         plot_risk_management(risk_assessment, current_price, ticker, os.path.join(ticker_dir, f"{ticker}_risk_management.png"))
-        visualize_risk_reward_ratio(risk_assessment, ticker, os.path.join(ticker_dir, f"{ticker}_risk_reward_ratio.png"))
+        current_price = extractor.get_current_price(ticker)
+        visualize_risk_reward_ratio(risk_assessment, current_price, ticker, os.path.join(ticker_dir, f"{ticker}_risk_reward_ratio.png"))
         update_price_chart_with_risk_levels(price_data, risk_assessment, current_price, ticker, os.path.join(ticker_dir, f"{ticker}_price_with_risk_levels.png"))
         plot_relative_volume(full_data, ticker, timeframe, os.path.join(ticker_dir, f"{ticker}_{timeframe}_relative_volume.png"))
 
