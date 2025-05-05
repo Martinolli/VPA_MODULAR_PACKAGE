@@ -68,3 +68,32 @@ class VPAResultExtractor:
     
     def get_current_price(self, ticker: str) -> float:
         return self.extracted_data.get(ticker, {}).get('current_price', 0.0)
+    
+def extract_testing_signals(results: dict) -> dict:
+    """
+    Extract 'Testing' pattern information for each ticker and timeframe.
+
+    Returns a dictionary like:
+    {
+        "AAPL": {
+            "1d": [ { "type": ..., "price": ..., "index": ... }, ... ],
+            "1h": [...],
+            ...
+        },
+        ...
+    }
+    """
+    testing_data = {}
+
+    for ticker, ticker_data in results.items():
+        testing_data[ticker] = {}
+
+        timeframes = ticker_data.get("timeframes", {})
+        for tf, tf_data in timeframes.items():
+            pattern_analysis = tf_data.get("Pattern Analysis", {})
+            testing_section = pattern_analysis.get("Testing", {})
+
+            if testing_section.get("Detected") and isinstance(testing_section.get("Tests"), list):
+                testing_data[ticker][tf] = testing_section["Tests"]
+
+    return testing_data

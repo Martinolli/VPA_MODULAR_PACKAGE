@@ -1,6 +1,7 @@
 # test_visualizer.py
 
 from vpa_modular.vpa_facade import VPAFacade
+from vpa_modular.vpa_result_extractor import extract_testing_signals
 from vpa_modular.vpa_result_extractor import VPAResultExtractor
 from vpa_modular.vpa_visualizer import (
     plot_price_volume_chart,
@@ -17,6 +18,7 @@ from vpa_modular.vpa_visualizer import (
 )
 import os
 
+
 def test_visualizer():
     # Initialize VPAFacade and perform analysis
     vpa = VPAFacade()
@@ -25,6 +27,14 @@ def test_visualizer():
 
     for ticker in tickers:
         results[ticker] = vpa.analyze_ticker(ticker)
+        print("\n--- Extracted Testing Patterns ---")
+        testing_patterns = extract_testing_signals(results)
+        for ticker, timeframes in testing_patterns.items():
+            print(f"Ticker: {ticker}")
+            for tf, tests in timeframes.items():
+                print(f"  Timeframe: {tf}")
+                for test in tests:
+                    print(f"    Test: {test}")
 
     # Extract results
     extractor = VPAResultExtractor(results)

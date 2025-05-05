@@ -138,80 +138,91 @@ def plot_support_resistance(df: pd.DataFrame, support_resistance: dict, ticker: 
     plt.close()
 
 def create_summary_report(extractor, output_dir: str):
+    import os
+
     os.makedirs(output_dir, exist_ok=True)
     report_path = os.path.join(output_dir, "vpa_summary_report.txt")
-    
-    with open(report_path, 'w') as f:
+
+    with open(report_path, 'w', encoding="utf-8") as f:
         for ticker in extractor.get_tickers():
-            f.write(f"Analysis for {ticker}:\n")
-            f.write(f"Current price: {extractor.get_ticker_data(ticker)['current_price']:.2f}\n\n")
+            f.write(f"{'=' * 60}\n")
+            f.write(f"📊 Analysis for {ticker}\n")
+            f.write(f"{'=' * 60}\n\n")
+            f.write(f"Current Price: {extractor.get_ticker_data(ticker)['current_price']:.2f}\n\n")
 
             # Signal
             signal = extractor.get_signal(ticker)
-            f.write("Signal:\n")
-            f.write(f"  Type: {signal.get('type', 'N/A')}\n")
-            f.write(f"  Strength: {signal.get('strength', 'N/A')}\n")
-            f.write(f"  Details: {signal.get('details', 'N/A')}\n\n")
+            f.write("🔔 Signal:\n")
+            f.write(f"  • Type: {signal.get('type', 'N/A')}\n")
+            f.write(f"  • Strength: {signal.get('strength', 'N/A')}\n")
+            f.write(f"  • Details: {signal.get('details', 'N/A')}\n\n")
 
             # Evidence
             evidence = signal.get('evidence', {})
-            f.write("Evidence:\n")
-            for evidence_type, items in evidence.items():
-                f.write(f"  {evidence_type.capitalize()}:\n")
-                for item in items:
-                    if isinstance(item, dict):
-                        for key, value in item.items():
-                            f.write(f"    {key}: {value}\n")
-                    else:
-                        f.write(f"    {item}\n")
+            if evidence:
+                f.write("📌 Evidence:\n")
+                for evidence_type, items in evidence.items():
+                    f.write(f"  • {evidence_type.capitalize()}:\n")
+                    for item in items:
+                        if isinstance(item, dict):
+                            for key, value in item.items():
+                                f.write(f"      - {key}: {value}\n")
+                        else:
+                            f.write(f"      - {item}\n")
                 f.write("\n")
 
             # Risk Assessment
             risk = extractor.get_risk_assessment(ticker)
-            f.write("Risk Assessment:\n")
-            for key, value in risk.items():
-                f.write(f"  {key.replace('_', ' ').capitalize()}: {value:.2f}\n")
-            f.write("\n")
+            if risk:
+                f.write("⚠️ Risk Assessment:\n")
+                for key, value in risk.items():
+                    f.write(f"  • {key.replace('_', ' ').capitalize()}: {value:.2f}\n")
+                f.write("\n")
 
-            # Timeframe Analysis
+            # Timeframe-Specific Analysis
             for timeframe in extractor.get_timeframes(ticker):
-                f.write(f"Timeframe: {timeframe}\n")
-                
+                f.write(f"⏱️ Timeframe: {timeframe}\n")
+
                 # Candle Analysis
                 candle = extractor.get_candle_analysis(ticker, timeframe)
-                f.write("  Candle Analysis:\n")
-                for key, value in candle.items():
-                    f.write(f"    {key.replace('_', ' ').capitalize()}: {value}\n")
-                f.write("\n")
-                
+                if candle:
+                    f.write("  🕯️ Candle Analysis:\n")
+                    for key, value in candle.items():
+                        f.write(f"    • {key.replace('_', ' ').capitalize()}: {value}\n")
+
                 # Trend Analysis
                 trend = extractor.get_trend_analysis(ticker, timeframe)
-                f.write("  Trend Analysis:\n")
-                for key, value in trend.items():
-                    f.write(f"    {key.replace('_', ' ').capitalize()}: {value}\n")
-                f.write("\n")
-                
+                if trend:
+                    f.write("  📈 Trend Analysis:\n")
+                    for key, value in trend.items():
+                        f.write(f"    • {key.replace('_', ' ').capitalize()}: {value}\n")
+
                 # Pattern Analysis
                 pattern = extractor.get_pattern_analysis(ticker, timeframe)
-                f.write("  Pattern Analysis:\n")
-                for pat_type, pat_data in pattern.items():
-                    f.write(f"    {pat_type.capitalize()}:\n")
-                    for key, value in pat_data.items():
-                        f.write(f"      {key.capitalize()}: {value}\n")
-                f.write("\n")
-                
+                if pattern:
+                    f.write("  🔍 Pattern Analysis:\n")
+                    for pat_type, pat_data in pattern.items():
+                        f.write(f"    • {pat_type.capitalize()}:\n")
+                        for key, value in pat_data.items():
+                            f.write(f"        - {key.capitalize()}: {value}\n")
+
                 # Support and Resistance
                 sr = extractor.get_support_resistance(ticker, timeframe)
-                f.write("  Support and Resistance:\n")
-                for sr_type in ['support', 'resistance']:
-                    f.write(f"    {sr_type.capitalize()}:\n")
-                    for level in sr.get(sr_type, []):
-                        f.write(f"      Price: {level['price']:.2f}, Strength: {level['strength']:.1f}, Tests: {level.get('tests', 'N/A')}\n")
-                f.write("\n")
+                if sr:
+                    f.write("  📉 Support and Resistance:\n")
+                    for sr_type in ['support', 'resistance']:
+                        levels = sr.get(sr_type, [])
+                        if levels:
+                            f.write(f"    • {sr_type.capitalize()} Levels:\n")
+                            for level in levels:
+                                f.write(f"        - Price: {level['price']:.2f}, Strength: {level['strength']:.1f}, Tests: {level.get('tests', 'N/A')}\n")
 
-            f.write("\n")
+                f.write("\n")  # Space between timeframes
+
+            f.write("\n\n")  # Space between tickers
 
     print(f"✅ Summary report saved to {report_path}")
+
 
 def create_dashboard(extractor, output_dir: str):
     os.makedirs(output_dir, exist_ok=True)
