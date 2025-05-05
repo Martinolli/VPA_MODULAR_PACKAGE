@@ -1,5 +1,5 @@
 # test_visualizer.py
-
+import pandas as pd
 from vpa_modular.vpa_facade import VPAFacade
 from vpa_modular.vpa_result_extractor import extract_testing_signals
 from vpa_modular.vpa_result_extractor import VPAResultExtractor
@@ -50,11 +50,14 @@ def test_visualizer():
 
         for timeframe in extractor.get_timeframes(ticker):
             price_data = extractor.get_price_data(ticker, timeframe)
+            volume_data = extractor.get_volume_data(ticker, timeframe)  # ✅ Get volume
+            full_data = pd.concat([price_data, volume_data], axis=1)    # ✅ Merge them
+
             pattern_analysis = extractor.get_pattern_analysis(ticker, timeframe)
             support_resistance = extractor.get_support_resistance(ticker, timeframe)
 
             # Test existing visualizations
-            plot_price_volume_chart(price_data, ticker, timeframe, os.path.join(ticker_dir, f"{ticker}_{timeframe}_price_volume.png"))
+            plot_price_volume_chart(full_data, ticker, timeframe, os.path.join(ticker_dir, f"{ticker}_{timeframe}_price_volume.png"))
             plot_pattern_analysis(price_data, pattern_analysis, ticker, timeframe, os.path.join(ticker_dir, f"{ticker}_{timeframe}_patterns.png"))
             plot_support_resistance(price_data, support_resistance, ticker, timeframe, os.path.join(ticker_dir, f"{ticker}_{timeframe}_support_resistance.png"))
 

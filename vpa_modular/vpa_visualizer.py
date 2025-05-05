@@ -11,122 +11,155 @@ from matplotlib.patches import Rectangle
 from matplotlib.collections import PatchCollection
 from typing import Dict, List, Any
 
+import matplotlib.pyplot as plt
+import pandas as pd
+
 def plot_price_volume_chart(df: pd.DataFrame, ticker: str, timeframe: str, output_path: str = None):
     """
-    Plot candlestick chart with volume for a specific ticker and timeframe.
-
-    Args:
-        df (pd.DataFrame): DataFrame with 'open', 'high', 'low', 'close', and optionally 'volume'
-        ticker (str): Stock symbol
-        timeframe (str): Timeframe label (e.g., '1d', '1h', '15m')
-        output_path (str, optional): Path to save the figure. If None, just show.
+    Plot close price and volume as two separate subplots, renaming volume column if needed.
     """
-    fig, ax_price = plt.subplots(figsize=(12, 6), dpi=100)
+    print("Columns in df:", df.columns.tolist())
 
-    df = df.copy()
-    df.index = pd.to_datetime(df.index)
+    # Step 1: Try to detect and rename volume column if needed
+    if 'volume' not in df.columns:
+        volume_cols = [col for col in df.columns if col.startswith("volume")]
+        if volume_cols:
+            df = df.rename(columns={volume_cols[0]: 'volume'})
+            print(f"🔁 Renamed column '{volume_cols[0]}' to 'volume'")
+        else:
+            print(f"⚠️ No recognizable volume column found for {ticker} - {timeframe}. Skipping volume plot.")
+            return
 
-    # Price plot (candlestick-like using line + vertical bars)
-    ax_price.plot(df.index, df['close'], label='Close Price', color='black', linewidth=1.2)
-    ax_price.vlines(df.index, df['low'], df['high'], color='gray', linewidth=0.5, alpha=0.7)
+    # Step 2: Ensure timezone-naive datetime index
+    if isinstance(df.index, pd.DatetimeIndex) and df.index.tz:
+        df = df.copy()
+        df.index = df.index.tz_localize(None)
 
-    # Volume plot (if volume data is available)
-    if 'volume' in df.columns:
-        ax_volume = ax_price.twinx()
-        ax_volume.bar(df.index, df['volume'], width=0.005, color='blue', alpha=0.2, label='Volume')
-        ax_volume.set_ylim(0, df['volume'].max() * 4)
-        ax_volume.set_ylabel("Volume")
-        ax_volume.legend(loc='upper right')
+    df['volume_avg'] = df['volume'].rolling(window=5, min_periods=1).mean()
 
-    # Formatting
-    ax_price.set_title(f"{ticker} - {timeframe.upper()} Price" + (" + Volume" if 'volume' in df.columns else ""))
+    fig, (ax_price, ax_volume) = plt.subplots(
+        2, 1, figsize=(12, 8), dpi=100, sharex=True,
+        gridspec_kw={'height_ratios': [2, 1]}
+    )
+
+    # --- Price plot ---
+    ax_price.plot(df.index, df['close'], color='black', linewidth=1.5, label='Close Price')
     ax_price.set_ylabel("Price")
+    ax_price.set_title(f"{ticker} - {timeframe.upper()} Price and Volume")
     ax_price.grid(True, linestyle='--', alpha=0.3)
-
-    ax_price.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-    ax_price.xaxis.set_major_locator(mticker.MaxNLocator(10))
-    fig.autofmt_xdate()
-
     ax_price.legend(loc='upper left')
+
+    # --- Volume plot ---
+    bar_width = max(0.3, 100 / len(df))  # dynamic width
+    ax_volume.bar(df.index, df['volume'], width=bar_width, color='skyblue', alpha=0.6, label='Volume')
+    ax_volume.plot(df.index, df['volume_avg'], color='orange', linestyle='--', linewidth=1, label='Avg Volume')
+    ax_volume.set_ylabel("Volume")
+    ax_volume.grid(True, linestyle='--', alpha=0.3)
+    ax_volume.legend(loc='upper left')
+    ax_volume.tick_params(axis='x', rotation=45)
 
     plt.tight_layout()
 
     if output_path:
         plt.savefig(output_path)
-        print(f"✅ Chart saved to {output_path}")
+        print(f"✅ Price and volume chart saved to {output_path}")
     else:
         plt.show()
 
     plt.close()
 
-def plot_pattern_analysis(df: pd.DataFrame, pattern_analysis: dict, ticker: str, timeframe: str, output_path: str = None):
+
+def plot_pattern_analysis(df: pd.DataFrame, pattern_analysis: dict, ticker: str, timeframe: str, output_dir: str = "charts", max_test_labels: int = 5):
+    """
+    Plots pattern analysis for a ticker on a specific timeframe.
+    
+    Parameters:
+    - df: Price DataFrame with datetime index and 'close' column.
+    - pattern_analysis: Dict with pattern analysis data.
+    - ticker: Ticker symbol.
+    - timeframe: Timeframe string (e.g., "1d", "1h").
+    - output_dir: Folder to save the chart.
+    - max_test_labels: Max number of test labels to display for clarity.
+    """
+
+    import os
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = f"{output_dir}/{ticker}_{timeframe}_pattern_analysis.png"
+
     fig, ax = plt.subplots(figsize=(12, 6), dpi=100)
-    
-    # Plot close price in blue for better visibility
     ax.plot(df.index, df['close'], label='Close Price', color='blue', linewidth=1.2)
-    
-    # Define a color map for different patterns
+
+    # Pattern colors and markers
     color_map = {
-        'accumulation': 'green',
-        'distribution': 'red',
-        'testing': 'purple',
-        'other': 'orange'  # For any other patterns
+        'accumulation': ('green', 'o'),
+        'distribution': ('red', '^'),
+        'testing': ('purple', 's'),
+        'other': ('orange', 'x'),
     }
-    
-    # Create a list to store legend handles
+
     legend_elements = [plt.Line2D([0], [0], color='blue', lw=2, label='Close Price')]
-    
+
     for pattern, data in pattern_analysis.items():
-        if data.get('detected', False):
-            color = color_map.get(pattern.lower(), color_map['other'])
-            # If specific dates are provided, use them; otherwise, use the last date
-            pattern_date = data.get('date', df.index[-1])
-            pattern_price = data.get('price', df['close'].iloc[-1])  # Use provided price or last close price
-            ax.hlines(y=pattern_price, xmin=df.index[0], xmax=df.index[-1], color=color, alpha=0.5, linestyle='--')
-            ax.text(df.index[-1], pattern_price, pattern, horizontalalignment='right', verticalalignment='center', color=color)
-            
-            # Add a horizontal line to the legend
-            legend_elements.append(plt.Line2D([0], [0], color=color, lw=2, label=pattern))
-    
+        if not data.get('detected', False):
+            continue
+
+        color, marker = color_map.get(pattern.lower(), color_map['other'])
+
+        if pattern == 'testing' and 'tests' in data:
+            test_points = data['tests'][-max_test_labels:]  # Limit to recent tests
+            for test in test_points:
+                idx = pd.to_datetime(test["index"])
+                price = test["price"]
+                test_type = test["type"]
+                vertical_align = "top" if "RESISTANCE" in test_type else "bottom"
+                ax.scatter(idx, price, color=color, marker=marker, s=60, label=None)
+                ax.text(idx, price, test_type, fontsize=8, color=color, va=vertical_align, ha='right')
+            legend_elements.append(plt.Line2D([0], [0], color=color, marker=marker, linestyle='', label='testing'))
+
+        elif 'date' in data and 'price' in data:
+            idx = pd.to_datetime(data['date'])
+            price = data['price']
+            ax.scatter(idx, price, color=color, marker=marker, s=60)
+            ax.text(idx, price, pattern, fontsize=8, color=color, va='center', ha='right')
+            legend_elements.append(plt.Line2D([0], [0], color=color, marker=marker, linestyle='', label=pattern))
+
     ax.set_title(f"{ticker} - {timeframe.upper()} Pattern Analysis")
     ax.set_xlabel("Date")
     ax.set_ylabel("Price")
-    ax.legend(handles=legend_elements, loc='upper left', bbox_to_anchor=(1.05, 1), borderaxespad=0.)
-    ax.grid(True, linestyle='--', alpha=0.3)
-    
+    ax.legend(handles=legend_elements, loc='upper left', bbox_to_anchor=(1.01, 1), borderaxespad=0.)
+    ax.grid(True, linestyle='--', linewidth=0.5, alpha=0.7)
+
     plt.tight_layout()
-    
-    if output_path:
-        plt.savefig(output_path, bbox_inches='tight')
-        print(f"✅ Pattern analysis chart saved to {output_path}")
-    else:
-        plt.show()
-    
+    plt.savefig(output_path, bbox_inches='tight')
+    print(f"✅ Pattern analysis chart saved to {output_path}")
     plt.close()
+
 
 def plot_support_resistance(df: pd.DataFrame, support_resistance: dict, ticker: str, timeframe: str, output_path: str = None):
     fig, ax = plt.subplots(figsize=(12, 6), dpi=100)
     
     ax.plot(df.index, df['close'], label='Close Price', color='black', linewidth=1.2)
     
-    if isinstance(support_resistance, dict):
-        support_levels = support_resistance.get('support_levels', {})
-        resistance_levels = support_resistance.get('resistance_levels', {})
-        
-        for level, value in support_levels.items():
-            ax.axhline(y=value, color='green', linestyle='--', alpha=0.7, label=f'Support {level}')
-        
-        for level, value in resistance_levels.items():
-            ax.axhline(y=value, color='red', linestyle='--', alpha=0.7, label=f'Resistance {level}')
-    else:
-        print(f"Warning: Unexpected support_resistance format for {ticker} - {timeframe}")
+    # Plot support levels
+    for level in support_resistance.get('support', []):
+        price = float(level.get('price', 0))
+        ax.axhline(y=price, color='green', linestyle='--', alpha=0.7, label='Support')
+
+    # Plot resistance levels
+    for level in support_resistance.get('resistance', []):
+        price = float(level.get('price', 0))
+        ax.axhline(y=price, color='red', linestyle='--', alpha=0.7, label='Resistance')
     
     ax.set_title(f"{ticker} - {timeframe.upper()} Support and Resistance Levels")
     ax.set_xlabel("Date")
     ax.set_ylabel("Price")
-    ax.legend(loc='upper left')
-    ax.grid(True, linestyle='--', alpha=0.3)
     
+    # Avoid legend duplication
+    handles, labels = ax.get_legend_handles_labels()
+    by_label = dict(zip(labels, handles))
+    ax.legend(by_label.values(), by_label.keys(), loc='upper left')
+    
+    ax.grid(True, linestyle='--', alpha=0.3)
     plt.tight_layout()
     
     if output_path:
@@ -136,6 +169,7 @@ def plot_support_resistance(df: pd.DataFrame, support_resistance: dict, ticker: 
         plt.show()
     
     plt.close()
+
 
 def create_summary_report(extractor, output_dir: str):
     import os
