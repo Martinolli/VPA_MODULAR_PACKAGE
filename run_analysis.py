@@ -5,8 +5,7 @@ import json
 from vpa_modular.vpa_result_extractor import VPAResultExtractor
 from vpa_modular.vpa_visualizer import generate_all_visualizations, create_summary_report, create_dashboard
 from vpa_modular.vpa_facade import VPAFacade
-from vpa_modular.vpa_result_extractor import extract_testing_signals
-from vpa_modular.vpa_result_extractor import VPAResultExtractor
+from vpa_modular.vpa_result_extractor import VPAResultExtractor, extract_testing_signals
 
 def main():
     print("📥 Loading VPA analysis results...")
