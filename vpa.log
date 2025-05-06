@@ -14609,3 +14609,21 @@ Risk Assessment:
 2025-05-06 21:06:28,239 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
 2025-05-06 21:06:28,239 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
 2025-05-06 21:06:28,239 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-06 22:22:28,330 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 22:22:37,143 - VPA - ERROR - Facade test failed: Could not fetch data for any timeframe for AAPL
+2025-05-06 22:22:37,143 - VPA - INFO - Testing VPA LLM interface module
+2025-05-06 22:22:37,144 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 22:22:37,144 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 22:22:47,175 - VPA - ERROR - LLM interface test failed: Missing current_price in analysis
+2025-05-06 22:22:47,175 - VPA - ERROR - LLM interface test failed: Missing current_price in analysis
+2025-05-06 22:22:47,176 - VPA - INFO - Testing VPA utils module
+2025-05-06 22:22:47,176 - VPA - INFO - Testing VPA utils module
+2025-05-06 22:22:47,177 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 22:22:47,177 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 22:22:47,177 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 22:22:56,300 - VPA - ERROR - Utils test failed: Could not fetch data for any timeframe for AAPL
+2025-05-06 22:22:56,300 - VPA - ERROR - Utils test failed: Could not fetch data for any timeframe for AAPL
+2025-05-06 22:22:56,300 - VPA - ERROR - Utils test failed: Could not fetch data for any timeframe for AAPL
+2025-05-06 22:22:56,302 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-06 22:22:56,302 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-06 22:22:56,302 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
