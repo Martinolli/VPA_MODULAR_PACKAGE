@@ -96,7 +96,8 @@ default_config = {
     "trend": {
         "lookback_period": 5,
         "price_change_threshold": 0.01,
-        "volume_change_threshold": 0.05
+        "volume_change_threshold": 0.05,
+        "min_trend_length": 3
     },
     "pattern": {
         "accumulation": {
@@ -121,6 +122,7 @@ default_config = {
         }
     },
     "signal": {
+        "strong_signal_threshold": 0.8,
         "bullish_confirmation_threshold": 1,
         "bearish_confirmation_threshold": 1,
         "bullish_candles_threshold": 2,
@@ -129,7 +131,9 @@ default_config = {
     "risk": {
         "default_stop_loss_percent": 0.02,
         "default_take_profit_percent": 0.05,
-        "support_resistance_buffer": 0.005
+        "support_resistance_buffer": 0.005,
+        "default_risk_percent": 0.01,
+        "default_risk_reward": 2.0
     },
     "timeframes": [
         {"interval": "1d", "period": "1y"},

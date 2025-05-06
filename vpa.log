@@ -14543,3 +14543,49 @@ Risk Assessment:
 2025-05-06 18:01:19,143 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
 2025-05-06 18:01:19,143 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
 2025-05-06 18:07:54,451 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 18:18:06,114 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 18:32:44,234 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 18:50:29,230 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 19:05:07,685 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 19:05:53,272 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-06 19:58:15,768 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 20:02:45,309 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 20:04:28,996 - VPA - INFO - Starting VPA analysis...
+2025-05-06 20:04:28,996 - VPA - INFO - Starting VPA analysis...
+2025-05-06 20:04:28,998 - VPA - INFO - Tickers to analyze:
+2025-05-06 20:04:28,998 - VPA - INFO - Tickers to analyze:
+2025-05-06 20:04:28,998 - VPA - INFO - Starting VPA analysis...
+2025-05-06 20:04:28,998 - VPA - INFO - Starting VPA analysis...
+2025-05-06 20:04:28,998 - VPA - INFO - Analyzing NVDA...
+2025-05-06 20:04:28,998 - VPA - INFO - Analyzing NVDA...
+2025-05-06 20:04:28,998 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-06 20:04:28,998 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-06 20:05:14,879 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 20:10:07,848 - VPA - INFO - Starting VPA analysis...
+2025-05-06 20:10:07,848 - VPA - INFO - Starting VPA analysis...
+2025-05-06 20:10:07,848 - VPA - INFO - Tickers to analyze:
+2025-05-06 20:10:07,848 - VPA - INFO - Tickers to analyze:
+2025-05-06 20:10:07,848 - VPA - INFO - Starting VPA analysis...
+2025-05-06 20:10:07,848 - VPA - INFO - Starting VPA analysis...
+2025-05-06 20:10:07,849 - VPA - INFO - Analyzing NVDA...
+2025-05-06 20:10:07,849 - VPA - INFO - Analyzing NVDA...
+2025-05-06 20:10:07,849 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-06 20:10:07,849 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-06 20:29:21,132 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 20:29:30,819 - VPA - ERROR - Facade test failed: Could not fetch data for any timeframe for AAPL
+2025-05-06 20:29:30,820 - VPA - INFO - Testing VPA LLM interface module
+2025-05-06 20:29:30,820 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 20:29:30,820 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 20:29:40,415 - VPA - ERROR - LLM interface test failed: Missing current_price in analysis
+2025-05-06 20:29:40,415 - VPA - ERROR - LLM interface test failed: Missing current_price in analysis
+2025-05-06 20:29:40,415 - VPA - INFO - Testing VPA utils module
+2025-05-06 20:29:40,415 - VPA - INFO - Testing VPA utils module
+2025-05-06 20:29:40,415 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 20:29:40,415 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 20:29:40,415 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-06 20:29:50,737 - VPA - ERROR - Utils test failed: Could not fetch data for any timeframe for AAPL
+2025-05-06 20:29:50,737 - VPA - ERROR - Utils test failed: Could not fetch data for any timeframe for AAPL
+2025-05-06 20:29:50,737 - VPA - ERROR - Utils test failed: Could not fetch data for any timeframe for AAPL
+2025-05-06 20:29:50,740 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-06 20:29:50,740 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-06 20:29:50,740 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
