@@ -1,8 +1,28 @@
-from vpa_modular.vpa_processor import DataProcessor
-from vpa_modular.vpa_config import VPAConfig
-from vpa_modular.vpa_facade import VPAFacade
-from vpa_modular.vpa_logger import VPALogger
-from vpa_modular.vpa_llm_interface import VPALLMInterface
+import os
+import sys
+
+# Print Python path and current working directory
+print("Python Path:")
+for path in sys.path:
+    print(path)
+print("\nCurrent Working Directory:", os.getcwd())
+
+# Append the project root to the Python path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(project_root)
+print("\nAppended to Python Path:", project_root)
+
+
+try:
+    from vpa_modular.vpa_processor import DataProcessor
+    from vpa_modular.vpa_config import VPAConfig
+    from vpa_modular.vpa_facade import VPAFacade
+    from vpa_modular.vpa_logger import VPALogger
+    from vpa_modular.vpa_llm_interface import VPALLMInterface
+    print("\nSuccessfully imported vpa_modular modules")
+except ImportError as e:
+    print(f"\nFailed to import: {e}")
+    sys.exit(1)
 
 # Initialize the logger
 logger = VPALogger(log_level="INFO", log_file="logs/vpa.log")

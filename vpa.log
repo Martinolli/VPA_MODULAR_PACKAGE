@@ -14589,3 +14589,5 @@ Risk Assessment:
 2025-05-06 20:29:50,740 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
 2025-05-06 20:29:50,740 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
 2025-05-06 20:29:50,740 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-06 20:45:19,564 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-06 20:45:19,564 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
