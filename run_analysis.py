@@ -1,4 +1,12 @@
-# run_analysis.py
+#--------------------------------------------------------------------------------------------------------------
+# Date: 2025-05-01
+# This script is designed to run the VPA analysis and generate visualizations and reports.
+# It uses the VPAFacade to analyze multiple tickers and the VPAResultExtractor to extract and visualize results.
+# To run analysis: "python run_analysis.py"
+#--------------------------------------------------------------------------------------------------------------
+# Import necessary libraries and modules
+
+#--------------------------------------------------- Importing Libraries ---------------------------------------
 
 import os
 import json
@@ -7,13 +15,13 @@ from vpa_modular.vpa_visualizer import generate_all_visualizations, create_summa
 from vpa_modular.vpa_facade import VPAFacade
 from vpa_modular.vpa_result_extractor import VPAResultExtractor, extract_testing_signals
 
+#--------------------------------------------------- Main Function ---------------------------------------------
 def main():
     print("📥 Loading VPA analysis results...")
     with open("vpa_analysis_results.json", "r") as f:
         results = json.load(f)
     
-    # Initialize VPAFacade and perform analysis
-    vpa = VPAFacade()
+    vpa = VPAFacade() # Initialize the VPAFacade
     tickers = ["AAPL", "NFLX", "GOOGL", "AMZN", "MSFT", "TSLA", "META", "NVDA", "AMD", "INTC", "JPM", "BAC"]
     results = {}
 
@@ -28,10 +36,10 @@ def main():
                 for test in tests:
                     print(f"    Test: {test}")
 
-    extractor = VPAResultExtractor(results)
+    extractor = VPAResultExtractor(results) # Initialize the extractor with the results
 
     print("📊 Generating visualizations...")
-    generate_all_visualizations(results, output_dir="vpa_analysis_output")
+    generate_all_visualizations(results, output_dir="vpa_analysis_output") 
 
     print("📝 Creating summary report...")
     create_summary_report(extractor, output_dir=".")  # Changed to root directory
