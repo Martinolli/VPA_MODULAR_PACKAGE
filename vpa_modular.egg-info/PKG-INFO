@@ -1,8 +1,9 @@
 Metadata-Version: 2.4
 Name: vpa_modular
 Version: 1.0.0
-Requires-Dist: pandas
-Requires-Dist: numpy
-Requires-Dist: matplotlib
-Requires-Dist: yfinance
+Requires-Dist:
+  - pandas
+  - numpy
+  - matplotlib
+  - yfinance
 Dynamic: requires-dist
