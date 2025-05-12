@@ -14892,3 +14892,153 @@ Risk Assessment:
 2025-05-12 22:57:22,799 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
 2025-05-12 22:57:28,309 - VPA - ERROR - No data fetched for MSFT across specified timeframes. Aborting analysis.
 2025-05-12 22:57:28,309 - VPA - ERROR - No data fetched for MSFT across specified timeframes. Aborting analysis.
+2025-05-12 23:00:40,892 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:00:43,050 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:00:43,050 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:00:46,171 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:00:46,172 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:00:51,592 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 23:00:51,593 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:00:57,004 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 23:00:57,005 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-12 23:01:01,681 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-12 23:01:01,681 - VPA - INFO - VPA facade module test passed
+2025-05-12 23:01:01,683 - VPA - INFO - Testing VPA LLM interface module
+2025-05-12 23:01:01,684 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:01:01,684 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:01:04,421 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:01:04,421 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:01:04,421 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:01:04,421 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:01:09,796 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 23:01:09,796 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 23:01:09,797 - VPA - INFO - VPA LLM interface module test passed
+2025-05-12 23:01:09,797 - VPA - INFO - VPA LLM interface module test passed
+2025-05-12 23:01:09,800 - VPA - INFO - Testing VPA utils module
+2025-05-12 23:01:09,800 - VPA - INFO - Testing VPA utils module
+2025-05-12 23:01:09,801 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:01:09,801 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:01:09,801 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:01:15,972 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 23:01:15,972 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 23:01:15,972 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 23:01:15,973 - VPA - ERROR - Utils test failed: list index out of range
+2025-05-12 23:01:15,973 - VPA - ERROR - Utils test failed: list index out of range
+2025-05-12 23:01:15,973 - VPA - ERROR - Utils test failed: list index out of range
+2025-05-12 23:01:15,978 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-12 23:01:15,978 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-12 23:01:15,978 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-12 23:06:06,080 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-12 23:06:08,342 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-12 23:08:46,931 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-12 23:08:49,572 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-12 23:08:49,573 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:08:50,820 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:08:50,820 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 23:08:52,590 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 23:11:05,753 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-12 23:11:08,032 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-12 23:11:08,033 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:11:09,329 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:11:09,329 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 23:11:10,688 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 23:11:10,689 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-12 23:11:12,466 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-12 23:11:12,467 - VPA - INFO - Starting VPA analysis for LCID on timeframes: 
+2025-05-12 23:11:13,504 - VPA - INFO - Completed VPA analysis for LCID. Signal: BUY (MODERATE)
+2025-05-12 23:11:13,504 - VPA - INFO - Starting VPA analysis for SOUN on timeframes: 
+2025-05-12 23:11:14,597 - VPA - INFO - Completed VPA analysis for SOUN. Signal: BUY (MODERATE)
+2025-05-12 23:11:14,599 - VPA - INFO - Starting VPA analysis for QBTS on timeframes: 
+2025-05-12 23:11:15,686 - VPA - INFO - Completed VPA analysis for QBTS. Signal: BUY (MODERATE)
+2025-05-12 23:11:15,688 - VPA - INFO - Starting VPA analysis for SOFI on timeframes: 
+2025-05-12 23:11:16,748 - VPA - INFO - Completed VPA analysis for SOFI. Signal: BUY (MODERATE)
+2025-05-12 23:14:19,959 - VPA - INFO - Starting VPA analysis...
+2025-05-12 23:14:19,959 - VPA - INFO - Starting VPA analysis...
+2025-05-12 23:14:19,959 - VPA - INFO - Tickers to analyze:
+2025-05-12 23:14:19,959 - VPA - INFO - Tickers to analyze:
+2025-05-12 23:14:19,959 - VPA - INFO - Starting VPA analysis...
+2025-05-12 23:14:19,959 - VPA - INFO - Starting VPA analysis...
+2025-05-12 23:14:19,960 - VPA - INFO - Analyzing NVDA...
+2025-05-12 23:14:19,960 - VPA - INFO - Analyzing NVDA...
+2025-05-12 23:14:19,960 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 23:14:19,960 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 23:14:22,524 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 23:14:22,524 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 23:14:26,261 - VPA - INFO - Report files created: {'price_chart': 'vpa_reports\\NVDA_price_chart_2025-05-12_23-14-22.png', 'multi_timeframe': 'vpa_reports\\NVDA_multi_timeframe_2025-05-12_23-14-22.png', 'patterns': 'vpa_reports\\NVDA_patterns_2025-05-12_23-14-22.png', 'text_report': 'vpa_reports\\NVDA_vpa_report_2025-05-12_23-14-22.txt'}
+2025-05-12 23:14:26,261 - VPA - INFO - Report files created: {'price_chart': 'vpa_reports\\NVDA_price_chart_2025-05-12_23-14-22.png', 'multi_timeframe': 'vpa_reports\\NVDA_multi_timeframe_2025-05-12_23-14-22.png', 'patterns': 'vpa_reports\\NVDA_patterns_2025-05-12_23-14-22.png', 'text_report': 'vpa_reports\\NVDA_vpa_report_2025-05-12_23-14-22.txt'}
+2025-05-12 23:14:26,289 - VPA - INFO - Results saved to vpa_analysis_results.json
+2025-05-12 23:14:26,289 - VPA - INFO - Results saved to vpa_analysis_results.json
+2025-05-12 23:14:26,289 - VPA - INFO - NL Analysis:
+2025-05-12 23:14:26,289 - VPA - INFO - NL Analysis:
+2025-05-12 23:14:26,290 - VPA - INFO - Analyzing NVDA...
+2025-05-12 23:14:26,290 - VPA - INFO - Analyzing NVDA...
+2025-05-12 23:14:26,290 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 23:14:26,290 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 23:14:28,750 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 23:14:28,750 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 23:14:28,750 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 23:14:28,750 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 23:14:30,105 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 23:14:30,105 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 23:14:30,106 - VPA - INFO - ticker: NVDA
+2025-05-12 23:14:30,106 - VPA - INFO - ticker: NVDA
+2025-05-12 23:14:30,106 - VPA - INFO - error: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-12 23:14:30,106 - VPA - INFO - error: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-12 23:14:30,107 - VPA - INFO - explanation: Unable to analyze NVDA: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-12 23:14:30,107 - VPA - INFO - explanation: Unable to analyze NVDA: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-12 23:14:30,107 - VPA - INFO - 
+
+2025-05-12 23:14:30,107 - VPA - INFO - 
+
+2025-05-12 23:14:30,107 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 23:14:30,107 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 23:14:30,108 - VPA - INFO - Results saved to vpa_nl_analysis_results.json
+2025-05-12 23:14:30,108 - VPA - INFO - Results saved to vpa_nl_analysis_results.json
+2025-05-12 23:14:30,108 - VPA - INFO - Analysis complete.
+2025-05-12 23:14:30,108 - VPA - INFO - Analysis complete.
+2025-05-12 23:14:30,108 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 23:14:30,108 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 23:14:32,048 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 23:14:32,048 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 23:14:32,049 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-12 23:14:32,049 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-12 23:14:33,123 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-12 23:14:33,123 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-12 23:15:52,701 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-12 23:15:52,701 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-12 23:15:54,606 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:15:54,606 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:15:54,607 - VPA - INFO - Analyzing AAPL...
+2025-05-12 23:15:54,607 - VPA - INFO - Analyzing AAPL...
+2025-05-12 23:15:54,607 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:15:54,607 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:15:56,573 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:15:56,573 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:15:56,574 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:15:56,574 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:15:57,769 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:15:57,769 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:15:57,769 - VPA - INFO - ticker: AAPL
+2025-05-12 23:15:57,769 - VPA - INFO - ticker: AAPL
+2025-05-12 23:15:57,769 - VPA - INFO - error: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-12 23:15:57,769 - VPA - INFO - error: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-12 23:15:57,770 - VPA - INFO - explanation: Unable to analyze AAPL: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-12 23:15:57,770 - VPA - INFO - explanation: Unable to analyze AAPL: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-12 23:15:57,770 - VPA - INFO - 
+
+2025-05-12 23:15:57,770 - VPA - INFO - 
+
+2025-05-12 23:15:57,770 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 23:15:57,770 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 23:15:57,771 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:15:57,771 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:15:58,936 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:15:58,936 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:15:58,937 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:15:58,937 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:16:00,138 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:16:00,138 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
