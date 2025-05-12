@@ -36,7 +36,7 @@ custom_timeframes = [
         {"interval": "5m", "period": "5d"}
     ]
 
-tickers = ["AAPL", "NVDA", "NFLX", "AMZN", "TSLA"]
+tickers = ["AAPL"]
 vpa = VPAFacade()
 
 for ticker in tickers:

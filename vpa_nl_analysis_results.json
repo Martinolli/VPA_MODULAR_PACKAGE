@@ -1,0 +1,35 @@
+{
+    "NVDA": {
+        "ticker": "NVDA",
+        "current_price": 116.65,
+        "signal": {
+            "type": "BUY",
+            "strength": "MODERATE",
+            "details": "Moderate buy signal with some timeframe confirmation"
+        },
+        "risk": {
+            "stop_loss": 114.8429,
+            "take_profit": 123.50444999999999,
+            "risk_reward": 3.7930662387250096
+        },
+        "patterns": {
+            "accumulation": {
+                "detected": true,
+                "details": "Sideways: False, High volume bars: 2, Support tests: 5"
+            },
+            "distribution": {
+                "detected": true,
+                "details": "Sideways: False, High volume bars: 2, Resistance tests: 10"
+            },
+            "buying_climax": {
+                "detected": false,
+                "details": "Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True"
+            },
+            "selling_climax": {
+                "detected": false,
+                "details": "Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True"
+            }
+        },
+        "explanation": "Could not generate explanation for NVDA due to an error: Failed to fetch market data for any specified timeframe."
+    }
+}

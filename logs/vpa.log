@@ -6845,3 +6845,114 @@ Risk Assessment:
 2025-05-06 20:10:07,849 - VPA - INFO - Analyzing NVDA...
 2025-05-06 20:10:07,849 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
 2025-05-06 20:45:19,564 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-12 22:52:06,086 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-12 22:52:08,004 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 22:52:08,005 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 30m, 15m, 5m
+2025-05-12 22:52:10,559 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 22:52:10,560 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 30m, 15m, 5m
+2025-05-12 22:52:15,648 - VPA - ERROR - No data fetched for NFLX across specified timeframes. Aborting analysis.
+2025-05-12 22:52:15,649 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 30m, 15m, 5m
+2025-05-12 22:52:21,164 - VPA - ERROR - No data fetched for AMZN across specified timeframes. Aborting analysis.
+2025-05-12 22:52:21,164 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 30m, 15m, 5m
+2025-05-12 22:52:26,444 - VPA - ERROR - No data fetched for TSLA across specified timeframes. Aborting analysis.
+2025-05-12 22:52:26,444 - VPA - INFO - Analyzing AAPL...
+2025-05-12 22:52:26,445 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 22:52:32,683 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 22:52:32,685 - VPA - INFO - ticker: AAPL
+2025-05-12 22:52:32,685 - VPA - INFO - error: float() argument must be a string or a real number, not 'NoneType'
+2025-05-12 22:52:32,685 - VPA - INFO - explanation: Unable to analyze AAPL: float() argument must be a string or a real number, not 'NoneType'
+2025-05-12 22:52:32,686 - VPA - INFO - 
+
+2025-05-12 22:52:32,686 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 22:52:32,686 - VPA - INFO - Analyzing NVDA...
+2025-05-12 22:52:32,687 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 22:52:38,291 - VPA - ERROR - No data fetched for NVDA across specified timeframes. Aborting analysis.
+2025-05-12 22:52:38,291 - VPA - INFO - ticker: NVDA
+2025-05-12 22:52:38,292 - VPA - INFO - error: float() argument must be a string or a real number, not 'NoneType'
+2025-05-12 22:52:38,292 - VPA - INFO - explanation: Unable to analyze NVDA: float() argument must be a string or a real number, not 'NoneType'
+2025-05-12 22:52:38,292 - VPA - INFO - 
+
+2025-05-12 22:52:38,292 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 22:52:38,292 - VPA - INFO - Analyzing NFLX...
+2025-05-12 22:52:38,293 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-12 22:52:43,724 - VPA - ERROR - No data fetched for NFLX across specified timeframes. Aborting analysis.
+2025-05-12 22:52:43,724 - VPA - INFO - ticker: NFLX
+2025-05-12 22:52:43,725 - VPA - INFO - error: float() argument must be a string or a real number, not 'NoneType'
+2025-05-12 22:52:43,725 - VPA - INFO - explanation: Unable to analyze NFLX: float() argument must be a string or a real number, not 'NoneType'
+2025-05-12 22:52:43,725 - VPA - INFO - 
+
+2025-05-12 22:52:43,726 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 22:52:43,726 - VPA - INFO - Analyzing AMZN...
+2025-05-12 22:52:43,727 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 
+2025-05-12 22:52:49,244 - VPA - ERROR - No data fetched for AMZN across specified timeframes. Aborting analysis.
+2025-05-12 22:52:49,245 - VPA - INFO - ticker: AMZN
+2025-05-12 22:52:49,245 - VPA - INFO - error: float() argument must be a string or a real number, not 'NoneType'
+2025-05-12 22:52:49,246 - VPA - INFO - explanation: Unable to analyze AMZN: float() argument must be a string or a real number, not 'NoneType'
+2025-05-12 22:52:49,246 - VPA - INFO - 
+
+2025-05-12 22:52:49,247 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 22:52:49,247 - VPA - INFO - Analyzing TSLA...
+2025-05-12 22:52:49,247 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-12 22:52:54,690 - VPA - ERROR - No data fetched for TSLA across specified timeframes. Aborting analysis.
+2025-05-12 22:52:54,691 - VPA - INFO - ticker: TSLA
+2025-05-12 22:52:54,691 - VPA - INFO - error: float() argument must be a string or a real number, not 'NoneType'
+2025-05-12 22:52:54,691 - VPA - INFO - explanation: Unable to analyze TSLA: float() argument must be a string or a real number, not 'NoneType'
+2025-05-12 22:52:54,692 - VPA - INFO - 
+
+2025-05-12 22:52:54,692 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 22:52:54,693 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 22:53:00,204 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 22:53:30,605 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-12 22:53:32,386 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 22:53:32,387 - VPA - INFO - Analyzing AAPL...
+2025-05-12 22:53:32,387 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 22:53:36,325 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 22:53:36,326 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 22:53:41,643 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 22:53:41,644 - VPA - INFO - ticker: AAPL
+2025-05-12 22:53:41,644 - VPA - INFO - current_price: 198.53
+2025-05-12 22:53:41,644 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-12 22:53:41,644 - VPA - INFO - risk: {'stop_loss': 168.36404950000002, 'take_profit': 201.61305, 'risk_reward': 0.10220297881878404}
+2025-05-12 22:53:41,646 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 4, Support tests: 7'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 4, Resistance tests: 8'}, 'buying_climax': {'detected': False, 'details': 'Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-12 22:53:41,646 - VPA - INFO - explanation: Could not generate explanation for AAPL due to an error: Failed to fetch market data for any specified timeframe.
+2025-05-12 22:53:41,646 - VPA - INFO - 
+
+2025-05-12 22:53:41,646 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 22:53:41,647 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 22:53:47,163 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
+2025-05-12 22:57:02,273 - VPA - INFO - Starting VPA analysis...
+2025-05-12 22:57:02,274 - VPA - INFO - Tickers to analyze:
+2025-05-12 22:57:02,274 - VPA - INFO - Starting VPA analysis...
+2025-05-12 22:57:02,274 - VPA - INFO - Analyzing NVDA...
+2025-05-12 22:57:02,275 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 22:57:04,516 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 22:57:08,181 - VPA - INFO - Report files created: {'price_chart': 'vpa_reports\\NVDA_price_chart_2025-05-12_22-57-04.png', 'multi_timeframe': 'vpa_reports\\NVDA_multi_timeframe_2025-05-12_22-57-04.png', 'patterns': 'vpa_reports\\NVDA_patterns_2025-05-12_22-57-04.png', 'text_report': 'vpa_reports\\NVDA_vpa_report_2025-05-12_22-57-04.txt'}
+2025-05-12 22:57:08,207 - VPA - INFO - Results saved to vpa_analysis_results.json
+2025-05-12 22:57:08,207 - VPA - INFO - NL Analysis:
+2025-05-12 22:57:08,208 - VPA - INFO - Analyzing NVDA...
+2025-05-12 22:57:08,208 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 22:57:11,927 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 22:57:11,927 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 22:57:17,321 - VPA - ERROR - No data fetched for NVDA across specified timeframes. Aborting analysis.
+2025-05-12 22:57:17,321 - VPA - INFO - ticker: NVDA
+2025-05-12 22:57:17,323 - VPA - INFO - current_price: 116.65
+2025-05-12 22:57:17,323 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-12 22:57:17,323 - VPA - INFO - risk: {'stop_loss': 114.8429, 'take_profit': 123.50444999999999, 'risk_reward': 3.7930662387250096}
+2025-05-12 22:57:17,323 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 2, Support tests: 5'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 2, Resistance tests: 10'}, 'buying_climax': {'detected': False, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-12 22:57:17,324 - VPA - INFO - explanation: Could not generate explanation for NVDA due to an error: Failed to fetch market data for any specified timeframe.
+2025-05-12 22:57:17,324 - VPA - INFO - 
+
+2025-05-12 22:57:17,324 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 22:57:17,325 - VPA - INFO - Results saved to vpa_nl_analysis_results.json
+2025-05-12 22:57:17,325 - VPA - INFO - Analysis complete.
+2025-05-12 22:57:17,325 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 22:57:22,797 - VPA - ERROR - No data fetched for NVDA across specified timeframes. Aborting analysis.
+2025-05-12 22:57:22,799 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 30m, 15m, 5m
+2025-05-12 22:57:28,309 - VPA - ERROR - No data fetched for MSFT across specified timeframes. Aborting analysis.

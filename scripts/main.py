@@ -77,7 +77,7 @@ def main():
     llm_interface = VPALLMInterface()
 
 
-    tickers = ["NVDA", "MSFT"]
+    tickers = ["NVDA"]
     logger.info("Starting VPA analysis...")
     logger.info("Tickers to analyze:")
 
@@ -94,7 +94,7 @@ def main():
 
     # Scanner Signal Example
     # Call the method with required and optional arguments
-    tickers = ["MSFT", "NFLX"]  # Example list of tickers
+    tickers = ["MSFT"]  # Example list of tickers
     signal_type = "BUY"
     signal_strength = "MODERATE"
     timeframes = [
@@ -118,13 +118,15 @@ def main():
                 print(f"{key}: {value}")
                 print("\n")
 
+
+    """
     # Batch Report Analysis
     logger.info("Starting batch report analysis...")
     batch_report_tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "AMD", "META", "NFLX", "DIS", "INTC"]
     batch_report_files = create_batch_report(vpa, batch_report_tickers, "vpa_batch_reports")
     logger.info(f"Batch report files created: {batch_report_files}")
 
-    """"
+    
     # Define a list of tickers to analyze
     tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "AMD", "META", "NFLX", "DIS", "INTC"]
 

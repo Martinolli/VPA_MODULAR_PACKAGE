@@ -1,24 +1,594 @@
 {
-    "AAPL": {
-      "current_price": 181.56,
-      "signal": {
-        "type": "BUY",
-        "strength": "MODERATE"
-      },
-      "support_resistance": {
-        "support_levels": {"S1": 175.0, "S2": 170.0},
-        "resistance_levels": {"R1": 185.0, "R2": 190.0}
-      },
-      "risk_assessment": {
-        "stop_loss": 172.00,
-        "take_profit": 190.00,
-        "risk_per_share": 9.56,
-        "risk_reward_ratio": 1.83
-      },
-      "patterns": {
-        "accumulation": {"detected": true, "date": "2025-05-01", "price": 176.32},
-        "testing": {"detected": false}
-      }
+    "NVDA": {
+        "ticker": "NVDA",
+        "timeframe_analyses": {
+            "1d": {
+                "candle_analysis": {
+                    "candle_class": "NARROW_LOWER_WICK",
+                    "volume_class": "LOW",
+                    "is_up_candle": "False",
+                    "price_direction": "DOWN",
+                    "signal_type": "VALIDATION",
+                    "signal_strength": "NEUTRAL",
+                    "details": "Narrow spread down candle with low volume indicates consolidation"
+                },
+                "trend_analysis": {
+                    "trend_direction": "UP",
+                    "volume_trend": "DECREASING",
+                    "signal_type": "TREND_ANOMALY",
+                    "signal_strength": "BEARISH",
+                    "details": "Rising price with falling volume indicates weakening bullish trend"
+                },
+                "pattern_analysis": {
+                    "accumulation": {
+                        "detected": true,
+                        "strength": 2,
+                        "details": "Sideways: False, High volume bars: 2, Support tests: 5"
+                    },
+                    "distribution": {
+                        "detected": true,
+                        "strength": 2,
+                        "details": "Sideways: False, High volume bars: 2, Resistance tests: 10"
+                    },
+                    "testing": {
+                        "detected": true,
+                        "tests": [
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-05 04:00:00+00:00",
+                                "price": 112.66
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-06 04:00:00+00:00",
+                                "price": 110.822
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-09 04:00:00+00:00",
+                                "price": 115.21
+                            },
+                            {
+                                "type": "RESISTANCE_TEST",
+                                "index": "2025-05-06 04:00:00+00:00",
+                                "price": 114.74
+                            }
+                        ],
+                        "details": "Found 4 testing patterns"
+                    },
+                    "buying_climax": {
+                        "detected": false,
+                        "strength": 2,
+                        "details": "Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True"
+                    },
+                    "selling_climax": {
+                        "detected": false,
+                        "strength": 1,
+                        "details": "Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True"
+                    }
+                },
+                "support_resistance": {
+                    "support": [
+                        {
+                            "price": 110.11,
+                            "index": "2025-03-04 05:00:00+00:00",
+                            "volume": 397827425.0,
+                            "strength": 2.5,
+                            "tests": 3
+                        },
+                        {
+                            "price": 115.42,
+                            "index": "2025-03-21 04:00:00+00:00",
+                            "volume": 266498528.0,
+                            "strength": 2.0,
+                            "tests": 2
+                        },
+                        {
+                            "price": 103.65,
+                            "index": "2025-03-31 04:00:00+00:00",
+                            "volume": 299132653.0,
+                            "strength": 1.5,
+                            "tests": 1
+                        },
+                        {
+                            "price": 104.77,
+                            "index": "2025-03-11 04:00:00+00:00",
+                            "volume": 353196487.0,
+                            "strength": 1,
+                            "tests": 0
+                        },
+                        {
+                            "price": 86.62,
+                            "index": "2025-04-07 04:00:00+00:00",
+                            "volume": 610884947.0,
+                            "strength": 1,
+                            "tests": 0
+                        }
+                    ],
+                    "resistance": [
+                        {
+                            "price": 115.1,
+                            "index": "2025-04-09 04:00:00+00:00",
+                            "volume": 612830336.0,
+                            "strength": 3.0,
+                            "tests": 4
+                        },
+                        {
+                            "price": 111.98,
+                            "index": "2025-04-02 04:00:00+00:00",
+                            "volume": 220483243.0,
+                            "strength": 2.0,
+                            "tests": 2
+                        },
+                        {
+                            "price": 122.89,
+                            "index": "2025-03-17 04:00:00+00:00",
+                            "volume": 255501481.0,
+                            "strength": 1,
+                            "tests": 0
+                        }
+                    ],
+                    "volume_at_levels": {
+                        "86.62": {
+                            "type": "support",
+                            "candles_count": 1,
+                            "total_volume": 610884947.0,
+                            "avg_volume": 610884947.0
+                        },
+                        "103.65": {
+                            "type": "support",
+                            "candles_count": 9,
+                            "total_volume": 3322038409.0,
+                            "avg_volume": 369115378.7777778
+                        },
+                        "104.77": {
+                            "type": "support",
+                            "candles_count": 10,
+                            "total_volume": 3617807387.0,
+                            "avg_volume": 361780738.7
+                        },
+                        "110.11": {
+                            "type": "support",
+                            "candles_count": 15,
+                            "total_volume": 4687504436.0,
+                            "avg_volume": 312500295.73333335
+                        },
+                        "111.98": {
+                            "type": "resistance",
+                            "candles_count": 12,
+                            "total_volume": 3600065173.0,
+                            "avg_volume": 300005431.0833333
+                        },
+                        "115.1": {
+                            "type": "resistance",
+                            "candles_count": 11,
+                            "total_volume": 3642826513.0,
+                            "avg_volume": 331166046.6363636
+                        },
+                        "115.42": {
+                            "type": "support",
+                            "candles_count": 10,
+                            "total_volume": 2918946255.0,
+                            "avg_volume": 291894625.5
+                        },
+                        "122.89": {
+                            "type": "resistance",
+                            "candles_count": 3,
+                            "total_volume": 1055708399.0,
+                            "avg_volume": 351902799.6666667
+                        }
+                    }
+                },
+                "processed_data": {
+                    "price": "                              open     high       low    close\ndatetime                                                      \n2024-05-13 04:00:00+00:00   90.478   90.998   88.5290   90.399\n2024-05-14 04:00:00+00:00   89.599   91.651   88.9340   91.356\n2024-05-15 04:00:00+00:00   92.472   94.862   91.5990   94.630\n2024-05-16 04:00:00+00:00   94.910   95.819   94.1030   94.359\n2024-05-17 04:00:00+00:00   94.369   94.740   91.8060   92.479\n...                            ...      ...       ...      ...\n2025-05-05 04:00:00+00:00  112.905  114.665  112.6600  113.820\n2025-05-06 04:00:00+00:00  111.480  114.740  110.8220  113.540\n2025-05-07 04:00:00+00:00  113.045  117.680  112.2818  117.060\n2025-05-08 04:00:00+00:00  118.250  118.680  115.8500  117.370\n2025-05-09 04:00:00+00:00  117.350  118.230  115.2100  116.650\n\n[249 rows x 4 columns]",
+                    "volume": "datetime\n2024-05-13 04:00:00+00:00    289461170.0\n2024-05-14 04:00:00+00:00    296377080.0\n2024-05-15 04:00:00+00:00    417731700.0\n2024-05-16 04:00:00+00:00    323882600.0\n2024-05-17 04:00:00+00:00    358098500.0\n                                ...     \n2025-05-05 04:00:00+00:00    133078241.0\n2025-05-06 04:00:00+00:00    158045621.0\n2025-05-07 04:00:00+00:00    207827821.0\n2025-05-08 04:00:00+00:00    198428122.0\n2025-05-09 04:00:00+00:00    132972189.0\nName: volume, Length: 249, dtype: float64",
+                    "spread": "datetime\n2024-05-13 04:00:00+00:00    0.079\n2024-05-14 04:00:00+00:00    1.757\n2024-05-15 04:00:00+00:00    2.158\n2024-05-16 04:00:00+00:00    0.551\n2024-05-17 04:00:00+00:00    1.890\n                             ...  \n2025-05-05 04:00:00+00:00    0.915\n2025-05-06 04:00:00+00:00    2.060\n2025-05-07 04:00:00+00:00    4.015\n2025-05-08 04:00:00+00:00    0.880\n2025-05-09 04:00:00+00:00    0.700\nLength: 249, dtype: float64",
+                    "body_percent": "datetime\n2024-05-13 04:00:00+00:00    0.031997\n2024-05-14 04:00:00+00:00    0.646669\n2024-05-15 04:00:00+00:00    0.661355\n2024-05-16 04:00:00+00:00    0.321096\n2024-05-17 04:00:00+00:00    0.644172\n                               ...   \n2025-05-05 04:00:00+00:00    0.456359\n2025-05-06 04:00:00+00:00    0.525778\n2025-05-07 04:00:00+00:00    0.743766\n2025-05-08 04:00:00+00:00    0.310954\n2025-05-09 04:00:00+00:00    0.231788\nLength: 249, dtype: float64",
+                    "upper_wick": "datetime\n2024-05-13 04:00:00+00:00    0.520\n2024-05-14 04:00:00+00:00    0.295\n2024-05-15 04:00:00+00:00    0.232\n2024-05-16 04:00:00+00:00    0.909\n2024-05-17 04:00:00+00:00    0.371\n                             ...  \n2025-05-05 04:00:00+00:00    0.845\n2025-05-06 04:00:00+00:00    1.200\n2025-05-07 04:00:00+00:00    0.620\n2025-05-08 04:00:00+00:00    0.430\n2025-05-09 04:00:00+00:00    0.880\nLength: 249, dtype: float64",
+                    "lower_wick": "datetime\n2024-05-13 04:00:00+00:00    1.8700\n2024-05-14 04:00:00+00:00    0.6650\n2024-05-15 04:00:00+00:00    0.8730\n2024-05-16 04:00:00+00:00    0.2560\n2024-05-17 04:00:00+00:00    0.6730\n                              ...  \n2025-05-05 04:00:00+00:00    0.2450\n2025-05-06 04:00:00+00:00    0.6580\n2025-05-07 04:00:00+00:00    0.7632\n2025-05-08 04:00:00+00:00    1.5200\n2025-05-09 04:00:00+00:00    1.4400\nLength: 249, dtype: float64",
+                    "avg_volume": "datetime\n2024-05-13 04:00:00+00:00             NaN\n2024-05-14 04:00:00+00:00             NaN\n2024-05-15 04:00:00+00:00             NaN\n2024-05-16 04:00:00+00:00             NaN\n2024-05-17 04:00:00+00:00             NaN\n                                 ...     \n2025-05-05 04:00:00+00:00    3.043598e+08\n2025-05-06 04:00:00+00:00    3.024974e+08\n2025-05-07 04:00:00+00:00    3.012277e+08\n2025-05-08 04:00:00+00:00    2.987464e+08\n2025-05-09 04:00:00+00:00    2.925432e+08\nName: volume, Length: 249, dtype: float64",
+                    "volume_ratio": "datetime\n2024-05-13 04:00:00+00:00         NaN\n2024-05-14 04:00:00+00:00         NaN\n2024-05-15 04:00:00+00:00         NaN\n2024-05-16 04:00:00+00:00         NaN\n2024-05-17 04:00:00+00:00         NaN\n                               ...   \n2025-05-05 04:00:00+00:00    0.437240\n2025-05-06 04:00:00+00:00    0.522469\n2025-05-07 04:00:00+00:00    0.689936\n2025-05-08 04:00:00+00:00    0.664203\n2025-05-09 04:00:00+00:00    0.454539\nName: volume, Length: 249, dtype: float64",
+                    "volume_class": "datetime\n2024-05-13 04:00:00+00:00    AVERAGE\n2024-05-14 04:00:00+00:00    AVERAGE\n2024-05-15 04:00:00+00:00    AVERAGE\n2024-05-16 04:00:00+00:00    AVERAGE\n2024-05-17 04:00:00+00:00    AVERAGE\n                              ...   \n2025-05-05 04:00:00+00:00        LOW\n2025-05-06 04:00:00+00:00        LOW\n2025-05-07 04:00:00+00:00    AVERAGE\n2025-05-08 04:00:00+00:00    AVERAGE\n2025-05-09 04:00:00+00:00        LOW\nLength: 249, dtype: object",
+                    "candle_class": "datetime\n2024-05-13 04:00:00+00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n2024-05-14 04:00:00+00:00                          NEUTRAL\n2024-05-15 04:00:00+00:00                          NEUTRAL\n2024-05-16 04:00:00+00:00               NEUTRAL_UPPER_WICK\n2024-05-17 04:00:00+00:00                          NEUTRAL\n                                         ...              \n2025-05-05 04:00:00+00:00                           NARROW\n2025-05-06 04:00:00+00:00                          NEUTRAL\n2025-05-07 04:00:00+00:00                             WIDE\n2025-05-08 04:00:00+00:00                NARROW_LOWER_WICK\n2025-05-09 04:00:00+00:00                NARROW_LOWER_WICK\nLength: 249, dtype: object",
+                    "price_direction": "datetime\n2024-05-13 04:00:00+00:00    SIDEWAYS\n2024-05-14 04:00:00+00:00    SIDEWAYS\n2024-05-15 04:00:00+00:00    SIDEWAYS\n2024-05-16 04:00:00+00:00    SIDEWAYS\n2024-05-17 04:00:00+00:00    SIDEWAYS\n                               ...   \n2025-05-05 04:00:00+00:00        DOWN\n2025-05-06 04:00:00+00:00        DOWN\n2025-05-07 04:00:00+00:00        DOWN\n2025-05-08 04:00:00+00:00        DOWN\n2025-05-09 04:00:00+00:00        DOWN\nLength: 249, dtype: object",
+                    "volume_direction": "datetime\n2024-05-13 04:00:00+00:00          FLAT\n2024-05-14 04:00:00+00:00          FLAT\n2024-05-15 04:00:00+00:00          FLAT\n2024-05-16 04:00:00+00:00          FLAT\n2024-05-17 04:00:00+00:00          FLAT\n                                ...    \n2025-05-05 04:00:00+00:00    DECREASING\n2025-05-06 04:00:00+00:00    DECREASING\n2025-05-07 04:00:00+00:00    DECREASING\n2025-05-08 04:00:00+00:00    DECREASING\n2025-05-09 04:00:00+00:00    DECREASING\nLength: 249, dtype: object"
+                }
+            },
+            "1h": {
+                "candle_analysis": {
+                    "candle_class": "NARROW_LOWER_WICK",
+                    "volume_class": "VERY_LOW",
+                    "is_up_candle": "True",
+                    "price_direction": "UP",
+                    "signal_type": "VALIDATION",
+                    "signal_strength": "NEUTRAL",
+                    "details": "Narrow spread up candle with low volume indicates consolidation"
+                },
+                "trend_analysis": {
+                    "trend_direction": "DOWN",
+                    "volume_trend": "DECREASING",
+                    "signal_type": "TREND_ANOMALY",
+                    "signal_strength": "BULLISH",
+                    "details": "Falling price with falling volume indicates weakening bearish trend"
+                },
+                "pattern_analysis": {
+                    "accumulation": {
+                        "detected": true,
+                        "strength": 3,
+                        "details": "Sideways: True, High volume bars: 5, Support tests: 11"
+                    },
+                    "distribution": {
+                        "detected": true,
+                        "strength": 3,
+                        "details": "Sideways: True, High volume bars: 5, Resistance tests: 10"
+                    },
+                    "testing": {
+                        "detected": true,
+                        "tests": [
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-08 20:00:00+00:00",
+                                "price": 116.7554
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-08 23:00:00+00:00",
+                                "price": 117.0
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-09 11:00:00+00:00",
+                                "price": 117.23
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-09 20:00:00+00:00",
+                                "price": 116.33
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-09 21:00:00+00:00",
+                                "price": 116.3
+                            },
+                            {
+                                "type": "RESISTANCE_TEST",
+                                "index": "2025-05-09 08:00:00+00:00",
+                                "price": 118.2
+                            },
+                            {
+                                "type": "RESISTANCE_TEST",
+                                "index": "2025-05-09 10:00:00+00:00",
+                                "price": 118.19
+                            },
+                            {
+                                "type": "RESISTANCE_TEST",
+                                "index": "2025-05-09 12:00:00+00:00",
+                                "price": 118.2
+                            }
+                        ],
+                        "details": "Found 8 testing patterns"
+                    },
+                    "buying_climax": {
+                        "detected": false,
+                        "strength": 2,
+                        "details": "Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True"
+                    },
+                    "selling_climax": {
+                        "detected": false,
+                        "strength": 2,
+                        "details": "Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True"
+                    }
+                },
+                "support_resistance": {
+                    "support": [
+                        {
+                            "price": 116.14,
+                            "index": "2025-05-07 22:00:00+00:00",
+                            "volume": 550891.0,
+                            "strength": 7.5,
+                            "tests": 13
+                        },
+                        {
+                            "price": 112.615,
+                            "index": "2025-05-07 13:00:00+00:00",
+                            "volume": 22176480.0,
+                            "strength": 4.5,
+                            "high_volume": true,
+                            "tests": 5
+                        }
+                    ],
+                    "resistance": [
+                        {
+                            "price": 117.68,
+                            "index": "2025-05-07 19:00:00+00:00",
+                            "volume": 72662150.0,
+                            "strength": 9.0,
+                            "high_volume": true,
+                            "tests": 14
+                        },
+                        {
+                            "price": 119.55,
+                            "index": "2025-05-08 08:00:00+00:00",
+                            "volume": 1073335.0,
+                            "strength": 3.0,
+                            "tests": 4
+                        },
+                        {
+                            "price": 114.46,
+                            "index": "2025-05-07 12:00:00+00:00",
+                            "volume": 2302303.0,
+                            "strength": 2.5,
+                            "tests": 3
+                        },
+                        {
+                            "price": 120.83,
+                            "index": "2025-05-08 12:00:00+00:00",
+                            "volume": 5918677.0,
+                            "strength": 1,
+                            "tests": 0
+                        }
+                    ],
+                    "volume_at_levels": {
+                        "112.615": {
+                            "type": "support",
+                            "candles_count": 3,
+                            "total_volume": 47753838.0,
+                            "avg_volume": 15917946.0
+                        },
+                        "114.46": {
+                            "type": "resistance",
+                            "candles_count": 5,
+                            "total_volume": 78082546.0,
+                            "avg_volume": 15616509.2
+                        },
+                        "116.14": {
+                            "type": "support",
+                            "candles_count": 8,
+                            "total_volume": 210939250.0,
+                            "avg_volume": 26367406.25
+                        },
+                        "117.68": {
+                            "type": "resistance",
+                            "candles_count": 10,
+                            "total_volume": 236980808.0,
+                            "avg_volume": 23698080.8
+                        },
+                        "119.55": {
+                            "type": "resistance",
+                            "candles_count": 2,
+                            "total_volume": 6992012.0,
+                            "avg_volume": 3496006.0
+                        },
+                        "120.83": {
+                            "type": "resistance",
+                            "candles_count": 1,
+                            "total_volume": 5918677.0,
+                            "avg_volume": 5918677.0
+                        }
+                    }
+                },
+                "processed_data": {
+                    "price": "                             open     high     low     close\ndatetime                                                    \n2025-03-13 08:00:00+00:00  114.80  115.460  114.06  114.9700\n2025-03-13 09:00:00+00:00  114.95  116.330  114.59  116.3300\n2025-03-13 10:00:00+00:00  116.33  117.190  116.11  116.4900\n2025-03-13 11:00:00+00:00  116.50  116.810  115.25  115.9500\n2025-03-13 12:00:00+00:00  115.94  117.170  113.80  116.4300\n...                           ...      ...     ...       ...\n2025-05-09 19:00:00+00:00  116.61  116.865  116.43  116.6100\n2025-05-09 20:00:00+00:00  116.61  116.650  116.33  116.4000\n2025-05-09 21:00:00+00:00  116.40  116.430  116.30  116.3900\n2025-05-09 22:00:00+00:00  116.37  116.410  116.33  116.3500\n2025-05-09 23:00:00+00:00  116.37  116.400  116.34  116.3898\n\n[656 rows x 4 columns]",
+                    "volume": "datetime\n2025-03-13 08:00:00+00:00      625388.0\n2025-03-13 09:00:00+00:00      789085.0\n2025-03-13 10:00:00+00:00     1341969.0\n2025-03-13 11:00:00+00:00     1429814.0\n2025-03-13 12:00:00+00:00     4286699.0\n                                ...    \n2025-05-09 19:00:00+00:00    17081782.0\n2025-05-09 20:00:00+00:00     1871692.0\n2025-05-09 21:00:00+00:00      201821.0\n2025-05-09 22:00:00+00:00      108676.0\n2025-05-09 23:00:00+00:00      211087.0\nName: volume, Length: 656, dtype: float64",
+                    "spread": "datetime\n2025-03-13 08:00:00+00:00    0.1700\n2025-03-13 09:00:00+00:00    1.3800\n2025-03-13 10:00:00+00:00    0.1600\n2025-03-13 11:00:00+00:00    0.5500\n2025-03-13 12:00:00+00:00    0.4900\n                              ...  \n2025-05-09 19:00:00+00:00    0.0000\n2025-05-09 20:00:00+00:00    0.2100\n2025-05-09 21:00:00+00:00    0.0100\n2025-05-09 22:00:00+00:00    0.0200\n2025-05-09 23:00:00+00:00    0.0198\nLength: 656, dtype: float64",
+                    "body_percent": "datetime\n2025-03-13 08:00:00+00:00    0.121429\n2025-03-13 09:00:00+00:00    0.793103\n2025-03-13 10:00:00+00:00    0.148148\n2025-03-13 11:00:00+00:00    0.352564\n2025-03-13 12:00:00+00:00    0.145401\n                               ...   \n2025-05-09 19:00:00+00:00    0.000000\n2025-05-09 20:00:00+00:00    0.656250\n2025-05-09 21:00:00+00:00    0.076923\n2025-05-09 22:00:00+00:00    0.250000\n2025-05-09 23:00:00+00:00    0.330000\nLength: 656, dtype: float64",
+                    "upper_wick": "datetime\n2025-03-13 08:00:00+00:00    0.4900\n2025-03-13 09:00:00+00:00    0.0000\n2025-03-13 10:00:00+00:00    0.7000\n2025-03-13 11:00:00+00:00    0.3100\n2025-03-13 12:00:00+00:00    0.7400\n                              ...  \n2025-05-09 19:00:00+00:00    0.2550\n2025-05-09 20:00:00+00:00    0.0400\n2025-05-09 21:00:00+00:00    0.0300\n2025-05-09 22:00:00+00:00    0.0400\n2025-05-09 23:00:00+00:00    0.0102\nLength: 656, dtype: float64",
+                    "lower_wick": "datetime\n2025-03-13 08:00:00+00:00    0.74\n2025-03-13 09:00:00+00:00    0.36\n2025-03-13 10:00:00+00:00    0.22\n2025-03-13 11:00:00+00:00    0.70\n2025-03-13 12:00:00+00:00    2.14\n                             ... \n2025-05-09 19:00:00+00:00    0.18\n2025-05-09 20:00:00+00:00    0.07\n2025-05-09 21:00:00+00:00    0.09\n2025-05-09 22:00:00+00:00    0.02\n2025-05-09 23:00:00+00:00    0.03\nLength: 656, dtype: float64",
+                    "avg_volume": "datetime\n2025-03-13 08:00:00+00:00            NaN\n2025-03-13 09:00:00+00:00            NaN\n2025-03-13 10:00:00+00:00            NaN\n2025-03-13 11:00:00+00:00            NaN\n2025-03-13 12:00:00+00:00            NaN\n                                ...     \n2025-05-09 19:00:00+00:00    10803333.52\n2025-05-09 20:00:00+00:00    10532810.24\n2025-05-09 21:00:00+00:00    10066188.42\n2025-05-09 22:00:00+00:00     9991087.16\n2025-05-09 23:00:00+00:00     9968681.84\nName: volume, Length: 656, dtype: float64",
+                    "volume_ratio": "datetime\n2025-03-13 08:00:00+00:00         NaN\n2025-03-13 09:00:00+00:00         NaN\n2025-03-13 10:00:00+00:00         NaN\n2025-03-13 11:00:00+00:00         NaN\n2025-03-13 12:00:00+00:00         NaN\n                               ...   \n2025-05-09 19:00:00+00:00    1.581158\n2025-05-09 20:00:00+00:00    0.177701\n2025-05-09 21:00:00+00:00    0.020049\n2025-05-09 22:00:00+00:00    0.010877\n2025-05-09 23:00:00+00:00    0.021175\nName: volume, Length: 656, dtype: float64",
+                    "volume_class": "datetime\n2025-03-13 08:00:00+00:00     AVERAGE\n2025-03-13 09:00:00+00:00     AVERAGE\n2025-03-13 10:00:00+00:00     AVERAGE\n2025-03-13 11:00:00+00:00     AVERAGE\n2025-03-13 12:00:00+00:00     AVERAGE\n                               ...   \n2025-05-09 19:00:00+00:00        HIGH\n2025-05-09 20:00:00+00:00    VERY_LOW\n2025-05-09 21:00:00+00:00    VERY_LOW\n2025-05-09 22:00:00+00:00    VERY_LOW\n2025-05-09 23:00:00+00:00    VERY_LOW\nLength: 656, dtype: object",
+                    "candle_class": "datetime\n2025-03-13 08:00:00+00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n2025-03-13 09:00:00+00:00                          NEUTRAL\n2025-03-13 10:00:00+00:00               NEUTRAL_UPPER_WICK\n2025-03-13 11:00:00+00:00                          NEUTRAL\n2025-03-13 12:00:00+00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n                                         ...              \n2025-05-09 19:00:00+00:00     NARROW_UPPER_WICK_LOWER_WICK\n2025-05-09 20:00:00+00:00                          NEUTRAL\n2025-05-09 21:00:00+00:00     NARROW_UPPER_WICK_LOWER_WICK\n2025-05-09 22:00:00+00:00                NARROW_UPPER_WICK\n2025-05-09 23:00:00+00:00                NARROW_LOWER_WICK\nLength: 656, dtype: object",
+                    "price_direction": "datetime\n2025-03-13 08:00:00+00:00    SIDEWAYS\n2025-03-13 09:00:00+00:00    SIDEWAYS\n2025-03-13 10:00:00+00:00    SIDEWAYS\n2025-03-13 11:00:00+00:00    SIDEWAYS\n2025-03-13 12:00:00+00:00    SIDEWAYS\n                               ...   \n2025-05-09 19:00:00+00:00          UP\n2025-05-09 20:00:00+00:00          UP\n2025-05-09 21:00:00+00:00          UP\n2025-05-09 22:00:00+00:00          UP\n2025-05-09 23:00:00+00:00          UP\nLength: 656, dtype: object",
+                    "volume_direction": "datetime\n2025-03-13 08:00:00+00:00          FLAT\n2025-03-13 09:00:00+00:00          FLAT\n2025-03-13 10:00:00+00:00          FLAT\n2025-03-13 11:00:00+00:00          FLAT\n2025-03-13 12:00:00+00:00          FLAT\n                                ...    \n2025-05-09 19:00:00+00:00    INCREASING\n2025-05-09 20:00:00+00:00    DECREASING\n2025-05-09 21:00:00+00:00    DECREASING\n2025-05-09 22:00:00+00:00    DECREASING\n2025-05-09 23:00:00+00:00    DECREASING\nLength: 656, dtype: object"
+                }
+            },
+            "15m": {
+                "candle_analysis": {
+                    "candle_class": "NARROW_UPPER_WICK_LOWER_WICK",
+                    "volume_class": "VERY_LOW",
+                    "is_up_candle": "False",
+                    "price_direction": "DOWN",
+                    "signal_type": "VALIDATION",
+                    "signal_strength": "NEUTRAL",
+                    "details": "Narrow spread down candle with low volume indicates consolidation"
+                },
+                "trend_analysis": {
+                    "trend_direction": "UP",
+                    "volume_trend": "INCREASING",
+                    "signal_type": "TREND_VALIDATION",
+                    "signal_strength": "BULLISH",
+                    "details": "Rising price with rising volume confirms bullish trend"
+                },
+                "pattern_analysis": {
+                    "accumulation": {
+                        "detected": true,
+                        "strength": 3,
+                        "details": "Sideways: True, High volume bars: 2, Support tests: 11"
+                    },
+                    "distribution": {
+                        "detected": true,
+                        "strength": 3,
+                        "details": "Sideways: True, High volume bars: 2, Resistance tests: 11"
+                    },
+                    "testing": {
+                        "detected": true,
+                        "tests": [
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-09 20:00:00+00:00",
+                                "price": 116.38
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-09 20:30:00+00:00",
+                                "price": 116.39
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-09 20:45:00+00:00",
+                                "price": 116.33
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-09 21:15:00+00:00",
+                                "price": 116.3
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-09 23:30:00+00:00",
+                                "price": 116.35
+                            },
+                            {
+                                "type": "SUPPORT_TEST",
+                                "index": "2025-05-09 23:45:00+00:00",
+                                "price": 116.34
+                            },
+                            {
+                                "type": "RESISTANCE_TEST",
+                                "index": "2025-05-09 20:45:00+00:00",
+                                "price": 116.65
+                            },
+                            {
+                                "type": "RESISTANCE_TEST",
+                                "index": "2025-05-09 21:30:00+00:00",
+                                "price": 116.43
+                            },
+                            {
+                                "type": "RESISTANCE_TEST",
+                                "index": "2025-05-09 22:30:00+00:00",
+                                "price": 116.4
+                            },
+                            {
+                                "type": "RESISTANCE_TEST",
+                                "index": "2025-05-09 22:45:00+00:00",
+                                "price": 116.41
+                            }
+                        ],
+                        "details": "Found 10 testing patterns"
+                    },
+                    "buying_climax": {
+                        "detected": false,
+                        "strength": 2,
+                        "details": "Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True"
+                    },
+                    "selling_climax": {
+                        "detected": false,
+                        "strength": 2,
+                        "details": "Near low: True, Very high volume: False, Wide down candle: False, Lower wick: True"
+                    }
+                },
+                "support_resistance": {
+                    "support": [
+                        {
+                            "price": 115.98,
+                            "index": "2025-05-09 16:00:00+00:00",
+                            "volume": 3473216.0,
+                            "strength": 16.0,
+                            "tests": 30
+                        }
+                    ],
+                    "resistance": [
+                        {
+                            "price": 116.92,
+                            "index": "2025-05-09 18:00:00+00:00",
+                            "volume": 2423307.0,
+                            "strength": 12.5,
+                            "tests": 23
+                        },
+                        {
+                            "price": 118.2,
+                            "index": "2025-05-09 12:00:00+00:00",
+                            "volume": 1100416.0,
+                            "strength": 6.5,
+                            "high_volume": true,
+                            "tests": 9
+                        }
+                    ],
+                    "volume_at_levels": {
+                        "115.98": {
+                            "type": "support",
+                            "candles_count": 4,
+                            "total_volume": 33381027.0,
+                            "avg_volume": 8345256.75
+                        },
+                        "116.92": {
+                            "type": "resistance",
+                            "candles_count": 2,
+                            "total_volume": 13925446.0,
+                            "avg_volume": 6962723.0
+                        },
+                        "118.2": {
+                            "type": "resistance",
+                            "candles_count": 2,
+                            "total_volume": 14463166.0,
+                            "avg_volume": 7231583.0
+                        }
+                    }
+                },
+                "processed_data": {
+                    "price": "                             open    high       low     close\ndatetime                                                     \n2025-05-07 08:00:00+00:00  113.92  114.93  113.7900  113.8900\n2025-05-07 08:15:00+00:00  113.85  114.03  113.6400  113.9500\n2025-05-07 08:30:00+00:00  113.99  114.27  113.9900  114.1200\n2025-05-07 08:45:00+00:00  114.08  114.19  113.9900  114.1200\n2025-05-07 09:00:00+00:00  114.13  114.21  113.8300  113.9400\n...                           ...     ...       ...       ...\n2025-05-09 22:45:00+00:00  116.39  116.41  116.3500  116.3500\n2025-05-09 23:00:00+00:00  116.37  116.40  116.3502  116.3800\n2025-05-09 23:15:00+00:00  116.38  116.40  116.3639  116.4000\n2025-05-09 23:30:00+00:00  116.40  116.40  116.3500  116.3800\n2025-05-09 23:45:00+00:00  116.39  116.40  116.3400  116.3898\n\n[192 rows x 4 columns]",
+                    "volume": "datetime\n2025-05-07 08:00:00+00:00    147940.0\n2025-05-07 08:15:00+00:00    104601.0\n2025-05-07 08:30:00+00:00     89653.0\n2025-05-07 08:45:00+00:00     49090.0\n2025-05-07 09:00:00+00:00     50479.0\n                               ...   \n2025-05-09 22:45:00+00:00     29215.0\n2025-05-09 23:00:00+00:00     38176.0\n2025-05-09 23:15:00+00:00     25528.0\n2025-05-09 23:30:00+00:00     50661.0\n2025-05-09 23:45:00+00:00     96722.0\nName: volume, Length: 192, dtype: float64",
+                    "spread": "datetime\n2025-05-07 08:00:00+00:00    0.0300\n2025-05-07 08:15:00+00:00    0.1000\n2025-05-07 08:30:00+00:00    0.1300\n2025-05-07 08:45:00+00:00    0.0400\n2025-05-07 09:00:00+00:00    0.1900\n                              ...  \n2025-05-09 22:45:00+00:00    0.0400\n2025-05-09 23:00:00+00:00    0.0100\n2025-05-09 23:15:00+00:00    0.0200\n2025-05-09 23:30:00+00:00    0.0200\n2025-05-09 23:45:00+00:00    0.0002\nLength: 192, dtype: float64",
+                    "body_percent": "datetime\n2025-05-07 08:00:00+00:00    0.026316\n2025-05-07 08:15:00+00:00    0.256410\n2025-05-07 08:30:00+00:00    0.464286\n2025-05-07 08:45:00+00:00    0.200000\n2025-05-07 09:00:00+00:00    0.500000\n                               ...   \n2025-05-09 22:45:00+00:00    0.666667\n2025-05-09 23:00:00+00:00    0.200803\n2025-05-09 23:15:00+00:00    0.554017\n2025-05-09 23:30:00+00:00    0.400000\n2025-05-09 23:45:00+00:00    0.003333\nLength: 192, dtype: float64",
+                    "upper_wick": "datetime\n2025-05-07 08:00:00+00:00    1.01\n2025-05-07 08:15:00+00:00    0.08\n2025-05-07 08:30:00+00:00    0.15\n2025-05-07 08:45:00+00:00    0.07\n2025-05-07 09:00:00+00:00    0.08\n                             ... \n2025-05-09 22:45:00+00:00    0.02\n2025-05-09 23:00:00+00:00    0.02\n2025-05-09 23:15:00+00:00    0.00\n2025-05-09 23:30:00+00:00    0.00\n2025-05-09 23:45:00+00:00    0.01\nLength: 192, dtype: float64",
+                    "lower_wick": "datetime\n2025-05-07 08:00:00+00:00    0.1000\n2025-05-07 08:15:00+00:00    0.2100\n2025-05-07 08:30:00+00:00    0.0000\n2025-05-07 08:45:00+00:00    0.0900\n2025-05-07 09:00:00+00:00    0.1100\n                              ...  \n2025-05-09 22:45:00+00:00    0.0000\n2025-05-09 23:00:00+00:00    0.0198\n2025-05-09 23:15:00+00:00    0.0161\n2025-05-09 23:30:00+00:00    0.0300\n2025-05-09 23:45:00+00:00    0.0498\nLength: 192, dtype: float64",
+                    "avg_volume": "datetime\n2025-05-07 08:00:00+00:00           NaN\n2025-05-07 08:15:00+00:00           NaN\n2025-05-07 08:30:00+00:00           NaN\n2025-05-07 08:45:00+00:00           NaN\n2025-05-07 09:00:00+00:00           NaN\n                                ...    \n2025-05-09 22:45:00+00:00    2467115.50\n2025-05-09 23:00:00+00:00    2467216.44\n2025-05-09 23:15:00+00:00    2466362.60\n2025-05-09 23:30:00+00:00    2463736.54\n2025-05-09 23:45:00+00:00    2458911.64\nName: volume, Length: 192, dtype: float64",
+                    "volume_ratio": "datetime\n2025-05-07 08:00:00+00:00         NaN\n2025-05-07 08:15:00+00:00         NaN\n2025-05-07 08:30:00+00:00         NaN\n2025-05-07 08:45:00+00:00         NaN\n2025-05-07 09:00:00+00:00         NaN\n                               ...   \n2025-05-09 22:45:00+00:00    0.011842\n2025-05-09 23:00:00+00:00    0.015473\n2025-05-09 23:15:00+00:00    0.010350\n2025-05-09 23:30:00+00:00    0.020563\n2025-05-09 23:45:00+00:00    0.039335\nName: volume, Length: 192, dtype: float64",
+                    "volume_class": "datetime\n2025-05-07 08:00:00+00:00     AVERAGE\n2025-05-07 08:15:00+00:00     AVERAGE\n2025-05-07 08:30:00+00:00     AVERAGE\n2025-05-07 08:45:00+00:00     AVERAGE\n2025-05-07 09:00:00+00:00     AVERAGE\n                               ...   \n2025-05-09 22:45:00+00:00    VERY_LOW\n2025-05-09 23:00:00+00:00    VERY_LOW\n2025-05-09 23:15:00+00:00    VERY_LOW\n2025-05-09 23:30:00+00:00    VERY_LOW\n2025-05-09 23:45:00+00:00    VERY_LOW\nLength: 192, dtype: object",
+                    "candle_class": "datetime\n2025-05-07 08:00:00+00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n2025-05-07 08:15:00+00:00               NEUTRAL_LOWER_WICK\n2025-05-07 08:30:00+00:00                          NEUTRAL\n2025-05-07 08:45:00+00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n2025-05-07 09:00:00+00:00                          NEUTRAL\n                                         ...              \n2025-05-09 22:45:00+00:00                          NEUTRAL\n2025-05-09 23:00:00+00:00     NARROW_UPPER_WICK_LOWER_WICK\n2025-05-09 23:15:00+00:00                           NARROW\n2025-05-09 23:30:00+00:00                           NARROW\n2025-05-09 23:45:00+00:00     NARROW_UPPER_WICK_LOWER_WICK\nLength: 192, dtype: object",
+                    "price_direction": "datetime\n2025-05-07 08:00:00+00:00    SIDEWAYS\n2025-05-07 08:15:00+00:00    SIDEWAYS\n2025-05-07 08:30:00+00:00    SIDEWAYS\n2025-05-07 08:45:00+00:00    SIDEWAYS\n2025-05-07 09:00:00+00:00    SIDEWAYS\n                               ...   \n2025-05-09 22:45:00+00:00        DOWN\n2025-05-09 23:00:00+00:00        DOWN\n2025-05-09 23:15:00+00:00        DOWN\n2025-05-09 23:30:00+00:00        DOWN\n2025-05-09 23:45:00+00:00        DOWN\nLength: 192, dtype: object",
+                    "volume_direction": "datetime\n2025-05-07 08:00:00+00:00          FLAT\n2025-05-07 08:15:00+00:00          FLAT\n2025-05-07 08:30:00+00:00          FLAT\n2025-05-07 08:45:00+00:00          FLAT\n2025-05-07 09:00:00+00:00          FLAT\n                                ...    \n2025-05-09 22:45:00+00:00    DECREASING\n2025-05-09 23:00:00+00:00    INCREASING\n2025-05-09 23:15:00+00:00    DECREASING\n2025-05-09 23:30:00+00:00    DECREASING\n2025-05-09 23:45:00+00:00    DECREASING\nLength: 192, dtype: object"
+                }
+            }
+        },
+        "confirmations": {
+            "bullish": [],
+            "bearish": [],
+            "divergences": []
+        },
+        "signal": {
+            "type": "BUY",
+            "strength": "MODERATE",
+            "details": "Moderate buy signal with some timeframe confirmation",
+            "evidence": {
+                "candle_signals": [],
+                "trend_signals": [
+                    {
+                        "timeframe": "1h",
+                        "details": "Falling price with falling volume indicates weakening bearish trend"
+                    },
+                    {
+                        "timeframe": "15m",
+                        "details": "Rising price with rising volume confirms bullish trend"
+                    }
+                ],
+                "pattern_signals": [
+                    {
+                        "timeframe": "1d",
+                        "pattern": "Accumulation",
+                        "details": "Sideways: False, High volume bars: 2, Support tests: 5"
+                    },
+                    {
+                        "timeframe": "1h",
+                        "pattern": "Accumulation",
+                        "details": "Sideways: True, High volume bars: 5, Support tests: 11"
+                    },
+                    {
+                        "timeframe": "15m",
+                        "pattern": "Accumulation",
+                        "details": "Sideways: True, High volume bars: 2, Support tests: 11"
+                    }
+                ],
+                "timeframe_confirmations": []
+            }
+        },
+        "risk_assessment": {
+            "stop_loss": 114.8429,
+            "take_profit": 123.50444999999999,
+            "risk_reward_ratio": 3.7930662387250096,
+            "position_size": 55.33728072602496,
+            "risk_per_share": 1.8071000000000055
+        },
+        "current_price": 116.65
     }
-  }
-  
+}
