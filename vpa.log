@@ -14630,3 +14630,37 @@ Risk Assessment:
 2025-05-07 18:09:45,704 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
 2025-05-09 13:25:17,070 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
 2025-05-12 19:08:32,011 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 22:14:32,790 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 22:14:34,860 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 22:14:34,860 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-12 22:14:37,450 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-12 22:14:37,450 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-12 22:14:42,847 - VPA - ERROR - No data fetched for GOOGL across specified timeframes. Aborting analysis.
+2025-05-12 22:14:42,848 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 
+2025-05-12 22:14:48,367 - VPA - ERROR - No data fetched for AMZN across specified timeframes. Aborting analysis.
+2025-05-12 22:14:48,369 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-12 22:14:53,967 - VPA - ERROR - No data fetched for MSFT across specified timeframes. Aborting analysis.
+2025-05-12 22:14:53,968 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-12 22:14:59,408 - VPA - ERROR - No data fetched for TSLA across specified timeframes. Aborting analysis.
+2025-05-12 22:14:59,410 - VPA - INFO - Starting VPA analysis for META on timeframes: 
+2025-05-12 22:15:01,352 - VPA - INFO - Completed VPA analysis for META. Signal: BUY (MODERATE)
+2025-05-12 22:15:01,353 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-12 22:15:04,493 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-12 22:15:04,494 - VPA - INFO - Starting VPA analysis for AMD on timeframes: 
+2025-05-12 22:15:09,895 - VPA - ERROR - No data fetched for AMD across specified timeframes. Aborting analysis.
+2025-05-12 22:15:09,897 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-12 22:15:15,567 - VPA - ERROR - No data fetched for INTC across specified timeframes. Aborting analysis.
+2025-05-12 22:15:15,570 - VPA - INFO - Starting VPA analysis for JPM on timeframes: 
+2025-05-12 22:15:21,933 - VPA - ERROR - No data fetched for JPM across specified timeframes. Aborting analysis.
+2025-05-12 22:15:21,934 - VPA - INFO - Starting VPA analysis for BAC on timeframes: 
+2025-05-12 22:15:27,466 - VPA - ERROR - No data fetched for BAC across specified timeframes. Aborting analysis.
+2025-05-12 22:17:25,008 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 22:17:27,331 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 22:17:27,331 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-12 22:17:29,845 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-12 22:17:29,845 - VPA - INFO - Starting VPA analysis for GOOGL on timeframes: 
+2025-05-12 22:17:35,152 - VPA - ERROR - No data fetched for GOOGL across specified timeframes. Aborting analysis.
+2025-05-12 22:17:35,153 - VPA - INFO - Starting VPA analysis for AMZN on timeframes: 
+2025-05-12 22:17:40,604 - VPA - ERROR - No data fetched for AMZN across specified timeframes. Aborting analysis.
+2025-05-12 22:22:11,660 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 22:22:13,840 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
