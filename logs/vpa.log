@@ -7001,3 +7001,42 @@ Risk Assessment:
 2025-05-12 23:15:58,936 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
 2025-05-12 23:15:58,937 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
 2025-05-12 23:16:00,138 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:31:04,354 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-12 23:31:06,409 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:31:06,410 - VPA - INFO - Analyzing AAPL...
+2025-05-12 23:31:06,410 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:31:08,565 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:31:08,565 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:31:09,787 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:31:09,787 - VPA - INFO - ticker: AAPL
+2025-05-12 23:31:09,788 - VPA - INFO - error: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-12 23:31:09,788 - VPA - INFO - explanation: Unable to analyze AAPL: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-12 23:31:09,789 - VPA - INFO - 
+
+2025-05-12 23:31:09,789 - VPA - INFO - --------------------------------------------------
+
+2025-05-12 23:31:09,789 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:31:11,083 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:31:11,084 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:31:12,344 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:35:36,216 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-12 23:35:38,177 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:35:38,177 - VPA - INFO - Analyzing AAPL...
+2025-05-12 23:35:38,178 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:35:40,456 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:35:40,457 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:35:41,599 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:36:23,130 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-12 23:36:25,038 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:36:25,038 - VPA - INFO - Analyzing AAPL...
+2025-05-12 23:36:25,039 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:36:27,882 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:36:27,882 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:36:29,081 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:41:25,604 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-12 23:41:27,481 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:41:27,510 - VPA - INFO - Analyzing AAPL...
+2025-05-12 23:41:27,510 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:41:29,680 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-12 23:41:29,681 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-12 23:41:30,871 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)

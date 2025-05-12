@@ -43,9 +43,18 @@ for ticker in tickers:
     results = vpa.analyze_ticker(ticker, timeframes=custom_timeframes)  # This will now use the custom timeframes
     print(f"Analysis for {ticker}:")
 
+for key, value in results.items():
+    print(f"{key}: {value}")
+print("\n")
+
+
 for ticker in tickers:
+    print("LLM Analysis:")
     logger.info(f"Analyzing {ticker}...")
-    nl_analysis = llm_interface.get_ticker_analysis(ticker)  # This will also use the custom timeframes
+    nl_analysis = llm_interface.get_ticker_analysis(ticker) # This will also use the custom timeframes
+    print(nl_analysis)
+
+"""
     for key, value in nl_analysis.items():
         logger.info(f"{key}: {value}")
     logger.info("\n")
@@ -59,3 +68,4 @@ for key, value in response.items():
     print(f"{key}: {value}")
 print("\n")
 
+"""
