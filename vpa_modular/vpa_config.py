@@ -95,8 +95,9 @@ default_config = {
     },
     "trend": {
         "lookback_period": 5,
-        "price_change_threshold": 0.01,
-        "volume_change_threshold": 0.05,
+        "sideways_threshold": 2,  # 2% change for sideways movement
+        "strong_trend_threshold": 5,  # 5% change for strong trend
+        "volume_change_threshold": 10,  # 10% change for significant volume change
         "min_trend_length": 3
     },
     "pattern": {

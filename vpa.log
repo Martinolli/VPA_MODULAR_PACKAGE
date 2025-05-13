@@ -15346,3 +15346,61 @@ Risk Assessment:
 2025-05-13 18:15:46,069 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
 2025-05-13 18:15:47,942 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
 2025-05-13 18:15:47,942 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:18,792 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:20,767 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:20,767 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:22,078 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:22,078 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:23,356 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:23,357 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:25,222 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:25,223 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-13 18:45:26,280 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-13 18:45:26,281 - VPA - INFO - VPA facade module test passed
+2025-05-13 18:45:26,282 - VPA - INFO - Testing VPA LLM interface module
+2025-05-13 18:45:26,282 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:26,282 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:28,792 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:28,792 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:28,793 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:28,793 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:30,141 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:30,141 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:30,142 - VPA - INFO - VPA LLM interface module test passed
+2025-05-13 18:45:30,142 - VPA - INFO - VPA LLM interface module test passed
+2025-05-13 18:45:30,142 - VPA - INFO - Testing VPA utils module
+2025-05-13 18:45:30,142 - VPA - INFO - Testing VPA utils module
+2025-05-13 18:45:30,143 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:30,143 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:30,143 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:45:32,526 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:32,526 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:32,526 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:45:35,977 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:45:35,977 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:45:35,977 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:45:35,978 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
+2025-05-13 18:45:35,978 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
+2025-05-13 18:45:35,978 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
+2025-05-13 18:48:02,893 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-13 18:48:04,924 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-13 18:48:04,925 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:48:06,051 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:48:06,052 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-13 18:48:07,846 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-13 18:48:07,847 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-13 18:48:09,376 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-13 18:48:09,376 - VPA - INFO - Starting VPA analysis for LCID on timeframes: 
+2025-05-13 18:48:10,503 - VPA - INFO - Completed VPA analysis for LCID. Signal: BUY (MODERATE)
+2025-05-13 18:48:10,504 - VPA - INFO - Starting VPA analysis for SOUN on timeframes: 
+2025-05-13 18:48:11,565 - VPA - INFO - Completed VPA analysis for SOUN. Signal: BUY (MODERATE)
+2025-05-13 18:48:11,565 - VPA - INFO - Starting VPA analysis for QBTS on timeframes: 
+2025-05-13 18:48:12,813 - VPA - INFO - Completed VPA analysis for QBTS. Signal: BUY (MODERATE)
+2025-05-13 18:48:12,814 - VPA - INFO - Starting VPA analysis for SOFI on timeframes: 
+2025-05-13 18:48:14,034 - VPA - INFO - Completed VPA analysis for SOFI. Signal: BUY (MODERATE)
+2025-05-13 18:48:14,035 - VPA - INFO - Starting VPA analysis for SOUN on timeframes: 
+2025-05-13 18:48:15,170 - VPA - INFO - Completed VPA analysis for SOUN. Signal: BUY (MODERATE)
+2025-05-13 18:48:15,172 - VPA - INFO - Starting VPA analysis for ACHR on timeframes: 
+2025-05-13 18:48:16,295 - VPA - INFO - Completed VPA analysis for ACHR. Signal: BUY (STRONG)
+2025-05-13 18:48:16,296 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-13 18:48:17,403 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)

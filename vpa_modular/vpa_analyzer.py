@@ -174,57 +174,74 @@ class TrendAnalyzer:
         volume_data = processed_data["volume"].loc[indices]
         volume_class = processed_data["volume_class"].loc[indices]
         
+        # Get parameters from config
+        params = self.trend_params
+        sideways_threshold = params.get("sideways_threshold", 2)
+        strong_trend_threshold = params.get("strong_trend_threshold", 5)
+        volume_change_threshold = params.get("volume_change_threshold", 10)
+
+        # Calculate percentage price change
+        start_price = price_data["close"].iloc[0]
+        end_price = price_data["close"].iloc[-1]
+        price_change_percent = (end_price - start_price) / start_price * 100
+
         # Determine trend direction
-        price_change = price_data["close"].iloc[-1] - price_data["close"].iloc[0]
-        if price_change > 0:
-            trend_direction = "UP"
-        elif price_change < 0:
-            trend_direction = "DOWN"
-        else:
+        if abs(price_change_percent) < sideways_threshold:
             trend_direction = "SIDEWAYS"
-        
-        # Analyze volume behavior in trend
-        volume_change = volume_data.iloc[-1] - volume_data.iloc[0]
-        if volume_change > 0:
-            volume_trend = "INCREASING"
-        elif volume_change < 0:
-            volume_trend = "DECREASING"
+        elif price_change_percent > 0:
+            trend_direction = "UP" if price_change_percent > strong_trend_threshold else "SLIGHT_UP"
         else:
+            trend_direction = "DOWN" if price_change_percent < -strong_trend_threshold else "SLIGHT_DOWN"
+
+        # Analyze volume behavior in trend
+        start_volume = volume_data.iloc[0]
+        end_volume = volume_data.iloc[-1]
+        volume_change_percent = (end_volume - start_volume) / start_volume * 100
+
+        volume_threshold = self.trend_params.get("volume_change_threshold", 10)  # 10% change
+        if abs(volume_change_percent) < volume_threshold:
             volume_trend = "FLAT"
-        
+        elif volume_change_percent > 0:
+            volume_trend = "INCREASING"
+        else:
+            volume_trend = "DECREASING"
+
         # Check for trend validation or anomaly
         result = {
             "trend_direction": trend_direction,
+            "price_change_percent": round(price_change_percent, 2),
             "volume_trend": volume_trend,
+            "volume_change_percent": round(volume_change_percent, 2),
             "signal_type": None,
             "signal_strength": None,
             "details": None
         }
-        
+
         # Apply VPA rules for trend validation/anomaly
-        if trend_direction == "UP":
+        if trend_direction in ["UP", "SLIGHT_UP"]:
             if volume_trend == "INCREASING":
-                # Rising price with rising volume = validation (bullish)
                 result["signal_type"] = "TREND_VALIDATION"
                 result["signal_strength"] = "BULLISH"
-                result["details"] = "Rising price with rising volume confirms bullish trend"
+                result["details"] = f"Rising price ({result['price_change_percent']}%) with rising volume ({result['volume_change_percent']}%) confirms bullish trend"
             elif volume_trend == "DECREASING":
-                # Rising price with falling volume = anomaly (weakening trend)
                 result["signal_type"] = "TREND_ANOMALY"
                 result["signal_strength"] = "BEARISH"
-                result["details"] = "Rising price with falling volume indicates weakening bullish trend"
+                result["details"] = f"Rising price ({result['price_change_percent']}%) with falling volume ({result['volume_change_percent']}%) indicates weakening bullish trend"
         
-        elif trend_direction == "DOWN":
+        elif trend_direction in ["DOWN", "SLIGHT_DOWN"]:
             if volume_trend == "INCREASING":
-                # Falling price with rising volume = validation (bearish)
                 result["signal_type"] = "TREND_VALIDATION"
                 result["signal_strength"] = "BEARISH"
-                result["details"] = "Falling price with rising volume confirms bearish trend"
+                result["details"] = f"Falling price ({result['price_change_percent']}%) with rising volume ({result['volume_change_percent']}%) confirms bearish trend"
             elif volume_trend == "DECREASING":
-                # Falling price with falling volume = anomaly (weakening trend)
                 result["signal_type"] = "TREND_ANOMALY"
                 result["signal_strength"] = "BULLISH"
-                result["details"] = "Falling price with falling volume indicates weakening bearish trend"
+                result["details"] = f"Falling price ({result['price_change_percent']}%) with falling volume ({result['volume_change_percent']}%) indicates weakening bearish trend"
+        
+        else:  # SIDEWAYS
+            result["signal_type"] = "CONSOLIDATION"
+            result["signal_strength"] = "NEUTRAL"
+            result["details"] = f"Sideways price movement ({result['price_change_percent']}%) indicates consolidation"
         
         # Check for climax volume conditions
         high_volume_count = sum(1 for v in volume_class if v in ["HIGH", "VERY_HIGH"])
