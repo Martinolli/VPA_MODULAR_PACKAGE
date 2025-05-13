@@ -266,7 +266,14 @@ class VPAFacade:
             explanation += f"  * Confirmed in timeframes: {', '.join(evidence['timeframe_confirmations'])}\n"
         
         explanation += "\nRisk Assessment:\n"
-        explanation += f"- Current Price: ${current_price:.2f if current_price is not None else 'N/A'}\n"
+        
+        # Handle current price formatting
+        if isinstance(current_price, (int, float)):
+            current_price_str = f"${current_price:.2f}"
+        else:
+            current_price_str = "N/A"
+        explanation += f"- Current Price: {current_price_str}\n"
+        
         explanation += f"- Stop Loss: ${risk_assessment.get('stop_loss', 0):.2f}\n"
         explanation += f"- Take Profit: ${risk_assessment.get('take_profit', 0):.2f}\n"
         explanation += f"- Risk-Reward Ratio: {risk_assessment.get('risk_reward_ratio', 0):.2f}\n"

@@ -7040,3 +7040,50 @@ Risk Assessment:
 2025-05-12 23:41:29,680 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
 2025-05-12 23:41:29,681 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
 2025-05-12 23:41:30,871 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:14:42,451 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-13 18:14:44,353 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:14:44,382 - VPA - INFO - Analyzing AAPL...
+2025-05-13 18:14:44,382 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:14:46,076 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:14:46,077 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:14:47,366 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:39,705 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-13 18:15:41,617 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:41,648 - VPA - INFO - Analyzing AAPL...
+2025-05-13 18:15:41,649 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:43,567 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:43,568 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:44,760 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:44,761 - VPA - INFO - ticker: AAPL
+2025-05-13 18:15:44,761 - VPA - INFO - current_price: 209.91
+2025-05-13 18:15:44,762 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-13 18:15:44,762 - VPA - INFO - risk: {'stop_loss': 207.37789999999998, 'take_profit': 214.00469999999999, 'risk_reward': 1.6171162276371258}
+2025-05-13 18:15:44,762 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 2, Support tests: 7'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 2, Resistance tests: 8'}, 'buying_climax': {'detected': False, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-13 18:15:44,763 - VPA - INFO - explanation: VPA Analysis for AAPL:
+
+Signal: BUY (MODERATE)
+Details: Moderate buy signal with some timeframe confirmation
+
+Supporting Evidence:
+- Trend Signals:
+  * 1h: Rising price with rising volume confirms bullish trend
+- Pattern Signals:
+  * 1d - Accumulation: Sideways: False, High volume bars: 2, Support tests: 7
+  * 1h - Accumulation: Sideways: True, High volume bars: 9, Support tests: 9
+  * 15m - Accumulation: Sideways: True, High volume bars: 3, Support tests: 9
+
+Risk Assessment:
+- Current Price: $209.91
+- Stop Loss: $207.38
+- Take Profit: $214.00
+- Risk-Reward Ratio: 1.62
+- Recommended Position Size: 39.49 shares
+
+2025-05-13 18:15:44,763 - VPA - INFO - 
+
+2025-05-13 18:15:44,763 - VPA - INFO - --------------------------------------------------
+
+2025-05-13 18:15:44,764 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:46,067 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:46,069 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:47,942 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)

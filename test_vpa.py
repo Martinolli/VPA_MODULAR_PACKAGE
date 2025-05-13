@@ -11,7 +11,7 @@ from datetime import datetime
 
 # Import VPA modules
 from vpa_modular.vpa_config import VPAConfig
-from vpa_modular.vpa_data import YFinanceProvider, MultiTimeframeProvider
+from vpa_modular.vpa_data import PolygonIOProvider, MultiTimeframeProvider
 from vpa_modular.vpa_processor import DataProcessor
 from vpa_modular.vpa_analyzer import CandleAnalyzer, TrendAnalyzer, PatternRecognizer, SupportResistanceAnalyzer, MultiTimeframeAnalyzer
 from vpa_modular.vpa_signals import SignalGenerator, RiskAssessor
@@ -67,7 +67,7 @@ def test_data_provider():
     logger.info("Testing VPA data provider module")
     
     # Create data provider
-    provider = YFinanceProvider()
+    provider = PolygonIOProvider()
     
     # Test data retrieval
     ticker = "AAPL"
@@ -111,7 +111,7 @@ def test_processor():
     logger.info("Testing VPA processor module")
     
     # Create data provider and processor
-    provider = YFinanceProvider()
+    provider = PolygonIOProvider()
     processor = DataProcessor()
     
     # Get data
@@ -152,7 +152,7 @@ def test_analyzer():
     logger.info("Testing VPA analyzer module")
     
     # Create data provider, processor, and analyzers
-    provider = YFinanceProvider()
+    provider = PolygonIOProvider()
     processor = DataProcessor()
     candle_analyzer = CandleAnalyzer()
     trend_analyzer = TrendAnalyzer()
@@ -241,7 +241,7 @@ def test_signals():
     logger.info("Testing VPA signals module")
     
     # Create data provider, processor, analyzers, and signal generator
-    provider = YFinanceProvider()
+    provider = PolygonIOProvider()
     processor = DataProcessor()
     multi_analyzer = MultiTimeframeAnalyzer()
     signal_generator = SignalGenerator()

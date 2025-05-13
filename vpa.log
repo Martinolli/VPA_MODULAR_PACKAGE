@@ -15152,3 +15152,197 @@ Risk Assessment:
 2025-05-12 23:45:17,540 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
 2025-05-12 23:45:17,540 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
 2025-05-12 23:45:17,540 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-13 18:02:11,912 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:02:14,513 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:02:14,514 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:02:17,265 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:02:17,265 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:02:19,609 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:02:19,610 - VPA - ERROR - Facade test failed: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'
+2025-05-13 18:02:19,611 - VPA - INFO - Testing VPA LLM interface module
+2025-05-13 18:02:19,611 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:02:19,611 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:02:21,906 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:02:21,906 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:02:21,907 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:02:21,907 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:02:23,250 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:02:23,250 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:02:23,250 - VPA - ERROR - LLM interface test failed: Missing current_price in analysis
+2025-05-13 18:02:23,250 - VPA - ERROR - LLM interface test failed: Missing current_price in analysis
+2025-05-13 18:02:23,251 - VPA - INFO - Testing VPA utils module
+2025-05-13 18:02:23,251 - VPA - INFO - Testing VPA utils module
+2025-05-13 18:02:23,252 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:02:23,252 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:02:23,252 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:02:25,474 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:02:25,474 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:02:25,474 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:02:29,404 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:02:29,404 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:02:29,404 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:02:29,405 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-13 18:02:29,405 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-13 18:02:29,405 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-13 18:09:43,149 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:09:45,721 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:09:45,721 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:09:47,033 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:09:47,033 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:09:48,674 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:09:48,674 - VPA - ERROR - Facade test failed: Invalid format specifier '.2f if isinstance(current_price, (int, float)) else 'N/A'' for object of type 'float'
+2025-05-13 18:09:48,675 - VPA - INFO - Testing VPA LLM interface module
+2025-05-13 18:09:48,676 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:09:48,676 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:09:51,001 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:09:51,001 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:09:51,001 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:09:51,001 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:09:52,231 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:09:52,231 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:09:52,232 - VPA - ERROR - LLM interface test failed: Missing current_price in analysis
+2025-05-13 18:09:52,232 - VPA - ERROR - LLM interface test failed: Missing current_price in analysis
+2025-05-13 18:09:52,233 - VPA - INFO - Testing VPA utils module
+2025-05-13 18:09:52,233 - VPA - INFO - Testing VPA utils module
+2025-05-13 18:09:52,233 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:09:52,233 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:09:52,233 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:09:54,668 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:09:54,668 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:09:54,668 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:09:58,025 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:09:58,025 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:09:58,025 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:09:58,027 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-13 18:09:58,027 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-13 18:09:58,027 - VPA - INFO - All VPA module tests completed. Overall result: FAILED
+2025-05-13 18:13:21,775 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:23,514 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:23,515 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:24,549 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:24,550 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:25,609 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:25,609 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:26,670 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:26,671 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-13 18:13:27,576 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-13 18:13:27,576 - VPA - INFO - VPA facade module test passed
+2025-05-13 18:13:27,578 - VPA - INFO - Testing VPA LLM interface module
+2025-05-13 18:13:27,578 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:27,578 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:29,625 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:29,625 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:29,626 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:29,626 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:30,934 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:30,934 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:30,935 - VPA - INFO - VPA LLM interface module test passed
+2025-05-13 18:13:30,935 - VPA - INFO - VPA LLM interface module test passed
+2025-05-13 18:13:30,936 - VPA - INFO - Testing VPA utils module
+2025-05-13 18:13:30,936 - VPA - INFO - Testing VPA utils module
+2025-05-13 18:13:30,937 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:30,937 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:30,937 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:13:33,149 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:33,149 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:33,149 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:13:36,588 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:13:36,588 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:13:36,588 - VPA - INFO - VPA utils module test passed
+2025-05-13 18:13:36,590 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
+2025-05-13 18:13:36,590 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
+2025-05-13 18:13:36,590 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
+2025-05-13 18:14:42,451 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-13 18:14:42,451 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-13 18:14:44,353 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:14:44,353 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:14:44,382 - VPA - INFO - Analyzing AAPL...
+2025-05-13 18:14:44,382 - VPA - INFO - Analyzing AAPL...
+2025-05-13 18:14:44,382 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:14:44,382 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:14:46,076 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:14:46,076 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:14:46,077 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:14:46,077 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:14:47,366 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:14:47,366 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:39,705 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-13 18:15:39,705 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 30m, 15m, 5m
+2025-05-13 18:15:41,617 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:41,617 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:41,648 - VPA - INFO - Analyzing AAPL...
+2025-05-13 18:15:41,648 - VPA - INFO - Analyzing AAPL...
+2025-05-13 18:15:41,649 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:41,649 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:43,567 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:43,567 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:43,568 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:43,568 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:44,760 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:44,760 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:44,761 - VPA - INFO - ticker: AAPL
+2025-05-13 18:15:44,761 - VPA - INFO - ticker: AAPL
+2025-05-13 18:15:44,761 - VPA - INFO - current_price: 209.91
+2025-05-13 18:15:44,761 - VPA - INFO - current_price: 209.91
+2025-05-13 18:15:44,762 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-13 18:15:44,762 - VPA - INFO - signal: {'type': 'BUY', 'strength': 'MODERATE', 'details': 'Moderate buy signal with some timeframe confirmation'}
+2025-05-13 18:15:44,762 - VPA - INFO - risk: {'stop_loss': 207.37789999999998, 'take_profit': 214.00469999999999, 'risk_reward': 1.6171162276371258}
+2025-05-13 18:15:44,762 - VPA - INFO - risk: {'stop_loss': 207.37789999999998, 'take_profit': 214.00469999999999, 'risk_reward': 1.6171162276371258}
+2025-05-13 18:15:44,762 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 2, Support tests: 7'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 2, Resistance tests: 8'}, 'buying_climax': {'detected': False, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-13 18:15:44,762 - VPA - INFO - patterns: {'accumulation': {'detected': True, 'details': 'Sideways: False, High volume bars: 2, Support tests: 7'}, 'distribution': {'detected': True, 'details': 'Sideways: False, High volume bars: 2, Resistance tests: 8'}, 'buying_climax': {'detected': False, 'details': 'Near high: True, Very high volume: False, Wide up candle: False, Upper wick: True'}, 'selling_climax': {'detected': False, 'details': 'Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True'}}
+2025-05-13 18:15:44,763 - VPA - INFO - explanation: VPA Analysis for AAPL:
+
+Signal: BUY (MODERATE)
+Details: Moderate buy signal with some timeframe confirmation
+
+Supporting Evidence:
+- Trend Signals:
+  * 1h: Rising price with rising volume confirms bullish trend
+- Pattern Signals:
+  * 1d - Accumulation: Sideways: False, High volume bars: 2, Support tests: 7
+  * 1h - Accumulation: Sideways: True, High volume bars: 9, Support tests: 9
+  * 15m - Accumulation: Sideways: True, High volume bars: 3, Support tests: 9
+
+Risk Assessment:
+- Current Price: $209.91
+- Stop Loss: $207.38
+- Take Profit: $214.00
+- Risk-Reward Ratio: 1.62
+- Recommended Position Size: 39.49 shares
+
+2025-05-13 18:15:44,763 - VPA - INFO - explanation: VPA Analysis for AAPL:
+
+Signal: BUY (MODERATE)
+Details: Moderate buy signal with some timeframe confirmation
+
+Supporting Evidence:
+- Trend Signals:
+  * 1h: Rising price with rising volume confirms bullish trend
+- Pattern Signals:
+  * 1d - Accumulation: Sideways: False, High volume bars: 2, Support tests: 7
+  * 1h - Accumulation: Sideways: True, High volume bars: 9, Support tests: 9
+  * 15m - Accumulation: Sideways: True, High volume bars: 3, Support tests: 9
+
+Risk Assessment:
+- Current Price: $209.91
+- Stop Loss: $207.38
+- Take Profit: $214.00
+- Risk-Reward Ratio: 1.62
+- Recommended Position Size: 39.49 shares
+
+2025-05-13 18:15:44,763 - VPA - INFO - 
+
+2025-05-13 18:15:44,763 - VPA - INFO - 
+
+2025-05-13 18:15:44,763 - VPA - INFO - --------------------------------------------------
+
+2025-05-13 18:15:44,763 - VPA - INFO - --------------------------------------------------
+
+2025-05-13 18:15:44,764 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:44,764 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:46,067 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:46,067 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:46,069 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:46,069 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-13 18:15:47,942 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-13 18:15:47,942 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)

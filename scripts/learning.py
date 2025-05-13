@@ -54,7 +54,7 @@ for ticker in tickers:
     nl_analysis = llm_interface.get_ticker_analysis(ticker) # This will also use the custom timeframes
     print(nl_analysis)
 
-"""
+
     for key, value in nl_analysis.items():
         logger.info(f"{key}: {value}")
     logger.info("\n")
@@ -67,5 +67,4 @@ response = llm_interface.process_query(query)
 for key, value in response.items():
     print(f"{key}: {value}")
 print("\n")
-
-"""
+print("Analysis complete.")
