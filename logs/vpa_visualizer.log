@@ -1,0 +1,145 @@
+2025-05-15 01:20:59,341 - VPAVisualizerRefactored_20250515_012059 - INFO - VPAVisualizerRefactored initialized. Output base: 	vpa_reports, Log base: logs
+2025-05-15 01:20:59,341 - VPAVisualizerRefactored_20250515_012059 - INFO - Starting output generation for ticker: AAPL
+2025-05-15 01:20:59,342 - VPAVisualizerRefactored_20250515_012059 - INFO - Output directory for AAPL: vpa_reports\AAPL
+2025-05-15 01:20:59,342 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating TXT report for AAPL at vpa_reports\AAPL\AAPL_report.txt
+2025-05-15 01:20:59,342 - VPAVisualizerRefactored_20250515_012059 - INFO - TXT report for AAPL generated successfully.
+2025-05-15 01:20:59,344 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating JSON report for AAPL at vpa_reports\AAPL\AAPL_report.json
+2025-05-15 01:20:59,356 - VPAVisualizerRefactored_20250515_012059 - INFO - JSON report for AAPL generated successfully.
+2025-05-15 01:20:59,356 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating candlestick charts with signals for AAPL in vpa_reports\AAPL
+2025-05-15 01:20:59,356 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for AAPL - Timeframe: 1d
+2025-05-15 01:20:59,791 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\AAPL\AAPL_1d_candlestick_signals.png
+2025-05-15 01:20:59,820 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for AAPL - Timeframe: 1h
+2025-05-15 01:21:00,526 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\AAPL\AAPL_1h_candlestick_signals.png
+2025-05-15 01:21:00,535 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for AAPL - Timeframe: 15m
+2025-05-15 01:21:00,833 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\AAPL\AAPL_15m_candlestick_signals.png
+2025-05-15 01:21:00,842 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating pattern analysis charts for AAPL in vpa_reports\AAPL
+2025-05-15 01:21:00,842 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for AAPL - Timeframe: 1d
+2025-05-15 01:21:01,054 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for AAPL - 1d
+2025-05-15 01:21:01,251 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\AAPL\AAPL_1d_pattern_analysis.png
+2025-05-15 01:21:01,259 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for AAPL - Timeframe: 1h
+2025-05-15 01:21:01,668 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for AAPL - 1h
+2025-05-15 01:21:02,031 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\AAPL\AAPL_1h_pattern_analysis.png
+2025-05-15 01:21:02,040 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for AAPL - Timeframe: 15m
+2025-05-15 01:21:02,182 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for AAPL - 15m
+2025-05-15 01:21:02,356 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\AAPL\AAPL_15m_pattern_analysis.png
+2025-05-15 01:21:02,364 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating multi-timeframe dashboard for AAPL in vpa_reports\AAPL
+2025-05-15 01:21:02,408 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 1d to dashboard for AAPL
+2025-05-15 01:21:02,584 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 1h to dashboard for AAPL
+2025-05-15 01:21:02,919 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 15m to dashboard for AAPL
+2025-05-15 01:21:03,576 - VPAVisualizerRefactored_20250515_012059 - INFO - Multi-timeframe dashboard saved to vpa_reports\AAPL\AAPL_multi_timeframe_dashboard.png
+2025-05-15 01:21:03,585 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating support/resistance charts for AAPL in vpa_reports\AAPL
+2025-05-15 01:21:03,585 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for AAPL - Timeframe: 1d
+2025-05-15 01:21:03,997 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\AAPL\AAPL_1d_support_resistance.png
+2025-05-15 01:21:04,005 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for AAPL - Timeframe: 1h
+2025-05-15 01:21:04,744 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\AAPL\AAPL_1h_support_resistance.png
+2025-05-15 01:21:04,753 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for AAPL - Timeframe: 15m
+2025-05-15 01:21:05,055 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\AAPL\AAPL_15m_support_resistance.png
+2025-05-15 01:21:05,063 - VPAVisualizerRefactored_20250515_012059 - INFO - Completed output generation for ticker: AAPL
+2025-05-15 01:21:05,063 - VPAVisualizerRefactored_20250515_012059 - INFO - Starting output generation for ticker: MSFT
+2025-05-15 01:21:05,063 - VPAVisualizerRefactored_20250515_012059 - INFO - Output directory for MSFT: vpa_reports\MSFT
+2025-05-15 01:21:05,063 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating TXT report for MSFT at vpa_reports\MSFT\MSFT_report.txt
+2025-05-15 01:21:05,063 - VPAVisualizerRefactored_20250515_012059 - INFO - TXT report for MSFT generated successfully.
+2025-05-15 01:21:05,063 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating JSON report for MSFT at vpa_reports\MSFT\MSFT_report.json
+2025-05-15 01:21:05,075 - VPAVisualizerRefactored_20250515_012059 - INFO - JSON report for MSFT generated successfully.
+2025-05-15 01:21:05,075 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating candlestick charts with signals for MSFT in vpa_reports\MSFT
+2025-05-15 01:21:05,075 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for MSFT - Timeframe: 1d
+2025-05-15 01:21:05,493 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\MSFT\MSFT_1d_candlestick_signals.png
+2025-05-15 01:21:05,502 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for MSFT - Timeframe: 1h
+2025-05-15 01:21:06,194 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\MSFT\MSFT_1h_candlestick_signals.png
+2025-05-15 01:21:06,206 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for MSFT - Timeframe: 15m
+2025-05-15 01:21:06,522 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\MSFT\MSFT_15m_candlestick_signals.png
+2025-05-15 01:21:06,531 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating pattern analysis charts for MSFT in vpa_reports\MSFT
+2025-05-15 01:21:06,531 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for MSFT - Timeframe: 1d
+2025-05-15 01:21:06,768 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for MSFT - 1d
+2025-05-15 01:21:06,955 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\MSFT\MSFT_1d_pattern_analysis.png
+2025-05-15 01:21:06,962 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for MSFT - Timeframe: 1h
+2025-05-15 01:21:07,359 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for MSFT - 1h
+2025-05-15 01:21:07,715 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\MSFT\MSFT_1h_pattern_analysis.png
+2025-05-15 01:21:07,724 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for MSFT - Timeframe: 15m
+2025-05-15 01:21:07,862 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for MSFT - 15m
+2025-05-15 01:21:08,041 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\MSFT\MSFT_15m_pattern_analysis.png
+2025-05-15 01:21:08,050 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating multi-timeframe dashboard for MSFT in vpa_reports\MSFT
+2025-05-15 01:21:08,095 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 1d to dashboard for MSFT
+2025-05-15 01:21:08,275 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 1h to dashboard for MSFT
+2025-05-15 01:21:08,623 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 15m to dashboard for MSFT
+2025-05-15 01:21:09,267 - VPAVisualizerRefactored_20250515_012059 - INFO - Multi-timeframe dashboard saved to vpa_reports\MSFT\MSFT_multi_timeframe_dashboard.png
+2025-05-15 01:21:09,275 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating support/resistance charts for MSFT in vpa_reports\MSFT
+2025-05-15 01:21:09,275 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for MSFT - Timeframe: 1d
+2025-05-15 01:21:09,665 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\MSFT\MSFT_1d_support_resistance.png
+2025-05-15 01:21:09,672 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for MSFT - Timeframe: 1h
+2025-05-15 01:21:10,454 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\MSFT\MSFT_1h_support_resistance.png
+2025-05-15 01:21:10,463 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for MSFT - Timeframe: 15m
+2025-05-15 01:21:10,790 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\MSFT\MSFT_15m_support_resistance.png
+2025-05-15 01:21:10,798 - VPAVisualizerRefactored_20250515_012059 - INFO - Completed output generation for ticker: MSFT
+2025-05-15 01:21:10,798 - VPAVisualizerRefactored_20250515_012059 - INFO - Starting output generation for ticker: GOOGL
+2025-05-15 01:21:10,799 - VPAVisualizerRefactored_20250515_012059 - INFO - Output directory for GOOGL: vpa_reports\GOOGL
+2025-05-15 01:21:10,799 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating TXT report for GOOGL at vpa_reports\GOOGL\GOOGL_report.txt
+2025-05-15 01:21:10,799 - VPAVisualizerRefactored_20250515_012059 - INFO - TXT report for GOOGL generated successfully.
+2025-05-15 01:21:10,799 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating JSON report for GOOGL at vpa_reports\GOOGL\GOOGL_report.json
+2025-05-15 01:21:10,812 - VPAVisualizerRefactored_20250515_012059 - INFO - JSON report for GOOGL generated successfully.
+2025-05-15 01:21:10,814 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating candlestick charts with signals for GOOGL in vpa_reports\GOOGL
+2025-05-15 01:21:10,814 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for GOOGL - Timeframe: 1d
+2025-05-15 01:21:11,184 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\GOOGL\GOOGL_1d_candlestick_signals.png
+2025-05-15 01:21:11,194 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for GOOGL - Timeframe: 1h
+2025-05-15 01:21:11,973 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\GOOGL\GOOGL_1h_candlestick_signals.png
+2025-05-15 01:21:11,982 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for GOOGL - Timeframe: 15m
+2025-05-15 01:21:12,294 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\GOOGL\GOOGL_15m_candlestick_signals.png
+2025-05-15 01:21:12,302 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating pattern analysis charts for GOOGL in vpa_reports\GOOGL
+2025-05-15 01:21:12,302 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for GOOGL - Timeframe: 1d
+2025-05-15 01:21:12,470 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for GOOGL - 1d
+2025-05-15 01:21:12,665 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\GOOGL\GOOGL_1d_pattern_analysis.png
+2025-05-15 01:21:12,673 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for GOOGL - Timeframe: 1h
+2025-05-15 01:21:13,107 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for GOOGL - 1h
+2025-05-15 01:21:13,533 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\GOOGL\GOOGL_1h_pattern_analysis.png
+2025-05-15 01:21:13,541 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for GOOGL - Timeframe: 15m
+2025-05-15 01:21:13,682 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for GOOGL - 15m
+2025-05-15 01:21:13,864 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\GOOGL\GOOGL_15m_pattern_analysis.png
+2025-05-15 01:21:13,873 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating multi-timeframe dashboard for GOOGL in vpa_reports\GOOGL
+2025-05-15 01:21:13,919 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 1d to dashboard for GOOGL
+2025-05-15 01:21:14,043 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 1h to dashboard for GOOGL
+2025-05-15 01:21:14,400 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 15m to dashboard for GOOGL
+2025-05-15 01:21:15,074 - VPAVisualizerRefactored_20250515_012059 - INFO - Multi-timeframe dashboard saved to vpa_reports\GOOGL\GOOGL_multi_timeframe_dashboard.png
+2025-05-15 01:21:15,084 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating support/resistance charts for GOOGL in vpa_reports\GOOGL
+2025-05-15 01:21:15,084 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for GOOGL - Timeframe: 1d
+2025-05-15 01:21:15,494 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\GOOGL\GOOGL_1d_support_resistance.png
+2025-05-15 01:21:15,503 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for GOOGL - Timeframe: 1h
+2025-05-15 01:21:16,259 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\GOOGL\GOOGL_1h_support_resistance.png
+2025-05-15 01:21:16,267 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for GOOGL - Timeframe: 15m
+2025-05-15 01:21:16,642 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\GOOGL\GOOGL_15m_support_resistance.png
+2025-05-15 01:21:16,651 - VPAVisualizerRefactored_20250515_012059 - INFO - Completed output generation for ticker: GOOGL
+2025-05-15 01:21:16,651 - VPAVisualizerRefactored_20250515_012059 - INFO - Starting output generation for ticker: AMZN
+2025-05-15 01:21:16,651 - VPAVisualizerRefactored_20250515_012059 - INFO - Output directory for AMZN: vpa_reports\AMZN
+2025-05-15 01:21:16,651 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating TXT report for AMZN at vpa_reports\AMZN\AMZN_report.txt
+2025-05-15 01:21:16,652 - VPAVisualizerRefactored_20250515_012059 - INFO - TXT report for AMZN generated successfully.
+2025-05-15 01:21:16,652 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating JSON report for AMZN at vpa_reports\AMZN\AMZN_report.json
+2025-05-15 01:21:16,664 - VPAVisualizerRefactored_20250515_012059 - INFO - JSON report for AMZN generated successfully.
+2025-05-15 01:21:16,664 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating candlestick charts with signals for AMZN in vpa_reports\AMZN
+2025-05-15 01:21:16,664 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for AMZN - Timeframe: 1d
+2025-05-15 01:21:17,036 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\AMZN\AMZN_1d_candlestick_signals.png
+2025-05-15 01:21:17,045 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for AMZN - Timeframe: 1h
+2025-05-15 01:21:17,775 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\AMZN\AMZN_1h_candlestick_signals.png
+2025-05-15 01:21:17,783 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting candlestick for AMZN - Timeframe: 15m
+2025-05-15 01:21:18,124 - VPAVisualizerRefactored_20250515_012059 - INFO - Successfully saved candlestick chart to vpa_reports\AMZN\AMZN_15m_candlestick_signals.png
+2025-05-15 01:21:18,132 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating pattern analysis charts for AMZN in vpa_reports\AMZN
+2025-05-15 01:21:18,132 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for AMZN - Timeframe: 1d
+2025-05-15 01:21:18,301 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for AMZN - 1d
+2025-05-15 01:21:18,497 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\AMZN\AMZN_1d_pattern_analysis.png
+2025-05-15 01:21:18,507 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for AMZN - Timeframe: 1h
+2025-05-15 01:21:18,885 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for AMZN - 1h
+2025-05-15 01:21:19,254 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\AMZN\AMZN_1h_pattern_analysis.png
+2025-05-15 01:21:19,263 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting pattern analysis for AMZN - Timeframe: 15m
+2025-05-15 01:21:19,448 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting 	testing	 test markers for AMZN - 15m
+2025-05-15 01:21:19,618 - VPAVisualizerRefactored_20250515_012059 - INFO - Pattern analysis chart saved to vpa_reports\AMZN\AMZN_15m_pattern_analysis.png
+2025-05-15 01:21:19,628 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating multi-timeframe dashboard for AMZN in vpa_reports\AMZN
+2025-05-15 01:21:19,673 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 1d to dashboard for AMZN
+2025-05-15 01:21:19,806 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 1h to dashboard for AMZN
+2025-05-15 01:21:20,179 - VPAVisualizerRefactored_20250515_012059 - INFO - Adding 15m to dashboard for AMZN
+2025-05-15 01:21:20,861 - VPAVisualizerRefactored_20250515_012059 - INFO - Multi-timeframe dashboard saved to vpa_reports\AMZN\AMZN_multi_timeframe_dashboard.png
+2025-05-15 01:21:20,870 - VPAVisualizerRefactored_20250515_012059 - INFO - Generating support/resistance charts for AMZN in vpa_reports\AMZN
+2025-05-15 01:21:20,870 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for AMZN - Timeframe: 1d
+2025-05-15 01:21:21,295 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\AMZN\AMZN_1d_support_resistance.png
+2025-05-15 01:21:21,304 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for AMZN - Timeframe: 1h
+2025-05-15 01:21:22,088 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\AMZN\AMZN_1h_support_resistance.png
+2025-05-15 01:21:22,105 - VPAVisualizerRefactored_20250515_012059 - INFO - Plotting S/R for AMZN - Timeframe: 15m
+2025-05-15 01:21:22,458 - VPAVisualizerRefactored_20250515_012059 - INFO - Support/Resistance chart saved to vpa_reports\AMZN\AMZN_15m_support_resistance.png
+2025-05-15 01:21:22,467 - VPAVisualizerRefactored_20250515_012059 - INFO - Completed output generation for ticker: AMZN

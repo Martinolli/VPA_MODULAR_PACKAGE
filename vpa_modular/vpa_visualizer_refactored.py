@@ -20,7 +20,7 @@ class VPAVisualizerRefactored:
     Refactored VPA Visualizer to generate charts and reports from VPAResultExtractor data.
     Ensures outputs are saved to specified directories and logs operations.
     """
-    def __init__(self, result_extractor, output_base_dir="vpa_reports", log_base_dir="vpa_modular_package/logs"):
+    def __init__(self, result_extractor, output_base_dir="vpa_reports", log_base_dir="logs"):
         """
         Initializes the VPAVisualizerRefactored.
 
@@ -281,12 +281,27 @@ class VPAVisualizerRefactored:
         ax.set_ylabel('Price', fontsize=10)
         ax.grid(True, linestyle='--', linewidth=0.5, alpha=0.7)
 
-        if volume_data is not None and not volume_data.empty:
+        if volume_data is not None:
             ax2 = ax.twinx()
-            ax2.bar(volume_data.index, volume_data, width, color='blue', alpha=0.3, label='Volume')
-            ax2.set_ylabel('Volume', fontsize=10, color='blue')
-            ax2.tick_params(axis='y', labelcolor='blue')
-            ax2.grid(False)
+            try:
+                if isinstance(volume_data, pd.DataFrame):
+                    if 'volume' in volume_data.columns:
+                        volume_data = volume_data['volume']
+                    else:
+                        volume_data = volume_data.iloc[:, 0]  # Take the first column
+                
+                if isinstance(volume_data, pd.Series):
+                    volume_data = pd.to_numeric(volume_data, errors='coerce')
+                    ax2.bar(volume_data.index, volume_data.values, width, color='blue', alpha=0.3, label='Volume')
+                else:
+                    self.logger.warning(f"Unexpected volume_data type: {type(volume_data)}. Skipping volume plot.")
+                    return
+                
+                ax2.set_ylabel('Volume', fontsize=10, color='blue')
+                ax2.tick_params(axis='y', labelcolor='blue')
+                ax2.grid(False)
+            except Exception as e:
+                self.logger.error(f"Error plotting volume data: {e}")
         
         ax.autoscale_view()
 

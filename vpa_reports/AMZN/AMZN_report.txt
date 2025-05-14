@@ -1,0 +1,157 @@
+VPA Analysis Report for: AMZN
+Report Generated: 2025-05-15 01:21:16
+======================================================================
+
+Current Price: 210.25
+
+Overall Signal:
+  Type: BUY
+  Strength: MODERATE
+  Details: Moderate buy signal with some timeframe confirmation
+  Evidence:
+    Candle Signals:
+    Trend Signals:
+    Pattern Signals:
+      - Timeframe: 1d
+      - Pattern: Accumulation
+      - Details: Sideways: False, High volume bars: 3, Support tests: 6
+      - Timeframe: 1h
+      - Pattern: Accumulation
+      - Details: Sideways: True, High volume bars: 8, Support tests: 13
+      - Timeframe: 15m
+      - Pattern: Accumulation
+      - Details: Sideways: True, High volume bars: 14, Support tests: 13
+    Timeframe Confirmations:
+
+Risk Assessment:
+  Stop Loss: 190.8609
+  Take Profit: 220.76250000000002
+  Risk Reward Ratio: 0.5421860736186832
+  Position Size: 5.157536966646205
+  Risk Per Share: 19.389100000000013
+
+Timeframe Specific Analysis:
+  Timeframe: 1D
+  --------------------
+    Candle Analysis:
+      Candle Class: NEUTRAL
+      Volume Class: AVERAGE
+      Is Up Candle: False
+      Price Direction: UP
+      Signal Type: None
+      Signal Strength: None
+      Details: 
+    Trend Analysis:
+      Trend Direction: UP
+      Price Change Percent: 11.41
+      Volume Trend: DECREASING
+      Volume Change Percent: -13.73
+      Signal Type: TREND_ANOMALY
+      Signal Strength: BEARISH
+      Details: Rising price (11.41%) with falling volume (-13.73%) indicates weakening bullish trend
+    Pattern Analysis:
+      Accumulation: Detected: True
+        Details: {'detected': True, 'strength': 2, 'details': 'Sideways: False, High volume bars: 3, Support tests: 6'}
+      Distribution: Detected: True
+        Details: {'detected': True, 'strength': 2, 'details': 'Sideways: False, High volume bars: 3, Resistance tests: 7'}
+      Testing: Detected: True
+        Tests:
+          - Type: SUPPORT_TEST, Price: 183.85, Index: 2025-05-06 04:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 194.69, Index: 2025-05-09 04:00:00+00:00
+      Buying Climax: Detected: False
+      Selling Climax: Detected: False
+    Support/Resistance:
+      Support Levels:
+        - Price: 191.82, Strength: 3.5, Tests: 5
+        - Price: 184.4, Strength: 3.0, Tests: 4
+        - Price: 189.38, Strength: 1.5, Tests: 1
+        - Price: 161.38, Strength: 1, Tests: 0
+        - Price: 165.285, Strength: 1, Tests: 0
+      Resistance Levels:
+        - Price: 187.44, Strength: 3.5, Tests: 5
+        - Price: 199.0, Strength: 2.5, Tests: 3
+        - Price: 192.65, Strength: 2.0, Tests: 2
+        - Price: 206.21, Strength: 1.5, Tests: 1
+        - Price: 190.22, Strength: 1.5, Tests: 1
+
+  Timeframe: 1H
+  --------------------
+    Candle Analysis:
+      Candle Class: NARROW
+      Volume Class: VERY_LOW
+      Is Up Candle: False
+      Price Direction: UP
+      Signal Type: VALIDATION
+      Signal Strength: NEUTRAL
+      Details: Narrow spread down candle with low volume indicates consolidation
+    Trend Analysis:
+      Trend Direction: SIDEWAYS
+      Price Change Percent: -0.24
+      Volume Trend: DECREASING
+      Volume Change Percent: -99.9
+      Signal Type: CONSOLIDATION
+      Signal Strength: NEUTRAL
+      Details: Sideways price movement (-0.24%) indicates consolidation
+    Pattern Analysis:
+      Accumulation: Detected: True
+        Details: {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 8, Support tests: 13'}
+      Distribution: Detected: True
+        Details: {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 8, Resistance tests: 13'}
+      Testing: Detected: True
+        Tests:
+          - Type: SUPPORT_TEST, Price: 210.51, Index: 2025-05-13 20:00:00+00:00
+          - Type: SUPPORT_TEST, Price: 210.01, Index: 2025-05-13 21:00:00+00:00
+          - Type: SUPPORT_TEST, Price: 210.21, Index: 2025-05-14 09:00:00+00:00
+          - Type: SUPPORT_TEST, Price: 210.4973, Index: 2025-05-14 12:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 211.24, Index: 2025-05-13 23:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 211.44, Index: 2025-05-14 08:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 211.45, Index: 2025-05-14 10:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 212.11, Index: 2025-05-14 11:00:00+00:00
+      Buying Climax: Detected: False
+      Selling Climax: Detected: False
+    Support/Resistance:
+      Support Levels:
+        - Price: 210.01, Strength: 8.0, Tests: 14
+        - Price: 207.671, Strength: 6.5, Tests: 9
+        - Price: 199.9, Strength: 1, Tests: 0
+      Resistance Levels:
+        - Price: 211.66, Strength: 9.5, Tests: 15
+        - Price: 209.2, Strength: 3.5, Tests: 5
+        - Price: 214.84, Strength: 2.0, Tests: 2
+
+  Timeframe: 15M
+  --------------------
+    Candle Analysis:
+      Candle Class: NARROW
+      Volume Class: VERY_LOW
+      Is Up Candle: False
+      Price Direction: DOWN
+      Signal Type: VALIDATION
+      Signal Strength: NEUTRAL
+      Details: Narrow spread down candle with low volume indicates consolidation
+    Trend Analysis:
+      Trend Direction: SIDEWAYS
+      Price Change Percent: -0.22
+      Volume Trend: DECREASING
+      Volume Change Percent: -99.93
+      Signal Type: CONSOLIDATION
+      Signal Strength: NEUTRAL
+      Details: Sideways price movement (-0.22%) indicates consolidation
+    Pattern Analysis:
+      Accumulation: Detected: True
+        Details: {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 14, Support tests: 13'}
+      Distribution: Detected: True
+        Details: {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 14, Resistance tests: 13'}
+      Testing: Detected: True
+        Tests:
+          - Type: SUPPORT_TEST, Price: 209.72, Index: 2025-05-14 21:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 210.25, Index: 2025-05-14 20:45:00+00:00
+      Buying Climax: Detected: False
+      Selling Climax: Detected: False
+    Support/Resistance:
+      Support Levels:
+        - Price: 210.4973, Strength: 18.5, Tests: 33
+      Resistance Levels:
+        - Price: 210.72, Strength: 20.5, Tests: 39
+
+======================================================================

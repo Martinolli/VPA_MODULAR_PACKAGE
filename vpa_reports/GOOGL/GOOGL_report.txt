@@ -1,0 +1,166 @@
+VPA Analysis Report for: GOOGL
+Report Generated: 2025-05-15 01:21:10
+======================================================================
+
+Current Price: 165.37
+
+Overall Signal:
+  Type: BUY
+  Strength: MODERATE
+  Details: Moderate buy signal with some timeframe confirmation
+  Evidence:
+    Candle Signals:
+    Trend Signals:
+    Pattern Signals:
+      - Timeframe: 1d
+      - Pattern: Accumulation
+      - Details: Sideways: False, High volume bars: 3, Support tests: 7
+      - Timeframe: 1h
+      - Pattern: Accumulation
+      - Details: Sideways: True, High volume bars: 9, Support tests: 9
+      - Timeframe: 15m
+      - Pattern: Accumulation
+      - Details: Sideways: True, High volume bars: 9, Support tests: 12
+    Timeframe Confirmations:
+
+Risk Assessment:
+  Stop Loss: 160.56315
+  Take Profit: 166.21694999999997
+  Risk Reward Ratio: 0.17619646962147031
+  Position Size: 20.803644798568723
+  Risk Per Share: 4.806849999999997
+
+Timeframe Specific Analysis:
+  Timeframe: 1D
+  --------------------
+    Candle Analysis:
+      Candle Class: WIDE
+      Volume Class: AVERAGE
+      Is Up Candle: True
+      Price Direction: DOWN
+      Signal Type: None
+      Signal Strength: None
+      Details: 
+    Trend Analysis:
+      Trend Direction: UP
+      Price Change Percent: 9.24
+      Volume Trend: DECREASING
+      Volume Change Percent: -61.95
+      Signal Type: TREND_ANOMALY
+      Signal Strength: BEARISH
+      Details: Rising price (9.24%) with falling volume (-61.95%) indicates weakening bullish trend
+    Pattern Analysis:
+      Accumulation: Detected: True
+        Details: {'detected': True, 'strength': 2, 'details': 'Sideways: False, High volume bars: 3, Support tests: 7'}
+      Distribution: Detected: True
+        Details: {'detected': True, 'strength': 2, 'details': 'Sideways: False, High volume bars: 3, Resistance tests: 6'}
+      Testing: Detected: True
+        Tests:
+          - Type: SUPPORT_TEST, Price: 161.19, Index: 2025-05-06 04:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 165.39, Index: 2025-05-05 04:00:00+00:00
+      Buying Climax: Detected: True
+        Details: {'detected': True, 'strength': 3, 'details': 'Near high: True, Very high volume: False, Wide up candle: True, Upper wick: True'}
+      Selling Climax: Detected: False
+    Support/Resistance:
+      Support Levels:
+        - Price: 161.37, Strength: 5.0, Tests: 8
+        - Price: 156.72, Strength: 2.0, Tests: 2
+        - Price: 150.662, Strength: 2.0, Tests: 2
+        - Price: 147.84, Strength: 2, Tests: 0
+        - Price: 140.53, Strength: 1, Tests: 0
+      Resistance Levels:
+        - Price: 159.55, Strength: 3.0, Tests: 4
+        - Price: 165.39, Strength: 2.0, Tests: 2
+        - Price: 161.72, Strength: 1.5, Tests: 1
+        - Price: 174.97, Strength: 1, Tests: 0
+        - Price: 170.63, Strength: 1, Tests: 0
+
+  Timeframe: 1H
+  --------------------
+    Candle Analysis:
+      Candle Class: NARROW
+      Volume Class: VERY_LOW
+      Is Up Candle: False
+      Price Direction: UP
+      Signal Type: VALIDATION
+      Signal Strength: NEUTRAL
+      Details: Narrow spread down candle with low volume indicates consolidation
+    Trend Analysis:
+      Trend Direction: SIDEWAYS
+      Price Change Percent: -0.52
+      Volume Trend: DECREASING
+      Volume Change Percent: -99.94
+      Signal Type: CONSOLIDATION
+      Signal Strength: NEUTRAL
+      Details: Sideways price movement (-0.52%) indicates consolidation
+    Pattern Analysis:
+      Accumulation: Detected: True
+        Details: {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 9, Support tests: 9'}
+      Distribution: Detected: True
+        Details: {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 9, Resistance tests: 11'}
+      Testing: Detected: True
+        Tests:
+          - Type: SUPPORT_TEST, Price: 159.51, Index: 2025-05-13 23:00:00+00:00
+          - Type: SUPPORT_TEST, Price: 159.74, Index: 2025-05-14 09:00:00+00:00
+          - Type: SUPPORT_TEST, Price: 159.78, Index: 2025-05-14 12:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 159.75, Index: 2025-05-13 22:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 159.8377, Index: 2025-05-13 23:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 160.24, Index: 2025-05-14 08:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 161.0, Index: 2025-05-14 09:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 160.75, Index: 2025-05-14 11:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 160.77, Index: 2025-05-14 12:00:00+00:00
+          - Type: RESISTANCE_TEST, Price: 165.5, Index: 2025-05-14 20:00:00+00:00
+      Buying Climax: Detected: False
+      Selling Climax: Detected: False
+    Support/Resistance:
+      Support Levels:
+        - Price: 157.76, Strength: 6.5, Tests: 9
+        - Price: 164.49, Strength: 3.0, Tests: 2
+        - Price: 152.64, Strength: 1, Tests: 0
+        - Price: 155.1, Strength: 1, Tests: 0
+        - Price: 159.61, Strength: 1, Tests: 0
+      Resistance Levels:
+        - Price: 158.6, Strength: 10.5, Tests: 19
+        - Price: 160.57, Strength: 4.0, Tests: 6
+        - Price: 167.0, Strength: 1, Tests: 0
+
+  Timeframe: 15M
+  --------------------
+    Candle Analysis:
+      Candle Class: NARROW
+      Volume Class: VERY_LOW
+      Is Up Candle: False
+      Price Direction: UP
+      Signal Type: VALIDATION
+      Signal Strength: NEUTRAL
+      Details: Narrow spread down candle with low volume indicates consolidation
+    Trend Analysis:
+      Trend Direction: SIDEWAYS
+      Price Change Percent: -0.1
+      Volume Trend: DECREASING
+      Volume Change Percent: -99.85
+      Signal Type: CONSOLIDATION
+      Signal Strength: NEUTRAL
+      Details: Sideways price movement (-0.1%) indicates consolidation
+    Pattern Analysis:
+      Accumulation: Detected: True
+        Details: {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 9, Support tests: 12'}
+      Distribution: Detected: True
+        Details: {'detected': True, 'strength': 3, 'details': 'Sideways: True, High volume bars: 9, Resistance tests: 12'}
+      Testing: Detected: True
+        Tests:
+          - Type: SUPPORT_TEST, Price: 165.21, Index: 2025-05-14 20:30:00+00:00
+          - Type: RESISTANCE_TEST, Price: 165.41, Index: 2025-05-14 20:15:00+00:00
+          - Type: RESISTANCE_TEST, Price: 165.5, Index: 2025-05-14 20:30:00+00:00
+      Buying Climax: Detected: False
+      Selling Climax: Detected: False
+    Support/Resistance:
+      Support Levels:
+        - Price: 164.495, Strength: 8.5, Tests: 15
+        - Price: 159.78, Strength: 5.5, Tests: 7
+      Resistance Levels:
+        - Price: 164.815, Strength: 9.5, Tests: 17
+        - Price: 160.77, Strength: 5.0, Tests: 6
+        - Price: 167.0, Strength: 1.5, Tests: 1
+
+======================================================================
