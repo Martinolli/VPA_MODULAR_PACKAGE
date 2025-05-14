@@ -1,0 +1,37 @@
+VPA Batch Analysis Report
+==================================================
+
+Generated on: 2025-05-14 21:01:18
+Tickers analyzed: 16
+
+Signal Summary:
+------------------------------
+BUY signals: 16
+SELL signals: 0
+NO_ACTION signals: 0
+Errors: 0
+
+Top BUY Signals:
+------------------------------
+INTC: MODERATE - Risk/Reward: 1.20
+  Price: $21.64, Stop: $19.67, Target: $24.02
+  Patterns: testing
+
+AAPL: MODERATE - Risk/Reward: 1.00
+  Price: $212.11, Stop: $210.22, Target: $214.00
+  Patterns: testing
+
+QCOM: MODERATE - Risk/Reward: 0.97
+  Price: $153.00, Stop: $149.67, Target: $156.24
+  Patterns: accumulation, distribution, testing
+
+BLK: MODERATE - Risk/Reward: 0.59
+  Price: $966.00, Stop: $933.48, Target: $985.10
+  Patterns: testing
+
+GOLD: MODERATE - Risk/Reward: 0.50
+  Price: $18.86, Stop: $18.63, Target: $18.97
+  Patterns: accumulation, distribution, testing
+
+Top SELL Signals:
+------------------------------

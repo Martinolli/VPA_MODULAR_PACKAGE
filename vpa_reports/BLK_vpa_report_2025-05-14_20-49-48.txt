@@ -1,0 +1,50 @@
+VPA Analysis Report for BLK
+Generated on: 2025-05-14_20-49-48
+==================================================
+
+Signal Information:
+------------------------------
+Type: BUY
+Strength: MODERATE
+Details: Moderate buy signal with some timeframe confirmation
+
+Risk Assessment:
+------------------------------
+Current Price: $967.78
+Stop Loss: $933.48
+Take Profit: $985.10
+Risk-Reward Ratio: 0.50
+Position Size: 2.92 shares
+
+Timeframe Analysis:
+------------------------------
+1d:
+  Candle Analysis: None (None)
+  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Patterns:
+    Accumulation: Not Detected
+    Distribution: Not Detected
+    Testing: Detected (8 tests)
+    Buying_climax: Detected
+    Selling_climax: Not Detected
+
+1h:
+  Candle Analysis: None (None)
+  Trend Analysis: CONSOLIDATION (NEUTRAL)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (3 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+15m:
+  Candle Analysis: None (None)
+  Trend Analysis: CONSOLIDATION (NEUTRAL)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (2 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
