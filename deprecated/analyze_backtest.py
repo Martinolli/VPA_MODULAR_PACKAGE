@@ -2,8 +2,8 @@ from vpa_modular.vpa_config import VPAConfig
 from vpa_backtest.vpa_backtester import VPABacktester
 from vpa_backtest.vpa_data_fetcher import VPADataFetcher
 from vpa_backtest.vpa_data_validator import VPADataValidator
-from vpa_backtest.vpa_data_fetcher_csv_fix import fix_all_csv_files
-from vpa_backtest.vpa_data_fetcher_csv_fix import fix_csv_format, enhance_data_fetcher_load_method
+from deprecated.vpa_data_fetcher_csv_fix import fix_all_csv_files
+from deprecated.vpa_data_fetcher_csv_fix import fix_csv_format, enhance_data_fetcher_load_method
 from vpa_backtest.vpa_backtester_integration import VPABacktesterIntegration
 
 # Patch the VPADataFetcher.load_data method
