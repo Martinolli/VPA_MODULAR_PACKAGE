@@ -15874,3 +15874,67 @@ Risk Assessment:
 2025-05-14 22:09:45,330 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
 2025-05-14 22:09:45,330 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
 2025-05-14 22:09:45,330 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
+2025-05-14 23:25:58,765 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-14 23:26:00,774 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-14 23:26:00,775 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-14 23:26:01,865 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-14 23:26:01,865 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-14 23:26:03,053 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-14 23:26:03,055 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-14 23:26:04,140 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-14 23:26:04,141 - VPA - INFO - Starting VPA analysis for LCID on timeframes: 
+2025-05-14 23:26:05,035 - VPA - INFO - Completed VPA analysis for LCID. Signal: BUY (MODERATE)
+2025-05-14 23:26:05,035 - VPA - INFO - Starting VPA analysis for SOUN on timeframes: 
+2025-05-14 23:26:06,146 - VPA - INFO - Completed VPA analysis for SOUN. Signal: BUY (MODERATE)
+2025-05-14 23:26:06,147 - VPA - INFO - Starting VPA analysis for QBTS on timeframes: 
+2025-05-14 23:26:07,146 - VPA - INFO - Completed VPA analysis for QBTS. Signal: BUY (MODERATE)
+2025-05-14 23:26:07,147 - VPA - INFO - Starting VPA analysis for SOFI on timeframes: 
+2025-05-14 23:26:08,067 - VPA - INFO - Completed VPA analysis for SOFI. Signal: BUY (MODERATE)
+2025-05-14 23:26:08,068 - VPA - INFO - Starting VPA analysis for ACHR on timeframes: 
+2025-05-14 23:26:09,252 - VPA - INFO - Completed VPA analysis for ACHR. Signal: BUY (MODERATE)
+2025-05-14 23:26:09,253 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-14 23:26:10,310 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-14 23:26:10,311 - VPA - INFO - Starting VPA analysis for UBER on timeframes: 
+2025-05-14 23:26:11,225 - VPA - INFO - Completed VPA analysis for UBER. Signal: BUY (MODERATE)
+2025-05-14 23:26:11,225 - VPA - INFO - Starting VPA analysis for GOLD on timeframes: 
+2025-05-14 23:26:12,212 - VPA - INFO - Completed VPA analysis for GOLD. Signal: BUY (MODERATE)
+2025-05-14 23:26:12,213 - VPA - INFO - Starting VPA analysis for BLK on timeframes: 
+2025-05-14 23:26:13,214 - VPA - INFO - Completed VPA analysis for BLK. Signal: BUY (MODERATE)
+2025-05-14 23:26:13,214 - VPA - INFO - Starting VPA analysis for GOOG on timeframes: 
+2025-05-14 23:26:14,554 - VPA - INFO - Completed VPA analysis for GOOG. Signal: BUY (MODERATE)
+2025-05-14 23:26:14,555 - VPA - INFO - Starting VPA analysis for QCOM on timeframes: 
+2025-05-14 23:26:15,446 - VPA - INFO - Completed VPA analysis for QCOM. Signal: BUY (MODERATE)
+2025-05-14 23:26:15,446 - VPA - INFO - Starting VPA analysis for PLTR on timeframes: 
+2025-05-14 23:26:16,824 - VPA - INFO - Completed VPA analysis for PLTR. Signal: BUY (MODERATE)
+2025-05-14 23:26:59,657 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-14 23:27:00,612 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-14 23:27:03,564 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-14 23:27:05,027 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-14 23:27:08,073 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-14 23:27:09,494 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-14 23:27:12,607 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-14 23:27:13,899 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-14 23:27:16,930 - VPA - INFO - Starting VPA analysis for LCID on timeframes: 
+2025-05-14 23:27:17,987 - VPA - INFO - Completed VPA analysis for LCID. Signal: BUY (MODERATE)
+2025-05-14 23:27:21,292 - VPA - INFO - Starting VPA analysis for SOUN on timeframes: 
+2025-05-14 23:27:22,203 - VPA - INFO - Completed VPA analysis for SOUN. Signal: BUY (MODERATE)
+2025-05-14 23:27:25,446 - VPA - INFO - Starting VPA analysis for QBTS on timeframes: 
+2025-05-14 23:27:26,446 - VPA - INFO - Completed VPA analysis for QBTS. Signal: BUY (MODERATE)
+2025-05-14 23:27:29,903 - VPA - INFO - Starting VPA analysis for SOFI on timeframes: 
+2025-05-14 23:27:30,942 - VPA - INFO - Completed VPA analysis for SOFI. Signal: BUY (MODERATE)
+2025-05-14 23:27:34,203 - VPA - INFO - Starting VPA analysis for ACHR on timeframes: 
+2025-05-14 23:27:35,558 - VPA - INFO - Completed VPA analysis for ACHR. Signal: BUY (MODERATE)
+2025-05-14 23:27:38,926 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-14 23:27:39,982 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-14 23:27:43,188 - VPA - INFO - Starting VPA analysis for UBER on timeframes: 
+2025-05-14 23:27:44,314 - VPA - INFO - Completed VPA analysis for UBER. Signal: BUY (MODERATE)
+2025-05-14 23:27:47,378 - VPA - INFO - Starting VPA analysis for GOLD on timeframes: 
+2025-05-14 23:27:48,325 - VPA - INFO - Completed VPA analysis for GOLD. Signal: BUY (MODERATE)
+2025-05-14 23:27:50,845 - VPA - INFO - Starting VPA analysis for BLK on timeframes: 
+2025-05-14 23:27:51,766 - VPA - INFO - Completed VPA analysis for BLK. Signal: BUY (MODERATE)
+2025-05-14 23:27:54,126 - VPA - INFO - Starting VPA analysis for GOOG on timeframes: 
+2025-05-14 23:27:55,393 - VPA - INFO - Completed VPA analysis for GOOG. Signal: BUY (MODERATE)
+2025-05-14 23:27:58,550 - VPA - INFO - Starting VPA analysis for QCOM on timeframes: 
+2025-05-14 23:27:59,458 - VPA - INFO - Completed VPA analysis for QCOM. Signal: BUY (MODERATE)
+2025-05-14 23:28:02,567 - VPA - INFO - Starting VPA analysis for PLTR on timeframes: 
+2025-05-14 23:28:03,559 - VPA - INFO - Completed VPA analysis for PLTR. Signal: BUY (MODERATE)

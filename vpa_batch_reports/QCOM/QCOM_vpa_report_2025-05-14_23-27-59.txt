@@ -1,0 +1,50 @@
+VPA Analysis Report for QCOM
+Generated on: 2025-05-14_23-27-59
+==================================================
+
+Signal Information:
+------------------------------
+Type: BUY
+Strength: MODERATE
+Details: Moderate buy signal with some timeframe confirmation
+
+Risk Assessment:
+------------------------------
+Current Price: $152.58
+Stop Loss: $149.67
+Take Profit: $156.24
+Risk-Reward Ratio: 1.25
+Position Size: 34.29 shares
+
+Timeframe Analysis:
+------------------------------
+1d:
+  Candle Analysis: VALIDATION (NEUTRAL)
+  Trend Analysis: TREND_ANOMALY (BEARISH)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (2 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+1h:
+  Candle Analysis: None (None)
+  Trend Analysis: CONSOLIDATION (NEUTRAL)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Detected (6 tests)
+    Buying_climax: Not Detected
+    Selling_climax: Not Detected
+
+15m:
+  Candle Analysis: VALIDATION (BEARISH)
+  Trend Analysis: CONSOLIDATION (NEUTRAL)
+  Patterns:
+    Accumulation: Detected
+    Distribution: Detected
+    Testing: Not Detected (0 tests)
+    Buying_climax: Detected
+    Selling_climax: Detected
+
