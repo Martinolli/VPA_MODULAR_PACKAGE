@@ -22,7 +22,7 @@ def main():
         results = json.load(f)
     
     vpa = VPAFacade() # Initialize the VPAFacade
-    tickers = ["NFLX", "AAPL", "NVDA", "TSLA", "LCID", "SOUN", "QBTS", "SOFI", "SOUN", "ACHR", "INTC","UBER", "GOLD"] # List of tickers to analyze
+    tickers = ["NFLX", "AAPL", "NVDA", "TSLA", "LCID", "SOUN", "QBTS", "SOFI", "SOUN", "ACHR", "INTC","UBER", "GOLD","BLK", "GOOG", "QCOM", "PLTR"] # List of tickers to analyze
     results = {}
 
     for ticker in tickers:
