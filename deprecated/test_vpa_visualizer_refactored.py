@@ -1,7 +1,7 @@
 import json
 from vpa_modular.vpa_facade import VPAFacade
 from vpa_modular.vpa_result_extractor import VPAResultExtractor
-from vpa_modular.vpa_visualizer_refactored import VPAVisualizerRefactored
+from deprecated.vpa_visualizer_refactored import VPAVisualizerRefactored
 
 def save_results_to_json(results, filename):
     with open(filename, 'w') as f:
