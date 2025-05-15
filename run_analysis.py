@@ -7,6 +7,8 @@
 # Import necessary libraries and modules
 
 #--------------------------------------------------- Importing Libraries ---------------------------------------
+import sys
+import io
 import os
 import json
 from vpa_modular.vpa_facade import VPAFacade
@@ -48,35 +50,44 @@ def print_testing_patterns(results):
 def generate_reports_and_visualizations(results, vpa):
     extractor = VPAResultExtractor(results)
 
-    logger.info("📊 Generating visualizations...")
+    logger.info(" Generating visualizations...")
     generate_all_visualizations(results, output_dir="vpa_analysis_output")
 
-    logger.info("📝 Creating summary report...")
+    logger.info(" Creating summary report...")
     create_summary_report(extractor, output_dir=".")
 
-    logger.info("📈 Creating dashboard...")
+    logger.info(" Creating dashboard...")
     create_dashboard(extractor, output_dir=".")
 
-    logger.info("📊 Generating batch report...")
-    create_batch_report(vpa, list(results.keys()), output_dir="vpa_batch_reports")
+    # logger.info(" Generating batch report...")
+    # create_batch_report(vpa, list(results.keys()), output_dir="vpa_batch_reports")
 
 def main():
-    vpa = VPAFacade()  # Initialize the VPAFacade
-    tickers = ["NFLX", "AAPL", "NVDA", "TSLA", "LCID", "SOUN", "QBTS", "SOFI", "ACHR", "INTC", "UBER", "GOLD", "BLK", "GOOG", "QCOM", "PLTR"]
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8') # Ensure stdout is UTF-8 encoded
 
-    logger.info("📊 Analyzing tickers...")
-    results = analyze_tickers(vpa, tickers)
+    try:
+        vpa = VPAFacade()  # Initialize the VPAFacade
+        tickers = ["NFLX", "AAPL", "NVDA", "TSLA", "LCID", "SOUN", "QBTS", "SOFI" "ACHR", "INTC", "UBER", "GOLD", "BLK", "GOOG", "QCOM", "PLTR"]
 
-    logger.info("\n📝 Extracting testing patterns...")
-    print_testing_patterns(results)
+        logger.info(" Analyzing tickers...")
+        results = analyze_tickers(vpa, tickers)
 
-    logger.info("\n💾 Saving results to JSON...")
-    save_results_to_json(results, "vpa_analysis_results.json")
+        logger.info("\n Extracting testing patterns...")
+        print_testing_patterns(results)
 
-    logger.info("\n📈 Generating reports and visualizations...")
-    generate_reports_and_visualizations(results, vpa)
+        logger.info("\n Saving results to JSON...")
+        save_results_to_json(results, "vpa_analysis_results.json")
 
-    logger.info("\n✅ Analysis complete. Check the output directories for results.")
+        logger.info("\n Generating reports and visualizations...")
+        generate_reports_and_visualizations(results, vpa)
+
+        logger.info("\n Analysis complete. Check the output directories for results.")
+
+    except UnicodeEncodeError as e:
+        logger.error(f"Encoding error occurred: {e}")
+        logger.info("Try running the script in a console that supports UTF-8, or remove emoji characters from logging statements.")
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
 
 if __name__ == "__main__":
     main()
