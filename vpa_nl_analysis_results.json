@@ -1,7 +1,0 @@
-{
-    "NVDA": {
-        "ticker": "NVDA",
-        "error": "Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'",
-        "explanation": "Unable to analyze NVDA: Invalid format specifier '.2f if current_price is not None else 'N/A'' for object of type 'float'"
-    }
-}

@@ -7,30 +7,39 @@
 # Import necessary libraries and modules
 
 #--------------------------------------------------- Importing Libraries ---------------------------------------
-
+import os
 import json
 from vpa_modular.vpa_facade import VPAFacade
 from vpa_modular.vpa_result_extractor import VPAResultExtractor, extract_testing_signals
 from vpa_modular.vpa_visualizer import generate_all_visualizations, create_summary_report, create_dashboard
 from vpa_modular.vpa_utils import create_batch_report
+from vpa_modular.vpa_logger import VPALogger
 
 #--------------------------------------------------- Main Function ---------------------------------------------
+# create necessary directories
+os.makedirs("logs", exist_ok=True)
+os.makedirs("output", exist_ok=True)
+
+# Initialize logger
+logger = VPALogger(log_level="INFO", log_file="logs/vpa_analysis.log")
+
 def save_results_to_json(results, filename):
-    with open(filename, 'w') as f:
+    output_path = os.path.join("output", filename)
+    with open(output_path, 'w') as f:
         json.dump(results, f, indent=4, default=str)
-    print(f"Results saved to {filename}")
+    logger.info(f"Results saved to {output_path}")
 
 def analyze_tickers(vpa, tickers):
     results = {}
     for ticker in tickers:
-        print(f"Analyzing {ticker}...")
+        logger.info(f"Analyzing {ticker}...")
         results[ticker] = vpa.analyze_ticker(ticker)
     return results
 
 def print_testing_patterns(results):
     testing_patterns = extract_testing_signals(results)
     for ticker, timeframes in testing_patterns.items():
-        print(f"\nTicker: {ticker}")
+        logger.info(f"\nTicker: {ticker}")
         for tf, tests in timeframes.items():
             print(f"  Timeframe: {tf}")
             for test in tests:
@@ -39,35 +48,35 @@ def print_testing_patterns(results):
 def generate_reports_and_visualizations(results, vpa):
     extractor = VPAResultExtractor(results)
 
-    print("📊 Generating visualizations...")
+    logger.info("📊 Generating visualizations...")
     generate_all_visualizations(results, output_dir="vpa_analysis_output")
 
-    print("📝 Creating summary report...")
+    logger.info("📝 Creating summary report...")
     create_summary_report(extractor, output_dir=".")
 
-    print("📈 Creating dashboard...")
+    logger.info("📈 Creating dashboard...")
     create_dashboard(extractor, output_dir=".")
 
-    print("📊 Generating batch report...")
+    logger.info("📊 Generating batch report...")
     create_batch_report(vpa, list(results.keys()), output_dir="vpa_batch_reports")
 
 def main():
     vpa = VPAFacade()  # Initialize the VPAFacade
     tickers = ["NFLX", "AAPL", "NVDA", "TSLA", "LCID", "SOUN", "QBTS", "SOFI", "ACHR", "INTC", "UBER", "GOLD", "BLK", "GOOG", "QCOM", "PLTR"]
 
-    print("📊 Analyzing tickers...")
+    logger.info("📊 Analyzing tickers...")
     results = analyze_tickers(vpa, tickers)
 
-    print("\n📝 Extracting testing patterns...")
+    logger.info("\n📝 Extracting testing patterns...")
     print_testing_patterns(results)
 
-    print("\n💾 Saving results to JSON...")
+    logger.info("\n💾 Saving results to JSON...")
     save_results_to_json(results, "vpa_analysis_results.json")
 
-    print("\n📈 Generating reports and visualizations...")
+    logger.info("\n📈 Generating reports and visualizations...")
     generate_reports_and_visualizations(results, vpa)
 
-    print("\n✅ Analysis complete. Check the output directories for results.")
+    logger.info("\n✅ Analysis complete. Check the output directories for results.")
 
 if __name__ == "__main__":
     main()

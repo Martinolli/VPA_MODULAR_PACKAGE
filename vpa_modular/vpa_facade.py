@@ -20,7 +20,7 @@ from .vpa_logger import VPALogger # Added VPALogger import
 class VPAFacade:
     """Simplified API for VPA analysis"""
     
-    def __init__(self, config_file=None, log_level="INFO", log_file="vpa.log"):
+    def __init__(self, config_file=None, log_level="INFO", log_file=None):
         """
         Initialize the VPA facade
         
@@ -30,6 +30,8 @@ class VPAFacade:
         - log_file: Path to the log file
         """
         self.config = VPAConfig(config_file)
+        if log_file is None:
+            log_file = os.path.join("logs", "vpa.log")
         self.logger = VPALogger(log_level, log_file) # Initialize logger
         self.data_provider = PolygonIOProvider() 
         self.multi_tf_provider = MultiTimeframeProvider(self.data_provider)
@@ -279,6 +281,8 @@ class VPAFacade:
         explanation += f"- Risk-Reward Ratio: {risk_assessment.get('risk_reward_ratio', 0):.2f}\n"
         explanation += f"- Recommended Position Size: {risk_assessment.get('position_size', 0):.2f} shares\n"
         
+        self.logger.info(f"Generated explanation for {ticker}")
+        self.logger.debug(explanation)
         return explanation
     
     def batch_analyze(self, tickers, timeframes=None):
@@ -295,15 +299,18 @@ class VPAFacade:
         return results
     
     def scan_for_signals(self, tickers, signal_type=None, signal_strength=None, timeframes=None):
+        self.logger.info(f"Scanning {len(tickers)} tickers for signals. Type: {signal_type}, Strength: {signal_strength}")
         all_results = self.batch_analyze(tickers, timeframes)
         filtered_results = {}
         for ticker, result in all_results.items():
             if "error" in result:
+                self.logger.warning(f"Error in results for {ticker}: {result['error']}")
                 continue
             if signal_type and result.get("signal", {}).get("type") != signal_type:
                 continue
             if signal_strength and result.get("signal", {}).get("strength") != signal_strength:
                 continue
             filtered_results[ticker] = result
+        self.logger.info(f"Found {len(filtered_results)} matching signals")
         return filtered_results
 
