@@ -66,6 +66,16 @@ def index():
     """Serves the main HTML interface."""
     return render_template("index.html")
 
+@app.route('/clear_memory', methods=['POST'])
+def clear_memory():
+    if query_engine_instance and hasattr(query_engine_instance, "memory"):
+        query_engine_instance.memory.clear()
+        logger.info("Query engine memory cleared.")
+        return jsonify({"message": "Memory cleared."}), 200
+    else:
+        logger.error("Query engine or its memory is not available.")
+        return jsonify({"error": "Query engine or its memory is not available."}), 500
+
 @app.route("/query", methods=["POST"])
 def handle_query_request():
     """Handles POST requests to the /query endpoint."""
