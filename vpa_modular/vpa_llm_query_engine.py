@@ -341,19 +341,31 @@ class VPAQueryEngine:
                     self.logger.debug(f"Executing function: {function_name} with args: {function_args}")
                     function_response = self._execute_function(function_name, **function_args)
                     
-                    if function_response:
+                    # FIX: Ensure function_response is a valid string before adding to messages
+                    if function_response is not None:
+                        # Save the function response to memory
                         self.memory.save_message("function", json.dumps({
                             "name": function_name,
                             "response": function_response
                         }))
                         
+                        # Ensure content is a string before adding to messages
+                        # This is the key fix for the "Invalid value for 'content': expected a string, got null" error
+                        content_str = str(function_response) if function_response is not None else ""
+                        
                         messages.append({
                             "role": "function",
                             "name": function_name,
-                            "content": function_response
+                            "content": content_str  # Ensure content is always a string
                         })
                     else:
-                        self.logger.warning(f"Function '{function_name}' returned empty response. Skipping function message.")
+                        # If function_response is None, use an empty string as content
+                        self.logger.warning(f"Function '{function_name}' returned None. Using empty string for content.")
+                        messages.append({
+                            "role": "function",
+                            "name": function_name,
+                            "content": ""  # Empty string instead of None
+                        })
                     
         except Exception as e:
             self.logger.error(f"Error in handle_query: {e}", exc_info=True)
@@ -394,5 +406,3 @@ if __name__ == '__main__':
             
     except Exception as e:
         print(f"\nAn error occurred during the example run: {e}")
-
-
