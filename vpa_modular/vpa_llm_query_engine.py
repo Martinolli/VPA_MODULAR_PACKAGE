@@ -189,7 +189,7 @@ class VPAQueryEngine:
             self.memory.save_message("user", user_prompt)
             self.memory.save_message("assistant", answer_text)
         
-        # Step 4: Package structured result
+        # Step 6: Package structured result
             result = {
             "answer": answer_text,
             "source_chunks": [
