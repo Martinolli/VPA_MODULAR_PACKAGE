@@ -7551,3 +7551,17 @@ Ticker: PLTR
 2025-05-16 18:14:29,485 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
 2025-05-16 18:14:29,485 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
 2025-05-16 18:14:29,485 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
+2025-05-16 18:22:33,212 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:22:33,212 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:22:35,904 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:22:35,904 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:22:35,905 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:22:35,905 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:22:37,352 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:22:37,352 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:22:37,353 - VPA - INFO - Generated explanation for AAPL
+2025-05-16 18:22:37,353 - VPA - INFO - Generated explanation for AAPL
+2025-05-16 18:22:37,353 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d
+2025-05-16 18:22:37,353 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d
+2025-05-16 18:22:38,536 - VPA - INFO - Completed VPA analysis for AAPL. Signal: SELL (MODERATE)
+2025-05-16 18:22:38,536 - VPA - INFO - Completed VPA analysis for AAPL. Signal: SELL (MODERATE)
