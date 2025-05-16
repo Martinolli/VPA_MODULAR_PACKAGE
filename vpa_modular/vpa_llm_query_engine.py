@@ -10,6 +10,7 @@ import logging
 from openai import OpenAI, OpenAIError
 from vpa_modular.vpa_llm_interface import VPALLMInterface
 from vpa_modular.rag.retriever import retrieve_top_chunks
+from vpa_modular.memory_manager import MemoryManager
 
 # Assuming VPAFacade is importable from the vpa_modular package
 try:
@@ -105,8 +106,10 @@ class VPAQueryEngine:
 
     def __init__(self, vpa_facade: VPAFacade, openai_model="gpt-4o"):
         """Initializes the engine with VPAFacade and OpenAI client."""
-        self.vpa_facade = vpa_facade
-        self.openai_model = openai_model
+        self.memory_manager = MemoryManager()  # Initialize memory manager
+        self.vpa_facade = vpa_facade # Initialize VPAFacade
+        self.openai_model = openai_model # Set the OpenAI model
+        # Set up logging
         self.logger = logging.getLogger(__name__)
         self.llm_interface = VPALLMInterface()  # Initialize VPALLMInterface
         try:
@@ -164,18 +167,23 @@ class VPAQueryEngine:
     )
 
         try:
+            messages = self.memory.get_history()  # Get the conversation history
+            messages.append({"role": "system", "content": system_message["content"]})
+            messages.append({"role": "user", "content": user_prompt})
+
             response = self.openai_client.chat.completions.create(
             model=self.openai_model,
-            messages=[
-                system_message,
-                {"role": "user", "content": user_prompt}
-            ],
-            max_tokens=7000,  # Adjust based on desired response length
-            temperature=0.4,  # Adjust for balance between creativity and focus
-            presence_penalty=0.3,  # Slight penalty for topic repetition
-            frequency_penalty=0.3,  # Slight penalty for word repetition
-        )
+            messages=messages,
+            max_tokens=7000,
+            temperature=0.4,
+            presence_penalty=0.3,
+            frequency_penalty=0.3,
+            )
+            # Step 5: Extract the answer from the response
+
             answer_text = response.choices[0].message.content.strip()
+            self.memory.save_message("user", user_prompt)
+            self.memory.save_message("assistant", answer_text)
         
         # Step 4: Package structured result
             result = {
@@ -297,6 +305,9 @@ class VPAQueryEngine:
         """Handles a user's natural language query."""
         self.logger.info(f"Received query: {user_query}")
         
+        # Get conversation history
+        messages = self.memory.get_history()
+
         system_message = {
             "role": "system",
             "content": """You are an expert in Volume Price Analysis (VPA) based on the Wyckoff method and Anna Coulling's teachings.
@@ -310,7 +321,12 @@ class VPAQueryEngine:
             Provide concise yet informative explanations, and always consider the broader market context when giving advice."""
         }
         
-        messages = [system_message, {"role": "user", "content": user_query}]
+        # If the conversation history is empty, add the system message first
+        if not messages:
+            messages.append(system_message)
+        
+        # Add the new user query to the conversation
+        messages.append({"role": "user", "content": user_query})
         
         try:
             # --- First API Call --- 
