@@ -132,7 +132,7 @@ class VPAQueryEngine:
     def _execute_search_vpa_documents(self, query: str) -> str:
         """Executes a search for VPA concepts in the embedded Anna Coulling book."""
          # Step 1: Retrieve top matching chunks
-        top_k=5 # Define the Top K parameter for the number of chunks to retrieve
+        top_k=10 # Define the Top K parameter for the number of chunks to retrieve
         top_chunks = retrieve_top_chunks(query, top_k)
 
         if not top_chunks:
@@ -151,7 +151,7 @@ class VPAQueryEngine:
         system_message = {
         "role": "system",
         "content": (
-            "You are an expert assistant specializing in Volume Price Analysis (VPA) based on Anna Coulling's book. "
+            "You are an expert assistant specializing in Volume Price Analysis (VPA) based on Anna Coulling's book and Wickoff Method. "
             "Provide comprehensive, accurate, and well-structured answers. "
             "Use examples where appropriate and always relate your answer back to VPA principles."
         )
@@ -179,7 +179,7 @@ class VPAQueryEngine:
             model=self.openai_model,
             messages=messages,
             max_tokens=7000,
-            temperature=0.4,
+            temperature=0.5,
             presence_penalty=0.3,
             frequency_penalty=0.3,
             )
@@ -305,17 +305,57 @@ class VPAQueryEngine:
         else:
             return json.dumps({"error": f"Unknown function requested: {function_name}"})
     
+    def _validate_messages(self, messages):
+        """
+        Validates and sanitizes all messages to ensure they have valid content.
+        This is a comprehensive fix to prevent "Invalid value for 'content': expected a string, got null" errors.
+        """
+        validated_messages = []
+        for i, msg in enumerate(messages):
+            # Create a new message dict to avoid modifying the original
+            valid_msg = msg.copy() if isinstance(msg, dict) else {}
+            
+            # Ensure 'role' exists and is valid
+            if 'role' not in valid_msg or not valid_msg['role']:
+                self.logger.warning(f"Message at index {i} has missing or invalid 'role'. Setting to 'system'.")
+                valid_msg['role'] = 'system'
+            
+            # Ensure 'content' exists and is a string
+            if 'content' not in valid_msg or valid_msg['content'] is None:
+                self.logger.warning(f"Message at index {i} with role '{valid_msg['role']}' has missing or null 'content'. Setting to empty string.")
+                valid_msg['content'] = ""
+            elif not isinstance(valid_msg['content'], str):
+                self.logger.warning(f"Message at index {i} with role '{valid_msg['role']}' has non-string 'content'. Converting to string.")
+                valid_msg['content'] = str(valid_msg['content'])
+            
+            # For function messages, ensure 'name' exists
+            if valid_msg['role'] == 'function' and ('name' not in valid_msg or not valid_msg['name']):
+                self.logger.warning(f"Function message at index {i} has missing 'name'. Setting to 'unknown_function'.")
+                valid_msg['name'] = 'unknown_function'
+            
+            validated_messages.append(valid_msg)
+            
+        return validated_messages
+    
     def handle_query(self, user_query: str):
         """Handles a user's natural language query."""
         self.logger.info(f"Received query: {user_query}")
         
         # Add the user query to the memory
-        messages = self.memory.get_history()
-        messages.append({"role": "user", "content": user_query})
-
+        self.memory.save_message("user", user_query)
+        
         try:
             while True:
-                self.logger.debug(f"Sending messages to OpenAI: {messages}")
+                # Get history and validate all messages
+                raw_messages = self.memory.get_history()
+                messages = self._validate_messages(raw_messages)
+                
+                # Add current user query if not in history
+                if not any(msg.get('role') == 'user' and msg.get('content') == user_query for msg in messages):
+                    messages.append({"role": "user", "content": user_query})
+                
+                self.logger.debug(f"Sending validated messages to OpenAI: {messages}")
+                
                 response = self.openai_client.chat.completions.create(
                     model=self.openai_model,
                     messages=messages,
@@ -330,6 +370,8 @@ class VPAQueryEngine:
                     self.memory.save_message("assistant", response_message.content)
                 else:
                     self.logger.warning("Received empty content from OpenAI")
+                    # Save empty string instead of None
+                    self.memory.save_message("assistant", "")
                 
                 if not response_message.tool_calls:
                     return response_message.content or "No response content received."
@@ -341,31 +383,21 @@ class VPAQueryEngine:
                     self.logger.debug(f"Executing function: {function_name} with args: {function_args}")
                     function_response = self._execute_function(function_name, **function_args)
                     
-                    # FIX: Ensure function_response is a valid string before adding to messages
-                    if function_response is not None:
-                        # Save the function response to memory
-                        self.memory.save_message("function", json.dumps({
-                            "name": function_name,
-                            "response": function_response
-                        }))
-                        
-                        # Ensure content is a string before adding to messages
-                        # This is the key fix for the "Invalid value for 'content': expected a string, got null" error
-                        content_str = str(function_response) if function_response is not None else ""
-                        
-                        messages.append({
-                            "role": "function",
-                            "name": function_name,
-                            "content": content_str  # Ensure content is always a string
-                        })
-                    else:
-                        # If function_response is None, use an empty string as content
-                        self.logger.warning(f"Function '{function_name}' returned None. Using empty string for content.")
-                        messages.append({
-                            "role": "function",
-                            "name": function_name,
-                            "content": ""  # Empty string instead of None
-                        })
+                    # Ensure function_response is a valid string
+                    content_str = str(function_response) if function_response is not None else ""
+                    
+                    # Save the function response to memory
+                    self.memory.save_message("function", json.dumps({
+                        "name": function_name,
+                        "response": content_str  # Use validated string
+                    }))
+                    
+                    # Add function message with validated content
+                    messages.append({
+                        "role": "function",
+                        "name": function_name,
+                        "content": content_str
+                    })
                     
         except Exception as e:
             self.logger.error(f"Error in handle_query: {e}", exc_info=True)
