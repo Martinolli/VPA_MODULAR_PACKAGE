@@ -7399,3 +7399,31 @@ Ticker: PLTR
  Generating reports and visualizations...
 2025-05-15 20:59:58,154 - VPA - INFO -  Generating visualizations...
 2025-05-15 21:00:18,197 - VPA - ERROR - An error occurred: 'evidence'
+2025-05-16 14:16:22,023 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 14:16:22,023 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 14:16:24,029 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 14:16:24,029 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 14:16:24,029 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 14:16:24,029 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 14:16:25,174 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 14:16:25,174 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 14:16:25,175 - VPA - INFO - Generated explanation for AAPL
+2025-05-16 14:16:25,175 - VPA - INFO - Generated explanation for AAPL
+2025-05-16 14:16:25,176 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d, 1h, 15m
+2025-05-16 14:16:25,176 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d, 1h, 15m
+2025-05-16 14:16:27,036 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 14:16:27,036 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 14:18:43,620 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 14:18:43,620 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 14:18:45,595 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 14:18:45,595 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 14:18:45,596 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 14:18:45,596 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 14:18:46,686 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 14:18:46,686 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 14:18:46,686 - VPA - INFO - Generated explanation for AAPL
+2025-05-16 14:18:46,686 - VPA - INFO - Generated explanation for AAPL
+2025-05-16 14:18:46,687 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d
+2025-05-16 14:18:46,687 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d
+2025-05-16 14:18:47,803 - VPA - INFO - Completed VPA analysis for AAPL. Signal: SELL (MODERATE)
+2025-05-16 14:18:47,803 - VPA - INFO - Completed VPA analysis for AAPL. Signal: SELL (MODERATE)

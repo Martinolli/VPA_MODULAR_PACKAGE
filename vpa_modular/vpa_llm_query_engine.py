@@ -170,7 +170,7 @@ class VPAQueryEngine:
                 system_message,
                 {"role": "user", "content": user_prompt}
             ],
-            max_tokens=2000,  # Adjust based on desired response length
+            max_tokens=5000,  # Adjust based on desired response length
             temperature=0.4,  # Adjust for balance between creativity and focus
             presence_penalty=0.3,  # Slight penalty for topic repetition
             frequency_penalty=0.3,  # Slight penalty for word repetition
