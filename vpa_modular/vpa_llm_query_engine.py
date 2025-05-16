@@ -149,12 +149,12 @@ class VPAQueryEngine:
 
         # Step 3: Create a system message for OpenAI
         system_message = {
-        "role": "system",
-        "content": (
-            "You are an expert assistant specializing in Volume Price Analysis (VPA) based on Anna Coulling's book and Wickoff Method. "
-            "Provide comprehensive, accurate, and well-structured answers. "
-            "Use examples where appropriate and always relate your answer back to VPA principles."
-        )
+            "role": "system",
+            "content": (
+                "You are an expert assistant specializing in Volume Price Analysis (VPA) based on Anna Coulling's book, "
+                "the Wyckoff Method, and related trading concepts. Provide comprehensive, accurate, and well-structured answers. "
+                "Use examples where appropriate and always relate your answer back to VPA principles and the Wyckoff Method when relevant."
+            )
         }
 
         # Step 4: Create a user prompt
