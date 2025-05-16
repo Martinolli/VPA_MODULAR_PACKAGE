@@ -109,9 +109,13 @@ class VPAQueryEngine:
         self.memory = MemoryManager()  # Initialize memory manager
         self.vpa_facade = vpa_facade # Initialize VPAFacade
         self.openai_model = openai_model # Set the OpenAI model
-        # Set up logging
-        self.logger = logging.getLogger(__name__)
+        self.logger = logging.getLogger(__name__) # Initialize logger
         self.llm_interface = VPALLMInterface()  # Initialize VPALLMInterface
+
+        # Add system message
+        self.memory.add_system_message("""You are an expert in Volume Price Analysis (VPA) based on the Wyckoff method and Anna Coulling's teachings.
+        Your goal is to analyze stock market data using VPA principles, explain VPA concepts, and answer user questions accurately.""")
+        
         try:
             # API key is expected to be in the environment variable OPENAI_API_KEY
             self.openai_client = OpenAI()
@@ -333,8 +337,14 @@ class VPAQueryEngine:
             {"role": "user", "content": user_query}
         ]
         
+        # Add the user query to the memory
+        messages = self.memory.get_history()
+        messages.append({"role": "user", "content": user_query})
+
+        # Check if the query is a search for VPA documents
         try:
             while True:
+                self.logger.debug(f"Sending messages to OpenAI: {messages}")
                 response = self.openai_client.chat.completions.create(
                     model=self.openai_model,
                     messages=messages,
@@ -343,31 +353,37 @@ class VPAQueryEngine:
                 )
                 
                 response_message = response.choices[0].message
-                messages.append(response_message)  # Add assistant's reply to messages
+                
+                # Check if content exists before saving
+                if response_message.content:
+                    self.memory.save_message("assistant", response_message.content)
+                else:
+                    self.logger.warning("Received empty content from OpenAI")
                 
                 if not response_message.tool_calls:
-                    return response_message.content
+                    return response_message.content or "No response content received."
                 
-                # Handle tool calls
                 for tool_call in response_message.tool_calls:
                     function_name = tool_call.function.name
                     function_args = json.loads(tool_call.function.arguments)
                     
+                    self.logger.debug(f"Executing function: {function_name} with args: {function_args}")
                     function_response = self._execute_function(function_name, **function_args)
                     
-                    messages.append({
-                        "tool_call_id": tool_call.id,
-                        "role": "tool",
+                    self.memory.save_message("function", json.dumps({
                         "name": function_name,
-                        "content": function_response,
-                    })
-                
-        except OpenAIError as e:
-            self.logger.error(f"OpenAI API error during query handling: {e}", exc_info=True)
-            return f"Error: Could not communicate with the AI assistant. {str(e)}"
+                        "response": function_response
+                    }))
+                    
+                messages.append({
+                    "role": "function",
+                    "name": function_name,
+                    "content": function_response
+                })
+                    
         except Exception as e:
-            self.logger.error(f"An unexpected error occurred during query handling: {e}", exc_info=True)
-            return f"Error: An unexpected issue occurred while processing your request. {str(e)}"
+            self.logger.error(f"Error in handle_query: {e}", exc_info=True)
+            return f"An error occurred while processing your query: {str(e)}"
 
 # --- Example Usage (for testing purposes) ---
 if __name__ == '__main__':
