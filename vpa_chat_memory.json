@@ -10,5 +10,9 @@
   {
     "role": "assistant",
     "content": null
+  },
+  {
+    "role": "user",
+    "content": "What is Selling Climax?"
   }
 ]

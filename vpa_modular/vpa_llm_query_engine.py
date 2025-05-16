@@ -277,24 +277,12 @@ class VPAQueryEngine:
         """Executes the concept explanation function."""
         self.logger.info(f"Executing explanation for concept: {concept_name}...")
         try:
-            # Option 1: Try getting explanation from facade/knowledge base
             explanation = self.llm_interface.explain_vpa_concept(concept_name)
-
-            if isinstance(explanation, str):
-                # If it's a string, assume it's a valid explanation
-                return json.dumps({"explanation": explanation})
-            elif isinstance(explanation, dict):
-                # If it's a dictionary, use it as is
-                return json.dumps(explanation)
-            else:
-                # Handle unexpected types
-                return json.dumps({"error": f"Unexpected type for explanation: {type(explanation)}"})
-            
-            # Option 2: Just pass back the concept name, let LLM explain based on its knowledge
-            # This is simpler initially and leverages the LLM's primary strength.
-            # return json.dumps({"concept_name": concept_name, "status": "Ready for LLM explanation"})
+            if not explanation:
+                return json.dumps({"error": f"No explanation found for concept: {concept_name}"})
+            return json.dumps({"explanation": explanation})
         except Exception as e:
-            logger.error(f"Error executing concept explanation for {concept_name}: {e}", exc_info=True)
+            self.logger.error(f"Error executing concept explanation for {concept_name}: {e}", exc_info=True)
             return json.dumps({"error": f"Failed to process explanation request for {concept_name}: {str(e)}"})
 
     def _execute_suggest_trading_parameters(self, ticker, trading_style):
@@ -321,27 +309,10 @@ class VPAQueryEngine:
         """Handles a user's natural language query."""
         self.logger.info(f"Received query: {user_query}")
         
-        messages = [
-            {
-                "role": "system",
-                "content": """You are an expert in Volume Price Analysis (VPA) based on the Wyckoff method and Anna Coulling's teachings.
-                Your goal is to analyze stock market data using VPA principles, explain VPA concepts, and answer user questions accurately.
-                When analysis is requested:
-                1. Use the provided functions to get VPA data.
-                2. Interpret the results clearly, referencing specific VPA patterns, signals (like Selling Climax, No Demand, Shakeout, Tests, etc.).
-                3. Explain volume/spread relationships and trend context.
-                4. Provide actionable insights based on the analysis.
-                5. If relevant, suggest related concepts or patterns to explore.
-                Provide concise yet informative explanations, and always consider the broader market context when giving advice."""
-            },
-            {"role": "user", "content": user_query}
-        ]
-        
         # Add the user query to the memory
         messages = self.memory.get_history()
         messages.append({"role": "user", "content": user_query})
 
-        # Check if the query is a search for VPA documents
         try:
             while True:
                 self.logger.debug(f"Sending messages to OpenAI: {messages}")
@@ -370,16 +341,19 @@ class VPAQueryEngine:
                     self.logger.debug(f"Executing function: {function_name} with args: {function_args}")
                     function_response = self._execute_function(function_name, **function_args)
                     
-                    self.memory.save_message("function", json.dumps({
-                        "name": function_name,
-                        "response": function_response
-                    }))
-                    
-                messages.append({
-                    "role": "function",
-                    "name": function_name,
-                    "content": function_response
-                })
+                    if function_response:
+                        self.memory.save_message("function", json.dumps({
+                            "name": function_name,
+                            "response": function_response
+                        }))
+                        
+                        messages.append({
+                            "role": "function",
+                            "name": function_name,
+                            "content": function_response
+                        })
+                    else:
+                        self.logger.warning(f"Function '{function_name}' returned empty response. Skipping function message.")
                     
         except Exception as e:
             self.logger.error(f"Error in handle_query: {e}", exc_info=True)
