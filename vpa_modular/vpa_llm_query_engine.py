@@ -301,113 +301,72 @@ class VPAQueryEngine:
             self.logger.error(f"Error suggesting parameters: {e}")
             return json.dumps({"error": f"Failed to suggest parameters for {ticker}: {str(e)}"})
     
+    def _execute_function(self, function_name, **kwargs):
+        if function_name == "get_vpa_analysis":
+            return self._execute_get_vpa_analysis(**kwargs)
+        elif function_name == "explain_vpa_concept":
+            return self._execute_explain_vpa_concept(**kwargs)
+        elif function_name == "suggest_trading_parameters":
+            return self._execute_suggest_trading_parameters(**kwargs)
+        elif function_name == "search_vpa_documents":
+            return self._execute_search_vpa_documents(**kwargs)
+        else:
+            return json.dumps({"error": f"Unknown function requested: {function_name}"})
+    
     def handle_query(self, user_query: str):
         """Handles a user's natural language query."""
         self.logger.info(f"Received query: {user_query}")
         
-        # Get conversation history
-        messages = self.memory.get_history()
-
-        system_message = {
-            "role": "system",
-            "content": """You are an expert in Volume Price Analysis (VPA) based on the Wyckoff method and Anna Coulling's teachings.
-            Your goal is to analyze stock market data using VPA principles, explain VPA concepts, and answer user questions accurately.
-            When analysis is requested:
-            1. Use the provided functions to get VPA data.
-            2. Interpret the results clearly, referencing specific VPA patterns, signals (like Selling Climax, No Demand, Shakeout, Tests, etc.).
-            3. Explain volume/spread relationships and trend context.
-            4. Provide actionable insights based on the analysis.
-            5. If relevant, suggest related concepts or patterns to explore.
-            Provide concise yet informative explanations, and always consider the broader market context when giving advice."""
-        }
-        
-        # If the conversation history is empty, add the system message first
-        if not messages:
-            messages.append(system_message)
-        
-        # Add the new user query to the conversation
-        messages.append({"role": "user", "content": user_query})
+        messages = [
+            {
+                "role": "system",
+                "content": """You are an expert in Volume Price Analysis (VPA) based on the Wyckoff method and Anna Coulling's teachings.
+                Your goal is to analyze stock market data using VPA principles, explain VPA concepts, and answer user questions accurately.
+                When analysis is requested:
+                1. Use the provided functions to get VPA data.
+                2. Interpret the results clearly, referencing specific VPA patterns, signals (like Selling Climax, No Demand, Shakeout, Tests, etc.).
+                3. Explain volume/spread relationships and trend context.
+                4. Provide actionable insights based on the analysis.
+                5. If relevant, suggest related concepts or patterns to explore.
+                Provide concise yet informative explanations, and always consider the broader market context when giving advice."""
+            },
+            {"role": "user", "content": user_query}
+        ]
         
         try:
-            # --- First API Call --- 
-            logger.debug("Making initial API call to OpenAI...")
-            response = self.openai_client.chat.completions.create(
-                model=self.openai_model,
-                messages=messages,
-                tools=tools,
-                tool_choice="auto" # Let the model decide whether to use a function
-            )
-            
-            response_message = response.choices[0].message
-            tool_calls = response_message.tool_calls
-
-            # --- Check if Function Call is Needed --- 
-            if tool_calls:
-                logger.info(f"LLM requested function call(s): {tool_calls}")
-                messages.append(response_message) # Add assistant's reply to messages
+            while True:
+                response = self.openai_client.chat.completions.create(
+                    model=self.openai_model,
+                    messages=messages,
+                    tools=tools,
+                    tool_choice="auto"
+                )
                 
-                # --- Execute Function(s) --- 
-                # Note: OpenAI currently only supports one function call per turn in practice, 
-                # but the API allows multiple. We'll handle the first one for simplicity.
-                tool_call = tool_calls[0]
-                function_name = tool_call.function.name
-                function_args = json.loads(tool_call.function.arguments)
+                response_message = response.choices[0].message
+                messages.append(response_message)  # Add assistant's reply to messages
                 
-                function_result_content = ""
-                if function_name == "get_vpa_analysis":
-                    function_result_content = self._execute_get_vpa_analysis(**function_args)
-                elif function_name == "explain_vpa_concept":
-                    function_result_content = self._execute_explain_vpa_concept(**function_args)
-                elif function_name == "suggest_trading_parameters":
-                    function_result_content = self._execute_suggest_trading_parameters(**function_args)
-                elif tool_call.function.name == "search_vpa_documents":
-                    args = json.loads(tool_call.function.arguments)
-                    function_result_content = self._execute_search_vpa_documents(
-                        query=args["query"]
-                    )
-                else:
-                    logger.warning(f"LLM requested unknown function: {function_name}")
-                    function_result_content = json.dumps({"error": f"Unknown function requested: {function_name}"})
+                if not response_message.tool_calls:
+                    return response_message.content
                 
-                # --- Add Function Result to Messages --- 
-                messages.append(
-                    {
+                # Handle tool calls
+                for tool_call in response_message.tool_calls:
+                    function_name = tool_call.function.name
+                    function_args = json.loads(tool_call.function.arguments)
+                    
+                    function_response = self._execute_function(function_name, **function_args)
+                    
+                    messages.append({
                         "tool_call_id": tool_call.id,
                         "role": "tool",
                         "name": function_name,
-                        "content": function_result_content,
-                    }
-                )
+                        "content": function_response,
+                    })
                 
-                # --- Second API Call (with function result) --- 
-                logger.debug("Making second API call to OpenAI with function result...")
-                second_response = self.openai_client.chat.completions.create(
-                    model=self.openai_model,
-                    messages=messages
-                )
-                final_response_content = second_response.choices[0].message.content
-                logger.info("Received final response from LLM after function call.")
-
-                # After processing the query and getting the response, save it to memory
-                self.memory.save_message("user", user_query)
-                self.memory.save_message("assistant", final_response_content)
-
-                return final_response_content
-                
-            else:
-                # --- No Function Call Needed - Direct Answer --- 
-                logger.info("LLM provided a direct answer.")
-                direct_answer = response_message.content
-                return direct_answer
-
         except OpenAIError as e:
-            logger.error(f"OpenAI API error during query handling: {e}", exc_info=True)
+            self.logger.error(f"OpenAI API error during query handling: {e}", exc_info=True)
             return f"Error: Could not communicate with the AI assistant. {str(e)}"
-        except json.JSONDecodeError as e:
-            logger.error(f"Error decoding JSON arguments from LLM: {e}", exc_info=True)
-            return f"Error: Received malformed arguments from the AI assistant."
         except Exception as e:
-            logger.error(f"An unexpected error occurred during query handling: {e}", exc_info=True)
+            self.logger.error(f"An unexpected error occurred during query handling: {e}", exc_info=True)
             return f"Error: An unexpected issue occurred while processing your request. {str(e)}"
 
 # --- Example Usage (for testing purposes) ---
