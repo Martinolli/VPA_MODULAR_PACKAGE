@@ -106,7 +106,7 @@ class VPAQueryEngine:
 
     def __init__(self, vpa_facade: VPAFacade, openai_model="gpt-4o"):
         """Initializes the engine with VPAFacade and OpenAI client."""
-        self.memory_manager = MemoryManager()  # Initialize memory manager
+        self.memory = MemoryManager()  # Initialize memory manager
         self.vpa_facade = vpa_facade # Initialize VPAFacade
         self.openai_model = openai_model # Set the OpenAI model
         # Set up logging
@@ -387,6 +387,11 @@ class VPAQueryEngine:
                 )
                 final_response_content = second_response.choices[0].message.content
                 logger.info("Received final response from LLM after function call.")
+
+                # After processing the query and getting the response, save it to memory
+                self.memory.save_message("user", user_query)
+                self.memory.save_message("assistant", final_response_content)
+
                 return final_response_content
                 
             else:
