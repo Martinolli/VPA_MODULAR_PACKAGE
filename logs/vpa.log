@@ -7512,3 +7512,42 @@ Ticker: PLTR
  Generating reports and visualizations...
 2025-05-16 17:19:13,393 - VPA - INFO -  Generating visualizations...
 2025-05-16 17:19:33,207 - VPA - ERROR - An error occurred: 'evidence'
+2025-05-16 18:14:13,392 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:15,511 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:15,511 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:16,946 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:16,946 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:18,263 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:18,264 - VPA - INFO - Generated explanation for AAPL
+2025-05-16 18:14:18,264 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:19,504 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:19,505 - VPA - INFO - Starting VPA analysis for MSFT on timeframes: 
+2025-05-16 18:14:20,713 - VPA - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-16 18:14:20,713 - VPA - INFO - VPA facade module test passed
+2025-05-16 18:14:20,714 - VPA - INFO - Testing VPA LLM interface module
+2025-05-16 18:14:20,715 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:20,715 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:22,467 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:22,467 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:22,468 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:22,468 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:23,506 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:23,506 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:23,506 - VPA - INFO - Generated explanation for AAPL
+2025-05-16 18:14:23,506 - VPA - INFO - Generated explanation for AAPL
+2025-05-16 18:14:23,506 - VPA - INFO - VPA LLM interface module test passed
+2025-05-16 18:14:23,506 - VPA - INFO - VPA LLM interface module test passed
+2025-05-16 18:14:23,508 - VPA - INFO - Testing VPA utils module
+2025-05-16 18:14:23,508 - VPA - INFO - Testing VPA utils module
+2025-05-16 18:14:23,508 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:23,508 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:23,508 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-16 18:14:25,717 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:25,717 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:25,717 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-16 18:14:29,483 - VPA - INFO - VPA utils module test passed
+2025-05-16 18:14:29,483 - VPA - INFO - VPA utils module test passed
+2025-05-16 18:14:29,483 - VPA - INFO - VPA utils module test passed
+2025-05-16 18:14:29,485 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
+2025-05-16 18:14:29,485 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
+2025-05-16 18:14:29,485 - VPA - INFO - All VPA module tests completed. Overall result: PASSED
