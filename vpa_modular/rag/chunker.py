@@ -5,8 +5,8 @@ from typing import List
 from pathlib import Path
 
 # Configuration
-SOURCE_PATH = Path("vpa_knowledge_base/sources/anna_coulling_vpa.pdf")
-OUTPUT_PATH = Path("vpa_knowledge_base/chunked/anna_coulling_chunks.json")
+SOURCE_PATH = Path("vpa_knowledge_base/sources/The_Wickoff_Method.pdf")
+OUTPUT_PATH = Path("vpa_knowledge_base/chunked/The_Wickoff_Method.json")
 CHUNK_SIZE = 500  # words
 OVERLAP = 100  # words
 
@@ -19,7 +19,7 @@ def extract_text_from_pdf(pdf_path: Path) -> str:
     return text
 
 
-def chunk_text(text: str, chunk_size: int, overlap: int) -> List[dict]:
+def chunk_text(text: str, chunk_size: int, overlap: int, source_name: str) -> List[dict]:
     words = text.split()
     chunks = []
     start = 0
@@ -36,8 +36,8 @@ def chunk_text(text: str, chunk_size: int, overlap: int) -> List[dict]:
         section_number = (start // 3000) + 1  # Roughly one section per ~6 pages
 
         chunks.append({
-            "chunk_id": f"coulling_{chunk_id}",
-            "source": "anna_coulling_vpa",
+            "chunk_id": f"{source_name}_{chunk_id}",
+            "source": source_name,
             "text": chunk_text,
             "metadata": {
                 "page": estimated_page,
@@ -61,14 +61,16 @@ def main():
     raw_text = extract_text_from_pdf(SOURCE_PATH)
     print(f"✅ Extracted {len(raw_text.split())} words")
 
+    # Extract the source name from the file name
+    source_name = SOURCE_PATH.stem
+
     print("✂️ Chunking text with overlap...")
-    chunks = chunk_text(raw_text, CHUNK_SIZE, OVERLAP)
+    chunks = chunk_text(raw_text, CHUNK_SIZE, OVERLAP, source_name)
     print(f"✅ Created {len(chunks)} chunks")
 
     print(f"💾 Saving to {OUTPUT_PATH}")
     save_chunks_to_json(chunks, OUTPUT_PATH)
     print("✅ Done.")
-
 
 if __name__ == "__main__":
     main()

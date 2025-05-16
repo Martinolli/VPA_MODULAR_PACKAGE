@@ -7,8 +7,8 @@ from openai import OpenAI
 import openai
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-INPUT_PATH = Path("vpa_knowledge_base/chunked/anna_coulling_chunks.json")
-OUTPUT_PATH = Path("vpa_knowledge_base/embeddings/anna_coulling_embeddings.json")
+INPUT_PATH = Path("vpa_knowledge_base/chunked/The_Wickoff_Method.json")
+OUTPUT_PATH = Path("vpa_knowledge_base/embeddings/The_Wickoff_Method.json")
 MODEL = "text-embedding-3-small"
 
 

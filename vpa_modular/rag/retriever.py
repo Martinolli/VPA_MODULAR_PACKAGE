@@ -7,7 +7,7 @@ from typing import List
 # Removed invalid import for openai.embeddings_utils
 
 # Configurations
-EMBEDDING_FILE = Path("vpa_knowledge_base/embeddings/anna_coulling_embeddings.json")
+EMBEDDING_DIR = Path("vpa_knowledge_base/embeddings")
 MODEL = "text-embedding-3-small"
 
 # Load API key
@@ -33,18 +33,21 @@ def embed_query(text: str) -> List[float]:
         return []
 
 
-def load_embeddings():
-    with open(EMBEDDING_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+def load_all_embeddings():
+    all_embeddings = []
+    for embedding_file in EMBEDDING_DIR.glob("*.json"):
+        with open(embedding_file, "r", encoding="utf-8") as f:
+            embeddings = json.load(f)
+            all_embeddings.extend(embeddings)
+    return all_embeddings
 
 
 def retrieve_top_chunks(query, top_k=5):
     # Embed the query
-    client = OpenAI()
     query_embedding = embed_query(query)
 
-    # Load chunks and calculate similarities
-    chunks = load_embeddings()
+    # Load all chunks and calculate similarities
+    chunks = load_all_embeddings()
     scored = []
     for chunk in chunks:
         sim = cosine_similarity(query_embedding, chunk["embedding"])
@@ -60,6 +63,7 @@ def retrieve_top_chunks(query, top_k=5):
         meta = chunk.get("metadata", {})
         print(f"--- Chunk {i} ---")
         print(f"Score: {score:.4f}")
+        print(f"Source: {chunk.get('source', '?')}")
         print(f"Page: {meta.get('page', '?')}, Section: {meta.get('section', '?')}")
         print(chunk['text'][:500] + "...\n")
 
@@ -69,8 +73,9 @@ def retrieve_top_chunks(query, top_k=5):
 
 # Example test
 if __name__ == "__main__":
-    query = "What is the importance of volume in price analysis?"
+    query = "What is Wickoff Method?"
     results = retrieve_top_chunks(query)
     for i, chunk in enumerate(results):
         print(f"\n--- Chunk {i+1} ---")
+        print(f"Source: {chunk.get('source', '?')}")
         print(chunk["text"][:500] + "...")
