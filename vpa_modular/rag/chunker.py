@@ -5,8 +5,8 @@ from typing import List
 from pathlib import Path
 
 # Configuration
-SOURCE_PATH = Path("vpa_knowledge_base/sources/The_Wyckoff_Method.pdf")
-OUTPUT_PATH = Path("vpa_knowledge_base/chunked/The_Wyckoff_Method.json")
+SOURCE_PATH = Path("vpa_knowledge_base/sources/the_wyckoff_methodology_in_depth.pdf")
+OUTPUT_PATH = Path("vpa_knowledge_base/chunked/the_wyckoff_methodology_in_depth.json")
 CHUNK_SIZE = 500  # words
 OVERLAP = 100  # words
 
