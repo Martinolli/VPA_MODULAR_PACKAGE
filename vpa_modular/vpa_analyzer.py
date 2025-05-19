@@ -198,8 +198,8 @@ class TrendAnalyzer:
         end_volume = volume_data.iloc[-1]
         volume_change_percent = (end_volume - start_volume) / start_volume * 100
 
-        volume_threshold = self.trend_params.get("volume_change_threshold", 10)  # 10% change
-        if abs(volume_change_percent) < volume_threshold:
+        # volume_threshold = self.trend_params.get("volume_change_threshold", 10)  # 10% change
+        if abs(volume_change_percent) < volume_change_threshold:
             volume_trend = "FLAT"
         elif volume_change_percent > 0:
             volume_trend = "INCREASING"

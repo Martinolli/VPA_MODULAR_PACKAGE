@@ -81,8 +81,8 @@ class VPAConfig:
 # Default configuration
 default_config = {
     "volume": {
-        "very_high_threshold": 2.0,
-        "high_threshold": 1.3,
+        "very_high_threshold": 2.0, # 200% increase
+        "high_threshold": 1.3, # 130% increase
         "low_threshold": 0.6,
         "very_low_threshold": 0.3,
         "lookback_period": 50
