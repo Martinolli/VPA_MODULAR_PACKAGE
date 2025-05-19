@@ -7565,3 +7565,173 @@ Ticker: PLTR
 2025-05-16 18:22:37,353 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d
 2025-05-16 18:22:38,536 - VPA - INFO - Completed VPA analysis for AAPL. Signal: SELL (MODERATE)
 2025-05-16 18:22:38,536 - VPA - INFO - Completed VPA analysis for AAPL. Signal: SELL (MODERATE)
+2025-05-19 19:20:57,808 - VPA - INFO -  Analyzing tickers...
+2025-05-19 19:20:57,809 - VPA - INFO - Analyzing NFLX...
+2025-05-19 19:20:57,809 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-19 19:21:00,161 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-19 19:21:00,161 - VPA - INFO - Analyzing AAPL...
+2025-05-19 19:21:00,161 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-19 19:21:01,511 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-19 19:21:01,511 - VPA - INFO - Analyzing NVDA...
+2025-05-19 19:21:01,511 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-19 19:21:03,083 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-19 19:21:03,083 - VPA - INFO - Analyzing TSLA...
+2025-05-19 19:21:03,083 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-19 19:21:04,532 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-19 19:21:04,533 - VPA - INFO - Analyzing LCID...
+2025-05-19 19:21:04,533 - VPA - INFO - Starting VPA analysis for LCID on timeframes: 
+2025-05-19 19:21:05,795 - VPA - INFO - Completed VPA analysis for LCID. Signal: BUY (MODERATE)
+2025-05-19 19:21:05,795 - VPA - INFO - Analyzing SOUN...
+2025-05-19 19:21:05,796 - VPA - INFO - Starting VPA analysis for SOUN on timeframes: 
+2025-05-19 19:21:06,936 - VPA - INFO - Completed VPA analysis for SOUN. Signal: BUY (MODERATE)
+2025-05-19 19:21:06,936 - VPA - INFO - Analyzing QBTS...
+2025-05-19 19:21:06,936 - VPA - INFO - Starting VPA analysis for QBTS on timeframes: 
+2025-05-19 19:21:08,076 - VPA - INFO - Completed VPA analysis for QBTS. Signal: BUY (MODERATE)
+2025-05-19 19:21:08,077 - VPA - INFO - Analyzing SOFIACHR...
+2025-05-19 19:21:08,077 - VPA - INFO - Starting VPA analysis for SOFIACHR on timeframes: 
+2025-05-19 19:21:09,059 - VPA - ERROR - No data fetched for SOFIACHR across specified timeframes. Aborting analysis.
+2025-05-19 19:21:09,059 - VPA - INFO - Analyzing INTC...
+2025-05-19 19:21:09,060 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-19 19:21:10,302 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-19 19:21:10,302 - VPA - INFO - Analyzing UBER...
+2025-05-19 19:21:10,302 - VPA - INFO - Starting VPA analysis for UBER on timeframes: 
+2025-05-19 19:21:11,864 - VPA - INFO - Completed VPA analysis for UBER. Signal: BUY (MODERATE)
+2025-05-19 19:21:11,865 - VPA - INFO - Analyzing GOLD...
+2025-05-19 19:21:11,865 - VPA - INFO - Starting VPA analysis for GOLD on timeframes: 
+2025-05-19 19:21:13,111 - VPA - INFO - Completed VPA analysis for GOLD. Signal: BUY (MODERATE)
+2025-05-19 19:21:13,112 - VPA - INFO - Analyzing BLK...
+2025-05-19 19:21:13,112 - VPA - INFO - Starting VPA analysis for BLK on timeframes: 
+2025-05-19 19:21:14,577 - VPA - INFO - Completed VPA analysis for BLK. Signal: BUY (MODERATE)
+2025-05-19 19:21:14,577 - VPA - INFO - Analyzing GOOG...
+2025-05-19 19:21:14,578 - VPA - INFO - Starting VPA analysis for GOOG on timeframes: 
+2025-05-19 19:21:16,556 - VPA - INFO - Completed VPA analysis for GOOG. Signal: BUY (MODERATE)
+2025-05-19 19:21:16,557 - VPA - INFO - Analyzing QCOM...
+2025-05-19 19:21:16,557 - VPA - INFO - Starting VPA analysis for QCOM on timeframes: 
+2025-05-19 19:21:17,893 - VPA - INFO - Completed VPA analysis for QCOM. Signal: BUY (MODERATE)
+2025-05-19 19:21:17,893 - VPA - INFO - Analyzing PLTR...
+2025-05-19 19:21:17,894 - VPA - INFO - Starting VPA analysis for PLTR on timeframes: 
+2025-05-19 19:21:19,072 - VPA - INFO - Completed VPA analysis for PLTR. Signal: BUY (MODERATE)
+2025-05-19 19:21:19,073 - VPA - INFO - 
+ Extracting testing patterns...
+2025-05-19 19:21:19,073 - VPA - INFO - 
+Ticker: NFLX
+2025-05-19 19:21:19,073 - VPA - INFO - 
+Ticker: AAPL
+2025-05-19 19:21:19,074 - VPA - INFO - 
+Ticker: NVDA
+2025-05-19 19:21:19,074 - VPA - INFO - 
+Ticker: TSLA
+2025-05-19 19:21:19,074 - VPA - INFO - 
+Ticker: LCID
+2025-05-19 19:21:19,074 - VPA - INFO - 
+Ticker: SOUN
+2025-05-19 19:21:19,074 - VPA - INFO - 
+Ticker: QBTS
+2025-05-19 19:21:19,074 - VPA - INFO - 
+Ticker: SOFIACHR
+2025-05-19 19:21:19,074 - VPA - INFO - 
+Ticker: INTC
+2025-05-19 19:21:19,074 - VPA - INFO - 
+Ticker: UBER
+2025-05-19 19:21:19,075 - VPA - INFO - 
+Ticker: GOLD
+2025-05-19 19:21:19,076 - VPA - INFO - 
+Ticker: BLK
+2025-05-19 19:21:19,076 - VPA - INFO - 
+Ticker: GOOG
+2025-05-19 19:21:19,076 - VPA - INFO - 
+Ticker: QCOM
+2025-05-19 19:21:19,076 - VPA - INFO - 
+Ticker: PLTR
+2025-05-19 19:21:19,076 - VPA - INFO - 
+ Saving results to JSON...
+2025-05-19 19:21:19,394 - VPA - INFO - Results saved to output\vpa_analysis_results.json
+2025-05-19 19:21:19,394 - VPA - INFO - 
+ Generating reports and visualizations...
+2025-05-19 19:21:19,396 - VPA - INFO -  Generating visualizations...
+2025-05-19 19:21:39,386 - VPA - ERROR - An error occurred: 'evidence'
+2025-05-19 19:23:38,355 - VPA - INFO -  Analyzing tickers...
+2025-05-19 19:23:38,357 - VPA - INFO - Analyzing NFLX...
+2025-05-19 19:23:38,357 - VPA - INFO - Starting VPA analysis for NFLX on timeframes: 
+2025-05-19 19:23:40,607 - VPA - INFO - Completed VPA analysis for NFLX. Signal: BUY (MODERATE)
+2025-05-19 19:23:40,608 - VPA - INFO - Analyzing AAPL...
+2025-05-19 19:23:40,608 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 
+2025-05-19 19:23:41,922 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-19 19:23:41,922 - VPA - INFO - Analyzing NVDA...
+2025-05-19 19:23:41,923 - VPA - INFO - Starting VPA analysis for NVDA on timeframes: 
+2025-05-19 19:23:43,493 - VPA - INFO - Completed VPA analysis for NVDA. Signal: BUY (MODERATE)
+2025-05-19 19:23:43,493 - VPA - INFO - Analyzing TSLA...
+2025-05-19 19:23:43,495 - VPA - INFO - Starting VPA analysis for TSLA on timeframes: 
+2025-05-19 19:23:44,674 - VPA - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
+2025-05-19 19:23:44,674 - VPA - INFO - Analyzing LCID...
+2025-05-19 19:23:44,674 - VPA - INFO - Starting VPA analysis for LCID on timeframes: 
+2025-05-19 19:23:45,942 - VPA - INFO - Completed VPA analysis for LCID. Signal: BUY (MODERATE)
+2025-05-19 19:23:45,942 - VPA - INFO - Analyzing SOUN...
+2025-05-19 19:23:45,943 - VPA - INFO - Starting VPA analysis for SOUN on timeframes: 
+2025-05-19 19:23:47,357 - VPA - INFO - Completed VPA analysis for SOUN. Signal: BUY (MODERATE)
+2025-05-19 19:23:47,358 - VPA - INFO - Analyzing QBTS...
+2025-05-19 19:23:47,358 - VPA - INFO - Starting VPA analysis for QBTS on timeframes: 
+2025-05-19 19:23:48,478 - VPA - INFO - Completed VPA analysis for QBTS. Signal: BUY (MODERATE)
+2025-05-19 19:23:48,478 - VPA - INFO - Analyzing SOFIACHR...
+2025-05-19 19:23:48,479 - VPA - INFO - Starting VPA analysis for SOFIACHR on timeframes: 
+2025-05-19 19:23:49,380 - VPA - ERROR - No data fetched for SOFIACHR across specified timeframes. Aborting analysis.
+2025-05-19 19:23:49,381 - VPA - INFO - Analyzing INTC...
+2025-05-19 19:23:49,381 - VPA - INFO - Starting VPA analysis for INTC on timeframes: 
+2025-05-19 19:23:50,752 - VPA - INFO - Completed VPA analysis for INTC. Signal: BUY (MODERATE)
+2025-05-19 19:23:50,752 - VPA - INFO - Analyzing UBER...
+2025-05-19 19:23:50,753 - VPA - INFO - Starting VPA analysis for UBER on timeframes: 
+2025-05-19 19:23:51,859 - VPA - INFO - Completed VPA analysis for UBER. Signal: BUY (MODERATE)
+2025-05-19 19:23:51,860 - VPA - INFO - Analyzing GOLD...
+2025-05-19 19:23:51,860 - VPA - INFO - Starting VPA analysis for GOLD on timeframes: 
+2025-05-19 19:23:53,141 - VPA - INFO - Completed VPA analysis for GOLD. Signal: BUY (MODERATE)
+2025-05-19 19:23:53,141 - VPA - INFO - Analyzing BLK...
+2025-05-19 19:23:53,142 - VPA - INFO - Starting VPA analysis for BLK on timeframes: 
+2025-05-19 19:23:54,253 - VPA - INFO - Completed VPA analysis for BLK. Signal: BUY (MODERATE)
+2025-05-19 19:23:54,253 - VPA - INFO - Analyzing GOOG...
+2025-05-19 19:23:54,253 - VPA - INFO - Starting VPA analysis for GOOG on timeframes: 
+2025-05-19 19:23:55,995 - VPA - INFO - Completed VPA analysis for GOOG. Signal: BUY (MODERATE)
+2025-05-19 19:23:55,996 - VPA - INFO - Analyzing QCOM...
+2025-05-19 19:23:55,996 - VPA - INFO - Starting VPA analysis for QCOM on timeframes: 
+2025-05-19 19:23:57,035 - VPA - INFO - Completed VPA analysis for QCOM. Signal: BUY (MODERATE)
+2025-05-19 19:23:57,036 - VPA - INFO - Analyzing PLTR...
+2025-05-19 19:23:57,036 - VPA - INFO - Starting VPA analysis for PLTR on timeframes: 
+2025-05-19 19:23:58,113 - VPA - INFO - Completed VPA analysis for PLTR. Signal: BUY (MODERATE)
+2025-05-19 19:23:58,113 - VPA - INFO - 
+ Extracting testing patterns...
+2025-05-19 19:23:58,113 - VPA - INFO - 
+Ticker: NFLX
+2025-05-19 19:23:58,113 - VPA - INFO - 
+Ticker: AAPL
+2025-05-19 19:23:58,113 - VPA - INFO - 
+Ticker: NVDA
+2025-05-19 19:23:58,114 - VPA - INFO - 
+Ticker: TSLA
+2025-05-19 19:23:58,114 - VPA - INFO - 
+Ticker: LCID
+2025-05-19 19:23:58,114 - VPA - INFO - 
+Ticker: SOUN
+2025-05-19 19:23:58,114 - VPA - INFO - 
+Ticker: QBTS
+2025-05-19 19:23:58,114 - VPA - INFO - 
+Ticker: SOFIACHR
+2025-05-19 19:23:58,115 - VPA - INFO - 
+Ticker: INTC
+2025-05-19 19:23:58,115 - VPA - INFO - 
+Ticker: UBER
+2025-05-19 19:23:58,115 - VPA - INFO - 
+Ticker: GOLD
+2025-05-19 19:23:58,115 - VPA - INFO - 
+Ticker: BLK
+2025-05-19 19:23:58,115 - VPA - INFO - 
+Ticker: GOOG
+2025-05-19 19:23:58,115 - VPA - INFO - 
+Ticker: QCOM
+2025-05-19 19:23:58,115 - VPA - INFO - 
+Ticker: PLTR
+2025-05-19 19:23:58,116 - VPA - INFO - 
+ Saving results to JSON...
+2025-05-19 19:23:58,414 - VPA - INFO - Results saved to output\vpa_analysis_results.json
+2025-05-19 19:23:58,415 - VPA - INFO - 
+ Generating reports and visualizations...
+2025-05-19 19:23:58,417 - VPA - INFO -  Generating visualizations...
+2025-05-19 19:24:18,673 - VPA - ERROR - An error occurred: 'evidence'

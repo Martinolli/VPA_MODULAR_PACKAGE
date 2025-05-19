@@ -17,7 +17,7 @@ try:
     from vpa_modular.vpa_facade import VPAFacade
 except ImportError:
     print("Error: VPAFacade not found. Make sure vpa_modular package is accessible.")
-    # Define a dummy class if facade is not available, to allow basic structure
+    # Define a dummy class if facade is not available, to allow basic structureenv\scripts\activate
     class VPAFacade:
         def analyze_ticker(self, ticker, primary_timeframe="1d", other_timeframes=None):
             # Dummy implementation for structure
