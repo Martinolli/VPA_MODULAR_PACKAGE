@@ -16,7 +16,7 @@ import traceback
 from .vpa_facade import VPAFacade
 # We might need a data loading mechanism, potentially reusing parts of the backtester's fetcher/validator
 # For now, let's assume data is pre-loaded or fetched ad-hoc
-from .vpa_data import YFinanceProvider # Example, might need adjustment
+from .vpa_data import PolygonIOProvider  # Importing a data provider, adjust as necessary
 from .vpa_logger import VPALogger # Example, might need adjustment
 
 # Set up logging
@@ -39,7 +39,7 @@ class VPATrainingDataGenerator:
         """
         self.vpa = vpa_facade
         self.output_dir = output_dir
-        self.data_provider = YFinanceProvider() # Example instantiation
+        self.data_provider = PolygonIOProvider()  # Use PolygonIOProvider instead of YFinanceProvider
         os.makedirs(self.output_dir, exist_ok=True)
 
         if log_file is None:
@@ -57,39 +57,31 @@ class VPATrainingDataGenerator:
         all_data = {}
         try:
             for tf in timeframes:
-                # Calculate period based on start and end dates
-                period = (datetime.strptime(end_date, "%Y-%m-%d") - datetime.strptime(start_date, "%Y-%m-%d")).days
-                period = f"{period}d"  # Convert to string format expected by yfinance
-
-                result = self.data_provider.get_data(ticker, interval=tf, period=period)
-
-                # Check if result is a tuple and extract the DataFrame
-                if isinstance(result, tuple):
-                    df = result[0]  # Assuming the DataFrame is the first element of the tuple
-                else:
-                    df = result
+                result = self.data_provider.get_data(ticker, interval=tf, start_date=start_date, end_date=end_date)
                 
-                if df is not None and not df.empty:
-                    # Ensure standard column names
-                    df.rename(columns={
-                        'Open': 'open',
-                        'High': 'high',
-                        'Low': 'low',
-                        'Close': 'close',
-                        'Volume': 'volume'
-                    }, inplace=True)
+                # Polygon.io returns a tuple of (price_data, volume_data)
+                price_data, volume_data = result
+                
+                if price_data is not None and not price_data.empty:
+                    # Combine price and volume data
+                    df = price_data.copy()
+                    df['volume'] = volume_data
+                    
                     # Ensure index is datetime
                     df.index = pd.to_datetime(df.index)
                     # Ensure timezone naive for consistency
-                    if getattr(df.index, 'tz', None) is not None:
-                         df.index = df.index.tz_convert(None)
+                    if df.index.tz is not None:
+                        df.index = df.index.tz_localize(None)
+                    
                     all_data[tf] = df
                     logger.info(f"Loaded {len(df)} rows for {tf}")
                 else:
                     logger.warning(f"No data loaded for timeframe {tf}")
             return all_data
+        except PolygonIOProvider.PolygonAPIError as e:
+            logger.error(f"Polygon.io API error: {e}")
         except Exception as e:
-            logger.error(f"Error loading historical data for {ticker}: {e}")
+            logger.error(f"Unexpected error: {e}")
             logger.debug(traceback.format_exc())
             return None
 
@@ -115,7 +107,7 @@ class VPATrainingDataGenerator:
             if getattr(processed_data.index, 'tz', None) is None and getattr(timestamp, 'tz', None) is not None:
                  current_ts = timestamp.tz_convert(None)
             else:
-                 current_ts = timestamp
+                 current_ts = pd.to_datetime(timestamp).tz_localize(None)
             
             # Get the index location for the current timestamp
             idx_loc = processed_data.index.get_loc(current_ts, method='ffill')
@@ -131,14 +123,16 @@ class VPATrainingDataGenerator:
         # Extract current candle raw data (requires original data access)
         # This part needs refinement - how to access original OHLCV for the specific candle?
         # Let's assume 'price' and 'volume' are available in processed_data for now
+        # Update how you access the data points
+        current_data_point = processed_data.loc[actual_timestamp]
+        
         current_candle_data = {
-            "open": current_data_point.get("open", None), # Placeholder - needs original data
-            "high": current_data_point.get("high", None), # Placeholder
-            "low": current_data_point.get("low", None),   # Placeholder
-            "close": current_data_point.get("close", None), # Placeholder
-            "volume": int(current_data_point.get("volume", 0)) # Placeholder
+            "open": float(current_data_point["open"]),
+            "high": float(current_data_point["high"]),
+            "low": float(current_data_point["low"]),
+            "close": float(current_data_point["close"]),
+            "volume": int(current_data_point["volume"])
         }
-
         # Extract recent candles (requires original data access)
         recent_candles_data = []
         if idx_loc >= num_recent_candles -1:
@@ -301,10 +295,10 @@ class VPATrainingDataGenerator:
 
         primary_data = historical_data[primary_timeframe]
         if len(primary_data) < min_lookback:
-             logger.warning(f"Insufficient primary data ({len(primary_data)} rows) for {ticker}, need at least {min_lookback}. Aborting.")
-             return
+            self.logger.warning(f"Insufficient primary data ({len(primary_data)} rows) for {ticker}, need at least {min_lookback}. Proceeding with available data.")
+            min_lookback = len(primary_data)  # Adjust min_lookback to available data
 
-        logger.info(f"Starting training data generation for {ticker} into {output_file}")
+        self.logger.info(f"Starting training data generation for {ticker} into {output_file}")
         count = 0
         # Iterate through the primary timeframe index, starting after the lookback period
         for i in range(min_lookback -1, len(primary_data)):
