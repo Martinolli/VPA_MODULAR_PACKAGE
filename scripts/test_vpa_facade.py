@@ -83,7 +83,7 @@ def test_basic_analysis(facade, ticker="AAPL", timeframe="1d"):
     
     try:
         # Define timeframe
-        timeframes = [{"interval": timeframe, "period": "1m"}]
+        timeframes = [{"interval": timeframe, "period": "1y"}]  # Changed from "1m" to "1y"
         
         # Perform analysis
         print_info(f"Analyzing {ticker} on {timeframe} timeframe...")
