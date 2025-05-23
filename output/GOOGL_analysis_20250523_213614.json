@@ -1,0 +1,13 @@
+{
+  "ticker": "GOOGL",
+  "error": "Failed to fetch market data for any specified timeframe.",
+  "timeframe_analyses": {},
+  "confirmations": [],
+  "signal": {
+    "type": "NO_SIGNAL",
+    "strength": "NONE",
+    "details": "Data unavailable"
+  },
+  "risk_assessment": {},
+  "current_price": null
+}
