@@ -69,8 +69,8 @@ def test_sample_tickers(tickers=None, timeframes=None):
     
     if timeframes is None:
         timeframes = [
-            {"interval": "1d", "period": "1m"},
-            {"interval": "1h", "period": "1w"}
+            {"interval": "1d", "period": "1y"},
+            {"interval": "1h", "period": "5d"}
         ]
     
     print_header(f"Testing VPA Analysis with Sample Tickers")
@@ -169,8 +169,8 @@ def main():
     print_header("VPA Sample Analysis Test")
     
     # Define sample tickers and timeframes
-    tickers = ["AAPL", "MSFT", "GOOGL"]
-    timeframes = [{"interval": "1d", "period": "1m"}]
+    tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA"]
+    timeframes = [{"interval": "1d", "period": "1y"}]
     
     # Test sample tickers
     results, success = test_sample_tickers(tickers, timeframes)
