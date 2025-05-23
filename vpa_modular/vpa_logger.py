@@ -80,6 +80,10 @@ class VPALogger:
         """Log critical message"""
         self.logger.critical(message)
     
+    def exception(self, message):
+        """Log exception with traceback"""
+        self.logger.exception(message)
+    
     def log_analysis_start(self, ticker, timeframes):
         """
         Log the start of an analysis

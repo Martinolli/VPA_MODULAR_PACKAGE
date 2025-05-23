@@ -51,6 +51,12 @@ class VPAConfig:
         """Get default timeframes for analysis"""
         return self.config["timeframes"]
     
+    def get_primary_timeframe(self):
+        """Get primary timeframe for analysis"""
+        if "timeframes" in self.config and self.config["timeframes"]:
+            return self.config["timeframes"][0]["interval"]
+        return "1d"  # Default to daily timeframe if none specified
+    
     def get_all(self):
         """Get all configuration parameters"""
         return self.config
