@@ -18,8 +18,8 @@ import pkg_resources
 from pathlib import Path
 from dotenv import load_dotenv
 
-# Add the parent directory to sys.path to import VPA modules
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add the current directory to sys.path to import VPA modules
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Define colors for terminal output
 class Colors:
@@ -55,7 +55,9 @@ def check_python_version():
     """Check if Python version is compatible"""
     print_header("Checking Python Version")
     
-    major, minor, _ = sys.version_info
+    version_info = sys.version_info
+    major = version_info.major
+    minor = version_info.minor
     version_str = f"{major}.{minor}"
     
     if major < 3 or (major == 3 and minor < 8):
@@ -69,59 +71,44 @@ def check_packages():
     """Check if required packages are installed"""
     print_header("Checking Required Packages")
     
-    # Get requirements from requirements.txt
-    requirements_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "requirements.txt")
-    
+    project_root = os.path.dirname(os.path.abspath(__file__))
+    requirements_path = os.path.join(project_root, "requirements.txt")
+
     if not os.path.exists(requirements_path):
         print_error(f"Requirements file not found at {requirements_path}")
         return False
     
     with open(requirements_path, 'r') as f:
-        requirements = []
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith('#'):
-                # Extract package name and version
-                parts = line.split('>=')
-                if len(parts) > 1:
-                    requirements.append((parts[0], parts[1]))
-                else:
-                    requirements.append((line, None))
-    
+        requirements = [line.strip() for line in f if line.strip() and not line.startswith('#')]
+
     all_installed = True
     missing_packages = []
     outdated_packages = []
     
-    for package, min_version in requirements:
+    for req in requirements:
         try:
-            # Skip empty lines and comments
-            if not package or package.startswith('#'):
+            if req.startswith('-e'):
+                # Skip editable installs for now
                 continue
-                
-            # Try to import the package
-            imported = importlib.import_module(package.replace('-', '_'))
+            req_name = req.split('==')[0]
+            req_version = req.split('==')[1] if '==' in req else None
             
-            # Check version if specified
-            if min_version:
-                try:
-                    version = pkg_resources.get_distribution(package).version
-                    if pkg_resources.parse_version(version) < pkg_resources.parse_version(min_version):
-                        print_warning(f"{package} version {version} is installed, but {min_version} or higher is required.")
-                        outdated_packages.append((package, version, min_version))
-                        all_installed = False
-                    else:
-                        print_success(f"{package} version {version} is installed.")
-                except Exception as e:
-                    print_warning(f"Could not determine version for {package}: {e}")
+            dist = pkg_resources.get_distribution(req_name)
+            version = dist.version
+            
+            if req_version and pkg_resources.parse_version(version) < pkg_resources.parse_version(req_version):
+                print_warning(f"{req_name} version {version} is installed, but {req_version} is required.")
+                outdated_packages.append((req_name, version, req_version))
+                all_installed = False
             else:
-                print_success(f"{package} is installed.")
+                print_success(f"{req_name} version {version} is installed.")
                 
-        except ImportError:
-            print_error(f"{package} is not installed.")
-            missing_packages.append(package)
+        except pkg_resources.DistributionNotFound:
+            print_error(f"{req_name} is not installed.")
+            missing_packages.append(req_name)
             all_installed = False
         except Exception as e:
-            print_error(f"Error checking {package}: {e}")
+            print_error(f"Error checking {req_name}: {e}")
             all_installed = False
     
     if missing_packages or outdated_packages:
@@ -150,7 +137,7 @@ def check_env_file():
     print_header("Checking .env File")
     
     # Check for .env file in the project root
-    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    project_root = os.path.dirname(os.path.abspath(__file__))
     env_path = os.path.join(project_root, ".env")
     
     if not os.path.exists(env_path):
@@ -225,15 +212,15 @@ def create_directories():
     print_header("Creating Necessary Directories")
     
     # Define directories to create
-    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    project_root = os.path.dirname(os.path.abspath(__file__))
     directories = [
         os.path.join(project_root, "logs"),
         os.path.join(project_root, "data"),
         os.path.join(project_root, "output"),
         os.path.join(project_root, "visualizations"),
         os.path.join(project_root, "llm_training_data"),
-        os.path.join(os.path.expanduser("~"), ".vpa", "logs"),
-        os.path.join(os.path.expanduser("~"), ".vpa", "config"),
+        os.path.join(project_root, ".vpa", "logs"),
+        os.path.join(project_root, ".vpa", "config"),
     ]
     
     for directory in directories:
