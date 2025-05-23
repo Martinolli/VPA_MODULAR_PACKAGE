@@ -19,7 +19,7 @@ try:
     logger.info("Starting VPA LLM Training Data Generation Example...")
 
     # --- Configuration ---
-    TICKER = "MSFT"  # Example ticker
+    TICKER = "NVDA"  # Example ticker
     START_DATE = "2025-01-01"
     END_DATE = "2025-03-01" # Shorter period for quicker example run
     PRIMARY_TIMEFRAME = "1d"

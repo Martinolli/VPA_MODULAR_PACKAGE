@@ -71,3 +71,336 @@
 2025-05-23 17:05:09,002 - VPA - WARNING - Alignment resulted in empty data for MSFT, timeframe 1h. Using provided slice directly.
 2025-05-23 17:05:09,033 - VPA - INFO - Finished generating 1 training examples for MSFT in ./llm_training_data_output\MSFT_vpa_training_data.jsonl
 2025-05-23 17:05:09,033 - VPA - INFO - Finished generating 1 training examples for MSFT in ./llm_training_data_output\MSFT_vpa_training_data.jsonl
+2025-05-23 17:24:01,163 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
+2025-05-23 17:24:01,166 - VPA - INFO - Generating training data for NVDA
+2025-05-23 17:24:01,166 - VPA - INFO - Generating training data for NVDA
+2025-05-23 17:24:01,166 - VPA - INFO - Loading historical data for NVDA from 2024-01-01 to 2025-03-01
+2025-05-23 17:24:01,166 - VPA - INFO - Loading historical data for NVDA from 2024-01-01 to 2025-03-01
+2025-05-23 17:24:02,622 - VPA - INFO - Loaded 291 rows for 1d
+2025-05-23 17:24:02,622 - VPA - INFO - Loaded 291 rows for 1d
+2025-05-23 17:24:03,432 - VPA - INFO - Loaded 924 rows for 1h
+2025-05-23 17:24:03,432 - VPA - INFO - Loaded 924 rows for 1h
+2025-05-23 17:24:03,433 - VPA - INFO - Starting training data generation for NVDA into ./llm_training_data_output\NVDA_vpa_training_data.jsonl
+2025-05-23 17:24:03,433 - VPA - INFO - Starting training data generation for NVDA into ./llm_training_data_output\NVDA_vpa_training_data.jsonl
+2025-05-23 17:24:03,433 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:03,433 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:04,542 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:04,542 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:04,550 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:04,550 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:05,503 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:05,503 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:05,544 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:05,544 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:05,817 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:05,817 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:05,823 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:05,823 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:06,368 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:06,368 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:06,405 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:06,405 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:06,784 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:06,784 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:06,790 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:06,790 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:07,687 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:07,687 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:07,735 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:07,735 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:08,060 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:08,060 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:08,065 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:08,065 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:08,965 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:08,965 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:09,004 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:09,004 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:09,339 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:09,339 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:09,346 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:09,346 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:10,146 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:10,146 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:10,185 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:10,185 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:10,463 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:10,463 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:10,468 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:10,468 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:11,422 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:11,422 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:11,462 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:11,462 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:11,748 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:11,748 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:11,755 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:11,755 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:12,631 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:12,631 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:12,672 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:12,672 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:13,021 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:13,021 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:13,027 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:13,027 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:13,984 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:13,984 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:14,026 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:14,026 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:14,311 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:14,311 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:14,316 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:14,316 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:15,372 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:15,372 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:15,412 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:15,412 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:15,693 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:15,693 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:15,698 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:15,698 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:16,639 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:16,639 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:16,680 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:16,680 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:16,958 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:16,958 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:16,964 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:16,964 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:17,806 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:17,806 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:17,847 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:17,847 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:18,121 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:18,121 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:18,126 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:18,126 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:19,107 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:19,107 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:19,147 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:19,147 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:19,430 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:19,430 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:19,436 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:19,436 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:20,390 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:20,390 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:20,430 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:20,430 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:20,707 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:20,707 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:20,712 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:20,712 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:21,662 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:21,662 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:21,702 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:21,702 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:21,982 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:21,982 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:21,989 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:21,989 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:22,949 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:22,949 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:22,990 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:22,990 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:23,275 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:23,275 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:23,280 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:23,280 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:24,087 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:24,087 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:24,128 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:24,128 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:24,539 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:24,539 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:24,545 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:24,545 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:25,511 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:25,511 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:25,552 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:25,552 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:25,829 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:25,829 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:25,836 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:25,836 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:26,783 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:26,783 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:26,824 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:26,824 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:27,104 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:27,104 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:27,111 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:27,111 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:28,014 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:28,014 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:28,055 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:28,055 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:28,379 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:28,379 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:28,384 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:28,384 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:29,286 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:29,286 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:29,327 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:29,327 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:29,605 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:29,605 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:29,611 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:29,611 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:30,634 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:30,634 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:30,676 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:30,676 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:30,956 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:30,956 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:30,962 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:30,962 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:31,904 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:31,904 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:31,944 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:31,944 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:32,228 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:32,228 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:32,233 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:32,233 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:33,182 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:33,182 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:33,224 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:33,224 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:33,501 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:33,501 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:33,507 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:33,507 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:34,462 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:34,462 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:24:34,504 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:34,504 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:24:34,782 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:34,782 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:24:34,788 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:24:34,788 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:10,959 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
+2025-05-23 17:25:10,961 - VPA - INFO - Generating training data for NVDA
+2025-05-23 17:25:10,961 - VPA - INFO - Generating training data for NVDA
+2025-05-23 17:25:10,961 - VPA - INFO - Loading historical data for NVDA from 2024-12-01 to 2025-03-01
+2025-05-23 17:25:10,961 - VPA - INFO - Loading historical data for NVDA from 2024-12-01 to 2025-03-01
+2025-05-23 17:25:11,799 - VPA - INFO - Loaded 60 rows for 1d
+2025-05-23 17:25:11,799 - VPA - INFO - Loaded 60 rows for 1d
+2025-05-23 17:25:12,488 - VPA - INFO - Loaded 836 rows for 1h
+2025-05-23 17:25:12,488 - VPA - INFO - Loaded 836 rows for 1h
+2025-05-23 17:25:12,488 - VPA - INFO - Starting training data generation for NVDA into ./llm_training_data_output\NVDA_vpa_training_data.jsonl
+2025-05-23 17:25:12,488 - VPA - INFO - Starting training data generation for NVDA into ./llm_training_data_output\NVDA_vpa_training_data.jsonl
+2025-05-23 17:25:12,489 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:12,489 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:13,620 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:13,620 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:13,627 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:13,627 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:14,462 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:14,462 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:14,500 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:14,500 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:14,783 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:14,783 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:14,790 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:14,790 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:15,617 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:15,617 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:15,657 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:15,657 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:15,931 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:15,931 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:15,936 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:15,936 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:16,480 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:16,480 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:16,518 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:16,518 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:16,788 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:16,788 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:16,793 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:16,793 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:17,372 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:17,372 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:17,410 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:17,410 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:17,822 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:17,822 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:17,827 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:17,827 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:18,362 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:18,362 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:18,399 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:18,399 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:18,682 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:18,682 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:18,687 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:18,687 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:19,265 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:19,265 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:19,304 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:19,304 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:19,581 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:19,581 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:19,585 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:19,585 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:20,387 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:20,387 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:20,426 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:20,426 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:20,708 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:20,708 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:20,713 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:20,713 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:21,253 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:21,253 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:21,292 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:21,292 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:21,660 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:21,660 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:21,664 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:21,664 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:22,305 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:22,305 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:22,345 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:22,345 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:22,623 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:22,623 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:22,628 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:22,628 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:23,262 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:23,262 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:23,300 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:23,300 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:25:23,580 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:23,580 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:25:23,587 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:23,587 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:25:24,544 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:24,544 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:25:24,581 - VPA - INFO - Finished generating 11 training examples for NVDA in ./llm_training_data_output\NVDA_vpa_training_data.jsonl
+2025-05-23 17:25:24,581 - VPA - INFO - Finished generating 11 training examples for NVDA in ./llm_training_data_output\NVDA_vpa_training_data.jsonl
+2025-05-23 17:27:03,003 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
+2025-05-23 17:27:03,005 - VPA - INFO - Generating training data for NVDA
+2025-05-23 17:27:03,005 - VPA - INFO - Generating training data for NVDA
+2025-05-23 17:27:03,005 - VPA - INFO - Loading historical data for NVDA from 2025-01-01 to 2025-03-01
+2025-05-23 17:27:03,005 - VPA - INFO - Loading historical data for NVDA from 2025-01-01 to 2025-03-01
+2025-05-23 17:27:03,986 - VPA - INFO - Loaded 39 rows for 1d
+2025-05-23 17:27:03,986 - VPA - INFO - Loaded 39 rows for 1d
+2025-05-23 17:27:04,741 - VPA - INFO - Loaded 624 rows for 1h
+2025-05-23 17:27:04,741 - VPA - INFO - Loaded 624 rows for 1h
+2025-05-23 17:27:04,741 - VPA - WARNING - Insufficient primary data (39 rows) for NVDA, need at least 50. Proceeding with available data.
+2025-05-23 17:27:04,741 - VPA - WARNING - Insufficient primary data (39 rows) for NVDA, need at least 50. Proceeding with available data.
+2025-05-23 17:27:04,742 - VPA - INFO - Starting training data generation for NVDA into ./llm_training_data_output\NVDA_vpa_training_data.jsonl
+2025-05-23 17:27:04,742 - VPA - INFO - Starting training data generation for NVDA into ./llm_training_data_output\NVDA_vpa_training_data.jsonl
+2025-05-23 17:27:04,743 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:27:04,743 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1d
+2025-05-23 17:27:05,713 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:27:05,713 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1d. Using provided slice directly.
+2025-05-23 17:27:05,718 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:27:05,718 - VPA - INFO - Processing NVDA data for point-in-time analysis, timeframe 1h
+2025-05-23 17:27:06,542 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:27:06,542 - VPA - WARNING - Alignment resulted in empty data for NVDA, timeframe 1h. Using provided slice directly.
+2025-05-23 17:27:06,578 - VPA - INFO - Finished generating 1 training examples for NVDA in ./llm_training_data_output\NVDA_vpa_training_data.jsonl
+2025-05-23 17:27:06,578 - VPA - INFO - Finished generating 1 training examples for NVDA in ./llm_training_data_output\NVDA_vpa_training_data.jsonl
