@@ -24,7 +24,7 @@ try:
     END_DATE = "2025-03-01" # Shorter period for quicker example run
     PRIMARY_TIMEFRAME = "1d"
     SECONDARY_TIMEFRAMES = ["1h"] # Keep secondary TFs minimal for example speed
-    OUTPUT_DIRECTORY = "./llm_training_data_output" # Specify output directory
+    OUTPUT_DIRECTORY = "./llm_training_data" # Specify output directory
     MIN_LOOKBACK = 50 # Minimum data points before starting generation
 
     custom_timeframes = [
