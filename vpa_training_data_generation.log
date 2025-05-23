@@ -48,3 +48,26 @@
 2025-05-23 16:54:00,639 - VPA - ERROR - Error processing timestamp 2025-02-28 05:00:00 for MSFT: 'VPALogger' object has no attribute 'exception'
 2025-05-23 16:54:00,641 - VPA - INFO - Finished generating 0 training examples for MSFT in ./llm_training_data_output\MSFT_vpa_training_data.jsonl
 2025-05-23 16:54:00,641 - VPA - INFO - Finished generating 0 training examples for MSFT in ./llm_training_data_output\MSFT_vpa_training_data.jsonl
+2025-05-23 17:05:05,629 - VPA - INFO - Starting VPA LLM Training Data Generation Example...
+2025-05-23 17:05:05,632 - VPA - INFO - Generating training data for MSFT
+2025-05-23 17:05:05,632 - VPA - INFO - Generating training data for MSFT
+2025-05-23 17:05:05,632 - VPA - INFO - Loading historical data for MSFT from 2025-01-01 to 2025-03-01
+2025-05-23 17:05:05,632 - VPA - INFO - Loading historical data for MSFT from 2025-01-01 to 2025-03-01
+2025-05-23 17:05:06,751 - VPA - INFO - Loaded 39 rows for 1d
+2025-05-23 17:05:06,751 - VPA - INFO - Loaded 39 rows for 1d
+2025-05-23 17:05:07,392 - VPA - INFO - Loaded 624 rows for 1h
+2025-05-23 17:05:07,392 - VPA - INFO - Loaded 624 rows for 1h
+2025-05-23 17:05:07,393 - VPA - WARNING - Insufficient primary data (39 rows) for MSFT, need at least 50. Proceeding with available data.
+2025-05-23 17:05:07,393 - VPA - WARNING - Insufficient primary data (39 rows) for MSFT, need at least 50. Proceeding with available data.
+2025-05-23 17:05:07,393 - VPA - INFO - Starting training data generation for MSFT into ./llm_training_data_output\MSFT_vpa_training_data.jsonl
+2025-05-23 17:05:07,393 - VPA - INFO - Starting training data generation for MSFT into ./llm_training_data_output\MSFT_vpa_training_data.jsonl
+2025-05-23 17:05:07,394 - VPA - INFO - Processing MSFT data for point-in-time analysis, timeframe 1d
+2025-05-23 17:05:07,394 - VPA - INFO - Processing MSFT data for point-in-time analysis, timeframe 1d
+2025-05-23 17:05:08,386 - VPA - WARNING - Alignment resulted in empty data for MSFT, timeframe 1d. Using provided slice directly.
+2025-05-23 17:05:08,386 - VPA - WARNING - Alignment resulted in empty data for MSFT, timeframe 1d. Using provided slice directly.
+2025-05-23 17:05:08,392 - VPA - INFO - Processing MSFT data for point-in-time analysis, timeframe 1h
+2025-05-23 17:05:08,392 - VPA - INFO - Processing MSFT data for point-in-time analysis, timeframe 1h
+2025-05-23 17:05:09,002 - VPA - WARNING - Alignment resulted in empty data for MSFT, timeframe 1h. Using provided slice directly.
+2025-05-23 17:05:09,002 - VPA - WARNING - Alignment resulted in empty data for MSFT, timeframe 1h. Using provided slice directly.
+2025-05-23 17:05:09,033 - VPA - INFO - Finished generating 1 training examples for MSFT in ./llm_training_data_output\MSFT_vpa_training_data.jsonl
+2025-05-23 17:05:09,033 - VPA - INFO - Finished generating 1 training examples for MSFT in ./llm_training_data_output\MSFT_vpa_training_data.jsonl
