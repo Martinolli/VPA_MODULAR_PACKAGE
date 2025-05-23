@@ -329,11 +329,11 @@ class PatternRecognizer:
         # Check for tests of support with decreasing volume
         support_tests = 0
         for i in range(1, len(price_data)):
-            if (price_data["low"].iloc[i] <= price_data["low"].iloc[i-1] * 1.01 and 
-                volume_data.iloc[i] < volume_data.iloc[i-1]):
+            if (price_data["low"].iloc[i] < price_data["low"].iloc[i-1] * 1.01 and
+                price_data["low"].iloc[i] > price_data["low"].iloc[i-1] * 0.99):
                 support_tests += 1
         
-        # Determine if accumulation pattern is present
+        # Determine if accumulation is present
         strength = 0
         if is_sideways:
             strength += 1
@@ -345,7 +345,7 @@ class PatternRecognizer:
         return {
             "detected": strength >= 2,
             "strength": strength,
-            "details": f"Sideways: {is_sideways}, High volume bars: {high_volume_count}, Support tests: {support_tests}"
+            "details": f"Sideways: {is_sideways}, High volume count: {high_volume_count}, Support tests: {support_tests}"
         }
     
     def detect_distribution(self, price_data, volume_data, volume_class):
@@ -366,7 +366,7 @@ class PatternRecognizer:
         high_volume_threshold = params.get("high_volume_threshold", 2)
         resistance_tests_threshold = params.get("resistance_tests_threshold", 1)
         
-        # Check for sideways price movement with increasing volume at tops
+        # Check for sideways price movement with increasing volume
         price_range = price_data["high"].max() - price_data["low"].min()
         avg_price = price_data["close"].mean()
         price_volatility = price_range / avg_price
@@ -378,11 +378,11 @@ class PatternRecognizer:
         # Check for tests of resistance with decreasing volume
         resistance_tests = 0
         for i in range(1, len(price_data)):
-            if (price_data["high"].iloc[i] >= price_data["high"].iloc[i-1] * 0.99 and 
-                volume_data.iloc[i] < volume_data.iloc[i-1]):
+            if (price_data["high"].iloc[i] > price_data["high"].iloc[i-1] * 0.99 and
+                price_data["high"].iloc[i] < price_data["high"].iloc[i-1] * 1.01):
                 resistance_tests += 1
         
-        # Determine if distribution pattern is present
+        # Determine if distribution is present
         strength = 0
         if is_sideways:
             strength += 1
@@ -394,7 +394,7 @@ class PatternRecognizer:
         return {
             "detected": strength >= 2,
             "strength": strength,
-            "details": f"Sideways: {is_sideways}, High volume bars: {high_volume_count}, Resistance tests: {resistance_tests}"
+            "details": f"Sideways: {is_sideways}, High volume count: {high_volume_count}, Resistance tests: {resistance_tests}"
         }
     
     def detect_testing(self, price_data, volume_class):
@@ -408,35 +408,38 @@ class PatternRecognizer:
         Returns:
         - Dictionary with testing pattern details
         """
-        # Testing typically involves price probes with specific volume characteristics
-        tests = []
+        # Testing typically shows a test of support/resistance with low volume
         
-        # Look for down probes with low volume (testing support)
-        for i in range(1, len(price_data)):
-            if (price_data["low"].iloc[i] < price_data["low"].iloc[i-1] and 
-                price_data["close"].iloc[i] > price_data["low"].iloc[i] and
-                volume_class.iloc[i] in ["LOW", "VERY_LOW"]):
-                tests.append({
-                    "type": "SUPPORT_TEST",
-                    "index": price_data.index[i],
-                    "price": price_data["low"].iloc[i]
-                })
+        # Check if the last candle tests a previous low
+        is_testing_low = False
+        for i in range(1, min(5, len(price_data) - 1)):
+            if (price_data["low"].iloc[-1] < price_data["low"].iloc[-1-i] * 1.01 and
+                price_data["low"].iloc[-1] > price_data["low"].iloc[-1-i] * 0.99):
+                is_testing_low = True
+                break
         
-        # Look for up probes with low volume (testing resistance)
-        for i in range(1, len(price_data)):
-            if (price_data["high"].iloc[i] > price_data["high"].iloc[i-1] and 
-                price_data["close"].iloc[i] < price_data["high"].iloc[i] and
-                volume_class.iloc[i] in ["LOW", "VERY_LOW"]):
-                tests.append({
-                    "type": "RESISTANCE_TEST",
-                    "index": price_data.index[i],
-                    "price": price_data["high"].iloc[i]
-                })
+        # Check if the last candle tests a previous high
+        is_testing_high = False
+        for i in range(1, min(5, len(price_data) - 1)):
+            if (price_data["high"].iloc[-1] > price_data["high"].iloc[-1-i] * 0.99 and
+                price_data["high"].iloc[-1] < price_data["high"].iloc[-1-i] * 1.01):
+                is_testing_high = True
+                break
+        
+        # Check if volume is low during the test
+        is_low_volume = volume_class.iloc[-1] in ["LOW", "VERY_LOW"]
+        
+        # Determine if testing is present
+        strength = 0
+        if is_testing_low or is_testing_high:
+            strength += 1
+        if is_low_volume:
+            strength += 1
         
         return {
-            "detected": len(tests) > 0,
-            "tests": tests,
-            "details": f"Found {len(tests)} testing patterns"
+            "detected": strength >= 2,
+            "strength": strength,
+            "details": f"Testing low: {is_testing_low}, Testing high: {is_testing_high}, Low volume: {is_low_volume}"
         }
     
     def detect_buying_climax(self, price_data, volume_data, volume_class):
@@ -453,7 +456,7 @@ class PatternRecognizer:
         """
         # Get parameters from config
         params = self.pattern_params.get("buying_climax", {})
-        near_high_threshold = params.get("near_high_threshold", 0.97)
+        near_high_threshold = params.get("near_high_threshold", 0.93)
         wide_up_threshold = params.get("wide_up_threshold", 0.6)
         upper_wick_threshold = params.get("upper_wick_threshold", 0.25)
         
@@ -841,3 +844,282 @@ class MultiTimeframeAnalyzer:
                     confirmations["divergences"].append((tf1, tf2))
         
         return confirmations
+
+
+class PointInTimeAnalyzer:
+    """Analyze data at a specific point in time for VPA signals"""
+    
+    def __init__(self, config=None, logger=None):
+        """
+        Initialize the point-in-time analyzer
+        
+        Parameters:
+        - config: VPAConfig instance
+        - logger: Logger instance
+        """
+        self.config = config or VPAConfig()
+        self.logger = logger
+        self.candle_analyzer = CandleAnalyzer(self.config)
+        self.trend_analyzer = TrendAnalyzer(self.config)
+        self.pattern_recognizer = PatternRecognizer(self.config)
+        self.sr_analyzer = SupportResistanceAnalyzer(self.config)
+    
+    def analyze_all(self, processed_timeframe_data):
+        """
+        Analyze all timeframes at a specific point in time
+        
+        Parameters:
+        - processed_timeframe_data: Dictionary with processed data for each timeframe
+        
+        Returns:
+        - Dictionary with analysis results for each timeframe
+        """
+        if not processed_timeframe_data:
+            if self.logger:
+                self.logger.error("No processed data provided to analyze_all")
+            return {}
+        
+        signals = {}
+        
+        for tf, processed_data in processed_timeframe_data.items():
+            try:
+                if not processed_data or "price" not in processed_data or processed_data["price"].empty:
+                    if self.logger:
+                        self.logger.warning(f"Empty or invalid processed data for timeframe {tf}")
+                    continue
+                
+                # Get the last index (point in time)
+                current_idx = processed_data["price"].index[-1]
+                
+                # Analyze candle
+                candle_analysis = self.candle_analyzer.analyze_candle(current_idx, processed_data)
+                
+                # Analyze trend
+                trend_analysis = self.trend_analyzer.analyze_trend(processed_data, current_idx)
+                
+                # Identify patterns
+                pattern_analysis = self.pattern_recognizer.identify_patterns(processed_data, current_idx)
+                
+                # Analyze support/resistance
+                sr_analysis = self.sr_analyzer.analyze_support_resistance(processed_data)
+                
+                # Combine results
+                signals[tf] = {
+                    "candle": candle_analysis,
+                    "trend": trend_analysis,
+                    "patterns": pattern_analysis,
+                    "support_resistance": sr_analysis,
+                    "timestamp": current_idx
+                }
+                
+                # Add a summary of detected patterns
+                pattern_summary = []
+                for pattern_name, pattern_data in pattern_analysis.items():
+                    if pattern_data.get("detected", False):
+                        pattern_summary.append(f"{pattern_name.replace('_', ' ').title()} (Strength: {pattern_data.get('strength', 0)})")
+                
+                signals[tf]["pattern_summary"] = ", ".join(pattern_summary) if pattern_summary else "No significant patterns detected"
+                
+            except Exception as e:
+                if self.logger:
+                    self.logger.error(f"Error analyzing timeframe {tf}: {str(e)}")
+                    self.logger.exception("Exception details:")
+                else:
+                    print(f"Error analyzing timeframe {tf}: {str(e)}")
+        
+        return signals
+    
+    def compute_risk_reward(self, processed_data, signals):
+        """
+        Compute risk-reward metrics based on analysis
+        
+        Parameters:
+        - processed_data: Dictionary with processed data
+        - signals: Dictionary with analysis signals
+        
+        Returns:
+        - Dictionary with risk-reward metrics
+        """
+        if not processed_data or "price" not in processed_data or processed_data["price"].empty:
+            return {"risk_reward_ratio": 0, "stop_loss": 0, "take_profit": 0}
+        
+        # Get current price
+        current_price = processed_data["price"]["close"].iloc[-1]
+        
+        # Get support/resistance levels
+        support_levels = []
+        resistance_levels = []
+        
+        if "support_resistance" in signals and "support" in signals["support_resistance"]:
+            for level in signals["support_resistance"]["support"]:
+                support_levels.append(level["price"])
+        
+        if "support_resistance" in signals and "resistance" in signals["support_resistance"]:
+            for level in signals["support_resistance"]["resistance"]:
+                resistance_levels.append(level["price"])
+        
+        # Determine signal type
+        signal_type = "NEUTRAL"
+        if "candle" in signals and "signal_strength" in signals["candle"]:
+            signal_type = signals["candle"]["signal_strength"]
+        
+        # Calculate stop loss and take profit
+        stop_loss = current_price
+        take_profit = current_price
+        
+        if signal_type == "BULLISH":
+            # For bullish signals, stop loss is below nearest support, take profit at nearest resistance
+            if support_levels:
+                nearest_support = max([s for s in support_levels if s < current_price], default=current_price * 0.95)
+                stop_loss = nearest_support
+            else:
+                stop_loss = current_price * 0.95  # Default 5% below current price
+            
+            if resistance_levels:
+                nearest_resistance = min([r for r in resistance_levels if r > current_price], default=current_price * 1.1)
+                take_profit = nearest_resistance
+            else:
+                take_profit = current_price * 1.1  # Default 10% above current price
+        
+        elif signal_type == "BEARISH":
+            # For bearish signals, stop loss is above nearest resistance, take profit at nearest support
+            if resistance_levels:
+                nearest_resistance = min([r for r in resistance_levels if r > current_price], default=current_price * 1.05)
+                stop_loss = nearest_resistance
+            else:
+                stop_loss = current_price * 1.05  # Default 5% above current price
+            
+            if support_levels:
+                nearest_support = max([s for s in support_levels if s < current_price], default=current_price * 0.9)
+                take_profit = nearest_support
+            else:
+                take_profit = current_price * 0.9  # Default 10% below current price
+        
+        # Calculate risk-reward ratio
+        risk = abs(current_price - stop_loss)
+        reward = abs(take_profit - current_price)
+        risk_reward_ratio = reward / risk if risk > 0 else 0
+        
+        return {
+            "current_price": current_price,
+            "stop_loss": stop_loss,
+            "take_profit": take_profit,
+            "risk": risk,
+            "reward": reward,
+            "risk_reward_ratio": risk_reward_ratio
+        }
+    
+    def compute_volatility(self, processed_data, lookback=20):
+        """
+        Compute volatility metrics
+        
+        Parameters:
+        - processed_data: Dictionary with processed data
+        - lookback: Number of candles to look back
+        
+        Returns:
+        - Dictionary with volatility metrics
+        """
+        if not processed_data or "price" not in processed_data or processed_data["price"].empty:
+            return {"atr": 0, "volatility_percent": 0}
+        
+        # Get price data for lookback period
+        price_data = processed_data["price"].iloc[-lookback:]
+        
+        # Calculate Average True Range (ATR)
+        true_ranges = []
+        for i in range(1, len(price_data)):
+            high = price_data["high"].iloc[i]
+            low = price_data["low"].iloc[i]
+            prev_close = price_data["close"].iloc[i-1]
+            
+            tr1 = high - low
+            tr2 = abs(high - prev_close)
+            tr3 = abs(low - prev_close)
+            
+            true_range = max(tr1, tr2, tr3)
+            true_ranges.append(true_range)
+        
+        atr = sum(true_ranges) / len(true_ranges) if true_ranges else 0
+        
+        # Calculate volatility as percentage of price
+        current_price = price_data["close"].iloc[-1]
+        volatility_percent = (atr / current_price) * 100 if current_price > 0 else 0
+        
+        return {
+            "atr": atr,
+            "volatility_percent": volatility_percent,
+            "true_ranges": true_ranges
+        }
+    
+    def compute_confidence_score(self, signals):
+        """
+        Compute confidence score based on signals across timeframes
+        
+        Parameters:
+        - signals: Dictionary with analysis signals for each timeframe
+        
+        Returns:
+        - Float confidence score (0-100)
+        """
+        if not signals:
+            return 0
+        
+        # Initialize score
+        score = 50  # Neutral starting point
+        
+        # Count bullish and bearish signals
+        bullish_count = 0
+        bearish_count = 0
+        neutral_count = 0
+        
+        # Check candle signals
+        for tf, tf_signals in signals.items():
+            if "candle" in tf_signals and "signal_strength" in tf_signals["candle"]:
+                if tf_signals["candle"]["signal_strength"] == "BULLISH":
+                    bullish_count += 1
+                elif tf_signals["candle"]["signal_strength"] == "BEARISH":
+                    bearish_count += 1
+                else:
+                    neutral_count += 1
+        
+        # Check trend signals
+        for tf, tf_signals in signals.items():
+            if "trend" in tf_signals and "signal_strength" in tf_signals["trend"]:
+                if tf_signals["trend"]["signal_strength"] == "BULLISH":
+                    bullish_count += 1
+                elif tf_signals["trend"]["signal_strength"] == "BEARISH":
+                    bearish_count += 1
+                else:
+                    neutral_count += 1
+        
+        # Check pattern signals
+        for tf, tf_signals in signals.items():
+            if "patterns" in tf_signals:
+                for pattern_name, pattern_data in tf_signals["patterns"].items():
+                    if pattern_data.get("detected", False):
+                        if "climax" in pattern_name:
+                            # Climax patterns are strong signals
+                            if "buying" in pattern_name:
+                                bearish_count += 2  # Buying climax is bearish
+                            elif "selling" in pattern_name:
+                                bullish_count += 2  # Selling climax is bullish
+                        elif "accumulation" in pattern_name:
+                            bullish_count += 1
+                        elif "distribution" in pattern_name:
+                            bearish_count += 1
+        
+        # Calculate final score
+        total_signals = bullish_count + bearish_count + neutral_count
+        if total_signals > 0:
+            bullish_weight = bullish_count / total_signals
+            bearish_weight = bearish_count / total_signals
+            
+            # Adjust score based on signal weights
+            score += bullish_weight * 25  # Max +25 points for bullish signals
+            score -= bearish_weight * 25  # Max -25 points for bearish signals
+        
+        # Ensure score is within 0-100 range
+        score = max(0, min(100, score))
+        
+        return score

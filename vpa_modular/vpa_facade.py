@@ -9,11 +9,7 @@ import pandas as pd # Ensure pandas is imported for type hints if used
 from .vpa_config import VPAConfig
 from .vpa_data import PolygonIOProvider, MultiTimeframeProvider
 from .vpa_processor import DataProcessor
-from .vpa_analyzer import MultiTimeframeAnalyzer # Assuming this is the main analyzer for other methods
-# We might need more specific analyzers if self.analyzer was intended to be different
-# For analyze_ticker_at_point, the original code implies an analyzer with methods like:
-# analyze_all, compute_risk_reward, compute_volatility, compute_confidence_score
-# These are not part of MultiTimeframeAnalyzer typically.
+from .vpa_analyzer import MultiTimeframeAnalyzer, PointInTimeAnalyzer # Added PointInTimeAnalyzer import
 from .vpa_signals import SignalGenerator, RiskAssessor
 from .vpa_logger import VPALogger # Added VPALogger import
 
@@ -40,17 +36,8 @@ class VPAFacade:
         self.signal_generator = SignalGenerator(self.config)
         self.risk_assessor = RiskAssessor(self.config)
         
-        # CRITICAL NOTE for analyze_ticker_at_point:
-        # The original analyze_ticker_at_point function (and the reinstated version below)
-        # refers to `self.analyzer`. However, `self.analyzer` is NOT initialized in this
-        # __init__ method, nor was it initialized in the user-provided previous version of VPAFacade.
-        # This will lead to an AttributeError when analyze_ticker_at_point is called
-        # unless self.analyzer is defined and initialized with an appropriate analyzer class
-        # that has methods like `analyze_all`, `compute_risk_reward`, `compute_volatility`, 
-        # and `compute_confidence_score`.
-        # Example: self.analyzer = YourSpecificPointInTimeAnalyzer(self.config, self.logger)
-        # This needs to be addressed by the user/developer.
-        self.analyzer = None # Explicitly set to None to highlight it's not ready.
+        # Initialize the PointInTimeAnalyzer for analyze_ticker_at_point method
+        self.analyzer = PointInTimeAnalyzer(self.config, self.logger)
 
     def analyze_ticker(self, ticker, timeframes=None):
         self.logger.log_analysis_start(ticker, timeframes or [])
@@ -160,6 +147,7 @@ class VPAFacade:
                     price_to_process = data_slice[['open', 'high', 'low', 'close']]
                     volume_to_process = data_slice['volume']
                 else:
+                    # Use axis parameter for alignment to avoid ValueError
                     aligned_price_data = historical_price_data.reindex(data_slice.index).dropna()
                     aligned_volume_data = historical_volume_data.reindex(data_slice.index).dropna()
 
@@ -194,12 +182,12 @@ class VPAFacade:
 
             rr_info = self.analyzer.compute_risk_reward(processed_timeframe_data[primary_tf_key_for_pit], signals.get(primary_tf_key_for_pit, {}))
             volatility = self.analyzer.compute_volatility(processed_timeframe_data[primary_tf_key_for_pit])
-            pattern_summary = processed_timeframe_data[primary_tf_key_for_pit].get("pattern_summary", "")
+            pattern_summary = signals[primary_tf_key_for_pit].get("pattern_summary", "")
             confidence_score = self.analyzer.compute_confidence_score(signals)
 
             return {
                 "ticker": ticker,
-                "timestamp": processed_timeframe_data[primary_tf_key_for_pit].index[-1].strftime("%Y-%m-%d %H:%M"),
+                "timestamp": processed_timeframe_data[primary_tf_key_for_pit]["price"].index[-1].strftime("%Y-%m-%d %H:%M"),
                 "signals": signals,
                 "risk_reward": rr_info,
                 "volatility": volatility,
@@ -313,4 +301,3 @@ class VPAFacade:
             filtered_results[ticker] = result
         self.logger.info(f"Found {len(filtered_results)} matching signals")
         return filtered_results
-
