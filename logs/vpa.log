@@ -7962,3 +7962,181 @@ Ticker: PLTR
 2025-05-21 22:52:42,020 - VPA - ERROR - CRITICAL: self.analyzer is not initialized in VPAFacade. analyze_ticker_at_point cannot function.
 2025-05-21 22:52:42,025 - VPA - ERROR - CRITICAL: self.analyzer is not initialized in VPAFacade. analyze_ticker_at_point cannot function.
 2025-05-21 22:52:42,029 - VPA - ERROR - CRITICAL: self.analyzer is not initialized in VPAFacade. analyze_ticker_at_point cannot function.
+2025-05-23 16:49:20,816 - VPA - INFO - Generating training data for AAPL
+2025-05-23 16:49:20,817 - VPA - INFO - Loading historical data for AAPL from 2024-01-01 to 2025-01-31
+2025-05-23 16:49:22,326 - VPA - INFO - Loaded 272 rows for 1d
+2025-05-23 16:49:23,234 - VPA - INFO - Loaded 1043 rows for 1h
+2025-05-23 16:49:23,235 - VPA - INFO - Starting training data generation for AAPL into llm_training_data\AAPL_vpa_training_data.jsonl
+2025-05-23 16:49:23,237 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:24,072 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:24,078 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:24,675 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:24,849 - VPA - ERROR - Error processing timestamp 2024-03-13 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:24,851 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:25,108 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:25,112 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:25,891 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:25,929 - VPA - ERROR - Error processing timestamp 2024-03-14 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:25,931 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:26,148 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:26,154 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:26,544 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:26,583 - VPA - ERROR - Error processing timestamp 2024-03-15 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:26,585 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:26,804 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:26,809 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:27,232 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:27,271 - VPA - ERROR - Error processing timestamp 2024-03-18 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:27,272 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:27,489 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:27,497 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:27,873 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:27,914 - VPA - ERROR - Error processing timestamp 2024-03-19 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:27,916 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:28,131 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:28,137 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:28,556 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:28,596 - VPA - ERROR - Error processing timestamp 2024-03-20 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:28,598 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:28,819 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:28,824 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:29,238 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:29,280 - VPA - ERROR - Error processing timestamp 2024-03-21 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:29,282 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:29,499 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:29,505 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:29,911 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:29,953 - VPA - ERROR - Error processing timestamp 2024-03-22 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:29,954 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:30,173 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:30,179 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:30,801 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:30,846 - VPA - ERROR - Error processing timestamp 2024-03-25 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:30,847 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:31,060 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:31,067 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:31,472 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:31,514 - VPA - ERROR - Error processing timestamp 2024-03-26 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:31,516 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:31,731 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:31,737 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:32,437 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:32,480 - VPA - ERROR - Error processing timestamp 2024-03-27 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:32,481 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:32,700 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:32,705 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:33,200 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:33,242 - VPA - ERROR - Error processing timestamp 2024-03-28 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:33,243 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:33,468 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:33,474 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:33,899 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:33,942 - VPA - ERROR - Error processing timestamp 2024-04-01 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:33,944 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:34,159 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:34,164 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:34,615 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:34,660 - VPA - ERROR - Error processing timestamp 2024-04-02 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:34,662 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:34,874 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:34,879 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:35,313 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:35,358 - VPA - ERROR - Error processing timestamp 2024-04-03 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:35,360 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:35,578 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:35,585 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:36,214 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:36,260 - VPA - ERROR - Error processing timestamp 2024-04-04 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:36,261 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:36,479 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:36,484 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:37,240 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:37,284 - VPA - ERROR - Error processing timestamp 2024-04-05 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:37,288 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:37,507 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:37,512 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:37,956 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:38,000 - VPA - ERROR - Error processing timestamp 2024-04-08 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:38,002 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:38,212 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:38,217 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:38,654 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:38,701 - VPA - ERROR - Error processing timestamp 2024-04-09 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:38,702 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:38,911 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:38,916 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:39,449 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:39,496 - VPA - ERROR - Error processing timestamp 2024-04-10 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:39,497 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:39,709 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:39,715 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:40,239 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:40,286 - VPA - ERROR - Error processing timestamp 2024-04-11 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:40,288 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:40,500 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:40,508 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:40,970 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:41,015 - VPA - ERROR - Error processing timestamp 2024-04-12 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:41,017 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:41,241 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:41,246 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:41,744 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:41,792 - VPA - ERROR - Error processing timestamp 2024-04-15 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:41,793 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:42,019 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:42,026 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:42,746 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:42,792 - VPA - ERROR - Error processing timestamp 2024-04-16 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:42,793 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:43,014 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:43,021 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:43,691 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:43,739 - VPA - ERROR - Error processing timestamp 2024-04-17 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:43,741 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:44,005 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:44,012 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:44,665 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:44,710 - VPA - ERROR - Error processing timestamp 2024-04-18 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:44,712 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:44,934 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:44,940 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:45,396 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:45,441 - VPA - ERROR - Error processing timestamp 2024-04-19 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:45,442 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:45,655 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:45,662 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:46,285 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:46,330 - VPA - ERROR - Error processing timestamp 2024-04-22 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:46,332 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:46,549 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:46,555 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:47,232 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:47,278 - VPA - ERROR - Error processing timestamp 2024-04-23 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:47,279 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:47,500 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:47,506 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:47,986 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:48,031 - VPA - ERROR - Error processing timestamp 2024-04-24 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:48,033 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:48,244 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:48,251 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:48,657 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:48,702 - VPA - ERROR - Error processing timestamp 2024-04-25 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:48,704 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:48,918 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:48,924 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:49,423 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:49,468 - VPA - ERROR - Error processing timestamp 2024-04-26 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:49,470 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:49,684 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:49,692 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:50,434 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:50,478 - VPA - ERROR - Error processing timestamp 2024-04-29 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:50,481 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:50,691 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:50,697 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
+2025-05-23 16:49:51,127 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1h. Using provided slice directly.
+2025-05-23 16:49:51,174 - VPA - ERROR - Error processing timestamp 2024-04-30 04:00:00 for AAPL: 'VPALogger' object has no attribute 'exception'
+2025-05-23 16:49:51,176 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1d
+2025-05-23 16:49:51,397 - VPA - WARNING - Alignment resulted in empty data for AAPL, timeframe 1d. Using provided slice directly.
+2025-05-23 16:49:51,402 - VPA - INFO - Processing AAPL data for point-in-time analysis, timeframe 1h
