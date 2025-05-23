@@ -9,32 +9,52 @@ import pandas as pd # Ensure pandas is imported for type hints if used
 from .vpa_config import VPAConfig
 from .vpa_data import PolygonIOProvider, MultiTimeframeProvider
 from .vpa_processor import DataProcessor
-from .vpa_analyzer import MultiTimeframeAnalyzer, PointInTimeAnalyzer # Added PointInTimeAnalyzer import
+from .vpa_analyzer import MultiTimeframeAnalyzer, PointInTimeAnalyzer, CandleAnalyzer, TrendAnalyzer, PatternRecognizer
 from .vpa_signals import SignalGenerator, RiskAssessor
 from .vpa_logger import VPALogger # Added VPALogger import
 
 class VPAFacade:
     """Simplified API for VPA analysis"""
     
-    def __init__(self, config_file=None, log_level="INFO", log_file=None):
+    def __init__(self, log_level="INFO", log_file=None, config=None, logger=None):
         """
         Initialize the VPA facade
         
         Parameters:
-        - config_file: Optional path to configuration file
-        - log_level: Logging level (e.g., "INFO", "DEBUG")
-        - log_file: Path to the log file
+        - log_level: Logging level
+        - log_file: Optional path to log file
+        - config: Optional VPAConfig instance (if None, a new one will be created)
+        - logger: Optional VPALogger instance (if None, a new one will be created)
         """
-        self.config = VPAConfig(config_file)
-        if log_file is None:
-            log_file = os.path.join("logs", "vpa.log")
-        self.logger = VPALogger(log_level, log_file) # Initialize logger
-        self.data_provider = PolygonIOProvider() 
-        self.multi_tf_provider = MultiTimeframeProvider(self.data_provider)
+        # Initialize logger
+        if logger is None:
+            if log_file is None:
+                log_file = "logs/vpa_analysis.log"
+            self.logger = VPALogger(log_level, log_file)
+        else:
+            self.logger = logger
+        
+        # Initialize config
+        self.config = config if config is not None else VPAConfig()
+
+        # Initialize Data Provider
+        self.data_provider = PolygonIOProvider()
+
+        # Initialize processor
         self.processor = DataProcessor(self.config)
-        self.multi_tf_analyzer = MultiTimeframeAnalyzer(self.config)
+        
+        # Initialize analyzers
+        self.candle_analyzer = CandleAnalyzer(self.config)
+        self.trend_analyzer = TrendAnalyzer(self.config)
+        self.pattern_recognizer = PatternRecognizer(self.config)
+        self.analyzer = PointInTimeAnalyzer(self.config)
+
+        # Initialize signal generator and risk assessor
         self.signal_generator = SignalGenerator(self.config)
         self.risk_assessor = RiskAssessor(self.config)
+
+        self.multi_tf_provider = MultiTimeframeProvider(self.data_provider)
+        self.multi_tf_analyzer = MultiTimeframeAnalyzer(self.config)
         
         # Initialize the PointInTimeAnalyzer for analyze_ticker_at_point method
         self.analyzer = PointInTimeAnalyzer(self.config, self.logger)

@@ -650,3 +650,6 @@ Ticker: PLTR
  Generating reports and visualizations...
 2025-05-23 16:57:53,073 - VPA - INFO -  Generating visualizations...
 2025-05-23 16:58:13,869 - VPA - ERROR - An error occurred: 'evidence'
+2025-05-23 19:08:06,088 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d
+2025-05-23 19:19:01,817 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d
+2025-05-23 19:19:01,818 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
