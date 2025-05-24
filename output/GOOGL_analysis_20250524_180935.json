@@ -1,0 +1,222 @@
+{
+  "ticker": "GOOGL",
+  "timeframe_analyses": {
+    "1d": {
+      "candle_analysis": {
+        "candle_class": "NARROW_UPPER_WICK",
+        "volume_class": "AVERAGE",
+        "is_up_candle": "False",
+        "price_direction": "UP",
+        "signal_type": null,
+        "signal_strength": null,
+        "details": ""
+      },
+      "trend_analysis": {
+        "trend_direction": "SIDEWAYS",
+        "price_change_percent": 1.37,
+        "volume_trend": "DECREASING",
+        "volume_change_percent": -17.79,
+        "signal_type": "CONSOLIDATION",
+        "signal_strength": "NEUTRAL",
+        "details": "Sideways price movement (1.37%) indicates consolidation"
+      },
+      "pattern_analysis": {
+        "accumulation": {
+          "detected": true,
+          "strength": 2,
+          "details": "Sideways: False, High volume count: 5, Support tests: 8"
+        },
+        "distribution": {
+          "detected": true,
+          "strength": 2,
+          "details": "Sideways: False, High volume count: 5, Resistance tests: 7"
+        },
+        "testing": {
+          "detected": false,
+          "strength": 1,
+          "details": "Testing low: False, Testing high: True, Low volume: False"
+        },
+        "buying_climax": {
+          "detected": false,
+          "strength": 1,
+          "details": "Near high: False, Very high volume: False, Wide up candle: False, Upper wick: True"
+        },
+        "selling_climax": {
+          "detected": false,
+          "strength": 1,
+          "details": "Near low: False, Very high volume: False, Wide down candle: False, Lower wick: True"
+        }
+      },
+      "support_resistance": {
+        "support": [
+          {
+            "price": 156.72,
+            "index": "2025-03-18 08:00:00",
+            "volume": 42074751.0,
+            "strength": 2.0,
+            "tests": 2
+          },
+          {
+            "price": 160.8901,
+            "index": "2025-03-21 08:00:00",
+            "volume": 36625764.0,
+            "strength": 2.0,
+            "tests": 2
+          },
+          {
+            "price": 150.662,
+            "index": "2025-03-31 08:00:00",
+            "volume": 54479064.0,
+            "strength": 2.0,
+            "tests": 2
+          },
+          {
+            "price": 147.84,
+            "index": "2025-05-07 08:00:00",
+            "volume": 127747554.0,
+            "strength": 2,
+            "high_volume": true,
+            "tests": 0
+          },
+          {
+            "price": 162.9,
+            "index": "2025-05-20 08:00:00",
+            "volume": 46607656.0,
+            "strength": 1.5,
+            "tests": 1
+          }
+        ],
+        "resistance": [
+          {
+            "price": 159.55,
+            "index": "2025-04-09 08:00:00",
+            "volume": 70396482.0,
+            "strength": 3.0,
+            "tests": 4
+          },
+          {
+            "price": 166.1,
+            "index": "2025-04-25 08:00:00",
+            "volume": 56028995.0,
+            "strength": 2.5,
+            "tests": 3
+          },
+          {
+            "price": 170.63,
+            "index": "2025-03-25 08:00:00",
+            "volume": 24174373.0,
+            "strength": 1.5,
+            "tests": 1
+          },
+          {
+            "price": 161.72,
+            "index": "2025-04-14 08:00:00",
+            "volume": 30332957.0,
+            "strength": 1.5,
+            "tests": 1
+          }
+        ],
+        "volume_at_levels": {
+          "147.84": {
+            "type": "support",
+            "candles_count": 6,
+            "total_volume": 415443028.0,
+            "avg_volume": 69240504.66666667
+          },
+          "150.662": {
+            "type": "support",
+            "candles_count": 10,
+            "total_volume": 598169670.0,
+            "avg_volume": 59816967.0
+          },
+          "156.72": {
+            "type": "support",
+            "candles_count": 14,
+            "total_volume": 652272773.0,
+            "avg_volume": 46590912.35714286
+          },
+          "159.55": {
+            "type": "resistance",
+            "candles_count": 11,
+            "total_volume": 521796178.0,
+            "avg_volume": 47436016.18181818
+          },
+          "160.8901": {
+            "type": "support",
+            "candles_count": 8,
+            "total_volume": 394155260.0,
+            "avg_volume": 49269407.5
+          },
+          "161.72": {
+            "type": "resistance",
+            "candles_count": 12,
+            "total_volume": 533861111.0,
+            "avg_volume": 44488425.916666664
+          },
+          "162.9": {
+            "type": "support",
+            "candles_count": 15,
+            "total_volume": 607970881.0,
+            "avg_volume": 40531392.06666667
+          },
+          "166.1": {
+            "type": "resistance",
+            "candles_count": 11,
+            "total_volume": 454226850.0,
+            "avg_volume": 41293350.0
+          },
+          "170.63": {
+            "type": "resistance",
+            "candles_count": 2,
+            "total_volume": 97590329.0,
+            "avg_volume": 48795164.5
+          }
+        }
+      },
+      "processed_data": {
+        "price": "                        open     high      low   close\ntimestamp                                             \n2024-05-24 08:00:00  174.980  175.770  173.650  174.99\n2024-05-28 08:00:00  174.450  177.270  174.365  176.40\n2024-05-29 08:00:00  175.430  176.836  174.720  175.90\n2024-05-30 08:00:00  175.200  175.220  171.790  172.11\n2024-05-31 08:00:00  171.860  173.060  169.440  172.50\n...                      ...      ...      ...     ...\n2025-05-19 08:00:00  164.510  166.640  164.220  166.54\n2025-05-20 08:00:00  166.430  168.500  162.900  163.98\n2025-05-21 08:00:00  163.690  173.140  163.560  168.56\n2025-05-22 08:00:00  171.850  176.770  170.710  170.87\n2025-05-23 08:00:00  169.055  169.960  167.890  168.47\n\n[250 rows x 4 columns]",
+        "volume": "timestamp\n2024-05-24 08:00:00    16579438.0\n2024-05-28 08:00:00    20570407.0\n2024-05-29 08:00:00    23388693.0\n2024-05-30 08:00:00    22935677.0\n2024-05-31 08:00:00    37638876.0\n                          ...    \n2025-05-19 08:00:00    30426097.0\n2025-05-20 08:00:00    46607656.0\n2025-05-21 08:00:00    73415956.0\n2025-05-22 08:00:00    74864418.0\n2025-05-23 08:00:00    35223873.0\nName: volume, Length: 250, dtype: float64",
+        "spread": "timestamp\n2024-05-24 08:00:00    0.010\n2024-05-28 08:00:00    1.950\n2024-05-29 08:00:00    0.470\n2024-05-30 08:00:00    3.090\n2024-05-31 08:00:00    0.640\n                       ...  \n2025-05-19 08:00:00    2.030\n2025-05-20 08:00:00    2.450\n2025-05-21 08:00:00    4.870\n2025-05-22 08:00:00    0.980\n2025-05-23 08:00:00    0.585\nLength: 250, dtype: float64",
+        "body_percent": "timestamp\n2024-05-24 08:00:00    0.004717\n2024-05-28 08:00:00    0.671256\n2024-05-29 08:00:00    0.222117\n2024-05-30 08:00:00    0.900875\n2024-05-31 08:00:00    0.176796\n                         ...   \n2025-05-19 08:00:00    0.838843\n2025-05-20 08:00:00    0.437500\n2025-05-21 08:00:00    0.508351\n2025-05-22 08:00:00    0.161716\n2025-05-23 08:00:00    0.282609\nLength: 250, dtype: float64",
+        "upper_wick": "timestamp\n2024-05-24 08:00:00    0.780\n2024-05-28 08:00:00    0.870\n2024-05-29 08:00:00    0.936\n2024-05-30 08:00:00    0.020\n2024-05-31 08:00:00    0.560\n                       ...  \n2025-05-19 08:00:00    0.100\n2025-05-20 08:00:00    2.070\n2025-05-21 08:00:00    4.580\n2025-05-22 08:00:00    4.920\n2025-05-23 08:00:00    0.905\nLength: 250, dtype: float64",
+        "lower_wick": "timestamp\n2024-05-24 08:00:00    1.330\n2024-05-28 08:00:00    0.085\n2024-05-29 08:00:00    0.710\n2024-05-30 08:00:00    0.320\n2024-05-31 08:00:00    2.420\n                       ...  \n2025-05-19 08:00:00    0.290\n2025-05-20 08:00:00    1.080\n2025-05-21 08:00:00    0.130\n2025-05-22 08:00:00    0.160\n2025-05-23 08:00:00    0.580\nLength: 250, dtype: float64",
+        "avg_volume": "timestamp\n2024-05-24 08:00:00            NaN\n2024-05-28 08:00:00            NaN\n2024-05-29 08:00:00            NaN\n2024-05-30 08:00:00            NaN\n2024-05-31 08:00:00            NaN\n                          ...     \n2025-05-19 08:00:00    39176878.26\n2025-05-20 08:00:00    39236950.84\n2025-05-21 08:00:00    39917201.68\n2025-05-22 08:00:00    40849380.12\n2025-05-23 08:00:00    40918733.30\nName: volume, Length: 250, dtype: float64",
+        "volume_ratio": "timestamp\n2024-05-24 08:00:00         NaN\n2024-05-28 08:00:00         NaN\n2024-05-29 08:00:00         NaN\n2024-05-30 08:00:00         NaN\n2024-05-31 08:00:00         NaN\n                         ...   \n2025-05-19 08:00:00    0.776634\n2025-05-20 08:00:00    1.187851\n2025-05-21 08:00:00    1.839206\n2025-05-22 08:00:00    1.832694\n2025-05-23 08:00:00    0.860825\nName: volume, Length: 250, dtype: float64",
+        "volume_class": "timestamp\n2024-05-24 08:00:00    AVERAGE\n2024-05-28 08:00:00    AVERAGE\n2024-05-29 08:00:00    AVERAGE\n2024-05-30 08:00:00    AVERAGE\n2024-05-31 08:00:00    AVERAGE\n                        ...   \n2025-05-19 08:00:00    AVERAGE\n2025-05-20 08:00:00    AVERAGE\n2025-05-21 08:00:00       HIGH\n2025-05-22 08:00:00       HIGH\n2025-05-23 08:00:00    AVERAGE\nLength: 250, dtype: object",
+        "candle_class": "timestamp\n2024-05-24 08:00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n2024-05-28 08:00:00                          NEUTRAL\n2024-05-29 08:00:00    NEUTRAL_UPPER_WICK_LOWER_WICK\n2024-05-30 08:00:00                          NEUTRAL\n2024-05-31 08:00:00               NEUTRAL_LOWER_WICK\n                                   ...              \n2025-05-19 08:00:00                          NEUTRAL\n2025-05-20 08:00:00                          NEUTRAL\n2025-05-21 08:00:00                             WIDE\n2025-05-22 08:00:00                NARROW_UPPER_WICK\n2025-05-23 08:00:00                NARROW_UPPER_WICK\nLength: 250, dtype: object",
+        "price_direction": "timestamp\n2024-05-24 08:00:00    SIDEWAYS\n2024-05-28 08:00:00    SIDEWAYS\n2024-05-29 08:00:00    SIDEWAYS\n2024-05-30 08:00:00    SIDEWAYS\n2024-05-31 08:00:00    SIDEWAYS\n                         ...   \n2025-05-19 08:00:00        DOWN\n2025-05-20 08:00:00        DOWN\n2025-05-21 08:00:00          UP\n2025-05-22 08:00:00          UP\n2025-05-23 08:00:00          UP\nLength: 250, dtype: object",
+        "volume_direction": "timestamp\n2024-05-24 08:00:00          FLAT\n2024-05-28 08:00:00          FLAT\n2024-05-29 08:00:00          FLAT\n2024-05-30 08:00:00          FLAT\n2024-05-31 08:00:00          FLAT\n                          ...    \n2025-05-19 08:00:00    INCREASING\n2025-05-20 08:00:00    INCREASING\n2025-05-21 08:00:00    INCREASING\n2025-05-22 08:00:00    INCREASING\n2025-05-23 08:00:00    INCREASING\nLength: 250, dtype: object"
+      }
+    }
+  },
+  "confirmations": {
+    "bullish": [],
+    "bearish": [],
+    "divergences": []
+  },
+  "signal": {
+    "type": "BUY",
+    "strength": "MODERATE",
+    "details": "Moderate buy signal with some timeframe confirmation",
+    "evidence": {
+      "candle_signals": [],
+      "trend_signals": [],
+      "pattern_signals": [
+        {
+          "timeframe": "1d",
+          "pattern": "Accumulation",
+          "details": "Sideways: False, High volume count: 5, Support tests: 8"
+        }
+      ],
+      "timeframe_confirmations": []
+    }
+  },
+  "risk_assessment": {
+    "stop_loss": 162.0855,
+    "take_profit": 171.48314999999997,
+    "risk_reward_ratio": 0.47194768580154534,
+    "position_size": 15.662933667475912,
+    "risk_per_share": 6.384500000000003
+  },
+  "current_price": 168.47
+}
