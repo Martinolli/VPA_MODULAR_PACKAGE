@@ -13,7 +13,7 @@ try:
     from vpa_modular.vpa_logger import VPALogger
 
     # Initialize logger
-    logger = VPALogger(log_level="INFO", log_file="./vpa_training_data_generation.log")
+    logger = VPALogger(log_level="INFO", log_file="./logs/vpa_training_data_generation.log")
 
     # Use the logger
     logger.info("Starting VPA LLM Training Data Generation Example...")
@@ -52,7 +52,7 @@ try:
         logger.info("Initializing VPAFacade...")
         # If your facade requires specific config, provide it here:
         # vpa_facade = VPAFacade(config_file="path/to/your/config.json")
-        vpa_facade = VPAFacade(config_file=None, log_level="INFO", log_file="./vpa_analysis.log")
+        vpa_facade = VPAFacade()
         logger.info("VPAFacade initialized successfully.")
 
     except Exception as e:
