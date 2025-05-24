@@ -748,3 +748,5 @@ Ticker: PLTR
 2025-05-23 21:33:53,245 - VPA - ERROR - No data fetched for AAPL across specified timeframes. Aborting analysis.
 2025-05-23 21:42:51,444 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d
 2025-05-23 21:42:52,952 - VPA - INFO - Completed VPA analysis for AAPL. Signal: BUY (MODERATE)
+2025-05-24 18:42:32,461 - VPA - INFO - Starting VPA analysis for AAPL on timeframes: 1d
+2025-05-24 18:42:33,603 - VPA - INFO - Completed VPA analysis for AAPL. Signal: SELL (MODERATE)

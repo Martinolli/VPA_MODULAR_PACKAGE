@@ -14,8 +14,11 @@ from logging.handlers import RotatingFileHandler
 from pathlib import Path
 from typing import Optional, Dict, Any, Union
 
+def get_project_root():
+    return Path(__file__).parent.parent
+
 # Default log directory
-DEFAULT_LOG_DIR = os.path.join(os.path.expanduser("~"), ".vpa", "logs")
+DEFAULT_LOG_DIR = os.path.join(get_project_root(), ".vpa", "logs")
 
 class VPALogger:
     """Standardized logging framework for VPA system"""

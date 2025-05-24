@@ -29,7 +29,7 @@ class VPAFacade:
         # Initialize logger
         if logger is None:
             if log_file is None:
-                log_file = "logs/vpa_analysis.log"
+                log_file = ".vpa/logs/vpa_analysis.log"
             self.logger = VPALogger(log_level, log_file)
         else:
             self.logger = logger

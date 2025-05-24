@@ -1,0 +1,10 @@
+2025-05-24 18:41:25,078 - SampleAnalysis - INFO - Starting VPA analysis for AAPL on timeframes: 1d
+2025-05-24 18:41:26,141 - SampleAnalysis - INFO - Completed VPA analysis for AAPL. Signal: SELL (MODERATE)
+2025-05-24 18:41:26,152 - SampleAnalysis - INFO - Starting VPA analysis for MSFT on timeframes: 1d
+2025-05-24 18:41:26,435 - SampleAnalysis - INFO - Completed VPA analysis for MSFT. Signal: BUY (MODERATE)
+2025-05-24 18:41:26,445 - SampleAnalysis - INFO - Starting VPA analysis for GOOGL on timeframes: 1d
+2025-05-24 18:41:26,805 - SampleAnalysis - INFO - Completed VPA analysis for GOOGL. Signal: BUY (MODERATE)
+2025-05-24 18:41:26,816 - SampleAnalysis - INFO - Starting VPA analysis for AMZN on timeframes: 1d
+2025-05-24 18:41:27,109 - SampleAnalysis - INFO - Completed VPA analysis for AMZN. Signal: BUY (MODERATE)
+2025-05-24 18:41:27,118 - SampleAnalysis - INFO - Starting VPA analysis for TSLA on timeframes: 1d
+2025-05-24 18:41:27,407 - SampleAnalysis - INFO - Completed VPA analysis for TSLA. Signal: BUY (MODERATE)
