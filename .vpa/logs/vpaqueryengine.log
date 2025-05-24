@@ -1,0 +1,24 @@
+2025-05-24 20:56:59,118 - VPAQueryEngine - ERROR - Error processing query: 'MemoryManager' object has no attribute 'get_context'
+Traceback (most recent call last):
+  File "C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package\vpa_modular\vpa_llm_query_engine_enhanced.py", line 400, in process_query
+    context = self.memory_manager.get_context(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MemoryManager' object has no attribute 'get_context'
+2025-05-24 21:00:24,220 - VPAQueryEngine - ERROR - Error processing query: 'MockOpenAI' object has no attribute 'Create'
+Traceback (most recent call last):
+  File "C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package\vpa_modular\vpa_llm_query_engine_enhanced.py", line 415, in process_query
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package\scripts\test_openai_function_calling.py", line 212, in create
+    return self.Create([MockChoice()])
+           ^^^^^^^^^^^
+AttributeError: 'MockOpenAI' object has no attribute 'Create'. Did you mean: 'create'?
+2025-05-24 21:06:40,694 - VPAQueryEngine - ERROR - Error processing query: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package\vpa_modular\vpa_llm_query_engine_enhanced.py", line 400, in process_query
+    context = self.memory_manager.get_context(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aspire5 15 i7 4G2050\vpa_modular_package\vpa_modular\memory_manager_enhanced.py", line 164, in get_context
+    context_parts.append(f"User asked{ticker_info}: '{item['query']}' and you responded: '{item['response'][:100]}...'")
+                                                                                           ~~~~~~~~~~~~~~~~^^^^^^
+TypeError: 'NoneType' object is not subscriptable
