@@ -20,10 +20,10 @@ try:
 
     # --- Configuration ---
     TICKER = "NVDA"  # Example ticker
-    START_DATE = "2025-01-01"
+    START_DATE = "2024-01-01"
     END_DATE = "2025-03-01" # Shorter period for quicker example run
     PRIMARY_TIMEFRAME = "1d"
-    SECONDARY_TIMEFRAMES = ["1h"] # Keep secondary TFs minimal for example speed
+    SECONDARY_TIMEFRAMES = ["15m"] # Keep secondary TFs minimal for example speed
     OUTPUT_DIRECTORY = "./llm_training_data" # Specify output directory
     MIN_LOOKBACK = 50 # Minimum data points before starting generation
 

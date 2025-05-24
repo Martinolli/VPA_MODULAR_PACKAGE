@@ -203,7 +203,7 @@ class PolygonIOProvider:
         
         return price_df, volume_series
     
-    def get_data(self, ticker: str, interval: str = "1d", period: str = "1y") -> Optional[Tuple[pd.DataFrame, pd.Series]]:
+    def get_data(self, ticker: str, interval: str = "1d", period: str = "1y", start_date: Optional[str] = None, end_date: Optional[str] = None) -> Optional[Tuple[pd.DataFrame, pd.Series]]:
         """
         Get price and volume data for a ticker with robust error handling
         
@@ -227,8 +227,19 @@ class PolygonIOProvider:
             return None
         
         # Calculate date range
-        end_date = datetime.now()
-        start_date = self._calculate_start_date(end_date, period)
+        if end_date is None:
+            end_date = datetime.now()
+        elif isinstance(end_date, str):
+            end_date = datetime.strptime(end_date, "%Y-%m-%d")
+        elif isinstance(end_date, pd.Timestamp):
+            end_date = end_date.to_pydatetime()
+        
+        if start_date is None:
+            start_date = self._calculate_start_date(end_date, period)
+        elif isinstance(start_date, str):
+            start_date = datetime.strptime(start_date, "%Y-%m-%d")
+        elif isinstance(start_date, pd.Timestamp):
+            start_date = start_date.to_pydatetime()
         
         # Fetch data with retry logic
         for attempt in range(MAX_RETRIES):
@@ -346,15 +357,18 @@ class MultiTimeframeProvider:
         for tf_config in timeframes:
             interval = tf_config['interval']
             period = tf_config.get('period', '1y')  # Default to 1 year if not provided
+            start_date = tf_config.get('start_date')
+            end_date = tf_config.get('end_date')
             
             tf_key = f"{interval}"
             
             try:
-                # Only pass the parameters that get_data accepts
                 price_data, volume_data = self.data_provider.get_data(
                     ticker, 
                     interval=interval, 
-                    period=period
+                    period=period,
+                    start_date=start_date,
+                    end_date=end_date
                 )
                 
                 if price_data.empty:
